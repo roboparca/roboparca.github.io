@@ -7,7 +7,7 @@ const contentEngine = require('./lib/content-engine');
 const diagnosticData = require('./lib/diagnostic-data');
 
 const DIST_DIR = path.join(__dirname, 'dist');
-const SITE_URL = (process.env.SITE_URL || 'https://n0dy786.github.io').replace(/\/+$/, '');
+const SITE_URL = (process.env.SITE_URL || 'https://roboparca.github.io').replace(/\/+$/, '');
 // Clean dist completely to prevent stale files and ensure 100% exact count
 if (fs.existsSync(DIST_DIR)) {
   fs.rmSync(DIST_DIR, { recursive: true, force: true });
@@ -654,14 +654,16 @@ a:hover { text-decoration: underline; }
   left: 0;
   right: 0;
   z-index: 999;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   border-top: 1px solid var(--border-color);
   padding: 10px 14px;
   box-shadow: 0 -4px 12px rgba(0,0,0,0.08);
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 10px;
+  box-sizing: border-box;
+  max-width: 100vw;
 }
 .sticky-info { display: flex; flex-direction: column; min-width: 0; flex: 1; }
 .sticky-title { font-size: 13px; font-weight: 700; color: var(--text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -671,9 +673,10 @@ a:hover { text-decoration: underline; }
   color: #111827;
   font-size: 13px;
   font-weight: 800;
-  padding: 10px 18px;
+  padding: 10px 16px;
   border-radius: 8px;
   white-space: nowrap;
+  flex-shrink: 0;
   text-decoration: none !important;
   box-shadow: var(--shadow-sm);
 }
@@ -821,15 +824,128 @@ a:hover { text-decoration: underline; }
   /* Mobile Sticky Bottom Bar */
   .mobile-sticky-cta {
     display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100vw;
+    padding: 10px 14px;
+    left: 0;
+    right: 0;
+  }
+  .btn-sticky-amazon {
+    flex-shrink: 0;
+    font-size: 13px;
+    padding: 10px 14px;
+    text-align: center;
+  }
+
+  /* Responsive Diagnostic Table -> Cards on Mobile */
+  .diagnostic-table, 
+  .diagnostic-table thead, 
+  .diagnostic-table tbody, 
+  .diagnostic-table th, 
+  .diagnostic-table td, 
+  .diagnostic-table tr {
+    display: block;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .diagnostic-table thead {
+    display: none;
+  }
+  .diagnostic-table {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+  .diagnostic-table tr {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .diagnostic-table td {
+    padding: 8px 0;
+    border-bottom: 1px dashed #f1f5f9;
+  }
+  .diagnostic-table td:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-top: 10px;
+  }
+  .diagnostic-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #64748b;
+    margin-bottom: 4px;
+  }
+  .diagnostic-table .part-fix-link {
+    width: 100%;
+    justify-content: center;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  /* Responsive Maintenance Table -> Cards on Mobile */
+  .maint-table, 
+  .maint-table thead, 
+  .maint-table tbody, 
+  .maint-table th, 
+  .maint-table td, 
+  .maint-table tr {
+    display: block;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .maint-table thead {
+    display: none;
+  }
+  .maint-table {
+    border: none;
+    background: transparent;
+  }
+  .maint-table tr {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .maint-table td {
+    padding: 4px 0;
+    border: none;
+  }
+  .maint-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #94a3b8;
+    margin-bottom: 2px;
   }
 
   /* Detail Layout */
   .detail-layout {
     grid-template-columns: 1fr;
     gap: 16px;
+    padding-bottom: 76px;
   }
   .main-content {
     padding: 16px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .truth-table-box {
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
   .step-grid {
     grid-template-columns: 1fr;
@@ -1104,10 +1220,10 @@ async function runBuild() {
               <tbody>
                 ${diagnosticData.getDiagnosticMatrix(model).map(item => `
                   <tr>
-                    <td><span class="code-badge">${esc(item.code)}</span></td>
-                    <td><strong>${esc(item.symptom)}</strong><br><span style="font-size:12px; color:#64748b;">${esc(item.cause)}</span></td>
-                    <td>${item.fix}</td>
-                    <td>
+                    <td data-label="Hata Kodu"><span class="code-badge">${esc(item.code)}</span></td>
+                    <td data-label="Belirti &amp; Olası Neden"><strong>${esc(item.symptom)}</strong><br><span style="font-size:12px; color:#64748b;">${esc(item.cause)}</span></td>
+                    <td data-label="Evde Çözüm Adımları">${item.fix}</td>
+                    <td data-label="Gereken Parça">
                       ${item.partUrl ? `
                         <a href="/${brandObj.slug}/${model.slug}/${item.partUrl}/" class="part-fix-link">
                           ${esc(item.partText)}
@@ -1143,7 +1259,7 @@ async function runBuild() {
             </thead>
             <tbody>
               ${maintSchedule.map(m => `
-                <tr><td><strong>${esc(m.f)}</strong></td><td>${esc(m.a)}</td></tr>
+                <tr><td data-label="Bakım Sıklığı"><strong>${esc(m.f)}</strong></td><td data-label="Yapılması Gereken İşlem">${esc(m.a)}</td></tr>
               `).join('')}
             </tbody>
           </table>
