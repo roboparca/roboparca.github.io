@@ -7,7 +7,7 @@ const contentEngine = require('./lib/content-engine');
 const diagnosticData = require('./lib/diagnostic-data');
 
 const DIST_DIR = path.join(__dirname, 'dist');
-const SITE_URL = (process.env.SITE_URL || 'https://roboparca.github.io').replace(/\/+$/, '');
+const SITE_URL = (process.env.SITE_URL || 'https://n0dy786.github.io').replace(/\/+$/, '');
 // Clean dist completely to prevent stale files and ensure 100% exact count
 if (fs.existsSync(DIST_DIR)) {
   fs.rmSync(DIST_DIR, { recursive: true, force: true });
