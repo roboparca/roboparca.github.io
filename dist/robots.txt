@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://roboparca-rehberi.surge.sh/sitemap.xml
+Sitemap: https://roboparca.github.io/sitemap.xml
