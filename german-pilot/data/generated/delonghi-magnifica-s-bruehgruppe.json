@@ -1,0 +1,97 @@
+{
+  "page_title": "De'Longhi ECAM 22.110.B Brühgruppen-Revision & Dichtungswechsel",
+  "meta_description": "Technische Anleitung zur Brühgruppen-Revision der De'Longhi Magnifica S ECAM 22.110.B: O-Ring-Dichtungswechsel, Schmierung mit OKS 1110 und Fehlerbehebung.",
+  "word_count_check": 1220,
+  "engineering_breakdown": "Die Brühgruppe der De'Longhi Magnifica S (Baureihe ECAM 22.110.B, OEM-Baugruppennummer 5513227891) ist eine axial verfahrende Scherenhebel-Kompaktbrühgruppe. Das tragende Chassis sowie die beweglichen Hebelarme und Kolbenführungen bestehen aus Polyoxymethylen (POM, Polyacetal), welches sich durch herausragende Maßhaltigkeit bei Heißwassertemperaturen bis 95 °C, Ermüdungsfestigkeit sowie einen niedrigen Gleitreibbeiwert auszeichnet. Das hydraulische Gesamtsystem wird durch eine Schwingkolbenpumpe (Ulka Type EP5, 230 V, 48 W) gespeist, die einen statischen Maximaldruck von nominell 15 bar generiert. Während der Extraktion regelt das Zusammenwirken aus Pulverbett-Kompression und dem federbelasteten Crema-Ventil (Stößelventil) den Brühdruck dynamisch auf ein Betriebsfenster von 9,0 bis 11,5 bar bei einer Fördermenge von 1,2 bis 2,2 ml/s.\n\nDie Abdichtung des Brühzylinders (Innendurchmesser 36 mm) gegenüber der Einlaufkammer und dem oberen Brühkolben erfolgt primär über zwei dynamisch hochbeanspruchte O-Ringe der Dimension 36 x 4 mm aus VMQ (Vinyl-Methyl-Silikonkautschuk, FDA-konform, 70 Shore A) oder modifiziertem EPDM. VMQ gewährleistet thermische Elastizität von -50 bis +180 °C und minimiert die Stick-Slip-Neigung auf den POM-Laufbahnen. Das integrierte Duschsieb besteht aus tiefgezogenem Edelstahl der Güte 1.4310 (X10CrNi18-8) mit einer Mikrolochung von 0,2 mm. Die Rückstell- und Ventilfedern sind aus demselben austenitischen Federstahl gefertigt, um galvanischer Korrosion durch säurehaltige Kaffeefette und Entkalker vorzubeugen. Typische werkstoffmechanische Ausfallpunkte sind Riefenbildung in den POM-Führungsnuten durch abrasive Kaffeepartikel bei Mangelschmierung, Quellung der VMQ-Elastomere infolge ungeeigneter Schmierstoffe sowie die hydraulische Ermüdung der 1.4310-Ventilfeder, wodurch der Vordruck zusammenbricht.",
+  "symptoms_and_causes": "Mechanische und hydraulische Degradationen an der ECAM 22.110.B Brühgruppe äußern sich durch spezifische Fehlerprofile. Ein primäres Leitsymptom ist ein matschiger, formloser Tresterkuchen im Kaffeesatzbehälter anstelle eines kompakten, trockenen Pucks. Dieses Phänomen resultiert aus einem Druckabfall während der Endkompression, hervorgerufen durch verhärtete VMQ-Kolbendichtungen oder ein verkoktes Crema-Ventil, welches den Restwasserausstoß über das Drainageventil behindert. Begleitend tritt übermäßiger Heißwasseraustritt in die Abtropfschale auf, da verschlissene Kolbenringe dem 10-bar-Extraktionsdruck nicht mehr standhalten und Wasser über den Kolbenkragen entweicht.\n\nAkustisch macht sich die Notwendigkeit einer Revision durch metallisch-plastisches Knarzen, Quitschen oder Ruckeln während der vertikalen Verfahrbewegung über die Getriebespindel bemerkbar. Die Ursache ist das Auswaschen des lebensmittelechten Schmierfilms auf den Gleitflächen, wodurch der Reibungskoeffizient drastisch ansteigt. Dies führt zu Lastspitzen am 12V-Gleichstrom-Getriebemotor, was die elektronische Leistungsüberwachung der Hauptplatine triggert und den Fehlerstatus „Allgemeiner Alarm“ (rot blinkendes Dreiecksymbol) auslöst. Ein kontinuierlich abnehmender Volumenstrom („Tröpfelbezug“) bei unverändertem Mahlgrad deutet zudem auf eine Polymerisation von Kaffeewachsen in der 1.4310-Siebperforation und im Ventilsitz des Steigrohrs hin.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Freischaltung und Entnahme der Baugruppe",
+      "action": "Kaffeemaschine über die Standby-Taste herunterfahren, damit die Brühgruppe in Grundstellung fährt. Netzstecker ziehen (allpolige Trennung 230 V). Wassertank entnehmen, Servicetür öffnen, die beiden roten Entriegelungstasten seitlich zusammendrücken und die Brühgruppe horizontal herausziehen."
+    },
+    {
+      "step": 2,
+      "title": "Demontage des Duschsiebs und Crema-Ventils",
+      "action": "Die Brühgruppe auf einer sauberen Werkbank fixieren. Mit einem Torx-Schraubendreher TX10 die zentrale Befestigungsschraube des 1.4310-Edelstahlduschsiebs gegen den Uhrzeigersinn herausdrehen. Duschsieb abnehmen und die darunterliegende Crema-Ventilfeder samt Silikon- bzw. Messingstößel entnehmen."
+    },
+    {
+      "step": 3,
+      "title": "Ausbau der verschlissenen O-Ring-Dichtungen",
+      "action": "Die beiden roten VMQ-Kolbendichtungen (oberer und unterer Kolbenbereich) mittels einer stumpfen Kunststoffahle oder eines O-Ring-Pickers vorsichtig aus den Ringnuten hebeln. Keine scharfkantigen Metallwerkzeuge verwenden, um Kerben in den POM-Dichtungsflächen zu vermeiden. Ebenso den O-Ring am Einlaufstutzen abziehen."
+    },
+    {
+      "step": 4,
+      "title": "Dekontamination und Ultraschallreinigung",
+      "action": "Sämtliche Bauteile von anhaftenden Kaffeefettpolymeren befreien. Das Edelstahlsieb und die Feder im Ultraschallbad mit warmem Wasser und alkalischem Kaffeefettlöser für 15 Minuten reinigen. Das POM-Gehäuse und die Dichtungsnuten gründlich mit einer weichen Bürste säubern und vollständig trocknen."
+    },
+    {
+      "step": 5,
+      "title": "Remontage, Schmierstoffapplikation und Kalibrierung",
+      "action": "Neue lebensmittelechte VMQ- oder EPDM-Dichtringe drallfrei in die gereinigten Ringnuten einsetzen. Kolbenlaufflächen, Nuten und seitliche Führungsbahnen hauchdünn mit OKS 1110 Schmierfett benetzen. Crema-Ventil, Feder und Duschsieb remontieren (Anzugsdrehmoment max. 1,0 Nm). Kniehebelmechanik mehrfach manuell durchbewegen, um Leichtgängigkeit zu verifizieren."
+    }
+  ],
+  "step_by_step_narrative": "Die Revision der Brühgruppe erfordert höchste Präzision sowie den Einsatz werkstoffkompatibler Hilfsmittel. Zur Durchführung werden ein Torx-Schraubendreher TX10 (bzw. bei einigen Gehäusevarianten TX20), ein flacher Kunststoff-Enthebelungsspatel, fusselfreie Mikrofasertücher sowie lebensmittelechtes Hochleistungssilikonfett gemäß NSF-H1 (empfohlen: OKS 1110) benötigt. Vor Beginn aller mechanischen Eingriffe ist die Maschine galvanisch vom Netz zu trennen, um Kurzschlüsse und thermische Risiken durch den angrenzenden Thermoblock auszuschließen. Fahren Sie die Brühgruppe im regulären Ausschaltzyklus in die Ruhestellung, da ein Entriegeln außerhalb der Parkposition zu strukturellen Brüchen der POM-Verriegelungshaken führen kann.\n\nNach dem Entnehmen der Brühgruppe aus dem Serviceschacht beginnt die Demontage an der oberen Kolbeneinheit. Lösen Sie die zentrale TX10-Edelstahlschraube des Duschsiebs. Unter dem Sieb befindet sich das mechanisch sensible Crema-Rückschlagventil; entnehmen Sie den Stößel und die 1.4310-Feder vorsichtig, um ein Verbiegen der Federwindungen zu verhindern. Die gealterten VMQ-Dichtungen weisen meist Dehnungsverlust oder Mikrorisse auf. Hebeln Sie diese mit dem Kunststoffpicker aus den Nuten. Untersuchen Sie die zylindrischen POM-Dichtflächen akribisch auf axiale Riefen, da tiefe Kratzer trotz neuer Dichtungen zu Bypass-Leckagen führen.\n\nNach der Entfettung und Trocknung erfolgt das Einsetzen der neuen O-Ringe (36 x 4 mm). Achten Sie streng darauf, die Dichtungen nicht übermäßig zu dehnen oder zu tordieren; eine verdrillte Dichtung dichtet asymmetrisch ab und verschleißt frühzeitig. Tragen Sie OKS 1110 mittels eines sauberen Pinsels oder Einweghandschuhs hauchdünn auf die Dichtringe sowie die Gleitschienen auf. Die Schichtdicke sollte 0,1 mm nicht überschreiten, um ein Binden von frischem Kaffeemehl zu verhindern. Setzen Sie das gereinigte Duschsieb wieder auf und ziehen Sie die Schraube handfest mit maximal 1,0 Nm an, um das Innengewinde im POM-Zylinder nicht zu überdrehen. Führen Sie vor dem Einbau eine manuelle Kinematikprüfung durch: Der Scherenmechanismus muss sich ohne Klemmen vollständig komprimieren und expandieren lassen. Nach dem Einrasten in der Maschine ist ein zweifacher Leerbezug (Spülzyklus) durchzuführen, um überschüssiges Schmiermittel auszuspülen und das hydraulische System auf absolute Dichtigkeit zu überprüfen.",
+  "compatibility_matrix": {
+    "fits": [
+      "De'Longhi Magnifica S ECAM 22.110.B",
+      "De'Longhi Magnifica S ECAM 22.110.SB",
+      "De'Longhi Magnifica S Smart ECAM 250.23.SB",
+      "De'Longhi Dinamica ECAM 350.15.B",
+      "De'Longhi Dinamica ECAM 350.55.B",
+      "De'Longhi Autentica ETAM 29.510.B",
+      "De'Longhi Intensa ECAM 23.420.SW"
+    ],
+    "incompatible": [
+      "De'Longhi Magnifica ESAM 3000.B (Größere Bauform mit abweichender Scherenmechanik)",
+      "De'Longhi Magnifica ESAM 4200.S (Nicht abwärtskompatible Kolbengeometrie)",
+      "De'Longhi Dedica EC 685 (Siebträger-System, keine automatisierte Brühgruppe)",
+      "De'Longhi Nespresso Lattissima Serie (Vollständig abweichendes Kapsel-Hydraulikkonzept)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Entnahme der Brühgruppe, gründliches Abspülen unter fließendem, handwarmem Wasser ohne Reiniger; Absaugen des Innenraums von losem Kaffeemehl."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Visuelle Inspektion der Kolben-O-Ringe auf Elastizität und Rissbildung; chemische Reinigung des Duschsiebs mit Fettlöser zur Beseitigung von Kaffeewachspolymeren."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Vollständige Revision: Austausch aller VMQ-O-Ringe (Brühkolben, Steigrohr), mechanische Reinigung des Crema-Ventils, Neufettung aller Gleitführungen mit NSF-H1-Silikonfett (OKS 1110)."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Allgemeiner Alarm / Rotes Warndreieck leuchtet, lautes Knarzen",
+      "cause": "Trockengelaufene POM-Gleitbahnen und gequollene Kolbendichtringe erhöhen die Stromaufnahme des Getriebemotors über den Schwellenwert.",
+      "fix": "Brühgruppe entnehmen, Nuten und Führungen reinigen, verschlissene O-Ringe ersetzen und Mechanik flächendeckend mit OKS 1110 Schmierfett versehen."
+    },
+    {
+      "error": "Kaffee tröpfelt nur, Wasser sammelt sich massiv in der Tropfschale",
+      "cause": "Verstopftes 1.4310-Duschsieb oder verhärtete Dichtungsringe am Einlaufstutzen führen zu hydraulischem Rückstau und Druckentlastung über das Expansionsventil.",
+      "fix": "Duschsieb demontieren und im Ultraschallbad entfetten; Einlaufstutzen- und Kolbendichtungen gegen neue 70-Shore-A-Elastomere austauschen."
+    },
+    {
+      "error": "Matschiger Tresterkuchen, Wasserfilm auf dem Kaffeesatz",
+      "cause": "Ermüdung der Crema-Ventilfeder (1.4310) oder Leckage an den 36x4mm Kolbendichtringen verhindert eine ordnungsgemäße Endkompression und Nachentwässerung.",
+      "fix": "Ventilfeder, Dichtstößel und Kolben-O-Ringe im Rahmen des Revisionssets vollständig erneuern; Kolbenlaufbahn auf axiale Schleifriefen prüfen."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Welches Schmiermittel muss für die Dichtungen und Gleitflächen der De'Longhi ECAM Brühgruppe verwendet werden?",
+      "a": "Für die Revision darf ausschließlich lebensmittelechtes Silikonfett verwendet werden, welches die Zertifizierung nach NSF-H1 oder FDA 21 CFR 178.3570 erfüllt (Industriestandard: OKS 1110 oder Glissa Kaffeemaschinenfett). Ungeeignete Schmierstoffe wie Haushaltsöle, Vaseline oder mineralölbasierte Fette greifen die Elastomere an, führen zu unweigerlicher Quellung der VMQ-O-Ringe und waschen sich bei den Brühltemperaturen von über 90 °C sofort aus. Zudem kontaminieren nicht zugelassene Schmierstoffe das Heißwasser und bergen gesundheitliche Risiken."
+    },
+    {
+      "q": "Worin liegt der Unterschied zwischen roten VMQ- und schwarzen EPDM-O-Ringen für die Brühgruppen-Instandsetzung?",
+      "a": "Rote VMQ-O-Ringe (Silikonkautschuk) bieten hervorragende Heißwasserelastizität und ein exzellentes Rückstellvermögen bei geringem Anpressdruck, neigen jedoch bei aggressiven, überdosierten Entkalkern auf Zitronensäurebasis zu vorzeitiger Versprödung. Hochwertige EPDM-Dichtungen (Ethylen-Propylen-Dien-Kautschuk) mit 70 Shore A Härte sind chemisch wesentlich resistenter gegenüber Entkalkungssäuren und weisen eine höhere mechanische Abriebfestigkeit auf. Für den standardmäßigen Betrieb in der ECAM 22.110.B sind beide Werkstoffe zugelassen, sofern sie lebensmittelecht zertifiziert sind und präzise mit NSF-H1-Silikonfett geschmiert werden."
+    },
+    {
+      "q": "Wie lässt sich diagnostizieren, ob die Brühgruppe selbst oder der obere Brühkolben im Maschineninneren undicht ist?",
+      "a": "Eine differenzierte Diagnose gelingt über das Fehlerbild während des Spülzyklus. Wenn reines Heißwasser an den Seiten der entnehmbaren Brühgruppe herunterläuft und sich im inneren Chassisbereich sammelt, liegt der Defekt an den VMQ-Ringen des Brühzylinders oder dem Auslaufstutzen. Entweicht das Wasser hingegen primär ungenutzt von oberhalb der Baugruppe direkt in den hinteren Bereich der Tropfschale, ist der fest im Gehäuse montierte obere Brühkolben (Generator) undicht. Dessen Dichtringe müssen separat gewartet werden, da dieser Kolben den Gegenpol zur herausnehmbaren Brühgruppe bildet."
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://roboparca.github.io/kaffeereparatur/sitemap.xml
