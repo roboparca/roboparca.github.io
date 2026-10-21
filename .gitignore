@@ -4,3 +4,4 @@ node_modules/
 cloudflared.exe
 scratch/
 .system_generated/
+german-pilot/dist/

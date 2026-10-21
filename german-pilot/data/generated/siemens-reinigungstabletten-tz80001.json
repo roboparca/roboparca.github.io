@@ -1,0 +1,98 @@
+{
+  "page_title": "Siemens TZ80001A 2in1 Tabletten: Technische Brühgruppen-Reinigung",
+  "meta_description": "Technische Analyse der Siemens TZ80001A Kaffeefett-Reinigungstabletten. Chemische Wirkungsweise, Brühgruppen-Hydraulik, Entfettung und Wartungsprotokolle.",
+  "word_count_check": 1185,
+  "engineering_breakdown": "Kaffee-Vollautomaten der Siemens EQ-Baureihe (EQ.300 bis EQ.900 sowie iQ700 Einbaugeräte) nutzen ein geschlossenes elektro-mechanisches und hydraulisches Brühsystem. Das Herzstück bildet die herausnehmbare bzw. fest verbundene Brüheinheit, deren tragende Struktur primär aus hochfestem Polyoxymethylen (POM) gefertigt ist. POM zeichnet sich durch hohe Dimensionsstabilität, geringe Gleitreibung und Beständigkeit gegen Heißwasserzyklen aus. Die Dichtebenen zwischen beweglichem Brühzylinder, oberem Brühkolben und Steigrohr basieren auf Präzisionsformdichtungen aus vernetztem Fluorsilikon- oder Vinyl-Methyl-Silikon-Kautschuk (VMQ) sowie Ethylen-Propylen-Dien-Kautschuk (EPDM) mit definierten Shore-A-Härten von 60 bis 70. Beim Brühvorgang beaufschlagt eine elektromagnetische Schwingkolbenpumpe (Invensys oder Ulka) das System mit einem Spitzen-Druck von bis zu 19 bar, der sich über ein mechanisches Cremaventil im Gegenkolben auf einen dynamischen Extraktionsdruck von 9 bis 11 bar bei einer Durchflussrate von ca. 120 bis 180 ml/min einpendelt. Dieses Cremaventil besteht aus einem kalibrierten Ventilteller, einer Edelstahlfeder aus Werkstoff 1.4310 (X10CrNi18-8) und einem mikrogelochten Duschsieb aus Werkstoff 1.4301. Während der thermischen Extraktion bei 88 bis 94 °C emulgieren Kaffeelipide (darunter Cafestol, Kahweol und freie Triglyceride) zusammen mit hydrophoben Wachsen und feinsten Schwebstoffen (Fines). Diese organischen Rückstände sedimentieren an den Wandungen des POM-Zylinders, verkleben das Cremaventil und setzen die Mikro-Porengröße (ca. 0,2 mm) des Brühsiebs sukzessive zu. Die Siemens 2in1 Reinigungstablette TZ80001A basiert auf einer chemo-physikalischen Kombination aus Natriumpercarbonat, anorganischen Phosphonaten/Polycarboxylaten und alkalischen Trägersalzen (Soda/Silikate). Bei Wasserkontakt im Spülzyklus (typischerweise bei ca. 60–70 °C Wassertemperatur) dissoziiert das Natriumpercarbonat unter Abspaltung von reaktivem Wasserstoffperoxid (Aktivsauerstoff). Die alkalische Lösung bricht die Esterbindungen der Kaffeefette auf (Saponifikation/Verseifung), während der Aktivsauerstoff gefärbte Polyphenole oxidativ depolymerisiert. Die Formulierung ist so austariert, dass sie organische Polymerisate vollständig auflöst, ohne die Werkstoffeigenschaften von POM anzugreifen oder elastomere Dichtungen (VMQ/EPDM) hydrolytisch zu verspröden.",
+  "symptoms_and_causes": "Das Versäumen regelmäßiger Entfettungszyklen mit adäquaten Reagenzien führt zu einer Kaskade hydraulischer und mechanischer Fehlfunktionen. Erstes hydraulisches Symptom ist die progressive Veränderung des Flussbildes am Kaffeeauslauf: Das Strahlbild spritzt, bricht ab oder reduziert sich auf ein zähflüssiges Tröpfeln. Ursächlich hierfür ist die Verengung des mikroperforierten Brühsiebes und des nachgeschalteten federbelasteten Cremaventils. Durch den Strömungswiderstand steigt der hydraulische Gegendruck im Brühzylinder über das Sollmaß (>12 bar an der Brühkammer), was das integrierte Überdruck- bzw. Expansionsventil öffnet. Infolgedessen wird Brühwasser ungenutzt direkt über das Drainageventil in die Tropfschale abgeleitet, was zu verringerter Tassenfüllmenge und extrem wässrigem Kaffee führt. Auf mechanischer Ebene erzeugt polymerisiertes Kaffeefett auf den POM-Gleitbahnen und im Inneren des Zylinders einen massiven Anstieg des Reibungskoeffizienten. Der 24V-Gleichstrom-Getriebemotor muss eine signifikant höhere Stromaufnahme (Ampere-Peak) bewältigen, um den Kolben in die obere Brühposition und die anschließende Auswurfposition zu fahren. Die Motorsteuerung der Steuerelektronik registriert diesen Lastanstieg; wird der werksseitig definierte Drehmoment-Schwellenwert überschritten, bricht das System den Zyklus mit den Fehlermeldungen 'Brühgruppe reinigen', 'Gerät neu starten' oder 'Fehler 8' ab. Akustisch macht sich dieser Zustand durch lautes Ächzen, Quietschen oder Knacken während der Hubbewegung bemerkbar. Wird die fettbedingte Schwergängigkeit nicht chemisch beseitigt, drohen mechanischer Zahnbruch am Getriebezahnrad, Risse im Brühkolbenhals oder das thermische Durchbrennen der Motortreiber-H-Brücke auf der Steuerplatine.",
+  "symptoms_and_causes_word_count": 235,
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Systemprüfung & Vorbereitung",
+      "action": "Tropfschale und Kaffeesatzbehälter entleeren, Wassertank mit frischem Leitungswasser bis zur 'max'-Markierung befüllen und die Wasserfilterpatrone (Brita Intenza) für die Dauer des Vorgangs entnehmen."
+    },
+    {
+      "step": 2,
+      "title": "Tabletteneinwurf im Automatikprogramm",
+      "action": "Über das Gerätemenü das Reinigungsprogramm oder 'calc'nClean' anwählen; nach Aufforderung durch das Display eine 2in1 Reinigungstablette TZ80001A in den Pulverschacht bzw. bei EQ.3 in die dafür vorgesehene Tablettenöffnung der Brüheinheit einlegen."
+    },
+    {
+      "step": 3,
+      "title": "Automatischer Spül- & Einweichzyklus",
+      "action": "Das Programm starten; das System pumpt in definierten Intervallen Heißwasser in die Brühkammer, um die Tablette kontrolliert zu lösen und eine Einwirkphase zur Saponifikation der Kaffeefette einzuleiten."
+    },
+    {
+      "step": 4,
+      "title": "Manuelle Brühgruppen-Inspektion & Spülung",
+      "action": "Nach Programmende das Gerät ausschalten, Netzstecker ziehen, Brühgruppe über die rote Verriegelung entnehmen und unter fließendem warmem Wasser von gelösten Fett- und Tensidresten befreien."
+    },
+    {
+      "step": 5,
+      "title": "Trocknung, Re-Schmierung & Inbetriebnahme",
+      "action": "Brühgruppe vollständig an der Luft trocknen lassen, Dichtringe sowie POM-Gleitflächen mit OKS 1110 Schmierfett hauchdünn nachfetten, einsetzen, verriegeln und einen Spülbezug durchführen."
+    }
+  ],
+  "step_by_step_narrative": "Die fachgerechte Ausführung des Reinigungsprozesses unter Verwendung der Siemens TZ80001A 2in1 Reinigungstabletten erfordert technisches Verständnis der hydraulischen Abläufe. Zu Beginn muss sichergestellt werden, dass keine Entkalkungslösung zeitgleich über den Pulverschacht eingebracht wird; Entkalkung (Säuren) und Kaffeefettreinigung (Sauerstoffträger/Basen) müssen streng getrennt ablaufen, um chemische Neutralisationseffekte zu unterbinden. Vor Start des Reinigungsprogramms sollte eine Sichtprüfung der Brühgruppe erfolgen. Bei fortgeschrittener Laufleistung empfiehlt sich die Demontage des Duschsiebs mittels eines Torx-Schraubendrehers (TX10 oder TX20, modellabhängig). Trennen Sie hierzu das Gerät allpolig vom Stromnetz (Netzstecker ziehen nach VDE 0701). Lösen Sie die zentrale Befestigungsschraube des oberen Duschsiebes am Kolben der Brühgruppe. Häufig zeigt sich hier eine massive Kaffeefettkruste auf der Rückseite des Edelstahlsiebes (Werkstoff 1.4301). Legen Sie das Sieb für 15 Minuten in eine Schale mit 100 ml 70 °C heißem Wasser und einer halben aufgelösten TZ80001A Tablette. Die alkalische Peroxidlösung löst die Verharzungen rückstandsfrei auf. Reinigen Sie den Brühzylinder und die dahinterliegende Auslauföffnung mechanisch mit einer weichen Nylonbürste. Nach der Remontage des Duschsiebes (Drehmoment maximal 1,0 Nm, um das POM-Gewinde nicht zu überdrehen) wird die Brühgruppe eingesetzt. Starten Sie das werksseitige Reinigungsprogramm mit der ganzen Tablette im Pulverschacht. Das Programm führt mehrere Druckstöße aus: Das Drainageventil schließt, die Pumpe fördert Wasser bei ca. 65 °C in den Brühraum, wodurch die Tablette gelöst wird. Anschließend verharrt die Maschine in einer 5-minütigen Stagnationsphase, in der die Wirkstoffe das Kaffeewachs emulgieren. Im letzten Schritt spült das System ca. 500 ml Frischwasser durch den Kaffeeauslauf und das Drainageventil. Nach Abschluss muss die Brühgruppe zwingend erneut entnommen werden. Da die chemische Entfettung auch den werkseitigen Schmierfilm von den VMQ-Nutringen des Kolbens wäscht, ist eine gezielte Nachschmierung mit hochviskosem, physiologisch unbedenklichem Silikonfett (OKS 1110, NSF-H1-Zertifizierung) an den Gleitschienen und Kolben-Lippendichtungen unverzichtbar, um Schwergängigkeit und Getriebeschäden vorzubeugen.",
+  "compatibility_matrix": {
+    "fits": [
+      "Siemens EQ.3 / EQ.300 Serie (z. B. TI351209DE, TI353201DE)",
+      "Siemens EQ.500 classic & integral (z. B. TQ505D09, TQ507D03)",
+      "Siemens EQ.6 plus Baureihe (z. B. TE651209DE, TE657503DE)",
+      "Siemens EQ.700 Serie (z. B. TP705D01, TP707R06)",
+      "Siemens EQ.9 / EQ.9 plus connect (z. B. TI923309RW, TI9553X1RW)",
+      "Siemens iQ700 Einbau-Kaffeevollautomaten (z. B. CT636LES1, CT836LEB6)",
+      "Siemens Surpresso Baureihe (Legacy-Modelle TK52001 bis TK68E)"
+    ],
+    "incompatible": [
+      "Siemens Filterkaffeemaschinen (z. B. Sensor for Senses TC86303)",
+      "Siebträgermaschinen mit E61-Brühgruppe (mechanische Blindfilterdosierung abweichend)",
+      "Kapselsysteme und Padmaschinen aller Hersteller (z. B. Nespresso, Tassimo, Senseo)",
+      "Dampfreiniger oder Kesselentkalkungssysteme (Gefahr unzulässiger Schaumbildung)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Entnahme der Brühgruppe, gründliches Abspülen unter klarem, handwarmem Wasser ohne Reiniger; Reinigung des Kaffeesatztrichters und der POM-Führungsnuten mit einem Pinsel."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Durchführung des automatischen Reinigungsprogramms mit 1x Siemens TZ80001A 2in1 Reinigungstablette zur chemischen Entfettung des Duschsiebs, Cremaventils und Auslaufverteilers."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Große Brühgruppen-Revision: Demontage des Duschsiebes (TX10), Erneuerung der VMQ-Kolben- und Drainageventildichtungen, manuelle Ultraschallreinigung und Applikation von OKS 1110 Schmierfett."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Kaffee fließt nur tröpfelnd; Pumpe wird akustisch extrem leise / abgewürgt",
+      "cause": "Massive Lipid- und Schwebstoff-Verblockung des mikroperforierten 1.4301-Duschsiebes und des Cremaventils im Brühkolben.",
+      "fix": "Reinigungsprogramm mit TZ80001A starten. Bei totaler Blockade Brühsieb manuell demontieren und in 70 °C heißer Reinigungslösung 20 Minuten einweichen."
+    },
+    {
+      "error": "Fehlermeldung 'Brühgruppe reinigen' oder Knarren des Antriebs nach der Reinigung",
+      "cause": "Die chemische Reinigung hat den Silikon-Schmierfilm der VMQ-Dichtungen vollständig abgewaschen; POM-Kolben klemmt mechanisch.",
+      "fix": "Brühgruppe entnehmen, trocknen lassen und die Zylinderlauffläche, Kolbendichtringe sowie Kulissenführungen dünn mit OKS 1110 lebensmittelechtem Silikonfett schmieren."
+    },
+    {
+      "error": "Wasser landet während des Brühvorgangs vollständig in der Auffangschale",
+      "cause": "Partikel- oder Fettblockade am Ventilsitz des Drainageventils; Ventilstößel schließt unter Druck nicht vollständig ab.",
+      "fix": "Intensiv-Reinigungszyklus mit TZ80001A durchführen, um Schmutzpartikel aus dem Drainagebereich zu spülen; bei fortbestehendem Fehler Drainageventil-Dichtsatz austauschen."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Worin liegt der chemische Unterschied zwischen den TZ80001A Reinigungstabletten und Entkalkungstabletten?",
+      "a": "Reinigungstabletten wie die TZ80001A sind alkalische Systeme, basierend auf Natriumpercarbonat und Tensiden. Ihre primäre Funktion ist die oxidative Aufspaltung und Verseifung hydrophober organischer Kaffeelipide, Öle und Wachse bei pH-Werten über 9. Entkalkungstabletten (z. B. TZ80002) hingegen basieren auf anorganischen oder organischen Säuren wie Amidosulfonsäure, Maleinsäure oder Zitronensäure (pH < 2). Sie lösen mineralische Calcium- und Magnesiumcarbonat-Ablagerungen im Durchlauferhitzer auf. Ein Vertauschen führt zu Schäden: Säuren lösen kein Fett, und Basen lösen keinen Kalk."
+    },
+    {
+      "q": "Warum muss die Brühgruppe nach der Verwendung der Reinigungstabletten zwingend nachgefettet werden?",
+      "a": "Die Tenside und Aktivsauerstoffträger der TZ80001A Tablette sind extrem fettlösend konzipiert, um verharzte Kaffeeöle restlos aus der Brühkammer zu spülen. Hierbei wird jedoch bauartbedingt auch der essentielle Schmierfilm aus lebensmittelechtem Silikonfett (OKS 1110) von den VMQ-Lippendichtungen und den POM-Führungsschienen abgewaschen. Ohne Re-Schmierung steigt die Reibung zwischen Kolbendichtung und Zylinderwand rapide an. Dies führt zu Riefenbildung auf den Dichtflächen, Schwergängigkeit des Getriebes, Überlastabschaltungen der Steuerelektronik und im schlimmsten Fall zum Bruch der Antriebszahnräder."
+    },
+    {
+      "q": "Können die TZ80001A Tabletten auch bei Siemens-Vollautomaten ohne separaten Pulverschacht verwendet werden?",
+      "a": "Ja, bei Modellen ohne konventionellen Pulverschacht (wie bestimmten Typen der Siemens EQ.3 / EQ.300 Serie) ist das Reinigungsprogramm im internen Firmware-Protokoll softwareseitig angepasst. Das System fordert den Anwender über das Display oder Blinkcodes auf, die Brüheinheit manuell über die Servicetür zu entnehmen. Die TZ80001A Tablette wird dann direkt in die geöffnete Brühkammer des Zylinders gelegt. Nach dem Wiedereinsetzen und Verriegeln der Einheit führt die Steuerung das programmierte Spül- und Auflösungsprotokoll fehlerfrei durch."
+    }
+  ]
+}

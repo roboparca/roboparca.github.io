@@ -1,0 +1,96 @@
+{
+  "page_title": "Siemens EQ.6 Plus s700 Mahlwerk Justieren & Tauschen | Fachservice",
+  "meta_description": "Siemens EQ.6 Plus s700 Keramikmahlwerk reparieren, justieren & tauschen: Detaillierte Anleitung zu Motorstrom, Mahlgradkalibrierung und Fehlerbehebung.",
+  "word_count_check": 1210,
+  "engineering_breakdown": "Das Mahlwerk der Siemens EQ.6 Plus s700 (Baureihe TE657503DE) firmiert herstellerseitig unter der Bezeichnung CeramDrive und ist als modulares Kegelmahlwerk konstruiert. Das Mahlwerkpaar besteht aus hochfester, isostatisch gepresster Zirkonoxid- bzw. Aluminiumoxid-Keramik (Al2O3-Reinheit > 95 %), wodurch eine abrasive Abnutzung gegenüber metallischen Mahlscheiben minimiert wird. Der äußere Stator (Mahlring) und der rotierende Innenkonus (Mahlkegel) arbeiten mit eng tolerierten Radial- und Axialspalten zwischen 50 µm und maximal 350 µm, abhängig von der mechanischen Voreinstellung des Rastkranzes.\n\nDer mechanische Antrieb erfolgt über einen permanenterregten 230-V-Gleichstrommotor (Mabuchi/Johnson-Klasse), der über eine netzsynchron getaktete Dioden-Brückengleichrichtung auf der Leistungsplatine angesteuert wird. Die Kraftübertragung auf den Mahlkegel erfolgt über ein untersetztes Stirnrad- und Schneckengetriebe mit Komponenten aus hochkristallinem Polyoxymethylen (POM-C) zur Vibrationsdämpfung und Geräuschreduktion bei ca. 1.200 bis 1.400 U/min an der Spindel. Die axiale Lastaufnahme wird über ein Federpaket aus austenitischem Federstahl 1.4310 (X10CrNi18-8) kompensiert, welches Schockbelastungen durch Kaffeebohnen bricht.\n\nZur Abdichtung der rotierenden Welle gegenüber Kaffeemehleintrag und abrasiven Feinstaubpartikeln dienen Formdichtungen aus Fluorkautschuk (FKM/Viton) bzw. Nitrilkautschuk (NBR). Die lastabhängige Überwachung des Mahlvorgangs erfolgt sensorlos über Shunt-Widerstände auf der Motorsteuerungsplatine. Ein blockiertes Mahlwerk erzeugt einen steilen Stromanstieg (> 1,8 A), woraufhin der Mikrocontroller innerhalb von 150 ms die Leistungszufuhr per Triac abschaltet. Bei zu geringer Stromaufnahme (< 0,35 A) registriert die Software fehlenden Bohneneinzug und initiiert die Displaymeldung zur Befüllung. Das resultierende Mahlgut definiert direkt den hydraulischen Strömungswiderstand in der Brühkammer: Bei einem Soll-Pumpendruck von 9 bis 15 bar (Ulka HF/EP5) führt ein unzulässiger Feinstaubanteil (Fines < 100 µm) zu Porenverschluss des Edelstahl-Brühsiebs (1.4301) und Überdruckableitung über das mechanische Expansionsventil.",
+  "symptoms_and_causes": "Mechanische und elektronische Defekte des EQ.6-Plus-Mahlwerks manifestieren sich durch spezifische Fehlerbilder. Das Leitsymptom 'Bohnenbehälter füllen' bei gefülltem Trichter basiert auf einer unzureichenden Stromaufnahme des DC-Motors: Die Steuerung erkennt die Leerlaufdrehzahl (hohe Motordrehzahl ohne Mahlwiderstand) infolge von Hohlraumbildung (Bridging) bei öligen Röstungen, abgenutzten Einzugsschnecken oder einem mechanischen Bruch der POM-Mitnehmerachse.\n\nEin hohes, kreischendes oder mahlendes Geräusch weist auf Zahnausfall im Schneckenradgetriebe oder Fremdkörpereintrag (z. B. kleine Steine aus Rohkaffee) hin, die zwischen Stator und Rotor verkeilt sind. Ein dumpfes Summen ohne Rotation kennzeichnet eine Blockade des Mahlkonus oder einen Wicklungsschluss des Gleichstrommotors (typischer Wicklungswiderstand kalt: 70–110 Ohm; bei Schluss sinkt dieser unter 15 Ohm). Wässriger Kaffee mit unzureichender Crema und strukturlosem, feuchtem Trester im Satzbehälter deutet auf eine Dejustierung des Mahlspalts durch Vibrationen oder abrasiven Kantenverschleiß der Keramikschneiden hin. Zudem führt eine unvollständige Entfettung zu klebrigen Rückständen in den Auslaufkanälen, wodurch das Mehl gestaut wird und der Mahlwerksmotor thermisch überlastet.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Sicherheitsabschaltung & Gehäuseöffnung",
+      "action": "Netzstecker ziehen. Bohnenbehälter leeren, Wassertank und Tropfschale entnehmen. Die rückseitigen und bodenseitigen Torx-Schrauben (TX10/TX15) lösen, Seitenverkleidungen nach hinten abziehen und die obere Gehäuseabdeckung vorsichtig von den Rastnasen lösen."
+    },
+    {
+      "step": 2,
+      "title": "Elektrische Trennung und Mahlwerkentnahme",
+      "action": "Verkabelung des Mahlwerks am Gleichstrommotor fotografieren, Flachsteckhülsen mit isolierter Zange abziehen. Die elastischen VMQ-Schwingungsdämpfer aushängen und die komplette Mahleinheit samt Pulverauslauftrichter vertikal nach oben aus der Chassisführung heben."
+    },
+    {
+      "step": 3,
+      "title": "Demontage der Mahleinheit & Reinigung",
+      "action": "Den oberen Bajonett-Haltering gegen den Uhrzeigersinn drehen und abheben. Keramik-Mahlring und Mahlkegel entnehmen. Bohnenreste, Kaffeefett und Verkrustungen mit Messingdrahtbürste, Staubsauger und Druckluft vollständig entfernen."
+    },
+    {
+      "step": 4,
+      "title": "Getriebeprüfung & Wellenabdichtung",
+      "action": "Getriebedeckel öffnen, POM-Zahnräder auf Karies prüfen. Altes Schmierfett entfernen und Getrieberäder sowie O-Ringe mit lebensmittelechtem Schmierfett OKS 1110 dünn benetzen. Wellendichtring auf Rissfreiheit prüfen und bei Verhärtung ersetzen."
+    },
+    {
+      "step": 5,
+      "title": "Kalibrierung, Remontage & Bezugstest",
+      "action": "Mahlwerk zusammenbauen und den Einstellring im Uhrzeigersinn auf Block drehen (Mahlflächen berühren sich), anschließend exakt 3 Raststufen gegen den Uhrzeigersinn öffnen (mechanische Nullpunktjustage). Mahlwerk einbauen, Gehäuse montieren und drei Referenzbezüge zur Partikelstabilisierung durchführen."
+    }
+  ],
+  "step_by_step_narrative": "Die Instandsetzung des Mahlwerks der Siemens EQ.6 Plus s700 verlangt präzises handwerkliches Vorgehen. Als Werkzeugausstattung sind Torx-Schraubendreher der Größen TX10, TX15 und TX20, ein flacher ESD-Kunststoffspudger, eine Spitzzange, ein digitales Multimeter sowie Schmierfett OKS 1110 (NSF-H1 zertifiziert) erforderlich. Trennen Sie die Kaffeemaschine vor Beginn ausnahmslos allpolig vom Stromnetz und entladen Sie verbleibende Restspannungen der Leistungselektronik durch mehrfaches Betätigen des Netzschalters.\n\nNach dem Entfernen des Wassertanks, des Bohnentrichterdeckels und der Kaffeesatzschublade lösen Sie die Schrauben an der Rückwand. Schieben Sie das Gehäusedach leicht nach vorn, um die sensiblen Rasten des Displays nicht abzubrechen. Das Mahlwerk liegt nun im oberen rechten Bereich frei. Lösen Sie die Rastlaschen des Auswurfkanals zur Brühgruppe. Heben Sie den Motorblock aus seinen vier VMQ-Entkopplungsgummis. Überprüfen Sie mit dem Multimeter den Innenwiderstand der Motorwicklung: Liegt der Wert außerhalb des Fensters von 60 bis 120 Ohm, ist der Motor thermisch geschädigt und das Aggregat muss komplett getauscht werden.\n\nZur Justierung und Revision wird der weiße oder schwarze Stellkranz nach Markierung der Werksposition gelöst. Nehmen Sie den Keramikmahlring heraus. Reinigen Sie die Schneidgeometrien gründlich von verharzten Kaffeewachsen. Tragen Sie eine minimale Menge OKS 1110 auf die Dichtflächen auf, keinesfalls jedoch auf die Mahlzähne der Keramik. Setzen Sie Mahlkegel und Mahlring wieder zusammen. Drehen Sie den Zahnkranz manuell im Uhrzeigersinn ein, bis die Keramikflächen spürbar aneinanderstoßen (mechanischer Anschlagpunkt). Drehen Sie den Kranz nun exakt 2,5 bis 3 Rastzähne zurück – dies entspricht der Werkseinstellung für einen mittleren Espresso-Mahlgrad. Montieren Sie die Baugruppe in umgekehrter Reihenfolge, führen Sie die Kabel knickfrei in den Kabelführungen und führen Sie abschließend eine Dichtigkeits- und Stromaufnahmeprüfung unter Last durch.",
+  "compatibility_matrix": {
+    "fits": [
+      "Siemens EQ.6 Plus s700 (TE657503DE, TE657M03DE)",
+      "Siemens EQ.6 Plus s500 (TE655203RW, TE655319DE)",
+      "Siemens EQ.6 Plus s300 (TE653501DE, TE653311RW)",
+      "Siemens EQ.6 Serie 300 / 700 (TE603201RW, TE607203DE)",
+      "Bosch VeroAroma 300 / 700 (TES60321RW, TES60729DE)"
+    ],
+    "incompatible": [
+      "Siemens EQ.9 Serie (TI903509DE, TI9553X1DE - separates Dual-Drive-System)",
+      "Siemens EQ.3 / EQ.300 (TI303203RW - modifizierte Getriebeaufnahme)",
+      "Siemens EQ.500 (TP507DX4 - abweichende Bohnentrichtergeometrie)",
+      "Jura E- und J-Linie (Aroma-G3 Mahlwerke mit modifizierter Sensorik)",
+      "DeLonghi ECAM Baureihen (Stahlkegelmahlwerke mit 230V Wechselstromantrieb)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Entfernen von Bohnenresten im Bohnenschacht mit Kaffeefettlöser-Pinseln und Aussaugen des Trichters zur Vermeidung von Verharzung."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Überprüfung des Pulverauswurfkanals auf Kaffeemehlbrücken; Trockenreinigung mit flexibler Bürste bei entnommener Brühgruppe."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Demontage des oberen Mahlrings, Prüfung des Mahlspalts, Sichtprüfung der Keramikzähne auf Absplitterungen und Neukalibrierung des mechanischen Nullpunkts."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Meldung 'Bohnenbehälter füllen' trotz vollem Trichter",
+      "cause": "Motorstrom zu gering (< 0,35 A) durch Mahlwerksleerstehung, verklebte Einzugsschnecke oder abgenutzte Keramikschneiden.",
+      "fix": "Trichter entleeren, Mahlwerk mit Staubsauger freisaugen. Obere Scheibe entnehmen, Schneckengang reinigen und Mahlgrad um 1 Stufe gröber justieren."
+    },
+    {
+      "error": "Kreischendes, metallisches Betriebsgeräusch",
+      "cause": "Zahnbruch an den POM-Zahnrädern des Reduktionsgetriebes oder Fremdkörpereintrag im Keramikmahlspalt.",
+      "fix": "Mahlwerk demontieren, Getriebekasten öffnen. POM-Getrieberäder auf Zahnausfall prüfen, Fremdkörper entfernen oder Getriebemodul ersetzen."
+    },
+    {
+      "error": "Kaffee tröpfelt nur, Trester nass und matschig",
+      "cause": "Mahlgrad zu fein eingestellt; übermäßiger Feinpartikelanteil verstopft das Brühsieb, Brühdruck steigt über 16 bar.",
+      "fix": "Mahlwerk-Einstellhebel bei laufendem Mahlwerk um zwei Stufen gröber stellen. Brühsieb demontieren und mit Kaffeefettlöser reinigen."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Wie kalibriere ich die mechanische Grundeinstellung des Mahlwerks nach dem Tausch der Keramikmahlscheiben präzise?",
+      "a": "Die Kalibrierung erfolgt durch manuelles Einrasten des Mahlwerk-Stellkranzes bei geöffnetem Gerät. Drehen Sie den Justierring vorsichtig im Uhrzeigersinn, bis der Mahlkegel spielfrei und spürbar auf dem Mahlring aufsitzt (mechanischer Nullpunkt). Drehen Sie den Zahnkranz nun exakt drei Rastschritte entgegen dem Uhrzeigersinn zurück. In dieser Position wird der externe Verstellhebel in die mittlere Rasterung montiert. Hierdurch wird sichergestellt, dass die Keramikmahlscheiben selbst auf feinster Bedienerstufe berührungsfrei rotieren und Beschädigungen oder Keramikabrieb im Kaffeemehl zuverlässig verhindert werden."
+    },
+    {
+      "q": "Warum meldet die Siemens EQ.6 'Bohnenbehälter füllen', obwohl Bohnen im Trichter sind und das Mahlwerk läuft?",
+      "a": "Die Steuerungselektronik der Siemens EQ.6 Plus s700 misst kontinuierlich die Stromaufnahme des Gleichstrommotors über einen Mess-Shunt auf der Leistungsplatine. Treffen stark ölhaltige Röstungen auf Kaffeefettablagerungen an der Einzugsschnecke, rutschen die Bohnen nicht nach (Kavitationseffekt). Der Motor dreht ohne mechanische Last mit erhöhter Drehzahl, wodurch die Stromaufnahme unter den parametrierten Schwellenwert von circa 0,35 Ampere abfällt. Die Maschinenlogik interpretiert diese geringe Stromlast als leeren Vorratsbehälter und bricht den Bezugszyklus vorsorglich ab."
+    },
+    {
+      "q": "Wann sollte das Mahlwerk komplett ersetzt werden statt nur die Keramikmahlscheiben zu reinigen oder zu tauschen?",
+      "a": "Ein Komplettaustausch des Mahlwerks ist zwingend erforderlich, wenn das interne POM-Untersetzungsgetriebe Zahnausfall aufweist, Lagerspiel an der Antriebswelle fühlbar ist oder der Gleichstrommotor Ankerfeuer, Wicklungsschäden oder Schmorgerüche zeigt. Auch wenn Feuchtigkeit über den Pulverschacht in das Getriebegehäuse eingedrungen ist und die Lager korrodiert sind, ist ein Einzeltausch der Mahlscheiben unwirtschaftlich. Ein neues Komplettaggregat stellt das ab Werk definierte Drehmomentprofil, absolute Rundlaufgenauigkeit (< 0,05 mm) und die elektrische Betriebssicherheit für weitere Extraktionszyklen sicher."
+    }
+  ]
+}

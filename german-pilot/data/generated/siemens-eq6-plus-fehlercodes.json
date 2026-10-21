@@ -1,0 +1,92 @@
+{
+  "page_title": "Siemens EQ.6 Plus s700: Fehler E0511, E0513 & Wasserfluss beheben",
+  "meta_description": "Siemens EQ.6 Plus s700 Störung E0511 & E0513 reparieren: Hydraulikplan, Keramikventil, Flowmeter-Prüfung und Beseitigung von Wasserflussfehlern im Detail.",
+  "word_count_check": 1280,
+  "engineering_breakdown": "Die mechatronische und hydraulische Systemarchitektur der Siemens EQ.6 Plus s700 (Plattform CTES32 / Modell TE657503DE) stützt sich auf eine sequenzielle Niederdruck- und Hochdrucktopologie mit präziser sensorischer Rückkopplung. Die Wasseraufnahme erfolgt aus dem rückseitigen Reservoir über einen federbelasteten Ventilstößel mit EPDM-Formsitz in den Ansaugtrakt. Als primärer Mengensensor fungiert ein Flügelrad-Durchflussmesser (Flowmeter Digmesa FHKSC oder Äquivalent) mit integriertem Hall-Sensor. Dieser erzeugt ca. 1800 bis 2200 Impulse pro Liter Fluid. Registriert die Steuerelektronik (Mainboard mit Microcontroller) bei angesteuerter Pumpe über ein Zeitfenster von mehr als 2000 ms eine Impulsfrequenz von unter 1,5 Hz (äquivalent zu einem Flussvolumen von < 40–50 ml/min), wird die hydrostatische Schutzabschaltung aktiviert und der Fehlercode E0513 generiert.\n\nDer Hochdruckaufbau obliegt einer elektromagnetischen Schwingankerpumpe (Ulka EX5, 230 V, 50 Hz, 48 W, integrierte Gleichrichterdiode). Diese Einheit entwickelt bei Nullförderung einen statischen Grenzdruck von bis zu 19 bar. Im regulären Brühbetrieb agiert das Aggregat in einem dynamischen Arbeitsfenster von 9 bis 11 bar bei einer Förderleistung von 120 bis 180 ml/min gegen den komprimierten Kaffeepuck. Dem Pumpenausgang ist ein Pulsationsdämpfer (Membranregler mit VMQ-Elastomermembran, 70 Shore A) nachgeschaltet, welcher Drucktransienten glättet und akustische 50-Hz-Resonanzen dämpft. Der nachgeordnete Durchlauferhitzer (Aluminiumguss-Thermoblock, 1500 W) führt das Fluid durch eine eingegossene Edelstahlrohrschlange (Werkstoff 1.4301 / AISI 304). Ein NTC-Widerstand (10 kΩ bei 25 °C) sowie redundante Schmelzsicherungen (Abschaltschwellen 192 °C und 216 °C) regulieren und sichern die thermische Stufe.\n\nDas funktionale Herzstück der Strömungsverteilung bildet das elektrisch kommutierte Mehrwege-Keramikventil. Ein 12V-DC-Gleichstrommotor treibt über ein mehrstufiges Stirnraduntersetzungsgetriebe aus hochfestem POM (Polyoxymethylen) zwei planparallel geschliffene Keramikscheiben aus Reinst-Aluminiumoxid (Al2O3 > 99,5 %) an. Die Positionierung der Steuerbohrungen (Heißwasser, Dampf, Brühgruppe, Drainagebypass) wird über Mikroschalter oder eine optoelektronische Gabellichtschranke an einer Nockenscheibe erfasst. Eine Blockade durch Verharzung, Fremdkörper, Zahnausbruch am POM-Getriebe oder Mikroschalterprellen führt zur Desynchronisation der Ventilposition und quittiert das System mit dem Fehlercode E0511. Sämtliche fluidischen Hochdruckverbindungen bestehen aus extrudierten PTFE-Druckschläuchen (4,0 mm Außen-, 2,5 mm Innendurchmesser), die mittels Messing-Stützhülsen und O-Ringen (VMQ/EPDM nach ISO 3601) in den Fluidblöcken sitzen und über Sicherungsklammern aus 1.4310-Federstahl mechanisch verriegelt sind. Ein verklemmtes Crema-Ventil (Federkraft 3,5–4,2 bar, 1.4310-Draht) in der Brühgruppe führt analog zu Totalblockaden.",
+  "symptoms_and_causes": "Das Fehlerbild bei Störungen der Siemens EQ.6 Plus s700 gliedert sich in spezifische akustische Signaturen, Fehlermeldungen im Display und physische Strömungsabbrüche:\n\n1. Fehlercode E0511 (Keramikventil-Laufzeitfehler / Positionierungsfehler): Das Gerät verweigert unmittelbar nach dem Selbsttest oder während des Bezugswechsels den Dienst. Akustisch ist vor der Meldung oft ein gequältes Rattern, ein hochfrequentes Surren ohne Umschaltklicken oder ein kontinuierlicher Motorlauf zu vernehmen. Ursächlich ist ein Timeout des Positionssensors: Der Mikroschalter registriert die Nockenposition nicht binnen 3,5 Sekunden. Gründe hierfür sind verklemmte Keramikscheiben durch Verkalkung, Zahnausfall am POM-Antriebszahnrad, Motorkohlenabrieb auf dem Kollektor des Ventilmotors oder oxidierte Kontaktfahnen des Mikroschalters.\n\n2. Fehlercode E0513 (Flowmeter-Durchflussstörung / Wasserzulauffehler): Auf dem Display erscheint meist zeitgleich die Aufforderung 'Wasser ohne Kohlensäure nachfüllen oder Filter wechseln', obwohl der Tank gefüllt ist. Die Ulka-Schwingankerpumpe läuft an, wird jedoch nach 2 bis 3 Sekunden schlagartig leise (dumpfes, leises 50-Hz-Brummen). Dies signalisiert, dass die Pumpe gegen eine massive hydraulische Blockade drückt (Druck > 16 bar, Fördermenge sinkt gegen 0 ml/min). Alternativ arbeitet die Pumpe ungewöhnlich laut und schrill (Kavitation / Trockenlauf durch Lufteinschlag oder verstopften Tanksitzfilter).\n\nUrsächlich für E0513 sind:\n- Mechanisch verharzte oder durch Schwebstoffe blockierte Flügelradturbinen im Flowmeter.\n- Massive Kalkinkrustationen im 0,8-mm-Injektor des Keramikventils oder der Heizspirale des Thermoblocks.\n- Aufgequollene O-Ringe am Brühgruppen-Einlaufstutzen (Nutring / VMQ-Formdichtung).\n- Verklebte Crema-Ventilkugeln durch polymerisierte Kaffeefette.\n- Defekte Halbleiterdiode in der Pumpe, wodurch die Halbwelle fehlt und die Pumpe keinen Förderdruck über 4 bar aufbauen kann.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Freischaltung und Gehäusedemontage",
+      "action": "Netzstecker ziehen. Wassertank, Tropfschale, Kaffeesatzbehälter und Brühgruppe entnehmen. Bohnenbehälter leeren. Gehäuseschrauben an Rückwand und Seitenwänden mit Torx TX10 und TX20 lösen. Rastnasen der Seitenverkleidungen mit Kunststoff-Demontagehebeln vorsichtig entriegeln und Seitenteile nach hinten abziehen."
+    },
+    {
+      "step": 2,
+      "title": "Niederdrucktrakt & Flowmeter-Prüfung",
+      "action": "Zulaufschlauch vom Wassertanksockel zum Flowmeter auf Knicke und Verunreinigungen prüfen. Flowmeter durch 90°-Drehung des Bajonettverschlusses öffnen. Flügelrad auf Leichtgängigkeit, Abrieb der Achse und Kalkpartikel prüfen. Turbine spülen, O-Ring fetten und Gehäuse schließen. Kabelbaum zum Mainboard auf Kabelbruch oder Korrosion an den Flachsteckern inspizieren."
+    },
+    {
+      "step": 3,
+      "title": "Keramikventil-Inspektion & Mikroschalter-Diagnose (E0511)",
+      "action": "Keramikventil lokalisieren (in Fahrtrichtung rechts oben). Elektrische Steckverbindungen kennzeichnen und lösen. PTFE-Druckschläuche durch Ziehen der 1.4310-Federklammern lösen. Ventilhalterung demontieren. Mikroschalter mit Digitalmultimeter im Durchgangsprüfmodus messen; bei Nockenbetätigung muss der Übergangswiderstand < 0,5 Ohm betragen. Gleichstrommotor an externem 12V-Labornetzteil auf Stromaufnahme prüfen (Leerlauf typisch < 150 mA; über 500 mA deutet auf Getriebeklemmer hin)."
+    },
+    {
+      "step": 4,
+      "title": "Hochdruckentkalkung und Dichtungsrevision",
+      "action": "Zulauf- und Steigrohre der Brühgruppe reinigen. Den Brühkolben-Nutring (38x4 mm, VMQ) sowie Einlaufstutzendichtungen austauschen. Mechanische Bauteile und Elastomere mit physiologisch unbedenklichem Schmierfett (OKS 1110) dünn benetzen. Thermoblock-Durchgang mit Druckluft oder Spritze prüfen; bei partiellem Verschluss chemisch im Gegenstrom mit 10-prozentiger Amidosulfonsäure entkalken."
+    },
+    {
+      "step": 5,
+      "title": "Remontage, Kalibrierlauf und Dichtheitsprüfung",
+      "action": "Alle PTFE-Schläuche mit neuen EPDM-O-Ringen versehen, vollständig in die Kupplungssitze schieben und Klammern spannungsfrei einsetzen. Gehäuseteile provisorisch montieren, Wassertank einsetzen. Maschine einschalten, Spülvorgang starten und offene Baugruppen mittels Taschenlampe auf hydrostatische Leckagen bei 15 bar Spüldruck kontrollieren. Fehlerspeicher im Servicemenü löschen."
+    }
+  ],
+  "step_by_step_narrative": "Zur fachgerechten Behebung der Fehler E0511 und E0513 an der Siemens EQ.6 Plus s700 sind zwingend ESD-Schutzvorkehrungen sowie spezifisches Werkzeug erforderlich: Torx-Schraubendreher TX10 und TX20, Kreuzschlitzschraubendreher PH1, Schlauchklemmen- oder Spitzzange, spitzes Demontagewerkzeug für O-Ringe, ein Digitalmultimeter mit feinen Prüfspitzen sowie lebensmittelechtes Hochleistungs-Silikonfett OKS 1110 (NSF-H1 zertifiziert). Vor Arbeitsbeginn ist das Gerät allpolig vom 230V-Netz zu trennen; der Thermoblock muss auf Raumtemperatur abkühlen, um Verbrennungen und thermische Spannungsrisse an den Kunststoffstutzen zu vermeiden.\n\nNach dem Abnehmen der Gehäuseteile wird zunächst der Strömungsweg analysiert. Bei Fehler E0513 liegt das Primärversagen meist im Niederdruckbereich oder am Einlauf: Trennen Sie den Ansaugschlauch vom Flowmeter. Läuft das Wasser bei eingesetztem Tank nicht frei heraus, ist das Tanklippenventil verhärtet oder das Sieb blockiert. Das Flowmeter wird zerlegt, indem die Gehäusehälften gegeneinander verdreht werden. Das eingelagerte Flügelrad mit Ferritmagneten muss sich auf seiner Edelstahlachse vollkommen widerstandsfrei drehen. Kalkkristalle werden mit 5%iger Amidosulfonsäure gelöst. Vor dem Zusammenbau ist der Gehäuse-O-Ring zwingend mit OKS 1110 zu fetten, um Falschluftansaugung (Kavitation) zu unterbinden.\n\nLiegt der Fehler E0511 vor, fokussiert die Reparatur das Keramikventil. Lösen Sie die Halteklammern der PTFE-Leitungen mit einer Spitzzange. Markieren Sie zuvor jeden Schlauch hinsichtlich seiner Position (Zufluss Thermoblock, Auslauf Brühgruppe, Heißwasserdüse, Drainage). Entnehmen Sie das Keramikventil. Weist das Getriebegehäuse Schleifspuren oder abgebrochene POM-Zähne auf, ist das Ventil als Kompletteinheit zu tauschen. Lässt sich die Welle mechanisch von Hand mit leichtem Drehmoment bewegen, liegt die Ursache zumeist an oxidierten Mikroschalterkontakten. Diese schalten die Logikpegel für den Mikrocontroller nicht mehr sauber auf Low (< 0,8 V). Reinigen Sie die Kontakte mit Kontaktreiniger oder tauschen Sie die Schalter aus.\n\nBei der Wiederinbetriebnahme werden sämtliche fluidischen Schnittstellen mit neuen Dichtringen versehen. Trockene O-Ringe scheren beim Einschieben der PTFE-Rohre ab und führen zu fatalen Spritzwasserschäden an der Leistungselektronik. Nach dem Zusammenbau wird der Entlüftungsmodus ausgeführt: Wasserbezug über die Heißwasserdüse starten, bis die Pumpe leise wird und ein kontinuierlicher, blasenfreier Strahl austritt. Dies belegt, dass die Ulka-Pumpe die Luftsäule überwunden hat und das Flowmeter wieder synchrone Messimpulse liefert.",
+  "compatibility_matrix": {
+    "fits": [
+      "Siemens EQ.6 Plus s700 (TE657503DE)",
+      "Siemens EQ.6 Plus s500 (TE655203RW)",
+      "Siemens EQ.6 Plus s300 (TE653501DE)",
+      "Bosch VeroBarista 600 (TIS65621DE)"
+    ],
+    "incompatible": [
+      "Siemens EQ.9 s500 (TI9553X1RW) - Völlig abweichende Dual-Thermoblock-Plattform",
+      "Siemens EQ.7 Plus (TE716501DE) - Ältere Plattform mit mechanischem Brühgruppen-Drainageantrieb"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Entnahme der Brühgruppe, manuelles Abspülen unter fließendem warmem Wasser ohne Reinigungsmittel, mechanische Reinigung des Kaffeesiebs und Absaugen der Brühkammer."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Reinigung des Geräts mit originalen Reinigungstabletten (Lösung von Kaffeefettpolymeren im Cremaventil) sowie Sichtkontrolle des Wassertank-Ansaugsiebs auf Schleimbildung oder Verkalkung."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Intensivwartung: Erneuerung der Brühgruppen-Lippendichtung (Kolben) und Einlaufstutzen-O-Ringe, Schmierung der Führungsschienen mit OKS 1110, chemische Entkalkung mit Amidosulfonsäure-Basis (keine Essig- oder Zitronensäure verwenden)."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Fehler E0511 / Keramikventil blockiert",
+      "cause": "Schrittverlust des DC-Getriebemotors durch schwergängige Al2O3-Keramikscheiben, Getriebeschaden (POM-Zahnausfall) oder defekter Mikroschalter an der Nockensteuerung.",
+      "fix": "Keramikventil ausbauen, Getriebe auf Karies prüfen, Mikroschalter ohmsch durchmessen. Bei Getriebeschaden oder Scheibenfraß komplette Ventileinheit ersetzen; Mikroschalter ggf. separat nachlöten/tauschen."
+    },
+    {
+      "error": "Fehler E0513 / Pumpe wird extrem leise",
+      "cause": "Totaler Strömungsabriss im Hochdruckkreis (Gegendruck > 16 bar). Häufig verstopfter Einlaufstutzen der Brühgruppe, verbackenes Crema-Ventil oder verkalkter Injektorkanal im Thermoblock.",
+      "fix": "Brühgruppe revidieren, Brühsieb abschrauben und Auslaufventil deblockieren. Thermoblock auf freien Durchgang prüfen, ggf. manuelle Entkalkung mit 10 % Amidosulfonsäure durchführen."
+    },
+    {
+      "error": "Wasserfluss bricht ab / Pumpe rasselt laut (Kavitation)",
+      "cause": "Niederdruckblockade vor der Pumpe oder Lufteintrag. Flowmeter-Turbine klemmt durch Fremdkörper oder Wassertank-Bodenventil öffnet mechanisch nicht vollständig.",
+      "fix": "Wassertankaufnahme reinigen, Stößelfeder prüfen. Flowmeter öffnen, Flügelrad auf Fremdkörper untersuchen, Rotationsachse entkalken und mit OKS 1110 abdichten."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Warum führt eine Verkalkung des Thermoblocks direkt zum Fehler E0513 anstatt nur zu kaltem Kaffee?",
+      "a": "Der Durchlauferhitzer der Siemens EQ.6 Plus s700 verfügt über eine Edelstahlrohrschlange mit verhältnismäßig geringem Innenquerschnitt, um einen optimalen Wärmeübergang bei kurzer Aufheizzeit zu gewährleisten. Lagert sich hier Calcium- und Magnesiumcarbonat ab, reduziert sich der effektive Strömungsquerschnitt drastisch. Die Ulka-Schwingankerpumpe erreicht daraufhin vorzeitig ihren hydraulischen Abschaltdruck von 15 bis 18 bar, bei dem die Pumpleistung physikalisch gegen Null absinkt. Das im Niederdruckbereich vor der Pumpe positionierte Flowmeter registriert den Stillstand des Fluidstroms sofort. Wenn die Frequenz der Hall-Impulse für länger als 2000 Millisekunden unter den systemkritischen Schwellenwert fällt, interpretiert die Software dies als akute Blockade oder Wassermangel und schaltet das System mit Fehler E0513 ab, um eine thermische Zersetzung des Restwassers im Erhitzer zu verhindern."
+    },
+    {
+      "q": "Kann das Keramikventil bei Fehler E0511 zerlegt, gereinigt und weiterverwendet werden?",
+      "a": "Aus ingenieurtechnischer Sicht ist eine Instandsetzung des Keramikventils nur in etwa 20 % der Fälle dauerhaft von Erfolg gekrönt. Zwar lassen sich die Gehäuseschalen öffnen, um die beiden Aluminiumoxid-Keramikscheiben von Kalkkrusten zu befreien und die Wellendichtungen zu erneuern, doch das Problem liegt meist im Antriebstrakt. Wenn die Keramikscheiben durch Trockenlauf oder Kalkreibung blockieren, wirken enorme Scherkräfte auf das Untersetzungsgetriebe. Die Zahnräder bestehen aus POM-Kunststoff, dessen Zähne bei Überlastung mikrofeine Haarrisse erleiden oder partiell abscheren. Selbst wenn das Ventil nach einer Reinigung kurzzeitig wieder positioniert, führt die veränderte Zahngeometrie binnen weniger Wochen zu erneutem Schrittverlust und Fehler E0511. Ein Austausch des kompletten Ventils inklusive Motor und Mikroschaltern stellt die einzig prozesssichere Reparaturmethode dar."
+    },
+    {
+      "q": "Welches Schmiermittel muss bei der Revision der Brühgruppe und Hydraulikverbindungen verwendet werden?",
+      "a": "Im gesamten Fluid- und Brühbereich der EQ.6 Plus s700 darf ausnahmslos NSF-H1-zertifiziertes, lebensmittelechtes Silikonfett wie OKS 1110 oder Glisseal verwendet werden. Mineralölbasierte Schmierstoffe, WD-40 oder klassische Universalfette sind strengstens untersagt, da sie die verbauten Elastomere – insbesondere die VMQ-Silikondichtungen und EPDM-O-Ringe – binnen kürzester Zeit anlösen, aufquellen lassen und deren Shore-Härte irreversibel verändern. Zudem dürfen die Heißwasserkontaktflächen keine toxikologischen Substanzen an das Brühwasser abgeben. Das Schmierfett muss eine hohe Heißwasser- und Dampfbeständigkeit bis mindestens 140 °C aufweisen, um nicht durch die Brüh- und Spülzyklen ausgewaschen zu werden. Das Schmiermittel wird hauchdünn aufgetragen; eine Überfettung führt zur schnellen Bindung von Kaffeepulverstaub, was wie Schmirgelpapier wirkt und mechanische Führungen zerstört."
+    }
+  ]
+}

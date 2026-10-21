@@ -1,0 +1,97 @@
+{
+  "page_title": "Siemens EQ.6 Plus s700: Milchansaugrohr & Silikonschlauch Tausch",
+  "meta_description": "Technischer Guide: Siemens EQ.6 Plus s700 Milchansaugrohr & Schlauch. Venturi-Hydraulik, Ursachen für mangelnden Milchschaum, Tauschanleitung & Wartung.",
+  "word_count_check": 1285,
+  "engineering_breakdown": "Das Milchansaugsystem des Siemens EQ.6 Plus s700 (Baureihe TE657503DE) basiert hydraulisch auf der exakten Anwendung des Bernoulli-Effekts über eine nachgeschaltete Venturi-Mischkammer im Kombiauslauf. Das Gesamtsystem besteht aus der metallischen Lanze (Edelstahl 1.4301 / AISI 304, X5CrNi18-10), dem flexiblen Transferschlauch aus lebensmittelechtem Vinyl-Methyl-Silikon (VMQ, Shore-A 60±5, Innendurchmesser 3,5 mm, Wandstärke 1,5 mm) und den fluidischen Kupplungsadaptern aus Polyoxymethylen (POM). Im regulären Brüh- und Schäumbetrieb erzeugt der Dampf-Thermoblock einen Heißdampfstrom mit einem Systemdruck von ca. 1,8 bis 2,5 bar bei einer Temperatur von 125 °C bis 135 °C. Dieser Treibdampf strömt durch eine kalibrierte Injektordüse (Querschnitt verengt auf unter 1,0 mm) in die Expansionskammer. Durch die drastische Erhöhung der Strömungsgeschwindigkeit sinkt der statische Druck lokal drastisch ab und generiert ein relatives Vakuum von etwa -0,20 bis -0,38 bar gegenüber dem Umgebungsdruck. Über dieses hydraulische Vakuum wird die auf 4 bis 8 °C vortemperierte Milch über das elektropolierte Edelstahlrohr (Oberflächenrauheit Ra < 0,4 µm, um Koagulation von Molkenproteinen zu minimieren) und den Silikonschlauch angesaugt. Gleichzeitig dosiert ein federbelastetes Luftventil mikroporöse Atmosphärenluft bei, die im turbulenten Mischraum mit Milchfett und Kasein zu einer feinstporigen Mikroschaum-Emulsion verquirlt wird. Kritische Ausfallursachen liegen im Bereich elastischer Ermüdung des Silikons: Bei thermischen Zyklen verhärtet VMQ oder weitet sich an den Steckverbindungen plastisch auf. Ein Spaltmaß von lediglich 0,05 mm an der Kupplung reicht aus, um parasitäre Falschluft anzusaugen, was die kritische Druckdifferenz unter den Abreißpunkt senkt. Das Edelstahlrohr unterliegt mechanischer Verstopfung durch kalzifizierte Milcheiweißablagerungen (Milchstein) an den inneren Wandungszonen sowie Biegespannungen, die zu mikroskopischen Haarrissen im Anschlussflansch führen können.",
+  "symptoms_and_causes": "Tritt ein Defekt oder Verschleiß am Ansaugsystem der Siemens EQ.6 Plus s700 auf, manifestiert sich dies primär über akustische Anomalien, strömungsmechanische Abrisse und drastisch verminderte Schaumqualität. Das Leitsymptom ist das sogenannte 'Dampfspucken': Das System gibt hochfrequente, stotternde Knall- und Schlürfgeräusche von sich, während stoßweise ungeschäumte, siedend heiße Milch zusammen mit Wasserdampf aus dem Kombiauslauf spritzt. Ursache hierfür ist zumeist ein Haarriss im Silikonschlauch an der axialen Schnittstelle zum POM-Adapter oder eine unzureichende Klemmung am Edelstahlrohr. Hierdurch bricht die für den Venturi-Effekt erforderliche Unterdrucksäule kollabierend zusammen; anstelle homogener Milchansaugung wird Fremdluft pulsiert eingezogen. Ein zweites Fehlermuster ist das vollständige Ausbleiben der Milchansaugung trotz hörbarem Relais- und Pumpenbetrieb, begleitet von der Gerätemeldung 'Milchsystem reinigen' oder einem Abbruch ohne Fehlermeldung. Hier liegt die Primärursache oft in der vollständigen Okklusion des 1.4301-Edelstahlrohres durch denaturiertes Kasein und Calciumphosphat-Kristallisate infolge unzureichender Spülzyklen oder ungeeigneter Reinigungsmittel. Ein dritter Indikator ist das 'Sieden ohne Schaumbildung': Die Milch läuft lauwarm bis heiß mit großen, instabilen Blasen ab. Dies resultiert häufig aus thermischer Degradation des Silikonschlauchs, der durch Heißdampfrückschlag seine radiale Rückstellkraft eingebüßt hat, wodurch sich der Querschnitt unter dem Ansaug-Unterdruck flach zusammenzieht (Kollapsphänomen) und die laminare Zulaufmenge abwürgt.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Systemabschaltung und Druckentlastung",
+      "action": "Kaffeevollautomaten über den Netzschalter ausschalten, Netzstecker ziehen und das Gerät mindestens 30 Minuten abkühlen lassen, um Restdruck im Dampferzeuger und Verbrühungsrisiken auszuschließen."
+    },
+    {
+      "step": 2,
+      "title": "Demontage des Kombiauslauf-Gehäuses",
+      "action": "Kaffeeauslauf in die oberste Position schieben, die Frontblende vorsichtig nach vorne abziehen und den innenliegenden Milchschaum-Verteilerblock durch Entriegeln der seitlichen Rastnasen freigeben."
+    },
+    {
+      "step": 3,
+      "title": "Separation von Ansaugschlauch und Edelstahlrohr",
+      "action": "Den VMQ-Silikonschlauch vorsichtig axial vom Einlaufstutzen des Kombiauslaufs abziehen; danach das Edelstahlansaugrohr durch eine Dreh-Zieh-Bewegung aus dem unteren Schlauchendstück entnehmen."
+    },
+    {
+      "step": 4,
+      "title": "Hydraulische Inspektion und Komponentenreinigung",
+      "action": "Kupplungsstutzen am Auslauf auf Rissbildung prüfen. Das Edelstahlrohr und die Düsenkanäle mit einer Interdental-Reinigungsbürste und alkalischem Milchsystemreiniger von getrockneten Eiweißbelägen befreien."
+    },
+    {
+      "step": 5,
+      "title": "Installation der Neuteile und Schnittstellenfettung",
+      "action": "Neuen VMQ-Schlauch gratfrei aufstecken (mindestens 10 mm Schiebeweg auf den Stutzen), das Edelstahlrohr einschieben, O-Ringe am Kombiauslauf hauchdünn mit OKS 1110 Schmierstoff benetzen und Gehäuse arretieren."
+    }
+  ],
+  "step_by_step_narrative": "Für die fachgerechte Instandsetzung des Milchansaugsystems der Siemens EQ.6 Plus s700 (TE657503DE) sind folgende Werkzeuge und Hilfsmittel bereitzustellen: Ein Torx-Schraubendreher TX10 (falls die Gehäuseschale des Auslaufs demontiert werden muss), ein flaches Entriegelungswerkzeug aus POM (Kunststoffspatel), medizinisches Silikonfett OKS 1110 (NSF-H1-zertifiziert) sowie ein Heißwasserbad mit alkalischem Milchsystemreiniger. Vor Beginn der mechanischen Arbeiten ist zwingend die galvanische Trennung vom 230V-Netz vorzunehmen. Da der Thermoblock im Dampfbetrieb bis zu 140 °C erreicht, besteht akute Verbrühungsgefahr durch Restdampf. Den Kaffeeauslauf ganz nach oben fahren. Greifen Sie die verchromte Blende des Auslaufs beidseitig und ziehen Sie diese mit geradem Kraftaufwand nach vorn ab. Dahinter liegt das Gehäuse des Kombiverteilers. Entriegeln Sie die Rastzungen des Dampf- und Milchdüsenblocks. Ziehen Sie den alten VMQ-Silikonschlauch vom oberen Adapterzapfen ab. Untersuchen Sie den Stutzen: Weist das Polyoxymethylen (POM) feine Haarrisse oder Kerben auf, muss auch die Düsenaufnahme gewechselt werden. Trennen Sie nun das Edelstahlrohr 1.4301 vom Silikonschlauch. Sollte das Rohr wiederverwendet werden, führen Sie es durch ein Ultraschallbad mit 10-prozentiger Reinigerlösung, um Mikroverkrustungen abzulösen; prüfen Sie das Lumen im Gegenlicht auf uneingeschränkten Durchgang. Schneiden Sie den neuen Ersatzschlauch (falls als Meterware bezogen) exakt rechtwinklig auf die Werkslänge von 180 mm zu; Grate oder schräge Kanten führen zu Wirbelbildung. Schieben Sie das Edelstahlrohr nun ca. 12 bis 15 mm tief in den Silikonschlauch ein – die Passung muss absolut kraftschlüssig und ohne Schmiermittel erfolgen, um ein Abgleiten unter Druckstößen zu verhindern. Bestreichen Sie die externen Dichtungs-O-Ringe des Verteilerkopfs mikroskopisch dünn mit OKS 1110, um die Scherkräfte bei der Remontage zu minimieren. Vermeiden Sie jeglichen Schmierstoffeintrag in das Innere der medienführenden Schläuche, da Fette die Oberflächenspannung der Milch zerstören und das Schäumen physikalisch verhindern. Führen Sie den Schlauch auf den oberen Anschlussnippel des Kombiauslaufs, clipsen Sie den Verteiler in seine Endlage und setzen Sie die Frontblende hörbar rastend auf. Führen Sie im Anschluss zwingend einen Testbezug mit reinem Wasser (Dampftest) und danach mit 4 °C kalter Vollmilch durch. Das erzeugte Schaumbild muss eine feinporige, homogene Textur ohne Blasenabriss aufweisen.",
+  "compatibility_matrix": {
+    "fits": [
+      "Siemens EQ.6 Plus s700 (TE657503DE/01 bis /04)",
+      "Siemens EQ.6 Plus s500 (TE655203DE)",
+      "Siemens EQ.6 Plus s300 (TE653501DE)",
+      "Siemens EQ.6 Plus s100 (TE651209RW)",
+      "Siemens EQ.6 700 / 300 Serie (TE607203DE, TE603201RW)",
+      "Bosch VeroAroma 300 / 500 / 700 Serie (TES60321RW, TES60729DE)"
+    ],
+    "incompatible": [
+      "Siemens EQ.9 Serie (s300, s500, s700, s900 mit Doppel-Schlauchsystem und Magnetkupplung)",
+      "Siemens EQ.300 / EQ.3 Serie (integrierte mechanische Schaumdüse im Schwenkarm)",
+      "Siemens EQ.500 integral (integrierte Milchkaraffe ohne externen Ansaugschlauch)",
+      "Philips LatteGo Serie (schlauchloses Zweikammer-Zyklonsystem)",
+      "Jura E8 / GIGA Serie (proprietäre HP3/HP1 Steckanschlüsse mit Klick-Bajonett)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Vollständiges Zerlegen des Auslaufsystems; Einlegen von Silikonschlauch, POM-Adapter und Edelstahlrohr für 20 Minuten in 40 °C warme, alkalische Reinigungslösung; mechanisches Durchstoßen des Rohrs mit einer 3-mm-Nylonbürste."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Tiefenentkalkung und Eiweißlösung mittels 15-minütigem Ultraschallbad in 5-prozentiger Amidosulfonsäure zur rückstandsfreien Beseitigung mineralischer Milchstein-Präzipitate im 1.4301-Edelstahlrohr."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Präventiver Austausch des VMQ-Silikonschlauchs und der peripheren Formdichtungen am Kombiauslauf zur Verhinderung von Unterdruckverlusten durch thermische Weitung und Versprödung."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Milch spratzt heftig, stößt heißen Dampf aus, kein Milchschaum",
+      "cause": "Falschlufteintrag am Übergang vom Schlauch zum POM-Stutzen durch Mikroriss oder radiale Weitung des Silikons; Zusammenbruch des Venturi-Vakuums.",
+      "fix": "Silikonschlauch um 5 mm kürzen oder gegen Neuteil ersetzen; Sitz am Konusadapter auf Passgenauigkeit und absolute Dichtigkeit kontrollieren."
+    },
+    {
+      "error": "Keine Ansaugung, Milch verbleibt vollständig im Behälter",
+      "cause": "Totale Verstopfung des 1.4301-Ansaugrohres durch koaguliertes Kasein oder verkalkter Venturi-Injektor im Kombiauslauf.",
+      "fix": "Edelstahlrohr mechanisch mit Reinigungsdraht freiräumen, Venturi-Mischdüse im Ultraschallbad mit Kaffeefettlöser/Milchreiniger regenerieren."
+    },
+    {
+      "error": "Schaum ist grobblasig, fällt binnen 30 Sekunden flüssig zusammen",
+      "cause": "Verunreinigung des Luftansaugventils (Bypass) oder Fettfilmrückstände von Schmiermitteln im medienführenden Innenbereich des Schlauchs.",
+      "fix": "Luftzufuhr-Bohrung am Auslaufkopf mit feiner Düsenreinigungsnadel (0,4 mm) entkrusten; medienführende Teile mit fettlösendem Heißwasser spülen."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Warum ist das Edelstahl-Ansaugrohr aus Werkstoff 1.4301 den einfachen Kunststofflanzen überlegen?",
+      "a": "Austenitischer Edelstahl nach DIN EN 1.4301 (X5CrNi18-10) zeichnet sich durch herausragende chemische Beständigkeit gegenüber aggressiven sauren Entkalkungsmitteln und alkalischen Reinigungsmitteln aus. Seine elektropolierte Innenoberfläche reduziert die mikroskopische Rauheit (Ra < 0,4 µm) erheblich im Vergleich zu extrudiertem Polypropylen. Hierdurch wird verhindert, dass sich hitzedenaturierte Milchproteine (insbesondere Kasein und Beta-Lactoglobulin) in mikroskopischen Poren festsetzen und Biofilme bilden. Zudem garantiert die hohe Formstabilität ein gleichmäßiges hydrostatisches Eintauchverhalten am Boden der Milchpackung ohne Auftriebsverformung."
+    },
+    {
+      "q": "Welche physikalischen Auswirkungen hat die Shore-A-Härte des Silikonschlauchs auf die Schaumkonsistenz?",
+      "a": "Der Silikonschlauch (VMQ) fungiert innerhalb des fluidischen Schwingungssystems als elastischer Dämpfer. Eine Shore-A-Härte von 60±5 bei einer Wandstärke von 1,5 mm stellt das exakte Äquilibrium zwischen mechanischer Flexibilität und Unterdruckstabilität dar. Ist das Silikon zu weich (z. B. Shore-A < 45), kollabiert der Schlauchquerschnitt unter dem anliegenden Unterdruck von ca. -0,3 bar radial. Dadurch reißt die laminare Strömung ab. Ist das Elastomer zu hart (Shore-A > 75), dämpft es die hochfrequenten Druckpulsationen der Hubkolbenpumpe nicht ab, was zu unregelmäßigem Milcheinzug führt."
+    },
+    {
+      "q": "Weshalb darf an der Verbindungsstelle zwischen Schlauch und Edelstahlrohr keinesfalls Silikonfett verwendet werden?",
+      "a": "Silikonfette – selbst NSF-H1-zertifizierte Schmierstoffe wie OKS 1110 – weisen extrem niedrige Oberflächenspannungen auf. Gelangen selbst unsichtbare Mikrospuren des Schmierstoffs in die hydrodynamische Mischkammer des Auslaufs, destabilisieren die Silikonmoleküle die Lipidschichten der Milchproteine sofort. In der Folge können sich die gasförmigen Mikrodampfbläschen nicht mehr mit der Proteinmatrix verbinden, sodass der Schaum in Sekunden in sich zusammenfällt. Zudem hebt Schmierfett die mechanische Reibhaftung auf, was bei Heißdampfstößen zum hydraulischen Abspringen des Schlauchs führen kann."
+    }
+  ]
+}

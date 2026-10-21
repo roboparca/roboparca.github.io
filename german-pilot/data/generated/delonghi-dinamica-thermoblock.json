@@ -1,0 +1,98 @@
+{
+  "page_title": "De'Longhi Dinamica ECAM 350.55.B Thermoblock 1400W Reparatur",
+  "meta_description": "Technischer Leitfaden: De'Longhi Dinamica ECAM 350.55.B Thermoblock 1400W & NTC Sensor tauschen. Diagnose, Messwerte, Schaltplan und Schritt-für-Schritt-Reparatur.",
+  "word_count_check": 1315,
+  "engineering_breakdown": "Der Thermoblock der De'Longhi Dinamica ECAM 350.55.B fungiert als kompakter hydrodynamischer Durchlauferhitzer mit einer Nennleistungsaufnahme von 1400 W bei 230 V Wechselspannung. Die physikalische Konstruktion basiert auf einem hochverdichteten Aluminium-Druckgusskörper (typischerweise AlSi10Mg), in welchen eine rohrförmige Edelstahl-Heizwendel (Werkstoff 1.4541 bzw. Incoloy-800) im Einbettungsverfahren spaltfrei eingegossen ist. Der ohmsche Soll-Widerstand der primären Heizschleife liegt im kalten Zustand (20 °C) bei präzise 37,8 Ω mit einer zulässigen Werkstoleranz von ±5 % (35,9 Ω bis 39,7 Ω). Hydraulisch ist das Heizelement für einen statischen Betriebsdruck von bis zu 18 bar ausgelegt; im dynamischen Brühbetrieb generiert die nachgeschaltete Ulka EP5 Schwingkolbenpumpe einen Extraktionsdruck zwischen 9 und 12 bar bei einem geregelten Volumenstrom von 1,2 bis 2,5 ml/s. Die thermische Erfassung erfolgt über einen NTC-Sensor (negativer Temperaturkoeffizient), der mittels Wärmeleitpaste direkt an der Au��enwandung des Blocks verschraubt oder geklemmt ist. Dieser Heißleiter weist bei 20 °C einen Referenzwiderstand von ca. 10 bis 12 kΩ auf, welcher bei Betriebstemperatur (95 °C) auf ca. 1,1 bis 1,3 kΩ absinkt. Zum Überhitzungsschutz sind zwei thermische Schmelzsicherungen (Microtemp) in Serie geschaltet, ausgelegt auf eine Abschalttemperatur von 192 °C (oder modellabhängig 216 °C) bei 10 A Nennstrom. Die Hochdruckfluidik nutzt 4x2 mm PTFE-Druckschläuche, die über Raccord-Steckanschlüsse mit Sicherungssplinten aus Federstahl 1.4310 fixiert und durch peroxidisch vernetzte VMQ- bzw. EPDM-O-Ringe (70 Shore A) hermetisch abgedichtet werden. Mechanische Hauptversagensursachen sind hydrostatische Spannungsrisse durch Frost- oder Überdruckeinwirkung, Lochfraßkorrosion im Aluminiumkörper durch Verwendung amidosulfonsäure- oder essigsäurebasierter Entkalker mit falschem pH-Wert sowie die thermische Zersetzung der Polymer-Elastomerdichtungen infolge permanenter thermozyklischer Wechsellast.",
+  "symptoms_and_causes": "Das Versagen des 1400W-Thermoblocks oder dessen NTC-Sensorik manifestiert sich durch charakteristische sensorische, akustische und steuerungstechnische Fehlermuster. Das prominenteste Leitsymptom ist die Meldung 'Allgemeine Störung' (im Servicemenü als Error 01 hinterlegt) im Display der ECAM 350.55.B unmittelbar nach dem Einschalten oder nach Ablauf eines 3-minütigen Initialisierungs-Timeouts. Dies tritt ein, wenn die Triac-Ansteuerung der Leistungselektronik zwar aktiv ist, der Mikrocontroller über die NTC-Spannungsteilerschaltung jedoch keinen plausiblen Temperaturgradienten (dT/dt) detektiert. Die primäre Ursache liegt hierbei entweder in einem irreversiblen Wendelbruch des Rohrheizkörpers (Widerstand = unendlich), dem Auslösen der 192 °C-Thermosicherungen infolge von Kalkschichten, die als Wärmeisolator fungieren, oder einem NTC-Drahtbruch. Ein weiteres Phänomen ist eine lauwarme Kaffeeausgabe (< 70 °C in der Tasse) mit blasser, instabiler Crema, hervorgerufen durch partielle NTC-Drift oder massive Calcit-Ablagerungen (CaCO3) im Innenkanal, welche den Wärmeübergangskoeffizienten drastisch reduzieren. Akustisch kündigt sich ein fortschreitender thermischer Defekt oft durch intensives Dampfknattern (Kavitation) und ein verzögertes Ansprechen der Brühgruppe an. Begleitend tritt häufig ein Druckabfall auf, wenn interne Dichtungen porös werden, was zu zischenden Entweichungsgeräuschen und Heißwasseransammlungen in der Auffangschale oder dem Geräteboden führt. Schlägt der Isolationswiderstand des Heizelements infolge von Feuchtigkeitsschäden gegen Masse durch (> 1 mA Leckstrom), löst im häuslichen Unterverteiler der Fehlerstrom-Schutzschalter (FI/RCD) unverzüglich aus.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Freischaltung und Gehäusedemontage",
+      "action": "Netzstecker ziehen, Wassertank und Bohnenbehälterdeckel entfernen. Rückwand und Seitenteile mit Torx TX20 lösen, Rastnasen vorsichtig aushebeln."
+    },
+    {
+      "step": 2,
+      "title": "Elektrische Messtechnik und Spannungsfreiheit",
+      "action": "Spannungsfreiheit feststellen. Thermoblock-Heizwendel (Soll: ~38 Ω), Thermosicherungen (Soll: 0 Ω) und NTC-Sensor (Soll: ~10-12 kΩ bei Raumtemperatur) mit Multimeter auf Durchgang prüfen."
+    },
+    {
+      "step": 3,
+      "title": "Hydraulische Dekonnektierung",
+      "action": "Sicherungssplinte der PTFE-Hochdruckschläuche mit Schlitzschraubendreher entnehmen, Schläuche vorsichtig abziehen, Restwasser mit saugfähigem Tuch auffangen."
+    },
+    {
+      "step": 4,
+      "title": "Mechanischer Komponententausch",
+      "action": "Befestigungsschrauben des Thermoblock-Trägers lösen. Alten Block entnehmen. Neuen 1400W Thermoblock montieren, NTC-Fühler mit Wärmeleitpaste bestreichen und präzise fixieren."
+    },
+    {
+      "step": 5,
+      "title": "Dichtungstausch, Reassemblierung und Druckprüfung",
+      "action": "Neue rote VMQ-O-Ringe mit OKS 1110 fetten, PTFE-Rohre arretieren, Splinte setzen. Gehäuse schließen, Spülzyklus starten und Sichtprüfung auf absolute Dichtigkeit durchführen."
+    }
+  ],
+  "step_by_step_narrative": "Vor Beginn der Revision an der De'Longhi Dinamica ECAM 350.55.B ist die Maschine zwingend allpolig vom 230V-Netz zu trennen. Legen Sie sich folgende Werkzeuge bereit: Torx-Schraubendreher TX10 und TX20, feiner Schlitzschraubendreher (2,5 mm), Spitzzange, Digitalmultimeter, silikonfreies Schleifvlies, OKS 1110 lebensmittelechtes Silikonfett sowie Hochleistungs-Wärmeleitpaste auf Zinkoxid-Basis. Entfernen Sie Wassertank, Tropfschale und Kaffeesatzbehälter. Lösen Sie die Schrauben der Gehäuserückwand (TX20) und schieben Sie diese nach hinten weg. Die beiden Seitenwände lassen sich nach dem Lösen der rückseitigen Haltepunkte durch leichtes Schieben nach hinten entriegeln. Lokalisieren Sie den Thermoblock im oberen Maschinenbereich. Führen Sie eine Eingangsmessung durch: Ziehen Sie die Flachstecker der Heizung ab und messen Sie den Widerstand direkt an den Anschlussfahnen. Liegt der Wert nicht im Sollbereich von 36–40 Ω, ist die Wendel defekt. Prüfen Sie die zwei inline geschalteten Thermosicherungen auf Durchgang (< 0,5 Ω); offener Durchgang indiziert ein Übertemperaturereignis. Messen Sie den NTC-Sensor über dessen zweipoligen JST-Stecker (Soll: ca. 10–12 kΩ bei 20 °C). Zum Ausbau hebeln Sie die Haltefedern (Splinte) an den Fluidanschlüssen mit dem Schlitzschraubendreher heraus. Ziehen Sie die PTFE-Druckschläuche axial heraus. Die alten O-Ringe müssen ausnahmslos verworfen werden. Lösen Sie die Erdungsschraube (PE) sowie die mechanischen Befestigungsschrauben am Halteblech. Setzen Sie den neuen Thermoblock 1400W ein. Übertragen Sie den NTC-Sensor: Reinigen Sie die Kontaktfläche am Block metallisch rein, tragen Sie einen erbsengroßen Tropfen Wärmeleitpaste auf und schrauben Sie den Sensor mit maximal 0,8 Nm Drehmoment fest, um Verzug zu vermeiden. Bestücken Sie die PTFE-Schläuche mit neuen roten VMQ-Dichtungen (4x2 mm), die hauchdünn mit OKS 1110 benetzt sind. Schieben Sie die Rohre bis zum spürbaren Anschlag ein und arretieren Sie die Sicherungssplinte vollständig. Stecken Sie die hitzebeständigen Silikon-Flachsteckhülsen wieder fest auf die Fahnen. Montieren Sie das Gehäuse provisorisch für den ersten Testlauf. Schalten Sie das Gerät ein, beobachten Sie die Initialisierungsphase und initiieren Sie über das Display mehrere Spülzyklen. Kontrollieren Sie die Anschlüsse unter Verwendung einer Inspektionslampe minutiös auf Mikroleckagen oder Dampfaustritt, bevor die endgültige Gehäusemontage erfolgt.",
+  "compatibility_matrix": {
+    "fits": [
+      "De'Longhi Dinamica ECAM 350.55.B",
+      "De'Longhi Dinamica ECAM 350.15.B",
+      "De'Longhi Dinamica ECAM 350.35.W",
+      "De'Longhi Dinamica ECAM 350.75.S",
+      "De'Longhi Dinamica Plus ECAM 370.70.B",
+      "De'Longhi Dinamica Plus ECAM 370.95.T",
+      "De'Longhi Magnifica S ECAM 22.110.B",
+      "De'Longhi Intensa ECAM 23.420.SW"
+    ],
+    "incompatible": [
+      "De'Longhi Magnifica ESAM 3000.B (Hufeisen-Thermoblock mit zwei Heizkreisen)",
+      "De'Longhi Primadonna ESAM 6600 (Doppel-Boiler System)",
+      "De'Longhi Dedica EC 685 (Siebträger-Thermoblock-Bauform)",
+      "De'Longhi EAM Serie (Klassische Röhrenkessel)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Manuelle Heißwasserspülung über die Düse auslösen, um Mikropartikel aus dem Brühkanal zu spülen; Abtropfschale auf Feuchtigkeitsspuren prüfen."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Präventive Entkalkung mit originalem EcoDecalk (Milchsäurebasis) durchführen; pH-neutrale Pflege des Aluminium-Druckgusses gewährleisten."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Sichtprüfung der Raccord-Anschlüsse im Maschineninnenraum auf Kalkblüten; Erneuerung der VMQ-Dichtungen an den PTFE-Rohren und Neufettung des oberen Brühkolbens mit OKS 1110."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Allgemeine Störung (General Alarm) nach 2-3 Minuten",
+      "cause": "Heizschleife unterbrochen (R = unendlich), Thermosicherungen 192 °C ausgelöst oder NTC-Sensor hochohmig abgerissen.",
+      "fix": "Widerstandsmessung durchführen: Heizkreis (Soll: ~38 Ω), Sicherungen (Soll: 0 Ω) und NTC (Soll: ~11 kΩ) prüfen; defektes Bauteil bzw. Thermoblock austauschen."
+    },
+    {
+      "error": "Kaffeebrühtemperatur signifikant zu gering (< 75 °C)",
+      "cause": "Massive Verkalkungsschicht im inneren Wendelrohr wirkt thermisch isolierend; NTC hat Kennliniendrift nach unten.",
+      "fix": "Entkalkungsprogramm intensiv mit Milchsäure durchführen. Bleibt die Temperatur niedrig, NTC-Sensorik messen und gegebenenfalls Fühler inklusive Wärmeleitpaste erneuern."
+    },
+    {
+      "error": "Zischen im Innenraum und Wasserverlust unter der Maschine",
+      "cause": "Gealterte, versprödete VMQ-O-Ringe (70 Shore A) an den Steckanschlüssen oder Riss im Aluminium-Druckgussgehäuse durch Kavitation/Frost.",
+      "fix": "PTFE-Schlauchverbindungen demontieren, Dichtsitz säubern, neue VMQ-Dichtungen mit OKS 1110 applizieren. Bei Gehäuseriss den gesamten Thermoblock zwingend ersetzen."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Wie überprüfe ich den Thermoblock und die Thermosicherungen messtechnisch mit einem Multimeter?",
+      "a": "Für die messtechnische Diagnose trennen Sie das Gerät zwingend vom Stromnetz und ziehen mindestens eine Flachsteckhülse der Heizelemente ab, um Fehlmessungen durch Parallelschaltungen zu verhindern. Stellen Sie das Multimeter auf Widerstandsmessung (200-Ω-Bereich). Kontaktieren Sie die beiden Anschlussfahnen der Heizspirale: Das Messgerät muss einen Wert zwischen 36 und 40 Ω anzeigen. Ein unendlicher Widerstand (OL) belegt einen Bruch der internen Heizwendel. Messen Sie danach im Durchgangsprüfmodus die beiden thermischen Schmelzsicherungen. Ein intakter Übertemperaturschutz weist einen Widerstand nahe 0,0 bis 0,3 Ω auf. Zeigt eine der Sicherungen keinen Durchgang, hat sie bei 192 °C irreversibel ausgelöst und muss zusammen mit der Fehlerursache ersetzt werden."
+    },
+    {
+      "q": "Warum darf für diesen De'Longhi Thermoblock keinesfalls Zitronen- oder Essigsäure zur Entkalkung verwendet werden?",
+      "a": "Der Thermoblock der ECAM-Serie besteht aus einer AlSi10Mg-Aluminium-Druckgusslegierung. Essigsäure greift die Passivierungsschicht des Aluminiums chemisch stark an, zersetzt Elastomer-Dichtungen und führt zu Lochfraßkorrosion. Zitronensäure wiederum bildet bei den im Brühprozess herrschenden Betriebstemperaturen von bis zu 95 °C unlösliches Calciumcitrat. Dieser zähe Niederschlag lagert sich mikrokristallin in den engen Windungen des Strömungskanals ab und verstopft das System dauerhaft. De'Longhi schreibt zwingend Entkalker auf Basis organischer L-(+)-Milchsäure (wie EcoDecalk) vor. Diese schont das Aluminiumsubstrat, komplexiert Calciumionen wasserlöslich und greift weder die peroxidisch vernetzten VMQ-O-Ringe noch den Brühzylinder an."
+    },
+    {
+      "q": "Welche Symptome deuten auf einen defekten NTC-Temperatursensor hin und wie verifiziert man seine Kennlinie?",
+      "a": "Ein defekter NTC-Sensor äußert sich primär durch zwei Extreme: Überhitzt der Block unkontrolliert bis zum Ansprechen der Schmelzsicherungen, meldet der Sensor fälschlicherweise einen zu hohen Widerstand (Kälte). Bleibt das Wasser kalt oder bricht die Maschine mit 'Allgemeine Störung' ab, liegt meist ein Kurzschluss oder Kabelbruch vor. Zur Verifikation ziehen Sie den Sensorstecker von der Leistungsplatine ab und messen im 20-kΩ-Bereich. Bei 20 °C Umgebungstemperatur muss der Messwert präzise zwischen 10 und 12 kΩ liegen. Erwärmt man den Fühler z. B. vorsichtig mit den Fingern oder warmer Luft, muss der Widerstandswert kontinuierlich und linear abfallen (z. B. auf 6–7 kΩ bei 35 °C). Sprunghafte Messwertänderungen belegen einen irreversiblen Halbleiterdefekt."
+    }
+  ]
+}

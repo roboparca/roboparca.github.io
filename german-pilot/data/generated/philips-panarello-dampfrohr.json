@@ -1,0 +1,94 @@
+{
+  "page_title": "Philips EP2220/10 Panarello Dampfdüse: Technischer Reparaturleitfaden",
+  "meta_description": "Philips 2200 (EP2220/10) Panarello Dampfdüse: Technische Analyse, Venturi-Geometrie, VMQ-Dichtungswechsel, OKS 1110 Wartung und Fehlerbehebung im Detail.",
+  "word_count_check": 1280,
+  "engineering_breakdown": "Der klassische Panarello-Milchaufschäumer der Philips 2200 Serie (Modell EP2220/10) stellt eine thermodynamische und strömungsmechanische Baugruppe dar, die auf dem Venturi-Injektionsprinzip basiert. Die Dampferzeugung erfolgt über einen kompakten Aluminium-Druckguss-Thermoblock mit integrierter Edelstahlrohr-Schlange (1.4301). Zur Generierung des Arbeitsdampfes moduliert die Elektronik über einen Triac die Schwingkolbenpumpe (ULKA HF / EP5, 230V, 48W) im Pulsbetrieb mit einer Taktung von etwa 15 bis 25 % Einschaltdauer. Hierbei wird ein dosierter Volumenstrom von 8 bis 15 ml/min bei einem Arbeitsdruck von dynamisch 1,2 bis maximal 2,2 bar durch eine PTFE-Druckleitung (Außendurchmesser 4 mm, Innendurchmesser 2 mm, Berstdruck >25 bar) zum manuellen Dampfventil geführt.\n\nDie Dampflanze selbst ist über ein zweifach abgedichtetes Kugelgelenk bzw. einen Schwenkarm realisiert. Die mechanische Kopplung nutzt Elastomer-O-Ringe aus hochtemperaturbeständigem Vinyl-Methyl-Silikon (VMQ, 70 Shore A) oder peroxidisch vernetztem EPDM (3,4 x 1,9 mm und 5,0 x 1,5 mm), die radialen Dichtsitz gegen axiale Verschiebung und Torsionskräfte garantieren. Der eigentliche Panarello-Körper besteht aus zwei Hauptkomponenten: dem inneren Düsenkern aus spritzgegossenem Polyoxymethylen (POM, Hostaform/Delrin) und der äußeren Hülse aus lebensmittelechtem ABS oder ferritischem Edelstahl (AISI 304 / 1.4301). Der POM-Kern weist eine präzise kalibrierte Dampfinjektionsbohrung (Durchmesser 1,2 mm) sowie eine transversale Luftansaugbohrung (Venturi-Öffnung mit 0,8 mm Durchmesser) auf. Sobald überhitzter Trockendampf mit einer Austrittstemperatur von 130 °C bis 140 °C die Verengung passiert, entsteht ein lokaler statischer Unterdruck (hydrodynamischer Druckabfall gemäß Bernoulli-Gleichung). Durch diesen Unterdruck wird Umgebungsluft angesaugt, in den Dampfstrom dispergiert und in die Milch emulgiert, um ein homogenes Mikroschaumgefüge (Bläschengröße < 0,5 mm) zu erzeugen. Hauptverschleißpunkte sind hydrodynamische Verkalkungen der 0,8-mm-Bohrung durch CaCO3-Kristallisation sowie die Versprödung der VMQ-Dichtungen durch zyklische thermische Belastungen (Delta T > 100 K).",
+  "symptoms_and_causes": "Defekte und Fehlfunktionen am Panarello-System der EP2220/10 äußern sich in reproduzierbaren Fehlerbildern. Das häufigste Symptom ist das Ausbleiben der Schaumbildung: Die Lanze stößt lediglich heißen Dampf aus, der die Milch zum Kochen bringt, ohne Feinporigkeit zu erzeugen. Die primäre Ursache hierfür liegt in einer Verstopfung der 0,8 mm messenden transversalen Luftansaugnut im POM-Innenkern durch polymerisierte Milchfettreste und thermisch koaguliertes Kasein. In diesem Zustand bricht der Venturi-Unterdruck zusammen, sodass keine Injektion atmosphärischer Luft erfolgt.\n\nEin weiteres kritisches Symptom ist Dampfaustritt am Schwenkgelenk oder am Übergang zwischen Dampfrohr und Gehäuse, oft begleitet von einem hochfrequenten Zischen. Dies indiziert versprödete, gequollene oder gerissene VMQ-O-Ringe auf dem Lanzenkonus infolge mangelnder Schmierung und thermischer Überalterung. Hierdurch verliert das Elastomer seine Rückstellkraft (Compression Set > 30 %), wodurch Dampf laminar am Schaft vorbeiströmt.\n\nTreten pulsierende, schlagende Hydraulikgeräusche (Kavitationshämmern) auf, liegt dies meist an massiver Verkalkung des Thermoblock-Auslasses oder des internen Übergangsstücks. Der Strömungswiderstand übersteigt den Auslegungsdruck des Fördertakts, wodurch die ULKA-Pumpe hydrostatisch blockiert. Ein permanentes Nachtropfen im Kaffee- oder Heißwasserbezug resultiert hingegen aus einer undichten Ventildichtung (FKM-Dichtsitz) des internen 2-Wege-Ventils, wodurch Heißwasser unkontrolliert in die Dampfstrecke migriert.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Sicherheitsabschaltung und Druckentlastung",
+      "action": "Kaffeevollautomaten ausschalten, Netzstecker (230 V) ziehen und Dampfventil kurz öffnen, um Restdruck abzubauen. Das System mindestens 45 Minuten abkühlen lassen."
+    },
+    {
+      "step": 2,
+      "title": "Demontage der Panarello-Baugruppe",
+      "action": "Die äußere Hülse des Panarello durch eine leichte Drehbewegung nach unten abziehen. Anschließend den inneren POM-Düsenkern vom Edelstahl-Dampfrohr axial nach unten abhebeln."
+    },
+    {
+      "step": 3,
+      "title": "Entfernung der verschlissenen O-Ringe",
+      "action": "Die beiden radialen VMQ-Dichtringe am Lanzenstutzen vorsichtig mit einer stumpfen Kunststoff- oder Messingnadel aus den Ringnuten aushebeln, ohne die Metalloberfläche zu verkratzen."
+    },
+    {
+      "step": 4,
+      "title": "Tiefenreinigung und Ultraschall-Dekontamination",
+      "action": "Sämtliche Komponenten in einem Ultraschallbad mit Kaffeefettlöser/Milchsystemreiniger reinigen. Die 0,8 mm Venturi-Bohrung manuell mit einer flexiblen Reinigungsnadel von Kasein befreien."
+    },
+    {
+      "step": 5,
+      "title": "Dichtungstausch, Schmierung und Endmontage",
+      "action": "Neue lebensmittelechte VMQ-70 O-Ringe (3,4 x 1,9 mm) aufziehen, hauchdünn mit OKS 1110 Silikonfett benetzen und die Baugruppe bis zum spürbaren mechanischen Rastsitz montieren."
+    }
+  ],
+  "step_by_step_narrative": "Die fachgerechte Revision des klassischen Panarello-Milchaufschäumers der Philips 2200 (EP2220/10) erfordert Präzision und technisches Verständnis für Dichtsysteme. Vor Beginn der Arbeiten ist das Gerät ausnahmslos galvanisch vom 230-V-Wechselstromnetz zu trennen. Öffnen Sie kurz das interne Ventil über das Bedienfeld, um jeglichen hydraulischen Restdruck in der PTFE-Zuleitung abzubauen. Warten Sie, bis der Thermoblock und das Dampfrohr auf unter 30 °C abgekühlt sind, um Verbrennungen zu vermeiden.\n\nZur Demontage benötigen Sie eine Abziehnadel aus Messing oder POM, ein Ultraschallbad, lebensmittelechtes Hochleistungssilikonfett (OKS 1110 nach NSF-H1-Standard) sowie zwei neue VMQ-O-Ringe (FDA-konform, Härtegrad 70 Shore A). Ziehen Sie zunächst die zylindrische Außenhülse mit einer axialen Bewegung nach unten ab. Der darunter liegende innere Düsenkern aus schwarzem POM ist mit einer Rastnase auf dem gerillten Metallstutzen der Lanze arretiert. Drücken Sie die Halterung vorsichtig auseinander und ziehen Sie den Kern ab. Inspizieren Sie das freiliegende Dampfrohr: Hier sitzen zwei O-Ringe in definierten Einstichen. Hebeln Sie die Alt-Elastomere mit dem Messingdorn heraus. Vermeiden Sie zwingend spitze Stahlwerkzeuge, da axiale Riefen im Dichtsitz zu irreversiblen Leckagen führen.\n\nLegen Sie den POM-Düsenkern und die Hülse für 15 Minuten in eine 50 °C warme Lösung aus Wasser und alkalischem Milchschaumreiniger. Reinigen Sie die transversale 0,8-mm-Unterdruckbohrung akribisch mit einer Düsennadel. Prüfen Sie das Bauteil gegen das Licht: Die Querbohrung muss absolut kreisrund und frei von Kaseinrückständen sein. Reinigen Sie anschließend den Edelstahlstutzen der Lanze mit Isopropanol.\n\nSetzen Sie die neuen VMQ-O-Ringe spannungsfrei in die Nuten ein. Tragen Sie eine minimale Menge OKS 1110 Silikonfett (ca. 20 mg) auf die O-Ringe auf. Das Fett dient nicht der Primärdichtung, sondern schützt das Elastomer vor Scherspannungen beim Wiederaufstecken und gewährleistet die Schwenkbarkeit der Lanze. Schieben Sie den POM-Düsenkern auf den Lanzenstutzen, bis dieser mit einem deutlichen mechanischen Klicken einrastet. Montieren Sie die Metallhülse. Schließen Sie das Gerät an und führen Sie einen 60-sekündigen Dampftest durch: Prüfen Sie das Schwenkgelenk penibel auf Dampfdurchtritt und verifizieren Sie die Zirkulation im Milchgefäß zur Erzeugung feinporigen Milchschaums.",
+  "compatibility_matrix": {
+    "fits": [
+      "Philips 2200 Serie (EP2220/10, EP2221/40, EP2224/40, EP2224/10)",
+      "Philips 1200 Serie (EP1220/00, EP1224/00)",
+      "Philips 3200 Serie mit Panarello (EP3221/40)",
+      "Gaggia Naviglio / Carezza Deluxe (Baugleicher Panarello-Kupplungsstutzen)"
+    ],
+    "incompatible": [
+      "Philips 2200 LatteGo Serie (EP2230/10, EP2231/40 - Schlauchloses 2-Kammer-System)",
+      "Philips 3200/4300/5400 LatteGo Modelle (EP3246/70, EP4346/70, EP5447/90)",
+      "Philips Saeco Poemia mit federbelastetem Ventilrohr",
+      "Saeco GranAroma / Xelsis Serie (Automatischer Hybriddampfbezug)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Vollständige Zerlegung von Hülse und POM-Kern; manuelle Reinigung der 0,8 mm Venturi-Querbohrung unter fließendem Warmwasser zur Beseitigung frischer Milchfett- und Proteinfilme."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Chemisches Einlegen der Kunststoff- und Metallteile in 10%ige alkalische Milchschaumreiniger-Lösung; Entkalkung des Thermoblock-Dampfzweigs mittels Amidosulfonsäure über den Dampfbezugsmodus."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Präventiver Austausch der beiden VMQ-70 Dichtringe am Dampflanzenkonus; Reinigung der Ringnuten und Applikation von lebensmittelechtem NSF-H1 Silikonfett (OKS 1110)."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Milch wird stark erhitzt, sprudelt wild, bildet jedoch keinerlei stabilen Schaum",
+      "cause": "Verstopfung der 0,8 mm Venturi-Luftansaugöffnung im POM-Düsenkern durch denaturiertes Kasein; Unterdruckbildung bricht vollständig zusammen.",
+      "fix": "Panarello demontieren, POM-Einsatz in heißer Reinigerlösung einweichen und die Querbohrung mit einer 0,6-mm-Reinigungsnadel vorsichtig mechanisch durchstoßen."
+    },
+    {
+      "error": "Dampfaustritt und Kondensattropfen oberhalb der Düsenkupplung am Schwenkarm",
+      "cause": "Thermische Ermüdung, Mikrorisse oder Verlust der radialen elastischen Rückstellkraft der VMQ-O-Ringe (3,4 x 1,9 mm) auf dem Haltestutzen.",
+      "fix": "Düse abziehen, alte O-Ringe mit Messingdorn entfernen, Sitze reinigen, neue lebensmittelechte VMQ-70 Ringe aufziehen und mit OKS 1110 Schmierfilm versehen."
+    },
+    {
+      "error": "Maschine vibriert stark, Dampfausstoß erfolgt stoßweise begleitet von lautem Klopfen",
+      "cause": "Kalkablagerungen im Auslaufbereich des Thermoblocks oder im Schwenkgelenk erzeugen massiven hydraulischen Gegendruck; ULKA-Schwingkolbenpumpe geht in Teillast-Stillstand.",
+      "fix": "Intensive Entkalkungsprozedur mit 5%iger Amidosulfonsäure-Lösung direkt über die Dampffunktion initiieren; bei fortgeschrittener Blockade Lanzenventil mechanisch entkalken."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Warum erzeugt die Panarello-Düse meiner Philips EP2220/10 plötzlich nur noch kochende Milch statt Schaum?",
+      "a": "Dieses Phänomen basiert auf einem Ausfall des hydrodynamischen Venturi-Effekts. Im Inneren des schwarzen Polyoxymethylen-Kerns (POM) befindet sich eine präzise transversale Bohrung mit 0,8 mm Durchmesser. Strömt Dampf mit hoher Geschwindigkeit an dieser Verengung vorbei, erzeugt er einen definierten Unterdruck, der Raumluft ansaugt und mit der Milch verwirbelt. Setzt sich dieser Kanal durch getrocknete Milcheiweiße (Kasein) oder Fettpartikel zu, wird keine Luft mehr emulgiert. Die kinetische Energie des Dampfes heizt die Milch lediglich auf Siedetemperatur auf. Eine Reinigung mit alkalischer Lösung und das mechanische Freistechen der Bohrung stellen die Funktionalität wieder her."
+    },
+    {
+      "q": "Welches Schmiermittel und welches Material muss für die O-Ringe der Dampflanze verwendet werden?",
+      "a": "Für die Revision des Dampfsystems dürfen ausschließlich Elastomere aus hochtemperaturbeständigem Silikonkautschuk (VMQ, Härtegrad 70 Shore A) oder lebensmitteltauglichem EPDM nach FDA- und BfR-Empfehlung XV verwendet werden. Handelsübliche NBR-Dichtungen verspröden bei den Dampftemperaturen von bis zu 140 °C innerhalb kürzester Zeit. Als Schmiermittel ist zwingend ein geruchs- und geschmacksneutrales Silikonfett mit NSF-H1-Zertifizierung einzusetzen, beispielsweise OKS 1110 oder Glisseal. Mineralölbasierte Schmierstoffe, WD-40 oder technische Fette sind toxikologisch bedenklich, zersetzen die Elastomere und führen zum strukturellen Bruch des POM-Düsenkerns."
+    },
+    {
+      "q": "Kann ich die Philips EP2220/10 nachträglich auf das automatisierte LatteGo-Milchsystem umbauen?",
+      "a": "Ein Umbau der EP2220/10 auf das LatteGo-System ist technisch und wirtschaftlich ausgeschlossen. Das LatteGo-System erfordert eine grundlegend andere interne Hydraulik- und Gehäusearchitektur. Während die EP2220/10 über ein manuelles Kugelgelenk und eine pulsweitenmodulierte Schwingkolbenpumpe für kontinuierlichen Trockendampf verfügt, benötigt LatteGo einen separaten Heißwasser-/Dampf-Umschaltblock mit modifizierten Magnetventilen und angepasster Förderleistung. Zudem weicht die Gehäusefrontblende konstruktiv vollständig ab, da die mechanische Aufnahme für den LatteGo-Zyklonbehälter fehlt. Auch die Steuerungs-Firmware auf der Leistungselektronik unterscheidet sich grundlegend in den Taktungszyklen und Sicherheitsabschaltungen."
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "page_title": "Siemens EQ.300 Sysko Vibrationspumpe 15 Bar: Reparatur & Diagnose",
+  "meta_description": "Sysko Vibrationspumpe 15 Bar & Schwingungsdämpfer für Siemens EQ.300 (TI351209RW): Ursachen, Ausfallmuster, Druckanalyse & technische Reparaturanleitung.",
+  "word_count_check": 1285,
+  "engineering_breakdown": "Die Sysko Vibrationspumpe (Typenklasse HP/SP, ausgelegt für 220–240 V AC bei 50 Hz, nominal 48 bis 65 W Leistungsaufnahme) bildet das fluidmechanische Herzstück des Brüh- und Heißwassersystems der Siemens EQ.300 (TI351209RW). Das Aggregat operiert nach dem elektromechanischen Schwingankerprinzip: Eine integrierte Siliziumdiode (typischerweise Typ 1N4007) schneidet eine Halbwelle der Netzwechselspannung ab, sodass ein pulsierendes Magnetfeld mit 50 Hz entsteht. Dieses Feld induziert eine axiale Hubbewegung eines magnetisierbaren, ferritischen Edelstahlkolbens (Werkstoff 1.4113/1.4310) gegen eine hochfeste Rückstellfeder aus Federstahl 1.4310 (X10CrNi18-8). Die zylindrische Lauffläche besteht aus verschleißfestem Polyoxymethylen-Copolymer (POM-C) oder faserverstärktem PPA, welches geringe Reibwerte mit hoher Maßhaltigkeit vereint. Die hydraulische Kennlinie ist degressiv ausgelegt: Der statische Maximaldruck (Nullförderung) erreicht P_max = 15 bar (punktuell bis zu 18 bar je nach Federvorspannung), während der optimale Arbeitspunkt bei der Espressoextraktion bei einem Arbeitsdruck von 9,0 bis 11,5 bar und einer Durchflussrate von ca. 140 bis 220 ml/min liegt. Dem Pumpenausgang unmittelbar nachgeschaltet ist der elastomere Schwingungsdämpfer (Membranregler), gefertigt aus einem hochtemperatur- und hydrolysebeständigen Silikonelastomer (VMQ, 50–55 Shore A) oder vernetztem Ethylen-Propylen-Dien-Kautschuk (EPDM). Dieser dient als hydropneumatischer Tiefpassfilter zur Dämpfung der 50-Hz-Druckspitzen, um Kavitation im Durchlauferhitzer zu verhindern und Körperschallübertragungen auf das thermoplastische Polypropylen-/ABS-Chassis der Maschine zu minimieren. Primäre mechanische Schwachstellen sind: Ermüdungsbrüche der Rückstellfeder durch Hysteresespannungen, Kavitationsabtrag an der federbelasteten Ein- und Auslass-Dichtkugel (oft Rubin, POM oder 1.4401-Edelstahl), abrasive Riefenbildung auf der Kolbenlauffläche durch sedimentierte Calciumcarbonat-Partikel (CaCO3) sowie thermischer Windungsschluss der Spule (Isolierstoffklasse F bis 155 °C) bei ausfallender Thermosicherung (Klixon-Schutzschalter > 105 °C) infolge verlängertem Trockenlaufs.",
+  "symptoms_and_causes": "Defekte an der Pumpen- und Dämpfereinheit der Siemens EQ.300 manifestieren sich über eindeutige akustische, kinetische und hydraulische Indikatoren. Ein auffällig lautes, metallisch-aggressives Schnarren oder Rattern signalisiert akuten Trockenlauf oder unvollständige Entlüftung (Kavitation). Hierbei zieht die Pumpe Luftblasen über den Ansaugschlauch oder die Tankkupplung, wodurch der hydraulische Gegendruck zusammenbricht und der Schwinganker ungedämpft auf den Anschlag prallt. Ein extrem leises, monotones Netzbrummen bei völligem Ausbleiben der Wasserförderung deutet hingegen auf eine hydraulische Totalblockade hin – meist verursacht durch massive Kalkausscheidungen im Thermoblock, ein klemmendes Auslaufventil der Brüheinheit oder einen mechanischen Fremdkörperklemmer im Zylinder der Pumpe. Eine signifikante Zunahme von dröhnenden Gehäuseresonanzen ohne hydraulischen Druckverlust resultiert aus der Alterung, Verhärtung oder Verschiebung der elastomeren VMQ-Schwingungsdämpfer: Die Schwingungsentkopplung versagt, und die 50-Hz-Schwingungen koppeln direkt mechanisch an die Seitenwände des Vollautomaten an. Systemseitig bricht die Steuerungselektronik bei fehlerhafter Pumpe den Bezug ab: Registriert der Reed-Kontakt des stromaufwärts platzierten Digmesa-Turbinenflowmeters während der Bestromung der Sysko-Pumpe über ein Zeitfenster von 5 bis 8 Sekunden keine oder zu wenige Drehfrequenz-Impulse (< 10 Hz), schaltet die EQ.300-Elektronik ab und signalisiert im Klartextdisplay oder über LED-Icons 'Wassertank prüfen' bzw. 'Gerät neu starten' (Timeout des Füllzyklus). Begleitend resultiert unzureichender Brühdruck (< 7 bar) in feuchten, instabilen Kaffeepads in der Tresterlade und mangelhafter Crema-Bildung infolge unvollständiger Extraktion.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Sicherheitsfreischaltung und Peripherieentfernung",
+      "action": "Netzstecker ziehen (VDE 0701-konform), Wassertank, Tropfschale, Kaffeesatzbehälter und die Brüheinheit vollständig aus dem Gerät entnehmen."
+    },
+    {
+      "step": 2,
+      "title": "Gehäusedemontage",
+      "action": "Lösen der rückseitigen und bodenseitigen Torx-Schrauben (TX10 und TX20), Rückwand vorsichtig nach hinten abziehen und linke Gehäuseseitenwand aus den Rastnasen aushängen."
+    },
+    {
+      "step": 3,
+      "title": "Hydraulische und elektrische Entkopplung",
+      "action": "Niederdruck-Gewebeschlauch von der Ansaugtülle der Sysko-Pumpe abziehen; die beiden 6,3-mm-Flachstecker der elektrischen Spulenzuleitung sowie die Kontakte des Thermoschalters unter Notierung der Polarität abziehen."
+    },
+    {
+      "step": 4,
+      "title": "Druckseitige Demontage & Dämpfertausch",
+      "action": "Sicherungssplint am Hochdruckanschluss (PTFE-Druckschlauch zum Erhitzer) mit Spitzzange ziehen, Schlauch entnehmen, alten O-Ring (3,4 x 1,9 mm EPDM) verwerfen, Sysko-Pumpe aus den elastomeren VMQ-Aufhängungspuffern heben und den Membran-Schwingungsdämpfer abschrauben."
+    },
+    {
+      "step": 5,
+      "title": "Remontage, Dichtungswechsel und Inbetriebnahme",
+      "action": "Neuen Schwingungsdämpfer mit frischem O-Ring montieren, Pumpe in neue VMQ-Dämpferblöcke einsetzen, Druckschlauch mit neuem, mit OKS 1110 gefettetem EPDM-O-Ring stecken und versplinten, Elektrik kontaktieren, Gehäuse schließen und manuellen Entlüftungs-/Spülzyklus initiieren."
+    }
+  ],
+  "step_by_step_narrative": "Vor Beginn der Instandsetzung an der Siemens EQ.300 (TI351209RW) ist zwingend die galvanische Trennung vom Stromnetz durch Ziehen des Schukosteckers herbeizuführen. Bereitzulegen sind: Torx-Schraubendreher TX10 und TX20, eine abgewinkelte Präzisions-Spitzzange, ein spitzer Demontagehaken für Radial-Wellendichtungen, lebensmittelechtes Hochleistungs-Silikonfett nach NSF-H1-Norm (beispielsweise OKS 1110) sowie ein Multimeter zur Spulenimpedanzmessung. Nach dem Entfernen aller mobilen Komponenten (Wassertank, Brühgruppe, Tropfschale) werden die rückwärtigen Befestigungsschrauben mit TX10 gelöst. Die Rückwand wird über die Gehäuserastkanten geschoben und abgenommen. Die linke Gehäuseseite, welche den Hydraulikraum umschließt, erfordert das Ausklipsen der unteren Verriegelungsnasen mittels eines Kunststoff-Spatels, um Kerbspannungen am ABS-Gehäuse zu vermeiden. Im unteren Heckbereich liegt nun die Sysko-Vibrationspumpe frei, aufgehängt in zwei vibrationsdämpfenden Silentblöcken aus VMQ-Kautschuk. Ziehen Sie zunächst den flexiblen Niederdruckschlauch vom Flowmeter zur Ansaugtülle ab und sichern Sie austretendes Restwasser mit saugfähigen Tüchern. Ziehen Sie die isolierten 6,3-mm-Faston-Kabelschuhe von den Flachsteckzungen der Erregerspule ab. Mittels Multimeter lässt sich im Vorfeld die Spulenintegrität prüfen: Durch die interne Einweg-Gleichrichterdiode 1N4007 muss das Messgerät im Diodentestmodus in einer Richtung einen Halbleiterabfall von ca. 0,5–0,7 V anzeigen, während in Widerstandsmessung (je nach Diode und Polung) Werte im Megaohm- oder ca. 1,8 bis 2,4 kOhm-Bereich vorliegen müssen; ein unendlicher Widerstand in beiden Richtungen bestätigt einen Spulendrahtbruch. Druckseitig entfernen Sie den metallischen Federsplint, welcher den 4-mm-PTFE-Druckschlauch im Ausgangsstutzen des Schwingungsdämpfers arretiert. Ziehen Sie die Hochdruckleitung vorsichtig heraus; der alte, meist verhärtete EPDM-O-Ring ist auszutauschen. Entnehmen Sie die defekte Sysko-Pumpe mitsamt Dämpfer aus der elastischen Klemmpassung. Schrauben Sie den Schwingungsdämpfer gegen den Uhrzeigersinn von der Pumpe ab, reinigen Sie das Messing-/POM-Gewinde und setzen Sie ihn mit neuem Dichtring auf die Austauschpumpe. Fetten Sie den neuen EPDM-O-Ring des Hochdruckschlauchs dünn mit OKS 1110 ein, um Scherspannungen beim Fügen zu verhindern. Rasten Sie die neue Pumpen-Dämpfer-Baugruppe spannungsfrei in die Führung der Silentblöcke ein; Achsenversatz führt zu Resonanzbrummen. Stecken Sie die elektrischen Kontakte und druckseitigen Leitungen fest auf und arretieren Sie den Halteclip vollständig. Führen Sie vor dem Verschrauben des Gehäuses einen Trockenlauf-Prüftest durch: Gerät einschalten, den initialen Füllmodus (Heißwasserbezug über die Dampfdüse) anfordern, bis der Hydraulikkreislauf blasenfrei gefüllt ist. Kontrollieren Sie den Druckbereich visuell auf absolute Leckagefreiheit (10+ bar Prüfdruck während des Vorbrühstoßes). Abschließend erfolgt die Remontage der Gehäuseschalen in umgekehrter Reihenfolge.",
+  "compatibility_matrix": {
+    "fits": [
+      "Siemens EQ.300 Serie (TI351209RW, TI351509DE, TI353201RW)",
+      "Siemens EQ.3 s100 / s300 / s500 (TI301209RW, TI303203RW, TI305206RW)",
+      "Siemens EQ.300 extraKlasse (TI35A209RW)",
+      "Bosch VeroCup 100 / VeroCup 300 (TIS30129RW, TIS30321RW)"
+    ],
+    "incompatible": [
+      "Siemens EQ.9 Serie (TI923309RW, TI9573X1EUR - nutzt Doppelpumpensystem bzw. modifizierte Invensys/Fluid-o-Tech Systeme)",
+      "Siemens EQ.700 Serie (TP705D01 - abweichende Flansch- und Ansteuergeometrie)",
+      "Jura ENA- / GIGA-Serie (abweichende Halteklammern und 24V- bzw. ARS-Invensys-Standard)",
+      "DeLonghi ECAM-Serie (nutzt native ULKA EP5/EX5 mit abweichender Schwingungsdämpferaufnahme)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Sichtprüfung des Wassertank-Einlassventils und Spülung des Tanksitzes zur Verhinderung von Sedimentansaugung in den Niederdrucktrakt der Pumpe."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Durchführung einer professionellen chemischen Entkalkung mit amidosulfonsäurebasiertem Reiniger zur Auflösung von Mikro-CaCO3-Kristallen im Schwingkolbenbereich."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Akkustische Inspektion auf Körperschallresonanz, Prüfung der elastomeren VMQ-Schwingungsdämpfer auf Versprödung sowie optische Druckdichtigkeitsprüfung der PTFE-Steckanschlüsse."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Display meldet 'Wassertank prüfen', Pumpe ist extrem laut und kreischt hochfrequent.",
+      "cause": "Trockenlauf durch Lufteinschluss im System oder blockiertes Rückschlagventil; Ansaugunterbrechung verhindert hydrodynamische Dämpfung des Schwingankers.",
+      "fix": "Heißwasser-Entlüftungszyklus über die Aufschäumdüse erzwingen. Bei anhaltendem Fehler Ansaugschlauch vom Flowmeter auf Rissbildung und Dichtigkeit prüfen; Pumpe manuell mit Spritze vorfüllen."
+    },
+    {
+      "error": "Pumpe brummt nur noch sehr leise; Kaffee tritt tröpfchenweise oder gar nicht aus dem Auslauf.",
+      "cause": "Schwinganker mechanisch blockiert oder Totalverkalkung im Zylinderbereich/Thermoblock; Gegendruck übersteigt 15 bar Abreißgrenze.",
+      "fix": "Elektrische Spulenimpedanz messen. System rückwärts mit Entkalkerlösung auf Amidosulfonsäurebasis spülen. Bei irreversiblem Klemmer Schwinganker/Pumpe komplett austauschen."
+    },
+    {
+      "error": "Massives, vibrationsbedingtes Gehäusedröhnen während der Kaffeeextraktion bei normalem Durchfluss.",
+      "cause": "Verhärtung (Versprödung durch thermische Belastung) oder Verrutschen der VMQ-Schwingungsdämpfer; Pumpe berührt das ABS-Chassis direkt.",
+      "fix": "Gerät öffnen, VMQ-Aufhängungsgummis ersetzen, exakte axiale Zentrierung im Trägerrahmen herstellen und Freigängigkeit aller Schlauchleitungen zum Gehäuse sicherstellen."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Kann die Sysko 15 Bar Vibrationspumpe durch eine herkömmliche Ulka EX5 ersetzt werden?",
+      "a": "Ein direkter 1:1-Ersatz durch eine Ulka EX5 ist bei der Siemens EQ.300 mechanisch und akustisch hochgradig problematisch. Die Sysko-Pumpe weist spezifische radiale Abmessungen auf, welche exakt auf die werksseitigen VMQ-Aufhängungsblöcke und den Membran-Schwingungsdämpfer der EQ.300 abgestimmt sind. Eine Ulka EX5 besitzt eine abweichende Gehäuselänge sowie eine andere Durchflusskennlinie bei 9–11 bar Brühdruck. Ein Einbau führt ohne bauliche Modifikation zu massiven Gehäuseresonanzen, Passungenauigkeiten am Hochdruckstutzen und potenziellen Undichtigkeiten."
+    },
+    {
+      "q": "Welche elektrische Spulenimpedanz muss an einer intakten Sysko-Pumpe messbar sein?",
+      "a": "Bedingt durch die integrierte Einweggleichrichter-Diode (Typ 1N4007) im Spulengehäuse kann eine Sysko-Vibrationspumpe nicht wie ein rein ohmscher Widerstand gemessen werden. Im herkömmlichen Widerstandsmessbereich zeigt ein Digitalmultimeter je nach Polarität der Messspitzen einen hochohmigen Zustand (Sperrrichtung) oder einen Wert zwischen ca. 1,8 und 2,4 kOhm an. Im Diodentestmodus muss in Durchlassrichtung eine Schwellenspannung von 0,5 bis 0,7 Volt messbar sein. Ein unendlicher Widerstand ('OL') in beiden Messrichtungen indiziert einen thermischen Spulendrahtbruch."
+    },
+    {
+      "q": "Warum ist der Austausch des Schwingungsdämpfers beim Pumpenwechsel dringend ratsam?",
+      "a": "Der Schwingungsdämpfer (Membranregler) unterliegt permanenter hydraulischer Druckwechselbeanspruchung mit 50 Hertz sowie thermischer Degradation durch Wärmeleitung vom Durchlauferhitzer. Das innere VMQ-/EPDM-Elastomer verliert über die Betriebsdauer seine Weichmacher und Elastizität, verhärtet und kann Mikrorisse bilden. Ein Weiterbetrieb des alten Dämpfers führt trotz neuer Pumpe zu persistierendem Brummgeräusch, Druckpulsationen im Brühsystem, ungleichmäßiger Extraktion des Kaffeepulvers und einem erhöhten Risiko von Druckspitzen-Leckagen am PTFE-Verbindungsknoten."
+    }
+  ]
+}

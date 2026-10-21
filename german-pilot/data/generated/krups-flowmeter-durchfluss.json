@@ -1,0 +1,98 @@
+{
+  "page_title": "Krups Flowmeter Sensor EA8108 & Evidence | Digmesa Reparaturanleitung",
+  "meta_description": "Krups Durchflussmesser (Digmesa) für EA8108 & Evidence fachgerecht diagnostizieren, reinigen und tauschen. Technische Daten, Fehleranalyse und Reparatur.",
+  "word_count_check": 1215,
+  "engineering_breakdown": "Der Wasserdurchflussmesser (Flowmeter) des Schweizer Präzisionsherstellers Digmesa (verbaut in der Krups EA8108 sowie der Evidence-Baureihe EA89xx) fungiert als volumetrischer Impulsgeber auf der Niederdruckseite des Hydrauliksystems. Das Gehäuse besteht aus hochfestem, lebensmittelechtem Polyoxymethylen (POM / Polyacetal), das eine herausragende Maßhaltigkeit sowie chemische Beständigkeit gegenüber sauren Entkalkerlösungen (z. B. Amidosulfonsäure) aufweist. Die interne Messkammer beherbergt eine frei rotierende Turbine (Impeller) aus POM, in deren Flügeln zwei gekapselte Permanentmagnete (Neodym-Eisen-Bor bzw. Bariumferrit) eingegossen sind. Als Lagerung dient eine gehärtete Edelstahlachse nach Werkstoffnorm 1.4310 bzw. 1.4404, welche axial und radial hochpräzise im Gehäusedeckel zentriert ist. Zwischen oberem und unterem Gehäusekörper dichtet ein O-Ring aus Ethylen-Propylen-Dien-Kautschuk (EPDM Shore A 70) bzw. Silikon-Kautschuk (VMQ) die Baugruppe hermetisch ab. Das Bauteil operiert hydraulisch in der Ansaugstrecke zwischen Wassertank-Kupplungsventil und der ULKA-Schwingkolbenpumpe (EP5/HF) bei Drücken von -0,2 bar (Unterdruck) bis maximal 0,5 bar Vordruck. Die integrierte Einlassdüse verfügt über einen kalibrierten Düsendurchmesser von typischerweise 1,15 mm bis 1,20 mm, woraus sich bei einem Nominalvolumenstrom von 120 bis 250 ml/min eine Auflösung von circa 1.950 bis 2.100 Impulsen pro Liter ergibt. Außerhalb des mediumführenden Bereichs sitzt auf dem POM-Dom eine Sensorplatine mit einem bipolaren Hall-IC. Bei jeder Rotation induzieren die Magnete im Hall-Sensor eine Spannungsänderung, die als digitales Rechtecksignal (Open-Collector-Ausgang, 5 V Logikpegel) an die Steuerelektronik (Mainboard) übertragen wird. Typische mechanische Fehlerbilder resultieren aus abrasiven Kalkpartikeln (CaCO3), biologischem Biofilm oder Schwebstoffen, die das Losbrechmoment der Turbinenachse erhöhen, das Düsenprofil verengen oder die Turbine mechanisch blockieren.",
+  "symptoms_and_causes": "Fällt das Digmesa-Flowmeter aus oder liefert es asynchrone Impulsfolgen, registriert die Krups-Elektronik eine Diskrepanz zwischen dem Ansteuerungsintervall der ULKA-Pumpe und dem tatsächlichen Wasserdurchsatz. Bei der Krups EA8108 (ohne Display) signalisiert das System diesen Zustand typischerweise durch das permanente Blinken der LED für das Wassertanksymbol (Tropfen-LED), obwohl der Wassertank vollständig befüllt ist und der magnetische Schwimmer ordnungsgemäß oben schwimmt. Bei Modellen der Evidence-Serie (EA89xx) erscheint im Klartext-Display häufig der Systemfehler 'Fehler 01' oder eine Endlosschleife mit der Aufforderung 'Wasserkreislauf füllen'. Akustisch äußert sich ein Defekt oft durch eine zunächst rau und laut anlaufende ULKA-Pumpe, da diese versucht, gegen eine scheinbare Luftblase anzufördern. Registriert der Mikrocontroller innerhalb eines Timeouts von 5 bis 8 Sekunden keine fallenden Flanken des Hall-Signals, bricht die Software den Brüh- oder Entlüftungsprozess aus Sicherheitsgründen (Trockenlaufschutz des Thermoblocks) abrupt ab; das Kaffeemehl wird trocken in den Tresterbehälter abgeworfen. Die primären Ursachen hierfür sind: 1. Verkalkung der Einlassdüse, wodurch die Strömungsgeschwindigkeit unter die Anlaufschwelle der Turbine fällt; 2. Verharzung oder Blockade der Edelstahlachse durch organische Rückstände; 3. Mikrorisse im Ansaugschlauch oder gealterte EPDM-Dichtungen, wodurch Luftblasen eintreten, die im Turbinenraum verwirbeln und das Rotationsverhalten stören; 4. Korrosion an den drei Steckfahnen des Hall-Sensors (VCC, GND, OUT) infolge von Schwitzwasser oder Leckagen am oberen Pumpenanschluss.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Sicherheitsabschaltung und Vorbereitung",
+      "action": "Netzstecker der Krups Kaffeemaschine ziehen, Wassertank entnehmen, Kaffeebohnen entfernen und das Gerät vollständig abkühlen lassen."
+    },
+    {
+      "step": 2,
+      "title": "Demontage des Gehäuses",
+      "action": "Gehäuseschrauben auf der Rückseite und unter dem Bohnenbehälterdeckel mit einem Torx-Schraubendreher (TX10 / TX20) lösen, danach die Gehäuseseitenwände und die obere Abdeckung vorsichtig entriegeln."
+    },
+    {
+      "step": 3,
+      "title": "Lokalisierung und Freilegung des Flowmeters",
+      "action": "Das Digmesa Flowmeter im unteren Bodenbereich zwischen dem Tankanschlussstutzen und der ULKA-Schwingkolbenpumpe lokalisieren; die elektrische 3-Pin-Steckverbindung entriegeln und abziehen."
+    },
+    {
+      "step": 4,
+      "title": "Hydraulischer Ausbau und Sichtprüfung",
+      "action": "Die flexiblen Silikonschläuche vorsichtig von den Stutzen des Flowmeters abziehen, Einbaulage und Strömungspfeil notieren und das Bauteil aus seiner elastischen Rastenhalterung entnehmen."
+    },
+    {
+      "step": 5,
+      "title": "Installation, Abdichtung und Probelauf",
+      "action": "Neues Original-Digmesa-Flowmeter unter strenger Beachtung der Durchflussrichtung einsetzen, Schläuche knickfrei montieren, Gehäuse zusammensetzen und einen vollständigen Entlüftungs- und Brühzyklus zur Dichtigkeitsprüfung durchführen."
+    }
+  ],
+  "step_by_step_narrative": "Zur professionellen Durchführung des Komponentenwechsels werden folgende Werkzeuge benötigt: Ein Torx-Schraubendreher der Größen TX10 und TX20, eine spitze Abziehzange für Schlauchverbindungen, lebensmittelechtes Silikonfett (z. B. OKS 1110) sowie ein Multimeter zur optionalen Durchgangsprüfung. Trennen Sie die Kaffeemaschine ausnahmslos vom 230-V-Stromnetz, um lebensgefährliche Stromschläge zu vermeiden. Entfernen Sie den Wassertank sowie den Tresterbehälter. Lösen Sie die Schrauben an der Rückwand und unter der oberen Bohnenbehälterabdeckung. Hebeln Sie mit einem Kunststoff-Spudger die rückseitigen Rastnasen vorsichtig auf, um die linke Gehäusehälfte freizugeben. Im unteren Bereich der Hydraulikbaugruppe sehen Sie nun das scheibenförmige Digmesa-Flowmeter, das über zwei Silikonschläuche in den Ansaugtrakt der ULKA-Pumpe eingebunden ist. Ziehen Sie den dreipoligen Kabelbaumstecker (belegt mit 5V-Versorgungsspannung, Masse und Signalleitung) behutsam vom Hall-Sensor-Aufsatz ab. Prüfen Sie die Steckerpins auf Grünspan oder Feuchtigkeitskorrosion. Ziehen Sie danach die beiden transparenten Silikonschläuche von den Ein- und Auslassstutzen ab. Untersuchen Sie das Schlauchmaterial zwingend auf Versprödung oder Mikrorisse; poröse Schläuche müssen ersetzt werden, da sie Falschluft ziehen. Beim Einsetzen des neuen Flowmeters ist zwingend auf den eingeprägten Richtungspfeil auf dem POM-Gehäuse zu achten: Das Wasser muss vom Tankstutzen in den Sensor eintreten und zur Saugseite der Pumpe austreten. Bestreichen Sie die Stutzen hauchdünn mit OKS 1110, um die Schläuche spannungsfrei aufzuschieben, ohne die kalibrierte Einlassdüse mit Fett zu kontaminieren. Drücken Sie das Flowmeter in die gummierte Dämpfungsaufnahme am Gehäuseboden. Nach dem Einrasten des Steckers erfolgt der Zusammenbau des Gehäuses in umgekehrter Reihenfolge. Füllen Sie den Wassertank mit kalkarmem Wasser, starten Sie die Maschine und führen Sie das automatische Entlüftungsprogramm durch. Beobachten Sie bei geöffnetem Service-Blickwinkel die Schlauchanschlüsse während der Heißwasserentnahme, um absolute Dichtigkeit unter Unterdruckbedingungen zu verifizieren.",
+  "compatibility_matrix": {
+    "fits": [
+      "Krups EA8108",
+      "Krups EA810870",
+      "Krups EA810B70",
+      "Krups EA8150",
+      "Krups EA8908 Evidence",
+      "Krups EA8918 Evidence",
+      "Krups EA829E",
+      "Krups Arabica EA8110"
+    ],
+    "incompatible": [
+      "De'Longhi Magnifica S ECAM 22.110 (Verwendet Reed-Kontakt-Turbine mit anderer Kalibrierung)",
+      "Philips LatGo 5400 Serie (Anderer Impulsfaktor und Steckergeometrie)",
+      "Jura Impressa Giga Serie (Verwendet optische Dual-Flowmeter)",
+      "Nespresso Pixie / Citiz (Kompaktmodelle ohne separates Niederdruck-Flowmeter)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Wassertank entnehmen, Tankaufnahme reinigen und Sichtprüfung der Ansaugmanschette auf Kalkkrusten und Biofilm durchführen."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Präventive Entkalkung mit Amidosulfonsäure-basiertem Entkalker zur Freihaltung der 1,2-mm-Präzisionsdüse des Flowmeters."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Demontagekontrolle der saugseitigen Silikonschläuche auf Verhärtung, Knicke oder Lufteintritt; Prüfung der elektrischen Steckkontakte auf Oxidation."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Wassertank-LED blinkt dauerhaft (EA8108) / 'Fehler 01' (Evidence)",
+      "cause": "Turbinenrad durch Kalkpartikel mechanisch blockiert oder Hall-Sensor liefert keine Rechteckimpulse an das Mainboard.",
+      "fix": "Flowmeter ausbauen, Gehäusebajonett öffnen, Messkammer und Edelstahlachse entkalken; bei defektem Hall-Sensor Bauteil komplett austauschen."
+    },
+    {
+      "error": "Kaffeemenge in der Tasse weicht stark ab (zu wenig Volumen)",
+      "cause": "Verengung der kalibrierten Einlassdüse durch mineralische Beläge; Impulsfrequenz stimmt nicht mehr mit hinterlegter Kalibrierungskurve überein.",
+      "fix": "Intensives Entkalkungsprogramm mit flüssiger Amidosulfonsäure durchführen oder Flowmeter erneuern, falls der Querschnitt mechanisch beschädigt ist."
+    },
+    {
+      "error": "Pumpe zieht rhythmisch Luft / lautes Röhren im Betrieb",
+      "cause": "Gehäusedichtung (EPDM-O-Ring) des Flowmeters versprödet oder Riss am Einlaufstutzen, wodurch im Saugtakt Luft infiltriert.",
+      "fix": "O-Ring des Flowmeters prüfen und ersetzen bzw. Flowmeter erneuern; Silikonschlauchverbindungen auf festen Sitz kontrollieren."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Kann man das Digmesa Flowmeter öffnen und manuell reinigen, statt es zu erneuern?",
+      "a": "Das Gehäuse des Digmesa-Flowmeters lässt sich durch eine leichte Drehbewegung des oberen Bajonett- oder Rastverschlusses öffnen. Liegt lediglich eine leichte Blockade durch Kalk oder Kaffeefettpartikel vor, kann die POM-Turbine entnommen und die 1.4310-Edelstahlachse mit einem sauberen Mikrofasertuch und Amidosulfonsäure gereinigt werden. Zeigen sich jedoch mechanische Riefen auf der Achse, ist die Einlassdüse ausgewaschen oder hat der integrierte Hall-Sensor einen thermischen Halbleiterdefekt, führt nur ein kompletter Komponentenaustausch zu dauerhafter Betriebssicherheit."
+    },
+    {
+      "q": "Wie kann das elektrische Signal des Hall-Sensors mit einem Multimeter überprüft werden?",
+      "a": "Zur Diagnose schließt man die Kaffeemaschine an die Spannungsversorgung an (Vorsicht: Hochspannung im Innenraum!). Zwischen dem Masse-Pin (GND) und dem Versorgungs-Pin (VCC) müssen stabil ca. 5 V Gleichspannung anliegen. Misst man mit einem Multimeter im Frequenz- oder Gleichspannungsbereich zwischen Signal-Pin und GND während die Pumpe Wasser fördert, muss bei intaktem Hall-IC und rotierender Turbine eine Taktung bzw. eine mittlere Spannung von circa 2,5 V messbar sein. Ein Oszilloskop zeigt idealerweise ein sauberes 5V-Rechtecksignal."
+    },
+    {
+      "q": "Warum bricht die Krups EA8108 den Bezug ab, obwohl der Tankschwimmer ordnungsgemäß oben steht?",
+      "a": "Die Krups EA8108 nutzt ein zweistufiges Überwachungssystem: Der Magnetschwimmer im Tank signalisiert dem Reedschalter lediglich das statische Vorhandensein von Wasser. Sobald die Pumpe anläuft, übernimmt das Digmesa-Flowmeter die dynamische Überwachung des tatsächlichen Durchflusses. Wenn das Flowmeter blockiert ist oder der Stecker korrodiert ist, erhält der Mikrocontroller keine Zählimpulse. Die Steuerung interpretiert dies als trockenlaufende Pumpe oder Systemverstopfung, bricht den Brühzyklus nach wenigen Sekunden ab und lässt die Tropfen-LED blinken."
+    }
+  ]
+}

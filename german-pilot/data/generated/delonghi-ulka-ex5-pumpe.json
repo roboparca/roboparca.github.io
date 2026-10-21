@@ -1,0 +1,94 @@
+{
+  "page_title": "De'Longhi Magnifica S: Ulka EX5 Pumpe tauschen & Hydraulik-Analyse",
+  "meta_description": "Technische Reparaturanleitung für die Ulka EX5 Vibrationspumpe der De'Longhi Magnifica S ECAM 22.110.B. Hydraulik-Analyse, Fehlerdiagnose und Einbauleitfaden.",
+  "word_count_check": 1210,
+  "engineering_breakdown": "Die Ulka EX5 ist eine elektromechanische Schwingankerpumpe (Solenoid-Plunger-Prinzip), die speziell für Heißgetränke-Hydraulikkreise konzipiert wurde. Im Lastbetrieb an 230 V Wechselspannung (50 Hz, Leistungsaufnahme 48 W) arbeitet die Spule im Halbwellenbetrieb über eine interne Silizium-Gleichrichterdiode (Typ 1N4007-Äquivalent), wodurch der Tauchkolben mit einer Frequenz von 50 Schwingungshüben pro Sekunde axial ausgelenkt wird. Der magnetische Kreis besteht aus einem Spulenkörper aus glasfaserverstärktem Polyamid (PA66 GF30) mit Kupferlackdraht-Wicklung der Isolationsklasse F (155 °C), umschlossen von einem verzinkten Weicheisenjoch. Im Inneren der Druckkammer operiert ein korrosionsbeständiger, ferromagnetischer Plungerkolben aus ferritischem Chromstahl (Werkstoff 1.4113 / AISI 430), welcher gegen eine kalibrierte Rückstellfeder aus austenitischem Federstahldraht (1.4310 / X10CrNi18-8) arbeitet. Das integrierte Ventilsystem umfasst ein saugseitiges Rückschlagventil sowie ein federbelastetes Auslassventil mit Elastomer-Dichtkörpern aus EPDM bzw. Fluor-Kautschuk (FKM) und Ventilführungen aus Polyoxymethylen (POM). Ein zentrales Qualitätsmerkmal der EX5 gegenüber der EP5-Baureihe ist der Hochdruckanschluss aus entzinkungsbeständigem Messing (CW617N / CuZn40Pb2) mit G 1/8-Zoll- bzw. De'Longhi-spezifischer Raccord-Geometrie für Hochdruck-PTFE-Leitungen. Hydraulisch weist die EX5 eine steile Pumpenkennlinie auf: Der maximale Nullförderdruck (statische Blockadegrenze) liegt bei 15 bar (1,5 MPa) bei 0 ml/min Durchfluss, während die maximale Freilauf-Förderleistung bei 0 bar circa 650 cm³/min beträgt. Im Arbeitspunkt der Kaffee-Extraktion fördert das Aggregat bei einem Systemgegendruck von 9 bis 12 bar nominell 120 bis 190 ml/min. Kritische mechanische Versagensursachen sind Mikro-Lochfraß und Riefenbildung am Kolbenmantel, Aushärtung oder Quellung der internen EPDM-Ventilscheiben durch Heißwasserrückstau, Verkalkung der Ventilbohrungen sowie plastische Verformung oder Ermüdungsbruch der 1.4310-Rückholfeder, was die Kompressionsfähigkeit schlagartig aufhebt.",
+  "symptoms_and_causes": "Das Fehlerbild einer defekten Ulka EX5 in der De'Longhi Magnifica S manifestiert sich in distinkten akustischen und hydraulischen Anomalien. Ein lautes, trockenes Brummen ohne Wasserförderung deutet auf eine hydrostatische Entkopplung hin: Hierbei ist entweder eine Luftblase im Pumpenraum gefangen (Kavitationsblockade nach Dampfbezug oder Leerlaufen des Wassertanks) oder das saugseitige POM/EPDM-Rückschlagventil klebt infolge von Kalkausfällungen am Ventilsitz fest. Sinkt die Geräuschkulisse hingegen während des Brühvorgangs nahezu auf Null ab, während der Kaffee nur noch tröpfchenweise austritt, liegt dies am Verlust der Kolbenkompression; die Federsteifigkeit der 1.4310-Rückholfeder reicht nicht mehr aus, um den Kolben gegen den ansteigenden Mahlgut-Gegendruck zurückzubewegen, wodurch der Schwinganker im Magnetfeld festfriert. Ein schrill vibrierendes, metallisches Kreischen signalisiert mechanischen Verschleiß der Kolbenführung oder Schwingungsübertragung durch kollabierte EPDM-Aufhängungsgummis an das Gehäuse-Chassis. Elektronisch führt mangelnder Durchfluss zu einem Timeout des Hall-Sensor-Flowmeters (Turbinenrad stoppt), woraufhin die Leistungsplatine den Brühzyklus abbricht und die Störungsanzeige 'Allgemeiner Alarm' (Warndreieck leuchtet oder blinkt permanent) ausgibt. Ein vollständiger Stillstand der Pumpe bei intaktem Schalter resultiert entweder aus dem Auslösen der thermisch gekoppelten 128-°C-Schmelzsicherung (Klixon-Thermoschutz) auf dem Spulengehäuse oder einem Halbleiterdurchschlag der internen Gleichrichterdiode, was zum Ausfall des Halbwellenhubs führt.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Spannungsfreiheit herstellen & Gehäusedemontage",
+      "action": "Netzstecker ziehen, Wassertank und Kaffeesatzbehälter entnehmen. Rückwand mit Torx TX20 lösen, Seitenteile nach hinten schieben und aushängen."
+    },
+    {
+      "step": 2,
+      "title": "Hydraulik- und Kabelstrang dekonnektieren",
+      "action": "Zulaufschlauch (Niederdruck, Silikon) vom Pumpeneingang abziehen. 6,3-mm-Flachsteckhülsen der Spulenversorgung und die Anschlüsse des Überhitzungsschutzes trennen."
+    },
+    {
+      "step": 3,
+      "title": "Hochdruckverbindung & Membranregler lösen",
+      "action": "Messing-Sicherungsklammer (Hairpin-Clip) am Druckausgang mit einer Spitzzange ziehen. PTFE-Druckleitung entnehmen und das Überdruckventil (Membranregler) abschrauben."
+    },
+    {
+      "step": 4,
+      "title": "Pumpenkorpus aus EPDM-Lagern entnehmen",
+      "action": "Die Ulka EX5 aus den beiden vibrationsdämpfenden EPDM-Gummilagern am Gehäuseboden hebeln. Schwingungsdämpfer auf Rissbildung prüfen und säubern."
+    },
+    {
+      "step": 5,
+      "title": "Neuinstallation, Dichtungstausch & Inbetriebnahme",
+      "action": "Neue Ulka EX5 mit frischen VMQ/EPDM-O-Ringen (4x2 mm) und OKS 1110 Schmierstoff versehen, montieren, Raccord sichern und Heißwasserbezug zur Entlüftung starten."
+    }
+  ],
+  "step_by_step_narrative": "Der Austausch der Ulka EX5 erfordert höchste handwerkliche Präzision im Umgang mit druckbeaufschlagten fluidischen Systemen. Benötigtes Equipment: Torx-Schraubendreher TX20 und TX10, Feinmechaniker-Schlitzschraubendreher, Spitzzange, Seitenschneider, Digitalmultimeter zur Impedanzmessung, lebensmittelechtes Silikonfett (OKS 1110) sowie zwei neue Hochdruck-O-Ringe (4x2 mm EPDM 70 ShA). Trennen Sie das Gerät vor Beginn zwingend vom 230-V-Netz. Nach Demontage der Gehäuserückwand und der linken Seitenwand liegt die Hydraulikeinheit im unteren Chassis frei. Ziehen Sie den gewebeverstärkten Silikon-Saugschlauch von der POM-Tülle der Pumpe ab. Trennen Sie die 6,3 mm AMP-Flachsteckkontakte; notieren Sie dabei die Position des Spulenthermostats. Am Messingausgang der EX5 befindet sich entweder ein Raccord-Druckschlauchanschluss oder ein aufgeschraubter Membranregler. Ziehen Sie die U-förmige Sicherungsklammer aus Federstahl mit der Spitzzange radial heraus und ziehen Sie den PTFE-Druckschlauch axial ab. Der alte O-Ring muss zwingend entsorgt werden. Drehen Sie den Membranregler bzw. das Überdruckventil gegen den Uhrzeigersinn vom Messinggewinde der alten Pumpe ab. Hebeln Sie die alte Pumpe aus den EPDM-Aufhängungsblöcken. Setzen Sie die neue Ulka EX5 in die Schwingungsdämpfer ein; achten Sie auf verspannungsfreien Sitz, um Körperschallbrücken zum ABS-Chassis zu vermeiden. Dichten Sie das Messinggewinde des Membranreglers neu ab (flüssige Mittelfest-Gewindedichtung oder originalgetreue EPDM-Dichtscheibe) und schrauben Sie ihn handfest auf das CW617N-Messinggewinde. Bestreichen Sie den neuen 4x2 mm O-Ring hauchdünn mit OKS 1110, führen Sie den PTFE-Schlauch bis zum spürbaren Anschlag in den Messingflansch ein und verriegeln Sie die Verbindung formschlüssig mit der Sicherungsklammer. Stecken Sie den Niederdruckschlauch auf und sichern Sie ihn gegen Lufteintritt. Vor der Gehäusemontage erfolgt die hydrostatische Entlüftung: Schließen Sie das Gerät an, schalten Sie es ein und öffnen Sie sofort das Heißwasserventil am Dampfhahn. Die Pumpe füllt den Thermoblock; sobald ein blasenfreier Wasserstrahl austritt, schließen Sie den Hahn. Führen Sie nun einen Testbezug mit Blindsieb oder Kaffeemehl durch und kontrollieren Sie alle Hochdruckverbindungen mit einer Inspektionslampe auf absolute Dichtheit.",
+  "compatibility_matrix": {
+    "fits": [
+      "De'Longhi Magnifica S (ECAM 22.110.B / SB / W)",
+      "De'Longhi Magnifica S Smart (ECAM 250.23.SB / 250.33.TB)",
+      "De'Longhi Dinamica (ECAM 350.15.B / 350.35.W / 350.55.B)",
+      "De'Longhi Autentica (ETAM 29.510.B / ETAM 29.660.SB)"
+    ],
+    "incompatible": [
+      "Siebträgermaschinen mit Rotationspumpen (z.B. Fluid-o-Tech / Procon)",
+      "Vollautomaten mit Gleichstrom-Getriebepumpen (24V DC)",
+      "Kapselmaschinen mit Sysko- oder ARS-Kompaktpumpen abweichender Geometrie",
+      "Gastro-Systeme mit Festwasseranschluss ohne Druckminderer"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Inspektion des Wassertank-Ansaugsiebs auf Schleimbildung, Biofilm und Partikelablagerungen."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Entkalkungszyklus mit amidosulfonsäurebasiertem Entkalker zur Vermeidung von Kalziumkarbonat-Ablagerungen in den Pumpenventilen."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Visuelle Prüfung des PTFE-Druckschlauchs, Erneuerung der EPDM-Dichtringe am Pumpenausgang und Schmierung der Raccord-Verbindung mit OKS 1110."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Pumpe brummt laut, Nullförderung (Kavitation / Air-Lock)",
+      "cause": "Trockenlauf nach Entleerung oder verklemmtes EPDM-Einlassventil durch Kalkbröckchen.",
+      "fix": "Dampf-/Heißwasserdrehknopf vollständig öffnen, um Systemunterdruck abzubauen. Gegebenenfalls Wasser über Spritze in den Ansaugtrakt injizieren (Zwangsbefüllung)."
+    },
+    {
+      "error": "Extremer Druckverlust bei Bezug (Kaffee tröpfelt, Pumpe verstummt fast)",
+      "cause": "Federbruch der 1.4310-Rückholfeder oder axiale Riefen im Kolben; Kolben bleibt bei Gegendruck stecken.",
+      "fix": "Ulka EX5 vollständig austauschen. Ein Einzeltausch interner Federn ist herstellerseitig unzulässig und nicht dauerhaft druckstabil."
+    },
+    {
+      "error": "Wasseransammlung unter der Maschine während des Pumpenlaufs",
+      "cause": "Versprödung oder Schnittbeschädigung des 4x2 mm Hochdruck-O-Rings am Raccord-Ausgang oder Riss im Membranreglergehäuse.",
+      "fix": "Sicherungsklammer entfernen, PTFE-Leitung kappen/neu absetzen, neuen O-Ring (EPDM 70) mit OKS 1110 einsetzen und Klammer arretieren."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Was ist der technische Unterschied zwischen der Ulka EX5 und der Ulka EP5?",
+      "a": "Der primäre konstruktive Unterschied liegt im Werkstoff des druckseitigen Pumpenausgangs. Die Ulka EX5 besitzt einen massiven Hochdruckausgang aus korrosions- und entzinkungsbeständigem Messing (CW617N), während die Ulka EP5 über einen Ausgangsstutzen aus thermoplastischem Kunststoff (Polyphthalamid bzw. PA66) verfügt. Der Messingausgang der EX5 gewährleistet eine signifikant höhere mechanische Zug- und Druckbelastbarkeit gegenüber hydraulischen Druckschlägen (Transienten bis 20 bar) sowie eine drastisch reduzierte Rissbildungsneigung bei Temperaturschwankungen und mechanischen Schwingungen des Membranreglers. Die elektrischen Leistungsdaten (48 W, 230 V, 50 Hz, 15 bar Maximaldruck) sind bei beiden Typen identisch."
+    },
+    {
+      "q": "Warum ist die maximale Einschaltdauer der Ulka EX5 auf 2/1 Minuten (ED 66%) spezifiziert?",
+      "a": "Schwingankerpumpen besitzen aufgrund ihrer kompakten Bauform und der hohen Leistungsdichte der Magnetspule keine aktive Eigenbelüftung. Beim Betrieb an 230 V Wechselstrom dissipiert der Kupferlackdraht der Wicklung erhebliche Joulesche Wärme. Die Betriebsart 2/1 min (Intermittent Operation: maximal 2 Minuten ununterbrochener Lastbetrieb, gefolgt von mindestens 1 Minute Abkühlphase) verhindert, dass die Grenztemperatur der Isolationsklasse F (155 °C) überschritten wird. Bei unzulässigem Dauerlauf erhitzt sich die Spule rasant, was zunächst zum Ansprechen der thermischen Schmelzsicherung (Klixon bei ca. 128 °C) und letztlich zur Zersetzung des Isolierlacks mit irreversiblem Windungsschluss führt."
+    },
+    {
+      "q": "Wie wird die Pumpe nach einem Trockenlauf oder Pumpentausch ohne Spezialwerkzeug korrekt entlüftet?",
+      "a": "Da die Ulka EX5 als Kolbenpumpe bei vollständig luftgefülltem Zylinder nur ein sehr geringes Saugvakuum aufbauen kann (Kompressionsverhältnis von Luft reicht nicht aus, um das federbelastete Auslassventil gegen den Atmosphärendruck aufzustoßen), entsteht ein sogenannter Air-Lock. Zur Beseitigung setzen Sie den gefüllten Wassertank ein, schalten die Maschine ein und öffnen sofort den manuellen Heißwasser-/Dampfhahn. Dadurch wird der hydraulische Gegendruck des Thermoblocks und des Brühgruppen-Crema-Ventils umgangen. Sollte die Pumpe nach 30 Sekunden noch trocken laufen, kann über eine saubere 20-ml-Einwegspritze manuell warmes Wasser direkt in den Saugschlauch injiziert werden, um die EPDM-Ventilsitze sofort hydrodynamisch zu benetzen."
+    }
+  ]
+}

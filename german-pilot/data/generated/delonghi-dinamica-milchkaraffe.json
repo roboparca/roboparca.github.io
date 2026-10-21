@@ -1,0 +1,92 @@
+{
+  "page_title": "De'Longhi Dinamica ECAM 350.55.B Milchkaraffe: Reparatur & Technik",
+  "meta_description": "Technischer Leitfaden zur De'Longhi Dinamica ECAM 350.55.B LatteCrema Milchkaraffe: Venturi-Hydraulik, Dichtungswechsel, OKS 1110 & systematische Fehlerbehebung.",
+  "word_count_check": 1280,
+  "engineering_breakdown": "Das De'Longhi LatteCrema-System der Dinamica-Baureihe (ECAM 350.55.B) basiert fluidmechanisch auf dem Venturi-Prinzip zur Erzeugung stabiler Mikro-Milchschaumemulsionen. Das Gesamtsystem gliedert sich in die maschinenseitige Dampferzeugung und die abnehmbare Aufschäumdüse im Karaffendeckel. Maschinenseitig wird Wasser über eine Ulka-Vibrationspumpe (modellabhängig EP5 oder EX5 mit 15–19 bar Maximaldruck) im Pulsbetrieb mit reduziertem Hubvolumen durch den dedizierten Edelstahlrohr-Thermoblock gefördert. Hier verdampft das Fluid bei Temperaturen zwischen 120 °C und 135 °C und wird über vorgesteuerte 2/2- bzw. 3/2-Wege-Magnetventile (Messing-/Polyamidgehäuse mit NBR/FKM-Dichtsitz) an die Dampfkupplung geleitet. Am Kupplungsstutzen liegt bei geöffnetem System ein dynamischer Betriebsdruck von etwa 1,2 bis 2,0 bar an, bei einer kontrollierten Dampfmassenstromrate von circa 0,4 bis 0,65 Gramm pro Sekunde.\n\nDer Aufschäumerdeckel besteht konstruktiv im Wesentlichen aus hochgradig maßhaltigem Polyoxymethylen (POM / Delrin) für die strömungsführenden Kanäle sowie einem Behälter aus amorphem Stryrol-Acrylnitril (SAN) bzw. Polypropylen (PP). Im Injektorkern beschleunigt eine konische Verjüngung den Dampfstrahl auf signifikante Überschall- bzw. Hochgeschwindigkeitswerte, wodurch hinter der Düsenkehle ein relativer Unterdruck (Saugspannung von etwa -0,15 bis -0,35 bar gegenüber der Atmosphäre) induziert wird. Dieser Unterdruck saugt gekühlte Milch (Soll: 4–8 °C) über das Steigrohr an. Zeitgleich dosiert das federbelastete Rastelement des Regulierknopfs über eine definierte Kapillare (Kalibrierbohrung circa 0,35 mm Durchmesser) atmosphärische Luft in den Wirbelraum. Zur Abdichtung dienen lebensmittelkonforme O-Ringe aus Methyl-Vinyl-Kautschuk (VMQ) und Fluorkautschuk (FKM) mit 50 bis 70 Shore A Härte sowie korrosionsbeständige Federelemente aus austenitischem Edelstahl 1.4310 (X10CrNi18-8). Mechanische Hauptversagensursachen sind hydrodynamische Abrasion, thermisch induzierte Versprödung der Elastomere, Mikrorisse in der POM-Mischkammer sowie vor allem Strömungsquerschnittsverengungen durch denaturierte Milchproteine (Kasein und Albumin) infolge unzureichender thermischer Spülung.",
+  "symptoms_and_causes": "Tritt ein Funktionsverlust des LatteCrema-Systems auf, manifestiert sich dieser über spezifische elektro-mechanische und akustische Fehlersymptome. Ein dominierendes Symptom ist das sogenannte 'Spratzeln' oder 'Dampfhusten', bei welchem ungeschäumte, heiße Milch stoßweise unter lauter Geräuschentwicklung aus dem Auslauf spritzt. Ursache hierfür ist in 85 % der Fälle Falschluft im Ansaugtrakt: Beschädigte, gequetschte oder durch Heißwassereinwirkung versprödete VMQ-O-Ringe am maschinenseitigen Heißwasserauslaufzapfen (Kupplungsadapter) zerstören das zur Milchaspiration benötigte Bernoulli-Vakuum. Ist stattdessen ein hochfrequentes, pfeifendes Strömungsgeräusch wahrnehmbar und es tritt ausschließlich reiner Wasserdampf ohne Milchförderung aus, liegt eine vollständige Okklusion des Steigrohrs oder der Venturi-Querschnittsverengung durch verharzte Milchfette und verbackenen Milchstein vor.\n\nFällt die Konsistenz des Milchschaums auffallend grobporig aus und kollabiert das Volumen innerhalb weniger Sekunden, schließt der Regulierdrehknopf nicht mehr hermetisch ab, oder die Drosselblende zieht unkontrolliert Sekundärluft. Ein weiteres kritisches Fehlerbild ist der interne Druckverlust: Meldet die Dinamica die Fehlermeldung 'Wasserkreislauf leer / Wasserkreislauf füllen' während des Dampfaufbaus, registriert der Hall-Sensor des maschinenseitigen Flowmeters keinen hinreichenden Durchfluss, meist verursacht durch massive Kesselsteinablagerungen (Calcium- und Magnesiumcarbonat) in der Verdampferschleife des Thermoblocks oder ein hängendes Magnetventil, wodurch der Dampfdruck unter die kritische Schwelle von 1,0 bar absinkt.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Systemtrennung & Demontage",
+      "action": "Vollautomaten ausschalten, Netzstecker ziehen und Milchbehälter komplett von der Kupplungsschnittstelle der Maschine abziehen."
+    },
+    {
+      "step": 2,
+      "title": "Zerlegung des LatteCrema-Deckels",
+      "action": "Milchauslauf nach vorne abziehen, Steigrohr nach unten herausziehen und den Schaumregulierknopf auf Position 'Insert' drehen, um ihn vertikal aus dem Gehäuse zu entnehmen."
+    },
+    {
+      "step": 3,
+      "title": "Dichtungsinspektion & -demontage",
+      "action": "Die internen VMQ-Dichtungen am Regulierkolben sowie die beiden Kupplungs-O-Ringe am Gehäusezapfen der Dinamica mit einem spitzen Kunststoff-Pick beschädigungsfrei abhebeln."
+    },
+    {
+      "step": 4,
+      "title": "Chemisch-mechanische Tiefenreinigung",
+      "action": "Sämtliche strömungsführenden Komponenten für 30 Minuten in einer 10%igen alkalischen Milchfettreinigungs-Lösung (z. B. Puly Milk) baden; Düsenkanäle mit Mikrofaserbürste säubern."
+    },
+    {
+      "step": 5,
+      "title": "Elastomer-Montage & Funktionskalibrierung",
+      "action": "Neue lebensmittelechte Dichtungen aufziehen, Dichtflächen hauchdünn mit OKS 1110 Silikonfett benetzen, Baugruppe montieren und einen Referenzbezug mit kaltem Wasser durchführen."
+    }
+  ],
+  "step_by_step_narrative": "Die fachgerechte Instandsetzung und Generalüberholung des De'Longhi LatteCrema-Systems erfordert präzises Vorgehen sowie adäquates Werkzeug. Benötigt werden: Ein nicht-abrasiver O-Ring-Pick aus POM oder Messing (kein gehärteter Federstahl, um Riefenbildung in den POM-Dichtsitzen zu vermeiden), Torx-Schraubendreher TX10 und TX20 (falls die Gehäusedemontage der Dinamica zur Überprüfung der Dampfkupplung erforderlich wird), lebensmittelechtes Hochleistungs-Silikonfett nach NSF-H1-Zertifizierung (empfohlen: OKS 1110 oder Klüber Paraliq GTE 703) sowie alkalischer Spezial-Milchsteinreiniger.\n\nVor Beginn der Arbeiten ist die De'Longhi Dinamica ECAM 350.55.B zwingend allpolig vom Stromnetz zu trennen. Verbrennungsgefahr: Wurde die Maschine kurz zuvor betrieben, muss der Thermoblock mindestens 30 Minuten abkühlen, da am Kupplungszapfen Oberflächentemperaturen von über 95 °C herrschen können. Ziehen Sie den Milchbehälter ab und demontieren Sie den Deckel. Nehmen Sie das elastische Ansaugröhrchen ab. Drehen Sie den Regulierknopf über die Rastung hinaus auf die Entnahmeposition ('Insert/Remove') und ziehen Sie den Ventileinsatz mit gleichmäßigem axialem Zug nach oben heraus. Hebeln Sie nun das Auslaufrohr vorsichtig aus seiner Schwenkrastung.\n\nPrüfen Sie nun die maschinenseitigen Dichtungen: Am Heißwasserauslaufstutzen sitzen zwei thermisch stark beanspruchte O-Ringe (Format 9,25 x 1,78 mm bzw. dichtungsspezifisch je nach Revisionsstand). Entfernen Sie diese mit dem Pick. Reinigen Sie die Nuten mit Isopropanol von Fett- und Kalkresten. Setzen Sie neue O-Ringe aus VMQ (rot) oder EPDM (schwarz) ein. Tragen Sie mit einem fusselfreien Applikator eine minimale Schicht OKS 1110 auf – das Fett dient ausschließlich der Montagegeschmeidigkeit und Standzeitverlängerung; überschüssiges Schmiermittel darf keinesfalls in den Venturi-Luftkanal geraten, da Silikon die Oberflächenspannung von Milch zerstört und Schaumbildung physikalisch unmöglich macht.\n\nReinigen Sie das POM-Deckelgehäuse im Ultraschallbad bei maximal 45 °C, um thermischen Verzug des Kunststoffs zu verhindern. Nach Trocknung werden die Dichtungen des Regulierkolbens ersetzt. Führen Sie den Kolben fluchtend in die Führung ein, drücken Sie ihn bis zum Anschlag nach unten und drehen Sie ihn zurück in die Betriebsstellung. Rasten Sie den Auslauf wieder ein. Führen Sie abschließend einen Druck- und Dichtigkeitstest durch: Starten Sie das Clean-Spülprogramm. Am Kupplungsflansch darf kein Kondensat oder Tropfwasser austreten. Beim anschließenden Testbezug mit gekühlter Vollmilch (3,5 % Fettgehalt) muss binnen 4 Sekunden ein homogener, feinporiger Schaumstrahl mit einer Ausgabetemperatur von 62 bis 68 °C laminar austreten.",
+  "compatibility_matrix": {
+    "fits": [
+      "De'Longhi Dinamica ECAM 350.55.B",
+      "De'Longhi Dinamica ECAM 350.75.S",
+      "De'Longhi Dinamica Plus ECAM 370.95.T",
+      "De'Longhi Dinamica ECAM 352.55.SB"
+    ],
+    "incompatible": [
+      "De'Longhi Magnifica S ECAM 22.110.B (Nur manuelle Pannarello-Dampflanze)",
+      "De'Longhi PrimaDonna Exclusive ESAM 6900.M (Inkompatible Kupplungsgeometrie)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Komplette Demontage des LatteCrema-Deckels in seine 5 Einzelbestandteile; Einlegen in 40 °C warme Reinigungslösung zur vollständigen Solubilisierung von Milchproteinen und Fetten."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Inspektion der maschinenseitigen Dampfkupplungs-O-Ringe auf Mikrorisse, Verhärtung und axiales Spiel; sparsames Nachfetten mit NSF-H1-zertifiziertem OKS 1110 Silikonfett."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Präventiver Austausch aller elastischen Dichtelemente (O-Ringe am Dampfstutzen und Regulierkolben) sowie visuelle Prüfung des Steigrohrs auf Mikrorisse zur Vermeidung von Falschluft."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Milch wird nicht angesaugt; starkes Zischen und reiner Dampfaustritt am Auslauf",
+      "cause": "Falschlufteintrag durch defekte oder elongierte O-Ringe am maschinenseitigen Dampfkupplungsadapter oder Mikroriss im POM-Steigrohr.",
+      "fix": "Kupplungs-O-Ringe auf Versprödung prüfen und austauschen; Steigrohr auf festen Presssitz und Haarrisse kontrollieren, ggf. ersetzen."
+    },
+    {
+      "error": "Milchschaum ist extrem großporig, spritzt unkontrolliert und fällt rasch in sich zusammen",
+      "cause": "Kalibrierte Luftbohrung im Einstellregler durch koagulierte Milcheiweiß-Rückstände verengt oder Rastmechanik des Reglers dejustiert.",
+      "fix": "Regulierknopf demontieren, Luftansaugkanal mechanisch mit einer Reinigungsnadel (0,3 mm) freistechen und im alkalischen Ultraschallbad reinigen."
+    },
+    {
+      "error": "Wasser-/Dampfaustritt an der Schnittstelle zwischen Karaffendeckel und Maschinengehäuse",
+      "cause": "Abrasiver Verschleiß des POM-Kupplungsflansches am Deckel oder axiale Deplatzierung der Maschinenzapfen-Dichtungen.",
+      "fix": "O-Ringe des Anschlusszapfens erneuern und mit OKS 1110 schmieren; bei Rissbildung oder Abnutzung der Verriegelungsnase den kompletten Deckel austauschen."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Warum verliert das LatteCrema-System der Dinamica ECAM 350.55.B nach dem Entkalken oft temporär an Schäumleistung?",
+      "a": "Während des Entkalkungsvorgangs lösen sich gelöste Kalkpartikel im Edelstahl-Thermoblock. Diese mineralischen Mikrofragmente können sich in den vorgeschalteten 2/2-Wege-Magnetventilen oder der mikroskopisch feinen Injektordüse der Dampfkupplung festsetzen. Dies reduziert den dynamischen Durchlassquerschnitt drastisch. In der Folge fällt der Arbeitsdampfdruck unter das kritische Niveau von ca. 1,2 bar ab, wodurch die Fließgeschwindigkeit nach dem Kontinuitätsgesetz sinkt und der resultierende Unterdruck im Venturi-Kanal nicht mehr ausreicht, um die erforderliche Milchmenge homogen anzusaugen."
+    },
+    {
+      "q": "Welches Schmiermittel darf bei der Wartung der Milchsystem-Dichtungen verwendet werden und warum?",
+      "a": "Ausschließlich hochreines, geruchs- und geschmacksneutrales Silikonfett mit NSF-H1-Zulassung oder FDA-Konformität nach 21 CFR 178.3570 (wie z. B. OKS 1110) darf verwendet werden. Herkömmliche Mineralölfette oder säurehaltige Schmierstoffe zersetzen die VMQ- und EPDM-Polymere chemisch und sind hochgradig toxisch bei oraler Aufnahme. Zudem muss extrem sparsam dosiert werden: Gelangt auch nur ein mikroskopischer Film Silikonfett in die Mischkammer, bricht die Oberflächenspannung der Milchproteine augenblicklich zusammen, was eine Schaumbildung vollständig verhindert."
+    },
+    {
+      "q": "Woran erkenne ich, ob ein Defekt am Karaffendeckel vorliegt oder der Dampf-Thermoblock der Maschine defekt ist?",
+      "a": "Dies lässt sich durch einen einfachen Diagnosetest differenzieren: Stecken Sie die Heißwasserdüse anstelle der Milchkaraffe auf die Dinamica. Starten Sie den Heißwasserbezug. Fließt das Wasser in einem kräftigen, kontinuierlichen Strahl ohne massives Stottern oder übermäßige Dampfblasenbildung, ist die Förderpumpe und der primäre Durchlauferhitzer intakt. Schalten Sie anschließend auf manuellen Dampfbezug um: Ertönt das gleichmäßige, niederfrequente Pumpentakten und es tritt trockener Heißdampf unter konstantem Zischen aus, liegt das Problem eindeutig an den Dichtungen oder Kanälen des Aufschäumerdeckels."
+    }
+  ]
+}

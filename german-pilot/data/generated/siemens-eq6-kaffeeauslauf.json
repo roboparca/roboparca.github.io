@@ -1,0 +1,93 @@
+{
+  "page_title": "Siemens EQ.6 Plus s700 Kaffeeauslauf Verteiler Reparatur & Tausch",
+  "meta_description": "Technische Anleitung für Kaffeeauslauf-Verteiler & Düsenabdeckung der Siemens EQ.6 Plus s700 (TE657503DE). Hydraulik, Montage, Dichtungswechsel & Wartung.",
+  "word_count_check": 1180,
+  "engineering_breakdown": "Die Auslauf- und Verteilerbaugruppe der Siemens EQ.6 Plus s700 (Baureihe TE657503DE) stellt die hydraulische Schnittstelle zwischen dem Brühgruppen-Drainagesystem und der finalen Tassenabgabe dar. Das Bauteil besteht im Kern aus einer strömungsoptimierten Verteilereinheit aus Polyoxymethylen-Copolymer (POM-C), einem thermoplastischen Kunststoff, der sich durch eine extrem hohe Zugfestigkeit, Formbeständigkeit bis über 110 °C und eine exzellente Resistenz gegen organische Kaffeesäuren, Lipide und Heißwasserentkalker auf Amidosulfonsäurebasis auszeichnet. Die äußere sichtbare Düsenabdeckung fungiert als Stoß- und Zierkörper und ist aus einem bruchfesten Acrylnitril-Butadien-Styrol-Copolymer (ABS) mit galvanischer Oberflächenveredelung beziehungsweise einer Decklage aus gebürstetem Edelstahl der Güte 1.4301 (X5CrNi18-10) gefertigt.\n\nHydraulisch operiert das System bei einem dynamischen Restdruck von ca. 1,0 bis 2,5 bar, nachdem das Brühwasser die Kaffeematrix und das Crema-Ventil (Betriebsspitzendruck der Pumpe bis 19 bar) passiert hat. Die Flussrate liegt beverage-spezifisch zwischen 1,2 und 2,8 ml/s bei Prozesstemperaturen von 88 °C bis 96 °C. Die Dichtheit der Schlauchanschlüsse wird über FDA-konforme Fluorsilikon- oder Vinyl-Methyl-Silikon-Dichtungen (VMQ, Härtegrad Shore A 60 ± 5) sichergestellt, während der mechanische Teleskop-Schlitten über federbelastete Rastelemente aus korrosionsbeständigem Federbandstahl 1.4310 (X10CrNi18-8) vertikal geführt wird. Kritische mechanische Schwachstellen sind die feingliedrigen Rastnasen des POM-Gehäuses, die bei thermischer Wechsellast und Fettakkumulation verspröden, sowie die interne Y-Kanalgeometrie, in welcher verharzte Kaffeeöle (Lipidfraktionen wie Cafestol und Kahweol) laminare Strömungen behindern und asymmetrischen Tassenauswurf provozieren.",
+  "symptoms_and_causes": "Defekte oder verstopfte Kaffeeauslauf-Verteiler bei der Siemens EQ.6 Plus s700 manifestieren sich durch klar definierte Symptome. Das häufigste Phänomen ist der asymmetrische Doppelbezug: Bei der Zubereitung zweier Tassen wird eine Seite signifikant minderbefüllt oder gibt den Kaffee nur tropfenweise ab. Ursache hierfür ist eine Querschnittsverengung in einem der beiden symmetrischen Abgangskanäle durch sedimentierten Kaffeemehl-Feinstaub, der sich mit polymerisierten Kaffeefetten zu einer zähen Matrix verbunden hat. \n\nEin weiteres kritisches Fehlerbild ist die interne Leckage: Hierbei tritt das Kaffeefluid nicht ausschließlich über die beiden Auslaufdüsen aus, sondern tropft hinter der Edelstahl-Frontblende herab, sammelt sich im Führungsschacht des Auslaufschiebers oder läuft unkontrolliert an der Frontwand direkt in die Tropfschale. Dies deutet primär auf rissige VMQ-O-Ringe am Einlaufstutzen, thermisch deformierte Haltenasen oder eine geplatzte Ultraschallschweißnaht der Verteilerkammer hin. Mechanisch äußert sich ein Defekt oft durch eine blockierte oder ruckelnde Höhenverstellung des Auslaufs. Ursache hierfür ist das Eindringen von feinsten Kaffeespritzern in die Gleitkulisse, was zum Auswaschen der werkseitigen NSF-H1-Silikonschmierung führt und den Reibkoeffizienten zwischen POM-Schlitten und Gehäuseführung massiv erhöht.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Netztrennung & Vorbereitung",
+      "action": "Gerät vollständig ausschalten, Netzstecker ziehen, Wassertank sowie Tropfschale entnehmen und das System mindestens 30 Minuten abkühlen lassen."
+    },
+    {
+      "step": 2,
+      "title": "Demontage der Auslaufblende",
+      "action": "Kaffeeauslauf in die unterste Position fahren. Mit einem flachen POM-Demontagehebel die untere Kante der D��senabdeckung vorsichtig nach vorne aushebeln und die oberen Rastnasen nach unten entriegeln."
+    },
+    {
+      "step": 3,
+      "title": "Freilegen des Verteilergehäuses",
+      "action": "Die beiden sichtbaren Torx-Schrauben (TX10) an der inneren Auslaufträgerplatte lösen und den Verteilerblock mitsamt Schiebermechanik behutsam aus der Führungsschiene ziehen."
+    },
+    {
+      "step": 4,
+      "title": "Hydraulische Entkopplung & Komponentenwechsel",
+      "action": "Die Klemmsicherung des Einlaufschlauchs lösen, den PTFE-/Silikonschlauch vom Verteilerstutzen abziehen, die VMQ-Dichtung erneuern und den neuen Verteiler (B08SQPSLNG) montieren."
+    },
+    {
+      "step": 5,
+      "title": "Remontage, Justage & Systemtest",
+      "action": "Führungsbahnen dünn mit OKS 1110 benetzen, Baugruppe verschrauben, Frontblende aufdrücken bis alle Rastnasen hörbar einrasten und abschließend einen Heißwasserspültest durchführen."
+    }
+  ],
+  "step_by_step_narrative": "Für die fachgerechte Instandsetzung des Kaffeeauslauf-Verteilers und der Düsenabdeckung der Siemens EQ.6 Plus s700 werden Präzisionswerkzeuge benötigt: ein Torx-Schraubendreher der Größe TX10 (vorzugsweise magnetisch), ein spitzes Kunststoff-Hebelwerkzeug (Demontagekeil zur Vermeidung von Kratzern auf gebürstetem Edelstahl), eine abgewinkelte Pinzette oder ein Dental-Pick zur O-Ring-Handhabung sowie lebensmittelechtes Hochtemperatur-Silikonfett gemäß NSF-H1 (empfohlen: OKS 1110 oder Klüber Paraliq GTE 703).\n\nNach der zwingenden galvanischen Netztrennung (VDE 0701/0702 Sicherheitsvorschrift) wird die Maschine von Wassertank und Bohnenbehälter-Zubehör befreit. Fahren Sie den Auslaufschlitten manuell ganz nach unten. Setzen Sie das Hebelwerkzeug mittig an der Unterkante der Auslaufdüsenabdeckung an und hebeln Sie diese mit gleichmäßigem, dosiertem Zug ab. Vermeiden Sie ruckartiges Reißen, da die oberen Führungszapfen sonst abscheren. Hinter der Abdeckung werden die beiden TX10-Schrauben sichtbar, welche die Arretierungsplatte fixieren; diese sind herauszudrehen. \n\nZiehen Sie die Schlitteneinheit leicht nach vorne, um den Zugang zum rückseitigen Fluidanschluss zu gewährleisten. Ziehen Sie den flexiblen VMQ-Druckschlauch behutsam vom Einlaufstutzen des Verteilers ab. Überprüfen Sie den Schlauch auf Versprödung, Risse oder Kalkinkrustationen; kürzen Sie das Schlauchende bei Dehnungsspuren um 2 mm mit einem geraden Schnitt. Ersetzen Sie die innenliegende Dichtung und fetten Sie den Stutzen hauchdünn mit OKS 1110 ein (Schichtdicke < 0,1 mm, um ein Verschleppen in den Brühweg zu verhindern). Setzen Sie den neuen Verteiler B08SQPSLNG passgenau in die Gleitschiene ein. Führen Sie die beiden TX10-Schrauben handfest ein (Anzugsdrehmoment max. 0,8 Nm in Kunststoffgewinde). Schieben Sie den Schlitten mehrfach vertikal auf und ab, um die Leichtgängigkeit der 1.4310-Federelemente zu prüfen. Setzen Sie die Frontabdeckung oben an und drücken Sie diese an der Unterseite fest, bis die Rastnasen mit einem deutlichen akustischen Feedback einschnappen. Führen Sie abschließend einen Spülzyklus mit 90 °C durch und prüfen Sie über Sichtkontrolle die absolute Dichtheit der Trennfugen.",
+  "compatibility_matrix": {
+    "fits": [
+      "Siemens EQ.6 Plus s700 (TE657503DE/01 bis /07)",
+      "Siemens EQ.6 Plus s700 Edelstahl (TE657M03DE)",
+      "Siemens EQ.6 Plus s500 (TE655203RW)",
+      "Siemens EQ.6 Plus s800 (TE658209DE)"
+    ],
+    "incompatible": [
+      "Siemens EQ.5 Serie (TE503201RW etc. - völlig abweichende Schiebermechanik)",
+      "Siemens EQ.7 Baureihe (TE716211DE - separates Drehverteiler-Konzept)",
+      "Siemens EQ.9 Baureihe (TI903509DE - Doppelkammer-Druckauslauf mit Flow-Control)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Entnahme der Düsenblende (soweit zugänglich), Durchspülen der Austrittsöffnungen mit klarem 60 °C warmem Wasser und Abwischen der Führungsschiene."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Durchführung des automatischen Reinigungsprogramms 'calc'nClean' unter Einsatz von sauerstoffbasierten Reinigertabletten zur Verseifung und Spülung der internen Kaffeeölrückstände im POM-Verteiler."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Demontage der Auslaufabdeckung, Sichtprüfung der VMQ-Schlauchdichtung auf Versprödung, Reinigung der Y-Verteilerkanäle im Ultraschallbad sowie Neuauftrag von NSF-H1-Fett auf die Gleitschienen."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Asymmetrischer Kaffeeauslauf bei 2-Tassen-Bezug",
+      "cause": "Einseitige Okklusion im POM-Y-Verteilerkanal durch verharzte Lipidverbindungen oder Mikro-Kaffeepartikel.",
+      "fix": "Auslaufverteiler demontieren, im alkalischen Ultraschallbad (z. B. mit Puly Caff) für 15 Minuten bei 50 °C reinigen oder Verteiler komplett austauschen."
+    },
+    {
+      "error": "Kaffeefluid läuft hinter der Edelstahl-Frontblende herab",
+      "cause": "Defekte oder gealterte VMQ-Elastomerdichtung am Schlauchstutzen oder Haarriss im Verteilergehäuse durch Materialermüdung.",
+      "fix": "Düsenabdeckung abnehmen, Schlauchanschluss inspizieren, Dichtungsring erneuern und den Verteilerblock B08SQPSLNG als Gesamteinheit ersetzen."
+    },
+    {
+      "error": "Auslaufschlitten blockiert oder verstellt sich selbstständig",
+      "cause": "Bruch der 1.4310 Federstahl-Rastlaschen oder massive Verklebung der Gleitbahnen durch eingetrockneten Kaffee.",
+      "fix": "Schlittenführung zerlegen, Führungsnuten von Verkrustungen säubern, Federspannung korrigieren und Führungsflächen mit OKS 1110 Silikonfett schmieren."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Warum läuft mein Kaffee trotz intensiver chemischer Entkalkung immer noch schief aus den Düsen?",
+      "a": "Klassische Entkalker auf Basis von Amidosulfon- oder Zitronensäure reagieren primär mit anorganischen Calcium- und Magnesiumcarbonat-Verbindungen. Die Engpässe im Y-Verteiler des Kaffeeauslaufs entstehen jedoch zu über 90 % aus organischen Kaffeefettablagerungen, wachsartigen Lipiden und feinstem Mahlgutstaub. Diese Verunreinigungen sind chemisch säureresistent. Zur Beseitigung ist zwingend ein alkalischer Kaffeefettlöser (Tenside/Aktivsauerstoff) im Reinigungsprogramm erforderlich. Ist der Verteilerkanal bereits mechanisch verblockt, hilft meist nur die Demontage und mechanische Reinigung mit Bürsten bzw. Ultraschall oder der vollständige Austausch des Verteilers."
+    },
+    {
+      "q": "Benötige ich Spezialwerkzeug oder Spezialschmiermittel für den Wechsel des Verteilers B08SQPSLNG?",
+      "a": "Für den Tausch sind Standardwerkzeuge wie ein Torx TX10 Schraubendreher und ein flacher Kunststoff-Hebel vollkommen ausreichend. Entscheidend ist jedoch das Schmiermittel: Verwenden Sie unter keinen Umständen mineralölbasierte Fette, WD-40 oder Standard-Schmierstoffe, da diese das lebensmittelechte POM- und ABS-Polymer angreifen, Spannungsrisse provozieren und die Trinkwassersicherheit gefährden. Zugelassen sind ausschließlich physiologisch unbedenkliche Hochtemperatur-Silikonfette nach NSF-H1-Norm oder DIN EN 51524 (z. B. OKS 1110), die resistent gegen Heißwasser bis 100 °C sind und nicht verseifen."
+    },
+    {
+      "q": "Passt der Auslaufverteiler der EQ.6 Plus s700 auch bei Geräten der s300 oder s500 Serie?",
+      "a": "Innerhalb der Siemens EQ.6 Plus Plattform (TE65...) teilen sich nahezu alle Modelle identische interne hydraulische Bauteile. Der innere POM-Verteilerkern ist uneingeschränkt kompatibel zwischen s300, s500, s700 und s800. Unterschiede existieren jedoch bei der äußeren Düsenabdeckung: Die Baureihe s700 (TE657503DE) nutzt eine hochwertige Edelstahl-Vollblende (gebürstet), während kleinere Modellreihen teils lackierte oder durchgefärbte Kunststofffronten aufweisen. Achten Sie bei der Baugruppe B08SQPSLNG darauf, ob sowohl der Verteiler als auch die systemspezifische Edelstahlblende oder lediglich der interne Verteiler getauscht werden."
+    }
+  ]
+}

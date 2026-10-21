@@ -1,0 +1,1487 @@
+// german-pilot/data/create-models-de.js
+// 102 Top Coffee Machine Models in Germany across 10 Leading Brands
+// Packed with authentic mechatronic specs: pump pressure, heating element, grinder, brew unit, filters, and common error codes.
+
+const fs = require('fs');
+const path = require('path');
+
+const models = [
+  // ==========================================
+  // 1. DE'LONGHI (18 Models)
+  // ==========================================
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "Magnifica S (ECAM 22.110.B)", slug: "magnifica-s",
+    series: "ECAM Compact", year: "2018", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Kompakte herausnehmbare ECAM Brühgruppe (7313251451)", grinder: "13-stufiges Edelstahl-Kegelmahlwerk",
+    filterType: "De'Longhi DLSC002 Wasserfilter",
+    typicalErrors: "Allgemeiner Alarm (rotes Warndreieck), 4 Tassen blinken, Tresterbehälter leeren blinkt",
+    quirks: "Sehr langlebige Spindelmechanik, neigt bei mangelnder Schmierung zum Festklemmen der Brühgruppe in oberer Position.",
+    googleSearches: [
+      "delonghi magnifica s brühgruppe klemmt",
+      "delonghi magnifica s allgemeine störung rotes dreieck",
+      "delonghi magnifica s pumpe brummt kein wasser",
+      "delonghi magnifica s kaffee läuft nur einseitig"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "Magnifica S Smart (ECAM 250.23.SB)", slug: "magnifica-s-smart",
+    series: "ECAM Smart", year: "2020", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "ECAM Brühgruppe mit Doppel-O-Ring (7313251451)", grinder: "Edelstahl-Kegelmahlwerk mit Vorbrühsystem",
+    filterType: "De'Longhi DLSC002",
+    typicalErrors: "Rotes Warndreieck blinkt im Sekundentakt, Kaffeesatzbehälter voll Fehlalarm",
+    quirks: "Sensorik für Schalenkontakt reagiert empfindlich auf Kaffeefett-Ablagerungen an den Mikroschaltern.",
+    googleSearches: [
+      "delonghi magnifica s smart brühgruppe reinigen",
+      "delonghi ecam 250.23 entkalken anleitung",
+      "delonghi smart rotes dreieck blinkt"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "Magnifica Evo (ECAM 290.61.B)", slug: "magnifica-evo",
+    series: "ECAM Evo", year: "2021", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "ECAM Generation 3 Brühgruppe", grinder: "Geräuschgedämmtes Edelstahl-Mahlwerk",
+    filterType: "De'Longhi DLSC002",
+    typicalErrors: "LatteCrema Karaffe wird nicht erkannt, Ausrufezeichen leuchtet dauerhaft",
+    quirks: "LatteCrema One-Touch-System erfordert saubere Mikroluft-Kanäle in der Milchschaumdüse.",
+    googleSearches: [
+      "delonghi magnifica evo milchschaum spritzt",
+      "delonghi magnifica evo brühgruppe klemmt",
+      "delonghi evo fehler ausrufezeichen"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "Magnifica Evo Next (ECAM 310.60.B)", slug: "magnifica-evo-next",
+    series: "ECAM Evo Next", year: "2023", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "ECAM Gen 3 mit federndem Vorbrühkolben", grinder: "Kalibriertes Edelstahl-Mahlwerk",
+    filterType: "De'Longhi DLSC002",
+    typicalErrors: "TFT-Display Fehler Wasserkreislauf, Brühgruppe schwergängig",
+    quirks: "Displaygestütztes Entkalkungsprogramm verlangt exaktes Durchlaufen der Spülzyklen.",
+    googleSearches: [
+      "delonghi magnifica evo next entkalken meldung hängt",
+      "delonghi ecam 310.60 brüheinheit fetten"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "Magnifica Start (ECAM 220.21.B)", slug: "magnifica-start",
+    series: "ECAM Start", year: "2022", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "ECAM Standard-Brüheinheit", grinder: "Stahlkegel-Mahlwerk",
+    filterType: "De'Longhi DLSC002",
+    typicalErrors: "LED Wassertank und Warnsymbol blinken wechselseitig",
+    quirks: "Kompaktes Soft-Touch-Panel; Reedkontakt des Wassertanks kann durch Schwimmermagnet-Blockade ausfallen.",
+    googleSearches: [
+      "delonghi magnifica start wassertank symbol blinkt",
+      "delonghi 220.21 brühgruppe lässt sich nicht einsetzen"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "Dinamica (ECAM 350.55.B)", slug: "dinamica",
+    series: "ECAM Dinamica", year: "2019", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Modulare ECAM Brühgruppe (7313251451)", grinder: "13-stufiges Kegelmahlwerk",
+    filterType: "De'Longhi DLSC002",
+    typicalErrors: "Allgemeine Störung im Display, Spülvorgang bricht ab, Trester nass",
+    quirks: "Doppelwandige LatteCrema-Kupplung neigt nach 2 Jahren zu feinen Mikrorissen an den Viton-Dichtungen.",
+    googleSearches: [
+      "delonghi dinamica allgemeine störung beheben",
+      "delonghi dinamica brühgruppe klemmt",
+      "delonghi dinamica kaffee nur lauwarm",
+      "delonghi ecam 350.55 milchaufschäumer zieht nicht"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "Dinamica Plus (ECAM 370.95.T)", slug: "dinamica-plus",
+    series: "ECAM Dinamica Plus", year: "2020", pumpPressure: "19 Bar", heaterPower: "1450 Watt",
+    brewUnit: "High-Pressure ECAM Brühgruppe", grinder: "Akustisch entkoppeltes Stahlmahlwerk",
+    filterType: "De'Longhi DLSC002",
+    typicalErrors: "Fehler 'Wasserkreislauf leer - System füllen', Bluetooth Verbindungsfehler",
+    quirks: "19 Bar Ulka-Hochdruckpumpe erfordert exakt entkalkte Solenoid-Dampfventile.",
+    googleSearches: [
+      "delonghi dinamica plus system füllen fehlermeldung",
+      "delonghi dinamica plus brühgruppe revidieren",
+      "delonghi ecam 370.95 milchkaraffe tropft"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "Eletta Explore (ECAM 450.86.T)", slug: "eletta-explore",
+    series: "ECAM Eletta Cold Brew", year: "2022", pumpPressure: "19 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Cold Extraction Brühgruppe mit Dual-Hub", grinder: "Elektronisch geregeltes Edelstahl-Mahlwerk",
+    filterType: "De'Longhi DLSC002",
+    typicalErrors: "Cold Brew Ventil öffnet nicht, Cold Foam Karaffe schäumt nicht",
+    quirks: "Zwei separate Milchkaraffen (Hot Foam & Cold Foam) nutzen unterschiedliche Venturi-Bohrungen.",
+    googleSearches: [
+      "delonghi eletta explore cold brew ventil fehler",
+      "delonghi eletta explore brühgruppe reinigen",
+      "delonghi 450.86 entkalken schritt für schritt"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "Eletta Cappuccino Top (ECAM 45.760.W)", slug: "eletta-cappuccino-top",
+    series: "ECAM Eletta Classic", year: "2017", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "ECAM Heavy Duty Brühgruppe", grinder: "Stahl-Kegelmahlwerk",
+    filterType: "De'Longhi DLSC002",
+    typicalErrors: "Allgemeiner Alarm, Milchaufschäumer liefert nur heiße Milch ohne Schaum",
+    quirks: "Kupplungsstück für Milchtank im Gehäuseinneren verkalkt bei hartem Leitungswasser schnell.",
+    googleSearches: [
+      "delonghi eletta cappuccino top allgemeiner alarm",
+      "delonghi ecam 45.760 milchschaum funktioniert nicht"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "PrimaDonna Soul (ECAM 610.75.MB)", slug: "primadonna-soul",
+    series: "ECAM PrimaDonna Premium", year: "2021", pumpPressure: "19 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Elektronisch adaptierte ECAM Brühgruppe", grinder: "Bean Adapt elektronisch gesteuertes Mahlwerk",
+    filterType: "De'Longhi DLSC002",
+    typicalErrors: "Bean Adapt Motor blockiert, Fehler Mahlgrad-Kalibrierung",
+    quirks: "Motorische Mahlgradverstellung darf nur im Mahlvorgang softwareseitig justiert werden.",
+    googleSearches: [
+      "delonghi primadonna soul mahlwerk kalibrieren",
+      "delonghi ecam 610.75 brühgruppe schwergängig"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "PrimaDonna Elite (ECAM 650.85.MS)", slug: "primadonna-elite",
+    series: "ECAM PrimaDonna Elite", year: "2018", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Edelstahl-verstärkte ECAM Brühgruppe", grinder: "Stahlkegel mit Sensorik",
+    filterType: "De'Longhi DLSC002",
+    typicalErrors: "Meldung 'Thermoblock heizt nicht', Trinkschokolade-Düse verstopft",
+    quirks: "Zusätzlicher zweiter Thermoblock für blitzschnellen Dampf und heiße Schokolade.",
+    googleSearches: [
+      "delonghi primadonna elite heizung fehler",
+      "delonghi ecam 650.85 brühgruppe dichtungsset"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "Autentica (ETAM 29.510.B)", slug: "autentica",
+    series: "ETAM Ultra Slim", year: "2016", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Ultra-kompakte ETAM Brühgruppe (7313230011)", grinder: "Kompakt-Kegelmahlwerk",
+    filterType: "De'Longhi DLSC002",
+    typicalErrors: "Brühgruppe klemmt beim Hochfahren (ETAM Führungsschienen sehr schmal)",
+    quirks: "Mit 19,5 cm extrem schlankes Gehäuse; eng verbautes Hydrauliksystem.",
+    googleSearches: [
+      "delonghi autentica brühgruppe klemmt fest",
+      "delonghi etam 29.510 allgemeine störung"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "Autentica Cappuccino (ETAM 29.660.SB)", slug: "autentica-cappuccino",
+    series: "ETAM Slim Cappuccino", year: "2017", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "ETAM Kompakt-Brüheinheit", grinder: "Stahlkegelmahlwerk",
+    filterType: "De'Longhi DLSC002",
+    typicalErrors: "Dampfstoß bricht ab, Milchschaum fällt zusammen",
+    quirks: "Kompakt-Solenoidventil schaltet Vorbrüh- und Dampfimpuls in engem Raum.",
+    googleSearches: [
+      "delonghi etam 29.660 milchschaum defekt",
+      "delonghi autentica cappuccino entkalken"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "La Specialista Arte (EC9155.MB)", slug: "specialista-arte",
+    series: "Specialista Hybrid Siebträger", year: "2022", pumpPressure: "15 Bar", heaterPower: "1400 Watt",
+    brewUnit: "51 mm Siebträger-Brühkopf mit Vorbrühkammer", grinder: "Integriertes Barista-Kegelmahlwerk",
+    filterType: "De'Longhi Weichwasserfilter",
+    typicalErrors: "Manometer steigt nicht über 4 Bar, Mahlwerk wirft Klumpen aus",
+    quirks: "Siebträger-Kombigerät mit Vibrationspumpe und manueller Dampflanze.",
+    googleSearches: [
+      "delonghi specialista arte kein druck manometer",
+      "delonghi ec9155 mahlwerk reinigen verstopft"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "La Specialista Prestigio (EC9355.M)", slug: "specialista-prestigio",
+    series: "Specialista Smart Tamping", year: "2021", pumpPressure: "19 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Massiver Messing-Brühkopf", grinder: "Sensorgesteuertes Barista-Mahlwerk mit Smart Tamping Station",
+    filterType: "De'Longhi Weichwasserfilter",
+    typicalErrors: "Tamping-Hebel blockiert, Druckmanometer bleibt im Pre-Infusion Bereich",
+    quirks: "Smart Tamping Mechanik muss regelmäßig von Kaffeestaub befreit werden.",
+    googleSearches: [
+      "delonghi specialista prestigio hebel klemmt",
+      "delonghi ec9355 pumpe brummt kein druck"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "Magnifica ESAM 3000.B", slug: "magnifica-esam-3000",
+    series: "ESAM Classic", year: "2012", pumpPressure: "15 Bar", heaterPower: "1350 Watt",
+    brewUnit: "Klassische ESAM Brühgruppe (7332183900)", grinder: "Robustes Stahl-Kegelmahlwerk",
+    filterType: "Optionaler Wassertank-Kalkfilter",
+    typicalErrors: "Dreieck leuchtet dauerhaft, Brühgruppe fährt gegen Endanschlag und knallt",
+    quirks: "Klassischer doppelter U-Thermoblock; mechanisch extrem langlebig, aber Dichtungen härten aus.",
+    googleSearches: [
+      "delonghi esam 3000 rotes dreieck leuchtet",
+      "delonghi esam 3000 brühgruppe klemmt",
+      "delonghi esam 3000 entkalken anleitung"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "Caffe Corso (ESAM 4200.S)", slug: "caffe-corso-esam-4200",
+    series: "ESAM Classic", year: "2014", pumpPressure: "15 Bar", heaterPower: "1350 Watt",
+    brewUnit: "ESAM Brühgruppe (7332183900)", grinder: "Stahlmahlwerk mit Drehregler",
+    filterType: "Universal-Filterpatrone",
+    typicalErrors: "Wasser läuft komplett in die Auffangschale, Brühkolben undicht",
+    quirks: "Oberer Brühkolben muss separat über die Dampfdüse entkalkt werden.",
+    googleSearches: [
+      "delonghi esam 4200 wasser läuft in auffangschale",
+      "delonghi esam 4200 brühkolben entkalken",
+      "delonghi esam 4200 brühgruppe zerlegen"
+    ]
+  },
+  {
+    brand: "De'Longhi", brandSlug: "delonghi", name: "Dedica Deluxe (EC685.M)", slug: "dedica-ec685",
+    series: "Dedica Siebträger", year: "2017", pumpPressure: "15 Bar", heaterPower: "1300 Watt",
+    brewUnit: "Kompakt-Thermoblock Brühkopf mit Crema-Siebträger", grinder: "Externes Mahlwerk empfohlen",
+    filterType: "De'Longhi DLSC002",
+    typicalErrors: "3 Tasten blinken schnell (Überhitzung/Entkalkungsalarm), Siebträger tropft an der Dichtung",
+    quirks: "Brühkopfdichtung aus Silikon (53 mm) wird nach 18 Monaten spröde.",
+    googleSearches: [
+      "delonghi dedica blinkt schnell 3 tasten",
+      "delonghi ec685 siebträger dichtung wechseln",
+      "delonghi dedica entkalken anleitung"
+    ]
+  },
+
+  // ==========================================
+  // 2. SIEMENS (18 Models)
+  // ==========================================
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.6 Plus s700 (TE657503DE)", slug: "eq6-plus-s700",
+    series: "EQ.6 Plus", year: "2019", pumpPressure: "19 Bar", heaterPower: "1500 Watt",
+    brewUnit: "BSH EQ-Brühgruppe mit Arretierung (11014117 / 11043584)", grinder: "ceramDrive verschleißfreies Keramikmahlwerk (12014022)",
+    filterType: "BRITA Intenza Wasserfilterpatrone (TZ70003)",
+    typicalErrors: "Fehler E0511 (Wasserweg/Heizung), Fehler E0513 (Brühgruppe blockiert), Bohnenbehälter füllen",
+    quirks: "Auslaufverteiler verkrustet mit Kaffeeresten; Keramikmahlwerk blockiert bei feuchten Kaffeebohnen.",
+    googleSearches: [
+      "siemens eq 6 plus brühgruppe klemmt",
+      "siemens eq6 plus fehler e0511 beheben",
+      "siemens eq6 plus kaffeeauslauf reinigen ausbauen",
+      "siemens eq 6 mahlwerk reinigen ceramdrive"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.6 Plus s500 (TE655203RW)", slug: "eq6-plus-s500",
+    series: "EQ.6 Plus", year: "2019", pumpPressure: "19 Bar", heaterPower: "1500 Watt",
+    brewUnit: "BSH EQ-Brühgruppe (11014117)", grinder: "ceramDrive Keramikmahlwerk",
+    filterType: "BRITA Intenza (TZ70003)",
+    typicalErrors: "Meldung 'Gerät abkühlen lassen', Brühgruppe reinigen Meldung verschwindet nicht",
+    quirks: "Mikroschalter an der Servicetür und am Brühgruppen-Schlitten verschmutzen durch feines Pulver.",
+    googleSearches: [
+      "siemens eq6 plus s500 brühgruppe lässt sich nicht einsetzen",
+      "siemens eq6 s500 fehler e0513",
+      "siemens eq6 plus s500 milchschaum spritzt"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.6 Plus s300 (TE653501DE)", slug: "eq6-plus-s300",
+    series: "EQ.6 Plus", year: "2019", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "BSH EQ-Brühgruppe Standard", grinder: "ceramDrive Keramikmahlwerk",
+    filterType: "BRITA Intenza (TZ70003)",
+    typicalErrors: "Kaffee läuft nur aus einer Düse, Wasser in der Tropfschale statt in der Tasse",
+    quirks: "15 Bar Ulka Pumpe; Drainageventil und Einlaufstutzen benötigen alle 12 Monate neue Lippendichtungen.",
+    googleSearches: [
+      "siemens eq6 plus s300 wasser in auffangschale",
+      "siemens eq6 s300 kaffeeauslauf verstopft",
+      "siemens eq6 plus s300 entkalken anleitung"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.6 Plus s100 (TE651209RW)", slug: "eq6-plus-s100",
+    series: "EQ.6 Plus", year: "2020", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "BSH EQ-Brüheinheit (11014117)", grinder: "ceramDrive Keramik",
+    filterType: "BRITA Intenza",
+    typicalErrors: "Pumpe brummt dumpf, kein Wasserfluss beim Spülen",
+    quirks: "Pulsweitenmodulierte Schwingkolbenpumpe; Flowmeter (Flügelradzähler) verkalkt bei hartem Wasser.",
+    googleSearches: [
+      "siemens eq6 s100 zieht kein wasser",
+      "siemens eq6 plus s100 brüheinheit fetten anleitung"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.9 Plus s700 (TI9573X1DE)", slug: "eq9-plus-s700",
+    series: "EQ.9 Plus DualBean", year: "2020", pumpPressure: "19 Bar", heaterPower: "1500 Watt",
+    brewUnit: "EQ.9 Edelstahl-Präzisionsbrühgruppe (11032486)", grinder: "Dual ceramDrive zwei getrennte Keramikmahlwerke",
+    filterType: "BRITA Intenza (TZ70003)",
+    typicalErrors: "Mahlwerk 1 oder 2 blockiert, Fehler E0511, Geräusch beim Spindelverfahren",
+    quirks: "Zwei separate Bohnenbehälter mit zwei Mahlwerken; extrem leise, aber aufwendig zerlegbar.",
+    googleSearches: [
+      "siemens eq9 plus s700 brühgruppe reinigen",
+      "siemens eq9 dualbean mahlwerk blockiert",
+      "siemens eq9 fehler e0511",
+      "siemens eq9 plus s700 kaffeeauslauf reinigen"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.9 Plus s500 (TI9553X1RW)", slug: "eq9-plus-s500",
+    series: "EQ.9 Plus SingleBean", year: "2020", pumpPressure: "19 Bar", heaterPower: "1500 Watt",
+    brewUnit: "EQ.9 Brühgruppe (11032486)", grinder: "Einzelnes leises Keramikmahlwerk",
+    filterType: "BRITA Intenza",
+    typicalErrors: "Fehler 'Milchsystem reinigen' bricht ab, Tresterbehälter Fehlmeldung",
+    quirks: "Automatisches Dampf-Reinigungssystem autoMilk Clean; Dichtungen an der Dampflanze müssen gefettet sein.",
+    googleSearches: [
+      "siemens eq9 s500 brüheinheit klemmt",
+      "siemens eq9 automilk clean fehler"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.9 Plus s300 (TI923309RW)", slug: "eq9-plus-s300",
+    series: "EQ.9 Plus Entry", year: "2019", pumpPressure: "19 Bar", heaterPower: "1500 Watt",
+    brewUnit: "EQ.9 Brühgruppe", grinder: "Leises Keramikmahlwerk",
+    filterType: "BRITA Intenza",
+    typicalErrors: "Wasser unterm Automaten, Fehlermeldung Brühgruppe verriegeln",
+    quirks: "Schlittenführung besitzt optische Lichtschranke zur Erkennung der Nullstellung.",
+    googleSearches: [
+      "siemens eq9 s300 wasser läuft aus",
+      "siemens eq9 brühgruppe verriegeln meldung"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.9 Plus connect s700", slug: "eq9-plus-connect-s700",
+    series: "EQ.9 Plus Smart", year: "2021", pumpPressure: "19 Bar", heaterPower: "1500 Watt",
+    brewUnit: "EQ.9 Präzisionsbrühgruppe", grinder: "Dual ceramDrive Mahlwerke",
+    filterType: "BRITA Intenza",
+    typicalErrors: "Home Connect Offline, Fehler E0512 Elektroniküberlastung",
+    quirks: "WLAN-Modul auf Hauptplatine; thermisch sensible Platinenabschirmung im Gehäusedeckel.",
+    googleSearches: [
+      "siemens eq9 connect brühgruppe fetten",
+      "siemens eq9 fehler e0512"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.500 integral (TQ507D03)", slug: "eq500-integral",
+    series: "EQ.500", year: "2020", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "BSH EQ-Kompaktbrühgruppe (11043584)", grinder: "ceramDrive Keramik",
+    filterType: "BRITA Intenza",
+    typicalErrors: "Integrierter Milchbehälter schäumt nicht, Kaffee tröpfelt nur schwach",
+    quirks: "Frontale Servicetür für Brühgruppe; Milchbehälter direkt an Front gesteckt.",
+    googleSearches: [
+      "siemens eq500 integral milchschaum funktioniert nicht",
+      "siemens eq500 brühgruppe reinigen ausbauen",
+      "siemens eq500 entkalken fehler"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.500 classic (TP501D09)", slug: "eq500-classic",
+    series: "EQ.500 Classic", year: "2021", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "BSH EQ-Kompaktbrühgruppe", grinder: "ceramDrive Keramik",
+    filterType: "BRITA Intenza",
+    typicalErrors: "Meldung 'Wassertank füllen' trotz vollem Tank, Tropfschale voll Alarm",
+    quirks: "Schwimmer im Wassertank verliert oft Magnetkraft durch Kalkkrusten.",
+    googleSearches: [
+      "siemens eq500 classic wassertank füllen meldung",
+      "siemens eq500 brüheinheit klemmt"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.300 (TI351209DE)", slug: "eq300",
+    series: "EQ.300", year: "2020", pumpPressure: "15 Bar", heaterPower: "1300 Watt",
+    brewUnit: "BSH EQ.3 Brühgruppe mit Druckfeder (11032731)", grinder: "ceramDrive Keramikmahlwerk",
+    filterType: "BRITA Intenza",
+    typicalErrors: "coffeeDirect Display blinkt, Brühgruppe lässt sich nicht einschieben",
+    quirks: "milkPerfect Milchdüse wird direkt in die Tasse geschäumt; Dampfventil neigt zum Verkalken.",
+    googleSearches: [
+      "siemens eq300 brühgruppe lässt sich nicht einsetzen",
+      "siemens eq300 milkperfect reinigen verstopft",
+      "siemens eq300 entkalken anleitung"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.3 s100 (TI301209RW)", slug: "eq3-s100",
+    series: "EQ.3", year: "2018", pumpPressure: "15 Bar", heaterPower: "1300 Watt",
+    brewUnit: "BSH EQ.3 Brühgruppe (11032731)", grinder: "ceramDrive Keramik",
+    filterType: "BRITA Intenza",
+    typicalErrors: "Brühgruppe knarrt beim Brühen, Kaffeepulver trocken im Innenraum",
+    quirks: "Einfachere Spindelführung ohne Drehmomentsensor; erfordert monatliches Silikonfett.",
+    googleSearches: [
+      "siemens eq3 s100 brühgruppe quietscht fetten",
+      "siemens eq3 fehler wasser füllen"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.3 s300 (TI303203RW)", slug: "eq3-s300",
+    series: "EQ.3", year: "2018", pumpPressure: "15 Bar", heaterPower: "1300 Watt",
+    brewUnit: "BSH EQ.3 Brühgruppe", grinder: "ceramDrive Keramik",
+    filterType: "BRITA Intenza",
+    typicalErrors: "Kaffee kalt, Display zeigt Warndreieck und Kaffeebohne",
+    quirks: "Kompakt-Thermoblock; NTC Sensor misst Temperatur am Alublock.",
+    googleSearches: [
+      "siemens eq3 s300 kaffee nicht heiß",
+      "siemens eq3 s300 brühgruppe zerlegen"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.700 integral (TQ707D03)", slug: "eq700-integral",
+    series: "EQ.700 iSelect", year: "2022", pumpPressure: "19 Bar", heaterPower: "1500 Watt",
+    brewUnit: "BSH NextGen Brühgruppe (11043584)", grinder: "ceramDrive Keramik mit elektronischer Feinjustierung",
+    filterType: "BRITA Intenza",
+    typicalErrors: "iSelect Touch Display friert ein, Fehler E0511 im Brühkreislauf",
+    quirks: "5-Zoll Touchdisplay steuert Servoventile für weltweite Kaffeespezialitäten.",
+    googleSearches: [
+      "siemens eq700 integral brühgruppe reinigen",
+      "siemens eq700 fehler e0511",
+      "siemens eq700 milchschaum düse verstopft"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.700 classic (TP705D01)", slug: "eq700-classic",
+    series: "EQ.700 Classic", year: "2022", pumpPressure: "19 Bar", heaterPower: "1500 Watt",
+    brewUnit: "BSH NextGen Brühgruppe", grinder: "ceramDrive Keramik",
+    filterType: "BRITA Intenza",
+    typicalErrors: "Pumpe fördert nicht, Fehlermeldung System entlüften",
+    quirks: "Externer Milchschlauch statt integrierter Karaffe; Ansaugventil benötigt saubere O-Ringe.",
+    googleSearches: [
+      "siemens eq700 classic entkalken hängt",
+      "siemens eq700 brüheinheit fetten"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.900 (TQ905D03)", slug: "eq900",
+    series: "EQ.900 Flagship", year: "2023", pumpPressure: "19 Bar", heaterPower: "1500 Watt",
+    brewUnit: "EQ.900 Vollmetall-verstärkte Brühgruppe", grinder: "Elektronisches eGrinder Mahlwerk",
+    filterType: "BRITA Intenza",
+    typicalErrors: "eGrinder Kalibrierfehler, BaristaMode Druckprofil bricht ab",
+    quirks: "Präzisions-Mahlgrad über Schrittmotor; darf nicht gewaltsam manuell gedreht werden.",
+    googleSearches: [
+      "siemens eq900 brühgruppe reinigen",
+      "siemens eq900 egrinder kalibrieren fehler"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.9 s500 (TI905201RW)", slug: "eq9-s500",
+    series: "EQ.9 Erste Generation", year: "2017", pumpPressure: "19 Bar", heaterPower: "1500 Watt",
+    brewUnit: "EQ.9 Brühgruppe (11032486)", grinder: "ceramDrive Keramik",
+    filterType: "BRITA Intenza",
+    typicalErrors: "Brühgruppe lässt sich nach Reinigung nicht mehr einsetzen (Nullstellung verstellt)",
+    quirks: "Zahnradkulisse verstellt sich, wenn der Schieber bei entnommener Brühgruppe betätigt wird.",
+    googleSearches: [
+      "siemens eq9 brühgruppe nullstellung ausrichten",
+      "siemens eq9 s500 kaffee tröpfelt"
+    ]
+  },
+  {
+    brand: "Siemens", brandSlug: "siemens", name: "EQ.8 Series 600 (TE806201DE)", slug: "eq8-series-600",
+    series: "EQ.8 Classic", year: "2015", pumpPressure: "19 Bar", heaterPower: "1600 Watt",
+    brewUnit: "BSH EQ-Brühgruppe Classic (00676451)", grinder: "Silent ceramDrive",
+    filterType: "BRITA Intenza",
+    typicalErrors: "Wasser läuft komplett in die Tropfschale, Keramikventil schaltet nicht",
+    quirks: "Elektrisches Keramik-Mehrwegeventil schaltet Wasserwege; neigt nach 4 Jahren zu Undichtigkeiten.",
+    googleSearches: [
+      "siemens eq8 keramikventil fehler undicht",
+      "siemens eq8 brühgruppe klemmt",
+      "siemens eq8 wasser in tropfschale"
+    ]
+  },
+
+  // ==========================================
+  // 3. JURA (16 Models)
+  // ==========================================
+  {
+    brand: "Jura", brandSlug: "jura", name: "E8 (EB Platin / Chrom)", slug: "e8",
+    series: "E-Linie", year: "2021", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Jura VC Präzisions-Brühgruppe fest verbaut (10188)", grinder: "Professional Aroma Grinder (P.A.G.)",
+    filterType: "CLARIS Smart Filterpatrone (RFID)",
+    typicalErrors: "Error 8 (Brühgruppen-Initialisierung fehlgeschlagen), System füllen, Error 2 (Heizung NTC)",
+    quirks: "Brühgruppe ist werkseitig fest verbaut; erfordert Gehäuseöffnung mit speziellem Jura Ovalkopfschlüssel.",
+    googleSearches: [
+      "jura e8 error 8 beheben",
+      "jura e8 brühgruppe reinigen revidieren",
+      "jura e8 drainageventil tauschen messingkappe",
+      "jura e8 wasser läuft in tresterbehälter"
+    ]
+  },
+  {
+    brand: "Jura", brandSlug: "jura", name: "E6 (EB Piano Black)", slug: "e6",
+    series: "E-Linie", year: "2020", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Jura VC Brühgruppe mit P.E.P.", grinder: "Aroma G3 Mahlwerk",
+    filterType: "CLARIS Smart Filterpatrone",
+    typicalErrors: "Error 8, Schale leeren Meldung erlischt nicht, Kaffeeauslauf tröpfelt",
+    quirks: "P.E.P. (Pulse Extraction Process) pulsiert Wasser im Millisekundentakt durch das Kaffeemehl.",
+    googleSearches: [
+      "jura e6 error 8 fehler beheben",
+      "jura e6 brüheinheit überholen",
+      "jura e6 drainageventil wechseln anleitung"
+    ]
+  },
+  {
+    brand: "Jura", brandSlug: "jura", name: "ENA 8 (Touch Nordic White)", slug: "ena-8",
+    series: "ENA Kompakt", year: "2021", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Jura Kompakt-Brühgruppe VC (6–10 Gramm)", grinder: "Aroma G3 Kompaktmahlwerk",
+    filterType: "CLARIS Smart Mini",
+    typicalErrors: "Error 8 Kompaktbrühgruppe blockiert, Rundtank Schwimmer hängt",
+    quirks: "Zylindrischer Wassertank mit Rautenoptik; Brühkammer fasst maximal 10g Pulver.",
+    googleSearches: [
+      "jura ena 8 error 8 beheben",
+      "jura ena 8 brühgruppe reinigen",
+      "jura ena 8 kaffeeauslauf verstopft"
+    ]
+  },
+  {
+    brand: "Jura", brandSlug: "jura", name: "ENA 4 (Metropolitan Black)", slug: "ena-4",
+    series: "ENA Purist", year: "2021", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Kompakt-Brühgruppe VC", grinder: "Aroma G3 Mahlwerk",
+    filterType: "CLARIS Smart Mini",
+    typicalErrors: "Error 8, Symbol Kaffeesatzbehälter blinkt dauerhaft",
+    quirks: "Reiner Kaffeevollautomat ohne Milchsystem; simples Hydrauliksystem ohne Keramikventil.",
+    googleSearches: [
+      "jura ena 4 error 8 fehler",
+      "jura ena 4 brühgruppe ausbauen anleitung"
+    ]
+  },
+  {
+    brand: "Jura", brandSlug: "jura", name: "S8 (Piano Black / Chrome)", slug: "s8",
+    series: "S-Linie Premium Mid", year: "2019", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Jura VC Brühgruppe mit Drainageventil", grinder: "Aroma G3 Mahlwerk",
+    filterType: "CLARIS Smart",
+    typicalErrors: "Error 8, Error 4 (Dampfthermoblock), Feinschaumdüse zieht keine Milch",
+    quirks: "Profi-Feinschaumdüse G2 mit Drehrad für Milchschaumregulierung.",
+    googleSearches: [
+      "jura s8 error 8 fehlercode",
+      "jura s8 feinschaumdüse zieht keine milch",
+      "jura s8 brühgruppe revidieren"
+    ]
+  },
+  {
+    brand: "Jura", brandSlug: "jura", name: "Z10 (Diamond Black Aluminium)", slug: "z10",
+    series: "Z-Linie Cold Brew", year: "2021", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Product Recognising Grinder (P.R.G.) Brühgruppe Gen 8", grinder: "Elektronisch geregelter P.R.G. Mahlgradantrieb",
+    filterType: "CLARIS Smart",
+    typicalErrors: "P.R.G. Mahlwerk Justierfehler, Cold Extraction Ventil klemmt",
+    quirks: "Stellt den Mahlgrad für jedes Getränk vollautomatisch in Sekundenbruchteilen ein.",
+    googleSearches: [
+      "jura z10 mahlwerk kalibrieren",
+      "jura z10 cold extraction fehler",
+      "jura z10 brühgruppe wartung"
+    ]
+  },
+  {
+    brand: "Jura", brandSlug: "jura", name: "J8 (Twin Piano White)", slug: "j8",
+    series: "J-Linie Sweet Foam", year: "2023", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Jura VC Brühgruppe 16g", grinder: "P.A.G.2+ Mahlwerk mit Aromakontrolle",
+    filterType: "CLARIS Smart",
+    typicalErrors: "Sweet Foam Sirup-Aufsatz verklebt, Error 8",
+    quirks: "Integrierter Sirupaufsatz aromatisiert den Milchschaum; muss penibel heiß gespült werden.",
+    googleSearches: [
+      "jura j8 sweet foam reinigen verstopft",
+      "jura j8 error 8 beheben"
+    ]
+  },
+  {
+    brand: "Jura", brandSlug: "jura", name: "GIGA 6 (Aluminium)", slug: "giga-6",
+    series: "GIGA Dual Flagship", year: "2019", pumpPressure: "2x 15 Bar (Dual Pump)", heaterPower: "2x 1450 Watt",
+    brewUnit: "Heavy-Duty Großraum-Brühgruppe (16 Gramm)", grinder: "2x elektronisch verstellbare Keramikscheibenmahlwerke",
+    filterType: "CLARIS Smart Pro / Maxi",
+    typicalErrors: "Error 8, Mahlwerk 1 Stromaufnahme zu hoch, Keramikventil Fehler 6",
+    quirks: "Zwei Pumpen und zwei Durchlauferhitzer erlauben gleichzeitigen Bezug von Kaffee und Milch.",
+    googleSearches: [
+      "jura giga 6 error 8 beheben",
+      "jura giga 6 keramikventil fehler 6",
+      "jura giga 6 mahlwerk reinigen"
+    ]
+  },
+  {
+    brand: "Jura", brandSlug: "jura", name: "GIGA 10 (Diamond Black)", slug: "giga-10",
+    series: "GIGA Touch Panorama", year: "2023", pumpPressure: "2x 15 Bar", heaterPower: "2x 1450 Watt",
+    brewUnit: "Jura Cold Brew Brühgruppe 16g", grinder: "2x P.R.G. Keramikmahlwerke",
+    filterType: "CLARIS Smart Pro",
+    typicalErrors: "Panorama Display Touchfehler, Dual-Pump Druckungleichgewicht",
+    quirks: "Drei Touchscreens im Panorama-Design steuern 35 Getränkespezialitäten.",
+    googleSearches: [
+      "jura giga 10 brühgruppe revidieren",
+      "jura giga 10 cold brew fehler"
+    ]
+  },
+  {
+    brand: "Jura", brandSlug: "jura", name: "D6 (Platin)", slug: "d6",
+    series: "D-Linie Classic", year: "2018", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Jura VC Standard Brühgruppe", grinder: "Aroma G2 Mahlwerk",
+    filterType: "CLARIS Smart",
+    typicalErrors: "Error 8, Rotary Switch wählt Getränke nicht an",
+    quirks: "Klassisches Klartextdisplay mit Drehregler (Rotary Switch).",
+    googleSearches: [
+      "jura d6 error 8 fehler beheben",
+      "jura d6 drainageventil wechseln",
+      "jura d6 brühgruppe überholen anleitung"
+    ]
+  },
+  {
+    brand: "Jura", brandSlug: "jura", name: "Impressa C5", slug: "impressa-c5",
+    series: "Impressa Legacy", year: "2010", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Klassische Jura Brühgruppe mit Aluschwinge", grinder: "Kegelmahlwerk V3",
+    filterType: "CLARIS Blue Filterpatrone",
+    typicalErrors: "Error 8 (Zahnrad / Encoder verschlissen), Wassertankstutzen undicht",
+    quirks: "Legendärer Dauerläufer; Drainageventil-Kunststoffkappe bricht nach Jahren unweigerlich ab.",
+    googleSearches: [
+      "jura impressa c5 error 8 beheben",
+      "jura c5 drainageventil messingkappe einbauen",
+      "jura impressa c5 brühgruppe zerlegen anleitung"
+    ]
+  },
+  {
+    brand: "Jura", brandSlug: "jura", name: "Impressa F50 Classic", slug: "impressa-f50",
+    series: "Impressa F-Serie", year: "2008", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Jura Impressa Brühgruppe (Alu Schwingarm)", grinder: "Johnson Gleichstrommotor Mahlwerk",
+    filterType: "CLARIS White / Blue",
+    typicalErrors: "Error 8, Error 2 (Heizung defekt), Hahn Dampf tropft",
+    quirks: "Alte Thermoblock-Generation mit Messingrohren; extrem reparaturfreundlich.",
+    googleSearches: [
+      "jura f50 error 8 reparieren",
+      "jura impressa f50 heizung fehler 2",
+      "jura f50 drainageventil tauschen anleitung"
+    ]
+  },
+  {
+    brand: "Jura", brandSlug: "jura", name: "Impressa J9 One Touch", slug: "impressa-j9",
+    series: "Impressa J-Serie", year: "2013", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Jura VC Brühgruppe", grinder: "Aroma+ Mahlwerk",
+    filterType: "CLARIS Blue",
+    typicalErrors: "Error 8, Cappuccino-Auslauf zieht nur Luft, Tresterbehälter fehlt Meldung",
+    quirks: "Höhen- und breitenverstellbarer Kaffeeauslauf mit innenliegenden Silikonschläuchen.",
+    googleSearches: [
+      "jura j9 error 8 fehler",
+      "jura j9 one touch milchschaum defekt",
+      "jura j9 brühgruppe ausbauen anleitung"
+    ]
+  },
+  {
+    brand: "Jura", brandSlug: "jura", name: "WE8 Professional", slug: "we8-professional",
+    series: "WE Business Linie", year: "2019", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Verstärkte Jura VC Gastro-Brühgruppe (16g)", grinder: "Aroma G3 Heavy Duty Mahlwerk",
+    filterType: "CLARIS Smart Pro (3 Liter Wassertank)",
+    typicalErrors: "Error 8 nach Dauerbetrieb, Tropfschalen-Füllkontakte korrodiert",
+    quirks: "Für Büros bis 30 Tassen täglich ausgelegt; 3 Liter Wassertank und 500g Bohnenbehälter.",
+    googleSearches: [
+      "jura we8 error 8 fehler beheben",
+      "jura we8 professional brühgruppe wartung",
+      "jura we8 drainageventil wechseln"
+    ]
+  },
+  {
+    brand: "Jura", brandSlug: "jura", name: "X8 Professional Platin", slug: "x8-professional",
+    series: "X Gastro Linie", year: "2020", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Gastro-Brühgruppe 16g", grinder: "P.A.G. Gastro Mahlwerk",
+    filterType: "CLARIS Pro Smart Maxi (5 Liter Wassertank)",
+    typicalErrors: "Error 8, Error 6 (Keramikventil Schwergängig), Spülaufforderung blockiert",
+    quirks: "Schlüsselschalter sperrt Menü vor unbefugter Verstellung im Büro.",
+    googleSearches: [
+      "jura x8 professional error 8",
+      "jura x8 keramikventil fehler 6"
+    ]
+  },
+  {
+    brand: "Jura", brandSlug: "jura", name: "ENA Micro 90", slug: "ena-micro-90",
+    series: "ENA Micro", year: "2016", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Ultra-Kompakt Brühgruppe VC Micro", grinder: "Aroma G3 Micro Mahlwerk",
+    filterType: "CLARIS Blue",
+    typicalErrors: "Error 8, One-Touch Cappuccino bricht beim Milchschaum ab",
+    quirks: "Kleinster One-Touch-Cappuccino Vollautomat von Jura; Bauteile extrem dicht gepackt.",
+    googleSearches: [
+      "jura ena micro 90 error 8",
+      "jura ena micro 90 milchschaum funktioniert nicht",
+      "jura ena micro 90 brühgruppe revidieren"
+    ]
+  },
+
+  // ==========================================
+  // 4. PHILIPS (12 Models)
+  // ==========================================
+  {
+    brand: "Philips", brandSlug: "philips", name: "LatteGo 2200 (EP2220/10)", slug: "lattego-2200",
+    series: "LatteGo 2000", year: "2019", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "Herausnehmbare Philips/Saeco Brühgruppe (CP0250/01)", grinder: "100% Keramik-Scheibenmahlwerk (12 Stufen)",
+    filterType: "AquaClean Wasserfilterpatrone (CA6903/10)",
+    typicalErrors: "Fehlercode 01 (Kaffeetrichter blockiert), Fehlercode 03/04 (Brühgruppe blockiert/falsch eingesetzt)",
+    quirks: "2-teiliges LatteGo Milchsystem ohne Schläuche; Brühgruppe muss wöchentlich abgespült und alle 3 Monate gefettet werden.",
+    googleSearches: [
+      "philips 2200 fehler 01 kaffeetrichter reinigen",
+      "philips 2200 fehler 03 04 brühgruppe klemmt",
+      "philips 2200 brühgruppe lässt sich nicht einsetzen",
+      "philips 2200 entkalken aquaclean meldung"
+    ]
+  },
+  {
+    brand: "Philips", brandSlug: "philips", name: "LatteGo 2200 Panarello (EP2224/40)", slug: "lattego-2200-panarello",
+    series: "LatteGo 2000 Classic", year: "2019", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "Philips Brühgruppe (CP0250/01)", grinder: "Keramikmahlwerk 12 Stufen",
+    filterType: "AquaClean (CA6903/10)",
+    typicalErrors: "Fehler 01, Panarello-Dampflanze tropft nach, Kaffee tröpfelt nur",
+    quirks: "Klassische Dampflanze aus Edelstahl/Kunststoff; Dampfventil neigt bei Kalk zu Undichtigkeiten.",
+    googleSearches: [
+      "philips ep2224 dampflanze tropft",
+      "philips 2200 panarello fehler 01",
+      "philips ep2224 brühgruppe schmieren"
+    ]
+  },
+  {
+    brand: "Philips", brandSlug: "philips", name: "LatteGo 3200 (EP3246/70)", slug: "lattego-3200",
+    series: "LatteGo 3000", year: "2019", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "Philips Brühgruppe mit gelbem Rasthebel (CP0250)", grinder: "100% Keramikmahlwerk",
+    filterType: "AquaClean (CA6903/10)",
+    typicalErrors: "Fehler 03 / 04, LatteGo Becher schäumt nicht (Mikroriss an der Rastnase), AquaClean LED blinkt",
+    quirks: "LatteGo Becher muss hörbar einrasten, sonst zieht die Venturi-Kammer Falschluft und spritzt.",
+    googleSearches: [
+      "philips lattego 3200 schäumt nicht spritzt",
+      "philips 3200 fehler 03 brühgruppe klemmt",
+      "philips ep3246 brühgruppe lässt sich nicht herausnehmen",
+      "philips 3200 entkalken anleitung"
+    ]
+  },
+  {
+    brand: "Philips", brandSlug: "philips", name: "LatteGo 3300 (EP3347/90)", slug: "lattego-3300",
+    series: "LatteGo 3300 SilentBrew", year: "2023", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "SilentBrew Brühgruppe (CP0250)", grinder: "SilentBrew geräuschgedämmtes Keramikmahlwerk",
+    filterType: "AquaClean (CA6903/10)",
+    typicalErrors: "Fehler 01 Kaffeemehl verklebt, Touchdisplay reagiert verzögert",
+    quirks: "SilentBrew Technologie dämpft Mahlgeräusche; Gehäuse besitzt innenliegende Akustikmatten.",
+    googleSearches: [
+      "philips 3300 lattego brühgruppe reinigen",
+      "philips ep3347 fehler 01 beheben"
+    ]
+  },
+  {
+    brand: "Philips", brandSlug: "philips", name: "LatteGo 4300 (EP4346/70)", slug: "lattego-4300",
+    series: "LatteGo 4300 TFT", year: "2020", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "Philips Brühgruppe (CP0250)", grinder: "Keramikmahlwerk 12 Stufen",
+    filterType: "AquaClean (CA6903/10)",
+    typicalErrors: "Fehlercode 15 (Überhitzung Thermoblock), Fehler 03 Brühgruppe blockiert",
+    quirks: "TFT-Display mit 2 Benutzerprofilen; Brühgruppenschlitten muss in exakter 'N'-Position stehen.",
+    googleSearches: [
+      "philips 4300 fehler 15 überhitzung",
+      "philips lattego 4300 brühgruppe klemmt",
+      "philips ep4346 milchschaum kalt"
+    ]
+  },
+  {
+    brand: "Philips", brandSlug: "philips", name: "LatteGo 5400 (EP5447/90)", slug: "lattego-5400",
+    series: "LatteGo 5400 Premium", year: "2020", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "Philips Brühgruppe (CP0250)", grinder: "Keramikmahlwerk mit ExtraShot",
+    filterType: "AquaClean (CA6903/10)",
+    typicalErrors: "Fehler 04 (Positionssensor Brühgruppe), LatteGo Kupplung undicht, Fehler 01",
+    quirks: "ExtraShot Funktion verdoppelt Brühzyklus; erfordert absolut leichtgängige Spindelmechanik.",
+    googleSearches: [
+      "philips 5400 lattego fehler 04",
+      "philips 5400 brühgruppe klemmt fest",
+      "philips ep5447 entkalken schritt für schritt"
+    ]
+  },
+  {
+    brand: "Philips", brandSlug: "philips", name: "Series 1200 (EP1220/00)", slug: "series-1200",
+    series: "Series 1200 Entry", year: "2019", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "Philips Brühgruppe (CP0250)", grinder: "Keramikmahlwerk",
+    filterType: "AquaClean",
+    typicalErrors: "Fehler 01, 3 Warnleuchten blinken rot (System entlüften)",
+    quirks: "Simples Sensorpanel; System muss nach Leerlaufen über Heißwasserbezug entlüftet werden.",
+    googleSearches: [
+      "philips 1200 drei leuchten blinken rot",
+      "philips 1200 fehler 01 beheben",
+      "philips ep1220 brühgruppe ausbauen"
+    ]
+  },
+  {
+    brand: "Philips", brandSlug: "philips", name: "Series 2000 (HD8651)", slug: "series-2000-hd8651",
+    series: "Saeco Minuto Basis", year: "2015", pumpPressure: "15 Bar", heaterPower: "1400 Watt",
+    brewUnit: "Saeco Brühgruppe (11001011)", grinder: "Keramikmahlwerk 5 Stufen",
+    filterType: "Brita Intenza Saeco",
+    typicalErrors: "Ausrufezeichen blinkt schnell, Brühgruppe lässt sich nicht einsetzen",
+    quirks: "Extrem kompakte Brühkammer; Hebel an der Brühgruppe muss vor dem Einschieben nach oben rasten.",
+    googleSearches: [
+      "philips hd8651 ausrufezeichen blinkt schnell",
+      "philips 2000 brühgruppe klemmt",
+      "philips hd8651 entkalken"
+    ]
+  },
+  {
+    brand: "Philips", brandSlug: "philips", name: "Series 3000 (HD8829/01)", slug: "series-3000-hd8829",
+    series: "Series 3000 Easy Cappuccino", year: "2016", pumpPressure: "15 Bar", heaterPower: "1850 Watt",
+    brewUnit: "Saeco Brühgruppe Standard (CP0250)", grinder: "Keramikmahlwerk",
+    filterType: "Brita Intenza / AquaClean",
+    typicalErrors: "Fehlercode 01, Fehlercode 05 (Wasserkreislauf verstopft)",
+    quirks: "1850 Watt Schnell-Thermoblock aus Edelstahl; heizt in unter 30 Sekunden auf.",
+    googleSearches: [
+      "philips hd8829 fehler 05",
+      "philips 3000 brühgruppe lässt sich nicht verriegeln",
+      "philips hd8829 kaffeeauslauf verstopft"
+    ]
+  },
+  {
+    brand: "Philips", brandSlug: "philips", name: "Series 5000 LatteGo (EP5335/10)", slug: "series-5000-lattego",
+    series: "Series 5000 Edelstahl", year: "2018", pumpPressure: "15 Bar", heaterPower: "1850 Watt",
+    brewUnit: "Philips Brühgruppe (CP0250)", grinder: "Keramikmahlwerk",
+    filterType: "AquaClean (CA6903/10)",
+    typicalErrors: "Fehler 01, LatteGo Halterung abgebrochen, Fehler 03",
+    quirks: "Frühes LatteGo Modell mit Edelstahl-Front; Brühgruppenstutzen besitzt zwei dicke O-Ringe.",
+    googleSearches: [
+      "philips ep5335 fehler 01 beheben",
+      "philips 5000 lattego brühgruppe klemmt",
+      "philips 5000 entkalken anleitung"
+    ]
+  },
+  {
+    brand: "Philips", brandSlug: "philips", name: "Series 4000 (HD8847/01)", slug: "series-4000-hd8847",
+    series: "Series 4000 CoffeeSwitch", year: "2015", pumpPressure: "15 Bar", heaterPower: "1850 Watt",
+    brewUnit: "Saeco CoffeeSwitch Brühgruppe", grinder: "Keramikmahlwerk",
+    filterType: "Brita Intenza",
+    typicalErrors: "CoffeeSwitch Hebel schaltet Druck nicht um, Fehler 03",
+    quirks: "Mechanischer Hebel schaltet Ventil zwischen Espresso-Hochdruck (15 Bar) und Filterkaffee-Niederdruck um.",
+    googleSearches: [
+      "philips hd8847 coffeeswitch fehler",
+      "philips 4000 brühgruppe klemmt"
+    ]
+  },
+  {
+    brand: "Philips", brandSlug: "philips", name: "Baristina (BAR300)", slug: "baristina",
+    series: "Baristina Portafilter Hybrid", year: "2024", pumpPressure: "16 Bar", heaterPower: "1200 Watt",
+    brewUnit: "Integrierter Portafilter mit Swipe-Mechanismus", grinder: "Kompakt-Kegelmahlwerk",
+    filterType: "Philips Wasserfilter",
+    typicalErrors: "Swipe-Hebel lässt sich nicht durchziehen, Siebträger klemmt",
+    quirks: "Manueller Wischmechanismus verdichtet Kaffeemehl im fest verriegelten Sieb.",
+    googleSearches: [
+      "philips baristina siebträger klemmt",
+      "philips baristina swipe fehler"
+    ]
+  },
+
+  // ==========================================
+  // 5. SAECO (10 Models)
+  // ==========================================
+  {
+    brand: "Saeco", brandSlug: "saeco", name: "Xelsis Deluxe (SM8785/00)", slug: "xelsis-deluxe",
+    series: "Xelsis Deluxe Touch", year: "2021", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "Saeco Xelsis Vollmetall-verstärkte Brühgruppe (CP0250/01)", grinder: "100% Keramik-Mahlwerk mit CoffeeMaestro",
+    filterType: "AquaClean Wasserfilter (CA6903/10)",
+    typicalErrors: "Fehler 03 Brühgruppe blockiert, HygieSteam Dampfstöße brechen ab, Fehler 01",
+    quirks: "HygieSteam reinigt den gesamten Milchkreislauf mit heißem Dampf; O-Ringe an Dampflanze müssen gefettet sein.",
+    googleSearches: [
+      "saeco xelsis deluxe fehler 03 brühgruppe",
+      "saeco xelsis hygiesteam fehler dampf",
+      "saeco xelsis brühgruppe schmieren anleitung",
+      "saeco sm8785 entkalken anleitung"
+    ]
+  },
+  {
+    brand: "Saeco", brandSlug: "saeco", name: "Xelsis Suprema (SM8889/00)", slug: "xelsis-suprema",
+    series: "Xelsis Flagship 7,8 Zoll", year: "2022", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "Saeco Xelsis Präzisions-Brühgruppe", grinder: "Keramikmahlwerk 12 Stufen",
+    filterType: "AquaClean",
+    typicalErrors: "Großes Touchdisplay reagiert träge, Brühgruppe schwergängig",
+    quirks: "Riesiges 7,84 Zoll Farbdisplay; Brühkammer besitzt Feinsieb mit Bajonettverschluss.",
+    googleSearches: [
+      "saeco xelsis suprema brühgruppe reinigen",
+      "saeco sm8889 fehler 01 kaffeetrichter"
+    ]
+  },
+  {
+    brand: "Saeco", brandSlug: "saeco", name: "GranAroma Deluxe (SM6685/00)", slug: "granaroma-deluxe",
+    series: "GranAroma Deluxe", year: "2021", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "Saeco Brühgruppe (CP0250)", grinder: "Keramikmahlwerk 12 Stufen",
+    filterType: "AquaClean",
+    typicalErrors: "Fehler 04 Positionserkennung, Milchkaraffe rastet nicht sauber ein",
+    quirks: "CoffeeEqualizer Touchbedienung; Spindelantrieb besitzt Mikroschalter mit Metallzunge.",
+    googleSearches: [
+      "saeco granaroma deluxe fehler 04",
+      "saeco granaroma brühgruppe klemmt",
+      "saeco sm6685 entkalken"
+    ]
+  },
+  {
+    brand: "Saeco", brandSlug: "saeco", name: "GranAroma (SM6580/00)", slug: "granaroma",
+    series: "GranAroma Classic", year: "2020", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "Saeco Brühgruppe Standard", grinder: "Keramikmahlwerk",
+    filterType: "AquaClean",
+    typicalErrors: "Fehler 01, Kaffee läuft einseitig aus der Doppel-Düse",
+    quirks: "Auslaufstutzen lässt sich nach Abziehen der Frontblende mit Torx T10 zerlegen.",
+    googleSearches: [
+      "saeco granaroma kaffee läuft einseitig",
+      "saeco sm6580 brüheinheit reinigen"
+    ]
+  },
+  {
+    brand: "Saeco", brandSlug: "saeco", name: "PicoBaristo (SM5460/10)", slug: "picobaristo",
+    series: "PicoBaristo Kompakt", year: "2017", pumpPressure: "15 Bar", heaterPower: "1850 Watt",
+    brewUnit: "Saeco Kompaktbrühgruppe (CP0250)", grinder: "Keramikmahlwerk 10 Stufen",
+    filterType: "AquaClean",
+    typicalErrors: "Fehlercode 01, Fehlercode 03, Wasser in Auffangschale",
+    quirks: "Edelstahl-Finish; Brühkolben-Dichtung (40 x 4 mm VMQ rot) muss alle 12 Monate getauscht werden.",
+    googleSearches: [
+      "saeco picobaristo fehler 01 beheben",
+      "saeco picobaristo brühgruppe klemmt",
+      "saeco sm5460 brüheinheit dichtung wechseln"
+    ]
+  },
+  {
+    brand: "Saeco", brandSlug: "saeco", name: "PicoBaristo Deluxe (SM5570/10)", slug: "picobaristo-deluxe",
+    series: "PicoBaristo Deluxe", year: "2018", pumpPressure: "15 Bar", heaterPower: "1850 Watt",
+    brewUnit: "Saeco Brühgruppe", grinder: "Keramikmahlwerk 12 Stufen",
+    filterType: "AquaClean",
+    typicalErrors: "Fehler 15 Thermoblock Überhitzung, Milchbehälter saugt keine Milch an",
+    quirks: "Integriertes Schnelldampfsystem mit Doppel-Solenoidventil.",
+    googleSearches: [
+      "saeco picobaristo deluxe fehler 15",
+      "saeco sm5570 milchschaum defekt"
+    ]
+  },
+  {
+    brand: "Saeco", brandSlug: "saeco", name: "Incanto (HD8917/01)", slug: "incanto",
+    series: "Incanto Edelstahl", year: "2016", pumpPressure: "15 Bar", heaterPower: "1850 Watt",
+    brewUnit: "Saeco Standard Brühgruppe (11001011)", grinder: "Keramikmahlwerk",
+    filterType: "AquaClean / Brita Intenza",
+    typicalErrors: "Fehler 05 Wasserkreislauf verstopft, Tropfschale voll Fehlalarm",
+    quirks: "Edelstahlgehäuse mit Frontbedienung; Kontakte der Tropfschale korrodieren bei feuchtem Trester.",
+    googleSearches: [
+      "saeco incanto fehler 05 beheben",
+      "saeco incanto brühgruppe klemmt",
+      "saeco hd8917 entkalken anleitung"
+    ]
+  },
+  {
+    brand: "Saeco", brandSlug: "saeco", name: "Royal OTC (One Touch Cappuccino)", slug: "royal-otc",
+    series: "Royal Gastro Re-Launch", year: "2020", pumpPressure: "15 Bar", heaterPower: "1400 Watt",
+    brewUnit: "Heavy-Duty Saeco Gastro Brühgruppe", grinder: "Stahl-Konusmahlwerk mit Metallzahnrädern",
+    filterType: "Brita Intenza Saeco (2,5L Wassertank)",
+    typicalErrors: "Meldung 'Kaffeesatzbehälter fehlt', Brühgruppe verriegelt nicht",
+    quirks: "Robustes Bürogerät für bis zu 50 Tassen am Tag; große 600g Bohnenkammer.",
+    googleSearches: [
+      "saeco royal otc brühgruppe reinigen",
+      "saeco royal kaffeesatzbehälter meldung",
+      "saeco royal otc fehlercode"
+    ]
+  },
+  {
+    brand: "Saeco", brandSlug: "saeco", name: "Magic M2", slug: "magic-m2",
+    series: "Magic Office Premium", year: "2022", pumpPressure: "15 Bar", heaterPower: "1900 Watt",
+    brewUnit: "Saeco Professional Brühgruppe 16g", grinder: "Stahlmahlwerk geräuscharm",
+    filterType: "Brita Intenza Saeco (4L Wassertank)",
+    typicalErrors: "7-Zoll Touchdisplay bootet nicht, Fehler Milchspülung",
+    quirks: "Großer 4 Liter Wassertank; integrierter Cappuccinatore mit automatischer Dampfreinigung.",
+    googleSearches: [
+      "saeco magic m2 brühgruppe wartung",
+      "saeco magic office fehler"
+    ]
+  },
+  {
+    brand: "Saeco", brandSlug: "saeco", name: "Talea Ring Plus", slug: "talea-ring-plus",
+    series: "Talea Touch-Lift Legacy", year: "2008", pumpPressure: "15 Bar", heaterPower: "1400 Watt",
+    brewUnit: "Saeco SBS Brühgruppe mit Crema-Ventil (11001011)", grinder: "Keramikmahlwerk V1",
+    filterType: "Brita Intenza Saeco",
+    typicalErrors: "SBS Drehventil klemmt, Error 8 Brühgruppe fährt nicht in Grundstellung",
+    quirks: "Saeco Brewing System (SBS) Drehknopf am Kaffeeauslauf variiert Durchflusswiderstand.",
+    googleSearches: [
+      "saeco talea ring brühgruppe klemmt",
+      "saeco talea error 8",
+      "saeco sbs ventil reinigen"
+    ]
+  },
+
+  // ==========================================
+  // 6. KRUPS (10 Models)
+  // ==========================================
+  {
+    brand: "Krups", brandSlug: "krups", name: "Evidence (EA8918)", slug: "evidence-ea8918",
+    series: "Evidence", year: "2019", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Hydraulische Metall-Brühgruppe fest verbaut (MS-5945333)", grinder: "Krups Metall-Kegelmahlwerk (3 Stufen)",
+    filterType: "Krups Claris F088 Wasserfilter",
+    typicalErrors: "Fehler 06 (Wasserkreislauf verstopft), Fehler 01 (Mahlwerk blockiert), Wasser unter Maschine",
+    quirks: "Feste Brühkammer wird hydraulisch durch den Wasserdruck der Pumpe zusammengepresst; erfordert Revisions-Dichtungssatz mit 3 O-Ringen.",
+    googleSearches: [
+      "krups evidence fehler 06 beheben",
+      "krups ea8918 wasser läuft unten aus",
+      "krups evidence brühgruppe dichtungswechsel",
+      "krups ea8918 mahlwerk blockiert"
+    ]
+  },
+  {
+    brand: "Krups", brandSlug: "krups", name: "Evidence Eco-Design (EA897B)", slug: "evidence-eco-design",
+    series: "Evidence Eco", year: "2022", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Krups CTS Hydraulik-Brühgruppe (MS-5945333)", grinder: "Edelstahl-Kegelmahlwerk",
+    filterType: "Krups Claris F088",
+    typicalErrors: "Fehler 06, Fehler 09 (NTC Temperaturfühler defekt), Auslauf tröpfelt",
+    quirks: "Gehäuse aus 62% recyceltem Kunststoff; identische bewährte CTS-Hydraulik wie EA8918.",
+    googleSearches: [
+      "krups ea897b fehler 06",
+      "krups eco design brühgruppe reparieren",
+      "krups ea897b entkalken anleitung"
+    ]
+  },
+  {
+    brand: "Krups", brandSlug: "krups", name: "Intuition Preference (EA875E)", slug: "intuition-preference",
+    series: "Intuition Premium", year: "2020", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Quattro Force Hydraulik-Brühkammer", grinder: "Active Speed Edelstahlmahlwerk",
+    filterType: "Krups Claris F088",
+    typicalErrors: "Smart Slide Touchscreen reagiert nicht, Fehler 06, Milchsystem reinigen Aufforderung",
+    quirks: "Farbige Lichtanzeigen (Lichtleiste) zeigen Wartungsstatus und Füllstände an.",
+    googleSearches: [
+      "krups intuition preference fehler 06",
+      "krups ea875e brühgruppe zerlegen",
+      "krups intuition milchschaum spritzt"
+    ]
+  },
+  {
+    brand: "Krups", brandSlug: "krups", name: "Intuition Experience (EA877D)", slug: "intuition-experience",
+    series: "Intuition Experience+", year: "2022", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Quattro Force Edelstahlkammer", grinder: "Geräuschreduziertes Kegelmahlwerk",
+    filterType: "Krups Claris F088",
+    typicalErrors: "Fehler 06, Kaffeemehl landet feucht in der Schale, Fehler 05",
+    quirks: "Neues Flüster-Mahlwerk; Hydraulik-Kolbendichtung muss mit Spezialfett geschmiert werden.",
+    googleSearches: [
+      "krups ea877d fehler 06 beheben",
+      "krups intuition experience brühgruppe wartung"
+    ]
+  },
+  {
+    brand: "Krups", brandSlug: "krups", name: "Arabica (EA8150)", slug: "arabica-ea8150",
+    series: "Arabica Kompakt", year: "2017", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Krups Kompakt CTS Brühgruppe", grinder: "Metall-Kegelmahlwerk",
+    filterType: "Krups Claris F088",
+    typicalErrors: "Fehler 05 (Flowmeter misst keinen Durchfluss), Fehler 01 (Mahlwerk)",
+    quirks: "LCD-Display mit 3 Kaffeestärken; Drainage-Stößel schlägt nach Brühung mechanisch auf.",
+    googleSearches: [
+      "krups ea8150 fehler 05 beheben",
+      "krups arabica mahlwerk blockiert fehler 01",
+      "krups ea8150 brühgruppe dichtung wechseln"
+    ]
+  },
+  {
+    brand: "Krups", brandSlug: "krups", name: "Essential (EA8108)", slug: "essential-ea8108",
+    series: "Essential Entry", year: "2014", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Krups CTS Hydraulikzylinder (MS-5945333)", grinder: "Edelstahl-Kegelmahlwerk",
+    filterType: "Krups Claris F088",
+    typicalErrors: "4 LEDs blinken gleichzeitig (Selbsttest fehlgeschlagen), Wasser tropft unten heraus",
+    quirks: "Deutschlands meistverkaufter Einsteiger-Vollautomat; Brühzylinder-Dichtungssatz ist der Top-Reparaturartikel.",
+    googleSearches: [
+      "krups ea8108 4 leuchten blinken",
+      "krups ea8108 verliert wasser unten",
+      "krups ea8108 brühgruppe revidieren anleitung",
+      "krups ea8108 entkalken schritt für schritt"
+    ]
+  },
+  {
+    brand: "Krups", brandSlug: "krups", name: "Roma (EA8105)", slug: "roma-ea8105",
+    series: "Roma Kompakt Weiß", year: "2015", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Krups CTS Brühgruppe", grinder: "Kegelmahlwerk",
+    filterType: "Krups Claris F088",
+    typicalErrors: "Warnleuchte 'Clean' und 'Calc' blinken abwechselnd, Kaffeesatz ist Brei",
+    quirks: "Baugleich mit EA8108 im weißen Gehäuse; mechanischer Drehregler für Tassenfüllmenge.",
+    googleSearches: [
+      "krups ea8105 clean calc blinkt",
+      "krups roma brühgruppe dichtungsset einbauen",
+      "krups ea8105 zerlegen anleitung"
+    ]
+  },
+  {
+    brand: "Krups", brandSlug: "krups", name: "Barista (EA9010)", slug: "barista-ea9010",
+    series: "Barista Vollautomatisch", year: "2013", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Motorgetriebene Vollmetall-Brühgruppe", grinder: "Elektronisch verstellbares Mahlwerk",
+    filterType: "Krups Claris F088",
+    typicalErrors: "Dampfdüse fährt nicht aus (Servomotor klemmt), Fehler 0B Platinenfehler",
+    quirks: "Dampfdüse fährt vollautomatisch in die Tasse und reinigt sich danach selbst im Spülbecken.",
+    googleSearches: [
+      "krups ea9010 dampfdüse fährt nicht aus",
+      "krups barista ea9010 fehler 0b",
+      "krups ea9010 brühgruppe reparatur"
+    ]
+  },
+  {
+    brand: "Krups", brandSlug: "krups", name: "Latt'Espress (EA8298)", slug: "lattespress-ea8298",
+    series: "Latt'Espress mit Karaffe", year: "2016", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Krups CTS Brühgruppe", grinder: "Metall-Mahlwerk",
+    filterType: "Krups Claris F088",
+    typicalErrors: "Fehler 06, Milchtank-Kupplung undicht, Dampf zischt im Gehäuse",
+    quirks: "Abnehmbare Milchkaraffe dockt an die Front; O-Ringe am Dampfstutzen verhärten schnell.",
+    googleSearches: [
+      "krups ea8298 fehler 06 beheben",
+      "krups lattespress brühgruppe dichtung tauschen"
+    ]
+  },
+  {
+    brand: "Krups", brandSlug: "krups", name: "Quattro Force (EA82FE)", slug: "quattro-force-ea82fe",
+    series: "Quattro Force Classic", year: "2018", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Quattro Force 30kg Anpressdruck Brühkammer", grinder: "Active Speed Mahlwerk",
+    filterType: "Krups Claris F088",
+    typicalErrors: "Fehler 06, Zylinder fährt nicht komplett hoch, Crema blass",
+    quirks: "Hydraulikzylinder erzeugt 30 kg mechanischen Anpressdruck auf das Kaffeemehl.",
+    googleSearches: [
+      "krups quattro force fehler 06",
+      "krups ea82fe brühgruppe überholen anleitung"
+    ]
+  },
+
+  // ==========================================
+  // 7. SAGE / BREVILLE (8 Models)
+  // ==========================================
+  {
+    brand: "Sage", brandSlug: "sage", name: "Barista Touch (SES880)", slug: "barista-touch",
+    series: "Barista Touch Hybrid", year: "2019", pumpPressure: "15 Bar Ulka", heaterPower: "1680 Watt ThermoJet",
+    brewUnit: "54 mm Edelstahl-Brühgruppe mit ThermoJet (SP0020017)", grinder: "Integriertes gehärtetes Stahl-Kegelmahlwerk (30 Stufen)",
+    filterType: "Sage ClaroSwiss Wasserfilter (SES008)",
+    typicalErrors: "ThermoJet heizt nicht in 3 Sekunden auf, Touchdisplay friert ein, Druck fällt beim Bezug ab",
+    quirks: "ThermoJet heizt in 3 Sekunden auf; Brühkopfdichtung aus Silikon (54mm) muss alle 12 Monate erneuert werden.",
+    googleSearches: [
+      "sage barista touch kein druck beim brühen",
+      "sage barista touch thermojet heizt nicht",
+      "sage ses880 mahlwerk reinigen verstopft",
+      "sage barista touch siebträger dichtung wechseln"
+    ]
+  },
+  {
+    brand: "Sage", brandSlug: "sage", name: "Barista Express (BES875)", slug: "barista-express",
+    series: "Barista Express Classic", year: "2015", pumpPressure: "15 Bar Ulka (9 Bar Brühdruck)", heaterPower: "1850 Watt Thermocoil",
+    brewUnit: "54 mm Brühgruppe mit Expansionsventil (OPV)", grinder: "Edelstahl-Kegelmahlwerk (18 Stufen)",
+    filterType: "Sage ClaroSwiss (SES008)",
+    typicalErrors: "Druckmanometer schlägt nicht aus, Mahlwerk mahlt zu grob trotz Feineinstellung",
+    quirks: "Deutschlands beliebteste Einsteiger-Siebträgermaschine; oberer Mahlkranz besitzt interne Klick-Kalibrierung.",
+    googleSearches: [
+      "sage barista express manometer kein druck",
+      "sage bes875 mahlwerk feiner einstellen kalibrieren",
+      "sage barista express siebträger dichtung tropft",
+      "sage barista express entkalken anleitung"
+    ]
+  },
+  {
+    brand: "Sage", brandSlug: "sage", name: "Barista Pro (SES878)", slug: "barista-pro",
+    series: "Barista Pro LCD", year: "2020", pumpPressure: "15 Bar", heaterPower: "1680 Watt ThermoJet",
+    brewUnit: "54 mm Brühgruppe mit Pre-Infusion", grinder: "Baratza-basiertes 30-Stufen Mahlwerk",
+    filterType: "Sage ClaroSwiss",
+    typicalErrors: "LCD zeigt Fehlermeldung 'Er01', Dampflanze zischt schwach",
+    quirks: "ThermoJet Technologie; Dampfspitze mit 4 Löchern muss mit der mitgelieferten Nadel gereinigt werden.",
+    googleSearches: [
+      "sage barista pro kein druck fehlersuche",
+      "sage ses878 dampflanze verstopft reinigen",
+      "sage barista pro mahlwerk reinigen"
+    ]
+  },
+  {
+    brand: "Sage", brandSlug: "sage", name: "Oracle Touch (SES990)", slug: "oracle-touch",
+    series: "Oracle Dual Boiler Flagship", year: "2018", pumpPressure: "15 Bar (Brüh- & Dampfpumpe)", heaterPower: "2400 Watt (Dual Boiler)",
+    brewUnit: "58 mm Gastronomie-Brühgruppe mit beheiztem Brühkopf", grinder: "Automatisches Mahl- & Tamping-System (45 Stufen)",
+    filterType: "Sage ClaroSwiss",
+    typicalErrors: "Fehler 'Boiler heizt nicht', Auto-Tamping Station klemmt, Dampfboiler O-Ringe undicht",
+    quirks: "Echter Dual-Boiler aus Edelstahl; Triac-Regler und O-Ringe an den Boiler-Sonden (Größe 007 / 008 FKM) sind typische Verschleißteile.",
+    googleSearches: [
+      "sage oracle touch boiler heizt nicht",
+      "sage ses990 auto tamping klemmt",
+      "sage oracle touch o-ringe boiler dichtung wechseln",
+      "sage oracle touch entkalken problem"
+    ]
+  },
+  {
+    brand: "Sage", brandSlug: "sage", name: "The Oracle (SES980)", slug: "the-oracle",
+    series: "Oracle Dual Boiler Classic", year: "2016", pumpPressure: "15 Bar Dual Pump", heaterPower: "2400 Watt Dual Boiler",
+    brewUnit: "58 mm Beheizter Gastro-Brühkopf", grinder: "Auto-Grind & Auto-Tamp",
+    filterType: "Sage ClaroSwiss",
+    typicalErrors: "Zischen im Gehäuseinneren, Dampfdruck bricht nach 10 Sekunden zusammen",
+    quirks: "Boilersonden verkalken und lösen ständiges Nachfüllen der Dampfpumpe aus.",
+    googleSearches: [
+      "sage oracle ses980 zischen im gehäuse",
+      "sage oracle brühkopf heizung fehler"
+    ]
+  },
+  {
+    brand: "Sage", brandSlug: "sage", name: "Bambino Plus (SES500)", slug: "bambino-plus",
+    series: "Bambino Kompakt", year: "2019", pumpPressure: "15 Bar", heaterPower: "1600 Watt ThermoJet",
+    brewUnit: "54 mm Brühgruppe Ultra-Kompakt", grinder: "Kein internes Mahlwerk",
+    filterType: "Sage ClaroSwiss",
+    typicalErrors: "Auto-Milchaufschäum-Sensor am Boden verschmutzt, 1-Tasse & 2-Tassen Taste blinken",
+    quirks: "Temperatursensor im Abtropfgitter misst Kannenboden; muss absolut sauber und trocken sein.",
+    googleSearches: [
+      "sage bambino plus tasten blinken fehlersuche",
+      "sage bambino plus milchschaum sensor fehler",
+      "sage ses500 entkalken anleitung"
+    ]
+  },
+  {
+    brand: "Sage", brandSlug: "sage", name: "Dual Boiler (BES920)", slug: "dual-boiler-bes920",
+    series: "Dual Boiler Purist", year: "2015", pumpPressure: "15 Bar Ulka mit OPV Ventil", heaterPower: "2200 Watt Dual Boiler",
+    brewUnit: "58 mm Gewerbe-Brühgruppe mit PID Temperaturregelung", grinder: "Externes Mahlwerk",
+    filterType: "Sage ClaroSwiss",
+    typicalErrors: "Dampfboiler füllt ununterbrochen, O-Ringe an Heizpatronen undicht, FI-Schalter fliegt",
+    quirks: "Liebling der Home-Barista-Community; extrem modifizierbar (Slayer-Mod, OPV-Justage auf 9 Bar).",
+    googleSearches: [
+      "sage dual boiler fi schalter fliegt raus",
+      "sage bes920 boiler o-ringe tauschen",
+      "sage dual boiler opv ventil 9 bar einstellen"
+    ]
+  },
+  {
+    brand: "Sage", brandSlug: "sage", name: "Barista Touch Impress (SES881)", slug: "barista-touch-impress",
+    series: "Barista Touch Impress", year: "2023", pumpPressure: "15 Bar", heaterPower: "1680 Watt ThermoJet",
+    brewUnit: "54 mm Brühgruppe mit Puck Sucker", grinder: "Baratza Präzisionsmahlwerk",
+    filterType: "Sage ClaroSwiss",
+    typicalErrors: "Impress Tamping Hebel kalibriert nicht, Touchscreen bricht Rezept ab",
+    quirks: "Unterstütztes Tampen mit 10 kg konstantem Druck und 7 Grad Barista-Drehung.",
+    googleSearches: [
+      "sage barista touch impress tamping fehler",
+      "sage ses881 mahlwerk kalibrieren"
+    ]
+  },
+
+  // ==========================================
+  // 8. MELITTA (8 Models)
+  // ==========================================
+  {
+    brand: "Melitta", brandSlug: "melitta", name: "Caffeo Solo (E950-103)", slug: "caffeo-solo",
+    series: "Caffeo Solo Pur", year: "2014", pumpPressure: "15 Bar", heaterPower: "1400 Watt",
+    brewUnit: "Melitta/Nivona/Miele Brühgruppe (6716059)", grinder: "Stahl-Kegelmahlwerk (3 Stufen)",
+    filterType: "Melitta Pro Aqua Wasserfilter",
+    typicalErrors: "Symbol Kaffeebohne und Warnung blinken, Brühgruppe lässt sich nicht einschieben",
+    quirks: "Kompaktester Vollautomat (20 cm breit); Brühgruppe ist baugleich mit Nivona und Miele CM5.",
+    googleSearches: [
+      "melitta caffeo solo brühgruppe klemmt lässt sich nicht einsetzen",
+      "melitta caffeo solo blinkt bohne und ausrufezeichen",
+      "melitta solo kaffee läuft in auffangschale",
+      "melitta caffeo solo drainageventil wechseln"
+    ]
+  },
+  {
+    brand: "Melitta", brandSlug: "melitta", name: "Caffeo Solo & Perfect Milk (E957-103)", slug: "solo-perfect-milk",
+    series: "Caffeo Solo Milk", year: "2015", pumpPressure: "15 Bar", heaterPower: "1400 Watt",
+    brewUnit: "Melitta Standard Brühgruppe (6716059)", grinder: "Stahlmahlwerk",
+    filterType: "Melitta Pro Aqua",
+    typicalErrors: "Cappuccinatore Ventil zieht keine Milch, Brühgruppe schwergängig",
+    quirks: "Auto-Cappuccinatore an der Dampfdüse; Luftansaug-Ventil verkalkt schnell.",
+    googleSearches: [
+      "melitta solo perfect milk cappuccinatore zieht keine milch",
+      "melitta e957 brühgruppe fetten"
+    ]
+  },
+  {
+    brand: "Melitta", brandSlug: "melitta", name: "Caffeo Barista TS Smart (F850-102)", slug: "barista-ts-smart",
+    series: "Barista TS Smart Dual", year: "2019", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Melitta Premium Brühgruppe", grinder: "Super leises Stahlkegel-Mahlwerk",
+    filterType: "Melitta Pro Aqua",
+    typicalErrors: "Automatic Bean Select schaltet nicht um, Fehler Systemfehler 5, Brühgruppe blockiert",
+    quirks: "Automatischer 2-Kammern-Bohnenbehälter mit optischem Füllstandssensor.",
+    googleSearches: [
+      "melitta barista ts smart systemfehler 5",
+      "melitta barista ts brühgruppe klemmt",
+      "melitta f850 bean select fehler",
+      "melitta barista ts smart entkalken anleitung"
+    ]
+  },
+  {
+    brand: "Melitta", brandSlug: "melitta", name: "CI Touch (F630-101)", slug: "ci-touch",
+    series: "CI Touch One Touch", year: "2018", pumpPressure: "15 Bar", heaterPower: "1400 Watt",
+    brewUnit: "Melitta Brühgruppe (6716059)", grinder: "Flüsterleises Kegelmahlwerk",
+    filterType: "Melitta Pro Aqua",
+    typicalErrors: "Meldung 'System füllen', Milchsystem spritzt und dampft nur",
+    quirks: "Manueller 2-Kammern Bohnenbehälter Bean Select; Brühgruppe benötigt alle 6 Monate neue Dichtungen.",
+    googleSearches: [
+      "melitta ci touch system füllen meldung",
+      "melitta ci touch milchschaum spritzt",
+      "melitta ci touch brühgruppe zerlegen anleitung"
+    ]
+  },
+  {
+    brand: "Melitta", brandSlug: "melitta", name: "Purista (F230-102)", slug: "purista",
+    series: "Purista Silence", year: "2020", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Melitta Brühgruppe", grinder: "Extrem leises Kegelmahlwerk",
+    filterType: "Melitta Pro Aqua",
+    typicalErrors: "Tropfschale leeren Symbol leuchtet trotz leerer Schale, Pumpe brummt",
+    quirks: "Reines Kaffeegerät mit schlanker Front; Kontakte an der Rückwand der Schale reinigen.",
+    googleSearches: [
+      "melitta purista tropfschale leeren fehler",
+      "melitta purista brühgruppe klemmt"
+    ]
+  },
+  {
+    brand: "Melitta", brandSlug: "melitta", name: "Avanza (F270-100)", slug: "avanza",
+    series: "Avanza Cappuccinatore", year: "2020", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Melitta Brühgruppe", grinder: "Leises Stahlmahlwerk",
+    filterType: "Melitta Pro Aqua",
+    typicalErrors: "Easy Cappuccinatore schäumt nicht, Brühgruppe knarrt beim Brühen",
+    quirks: "Großer 250g Bohnenbehälter und 1,5L Wassertank bei schlanken 20cm Gehäusebreite.",
+    googleSearches: [
+      "melitta avanza milchaufschäumer zieht nicht",
+      "melitta avanza brühgruppe schmieren"
+    ]
+  },
+  {
+    brand: "Melitta", brandSlug: "melitta", name: "Passione OT (F531-102)", slug: "passione-ot",
+    series: "Passione One Touch", year: "2017", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Melitta Kompakt Brühgruppe", grinder: "Kegelmahlwerk mit Kubus-Chassis",
+    filterType: "Melitta Pro Aqua",
+    typicalErrors: "Systemfehler 8, Milchlanze verstopft, Drainageventil undicht",
+    quirks: "Kubisches Design; Drainageventil mit Messingkappe verhindert Wasserverlust in die Schale.",
+    googleSearches: [
+      "melitta passione ot systemfehler 8",
+      "melitta passione drainageventil wechseln",
+      "melitta passione ot brühgruppe klemmt"
+    ]
+  },
+  {
+    brand: "Melitta", brandSlug: "melitta", name: "Varianza CSP (F570-102)", slug: "varianza-csp",
+    series: "Varianza My Bean Select", year: "2016", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Melitta Brühgruppe", grinder: "My Bean Select Einzelportionen-Mahlwerk",
+    filterType: "Melitta Pro Aqua",
+    typicalErrors: "Portionsschacht-Sensor blockiert, Kaffeepulver feucht im Innenraum",
+    quirks: "Separater Dosierlöffel oben erlaubt Probieren einzelner Tassen anderer Kaffeesorten.",
+    googleSearches: [
+      "melitta varianza csp brühgruppe reinigen",
+      "melitta varianza my bean select fehler"
+    ]
+  },
+
+  // ==========================================
+  // 9. NIVONA (6 Models)
+  // ==========================================
+  {
+    brand: "Nivona", brandSlug: "nivona", name: "CafeRomatica 759", slug: "caferomatica-759",
+    series: "NICR 7er Serie", year: "2019", pumpPressure: "15 Bar", heaterPower: "1455 Watt",
+    brewUnit: "Nivona Standard Brühgruppe (baugleich Melitta/Miele 6716059)", grinder: "Gehärtetes Kegelmahlwerk geräuschgedämmt",
+    filterType: "NIVONA CLARIS Frischwasserfilter (NIRF 700)",
+    typicalErrors: "Fehler 8 (Brühgruppen-Initialisierung), Spülwasser landet komplett in Auffangschale",
+    quirks: "Klassisches Eugster/Frismag Chassis; Drainageventil mit Messingkappe ist die beste Reparaturmaßnahme.",
+    googleSearches: [
+      "nivona 759 fehler 8 beheben",
+      "nivona 759 wasser läuft in auffangschale",
+      "nivona caferomatica 759 brühgruppe klemmt",
+      "nivona 759 drainageventil tauschen anleitung"
+    ]
+  },
+  {
+    brand: "Nivona", brandSlug: "nivona", name: "CafeRomatica 790", slug: "caferomatica-790",
+    series: "NICR 7er Facelift", year: "2021", pumpPressure: "15 Bar", heaterPower: "1455 Watt",
+    brewUnit: "Nivona Brühgruppe (6716059)", grinder: "Super Silence Stahlmahlwerk",
+    filterType: "NIVONA NIRF 700",
+    typicalErrors: "Fehler 8, OneTouch Spumatore zieht Luft statt Milch, Trester nass",
+    quirks: "Neues Matt-Schallschutzgehäuse; Spumatore Aufschäumerlanze regelmäßig im Ultraschallbad reinigen.",
+    googleSearches: [
+      "nivona 790 fehler 8 brühgruppe",
+      "nivona caferomatica 790 milchschaum spritzt",
+      "nivona 790 entkalken anleitung"
+    ]
+  },
+  {
+    brand: "Nivona", brandSlug: "nivona", name: "CafeRomatica 825", slug: "caferomatica-825",
+    series: "NICR 8er Edelstahl", year: "2020", pumpPressure: "15 Bar", heaterPower: "1465 Watt",
+    brewUnit: "Nivona Brühgruppe", grinder: "Aroma Balance System 3 Profile",
+    filterType: "NIVONA NIRF 700",
+    typicalErrors: "DuoSpumatore schäumt nur eine Tasse, Fehler 8 Brühgruppe",
+    quirks: "DuoSpumatore schäumt zwei Cappuccino gleichzeitig; doppelter Auslaufverteiler erfordert freie Düsen.",
+    googleSearches: [
+      "nivona 825 duospumatore reinigen",
+      "nivona caferomatica 825 fehler 8",
+      "nivona 825 brühgruppe dichtungswechsel"
+    ]
+  },
+  {
+    brand: "Nivona", brandSlug: "nivona", name: "CafeRomatica 930", slug: "caferomatica-930",
+    series: "NICR 9er Touch", year: "2021", pumpPressure: "15 Bar", heaterPower: "1465 Watt",
+    brewUnit: "Nivona Präzisions-Brühgruppe", grinder: "Flüster-Kegelmahlwerk",
+    filterType: "NIVONA NIRF 700",
+    typicalErrors: "Touchdisplay Fehlfunktion, Fehler System entlüften",
+    quirks: "Wassertank mit LED-Beleuchtung in 8 Farben; Wassertankschwimmer mit Magnetsensor.",
+    googleSearches: [
+      "nivona 930 touch display fehler",
+      "nivona caferomatica 930 brühgruppe klemmt"
+    ]
+  },
+  {
+    brand: "Nivona", brandSlug: "nivona", name: "CafeRomatica 960", slug: "caferomatica-960",
+    series: "NICR 9er Flagship", year: "2021", pumpPressure: "15 Bar", heaterPower: "1465 Watt",
+    brewUnit: "Nivona Brühgruppe", grinder: "Aroma Pre-Select Mahlwerk",
+    filterType: "NIVONA NIRF 700",
+    typicalErrors: "Fehler 8, Kaffeeauslauf tröpfelt schief, Drainageventil undicht",
+    quirks: "Großes 5 Zoll Touchdisplay; Brühgruppenkolben besitzt speziellen Viton-Lippenring.",
+    googleSearches: [
+      "nivona 960 fehler 8 beheben",
+      "nivona 960 brühgruppe ausbauen reinigen"
+    ]
+  },
+  {
+    brand: "Nivona", brandSlug: "nivona", name: "CafeRomatica 1040", slug: "caferomatica-1040",
+    series: "NICR 10er Gastro Büro", year: "2021", pumpPressure: "15 Bar Gastro", heaterPower: "2700 Watt Twin-Heater",
+    brewUnit: "Heavy-Duty Nivona Gastro Brühgruppe", grinder: "Gastro-Kegelmahlwerk (600g Bohnen)",
+    filterType: "NIVONA NIRF 700 (3,5L Wassertank)",
+    typicalErrors: "Fehler 8 Überlast, Doppeltassen-Milchventil klemmt",
+    quirks: "Für Großbüros mit Kannenfunktion; 2700 Watt Doppelheizung erlaubt rasante Tassenfolgen.",
+    googleSearches: [
+      "nivona 1040 fehler 8 brühgruppe überlastet",
+      "nivona caferomatica 1040 wartungsset"
+    ]
+  },
+
+  // ==========================================
+  // 10. BOSCH & MIELE (6 Models)
+  // ==========================================
+  {
+    brand: "Bosch", brandSlug: "bosch", name: "VeroCup 100 (TIS30129RW)", slug: "verocup-100",
+    series: "VeroCup", year: "2019", pumpPressure: "15 Bar", heaterPower: "1300 Watt",
+    brewUnit: "BSH EQ.3/Vero Brühgruppe mit Federkolben (11032731)", grinder: "ceramDrive Keramikmahlwerk",
+    filterType: "BRITA Intenza (TZ70003)",
+    typicalErrors: "Brühgruppe klemmt beim Hochfahren, MilkMagic Pro Düse zieht keine Milch",
+    quirks: "Identische BSH Plattform wie Siemens EQ.3; kompaktes Chassis mit frontal zugänglicher Brühgruppe.",
+    googleSearches: [
+      "bosch verocup 100 brühgruppe klemmt",
+      "bosch verocup 100 entkalken anleitung",
+      "bosch verocup 100 zieht kein wasser"
+    ]
+  },
+  {
+    brand: "Bosch", brandSlug: "bosch", name: "VeroBar 100 (TES70129DE)", slug: "verobar-100",
+    series: "VeroBar Classic", year: "2013", pumpPressure: "19 Bar", heaterPower: "1700 Watt SensoFlow",
+    brewUnit: "BSH EQ.7 Brühgruppe (00676451)", grinder: "Silent ceramDrive",
+    filterType: "BRITA Intenza",
+    typicalErrors: "Keramikventil undicht (Wasser in Tropfschale), Fehler 'Störung bitte Hotline anrufen'",
+    quirks: "SensoFlow System heizt extrem konstant; Keramik-Mehrwegeventil schaltet die Wasserwege.",
+    googleSearches: [
+      "bosch verobar 100 störung hotline anrufen",
+      "bosch verobar 100 keramikventil tauschen",
+      "bosch verobar 100 brühgruppe zerlegen"
+    ]
+  },
+  {
+    brand: "Bosch", brandSlug: "bosch", name: "VeroAroma 700 (TES60729DE)", slug: "veroaroma-700",
+    series: "VeroAroma", year: "2016", pumpPressure: "19 Bar", heaterPower: "1500 Watt",
+    brewUnit: "BSH EQ.6 Brühgruppe (11014117)", grinder: "ceramDrive Keramik",
+    filterType: "BRITA Intenza",
+    typicalErrors: "Fehler E0511 Heizung/Wasserweg, Kaffeeauslaufverteiler verstopft",
+    quirks: "Baugleich mit Siemens EQ.6 Serie; alle Ersatzteile (Brühgruppe, Mahlwerk, Auslauf) sind 100% kompatibel.",
+    googleSearches: [
+      "bosch veroaroma 700 fehler e0511",
+      "bosch veroaroma 700 brühgruppe klemmt",
+      "bosch veroaroma 700 kaffeeauslauf reinigen"
+    ]
+  },
+  {
+    brand: "Miele", brandSlug: "miele", name: "CM 5310 Silence", slug: "cm-5310-silence",
+    series: "CM5 Serie", year: "2020", pumpPressure: "15 Bar", heaterPower: "1450 Watt",
+    brewUnit: "Miele/Eugster Brühgruppe (baugleich Melitta/Nivona 6716059)", grinder: "Geräuscharmes Kegelmahlwerk aus abriebfestem Stahl",
+    filterType: "Miele Wasserfilter / Entkalkungstabletten",
+    typicalErrors: "Fehler F10 (Wasserzulauf gestört), Fehler F8 (Brühgruppe klemmt)",
+    quirks: "Hochwertiges Schweizer Eugster-Chassis; Brühgruppen-Dichtungen und Drainageventil sind identisch mit Melitta und Nivona.",
+    googleSearches: [
+      "miele cm 5310 fehler f10 beheben",
+      "miele cm 5310 brühgruppe klemmt fehler f8",
+      "miele cm 5310 entkalken anleitung",
+      "miele cm 5310 drainageventil wechseln"
+    ]
+  },
+  {
+    brand: "Miele", brandSlug: "miele", name: "CM 6160 MilkPerfection", slug: "cm-6160-milkperfection",
+    series: "CM6 Serie", year: "2021", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "Miele Brühgruppe mit AromaticSystem", grinder: "Stahl-Kegelmahlwerk",
+    filterType: "Miele Entkalkungskartusche",
+    typicalErrors: "Fehler F8, Doppel-Milchschaumdüse spritzt, Spülrohre verstopft",
+    quirks: "AromaticSystem Brühkammer dehnt sich bei Wassereinströmung aus für ideale Aromastoffe.",
+    googleSearches: [
+      "miele cm 6160 fehler f8 brühgruppe",
+      "miele cm 6160 milchschaum spritzt",
+      "miele cm 6160 kaffeeauslauf zerlegen"
+    ]
+  },
+  {
+    brand: "Miele", brandSlug: "miele", name: "CM 7750 CoffeeSelect", slug: "cm-7750-coffeeselect",
+    series: "CM7 Flagship", year: "2021", pumpPressure: "15 Bar", heaterPower: "1500 Watt",
+    brewUnit: "AutoDescale Miele Großraum-Brühgruppe", grinder: "3 Bohnenbehälter mit elektronischer Zuweisung",
+    filterType: "AutoDescale automatische Entkalkungskartusche",
+    typicalErrors: "AutoDescale Kartusche wird nicht erkannt, CupSensor Höhensensor blockiert",
+    quirks: "Automatische Entkalkung über integrierte Kartusche; CupSensor fährt Tassenhöhe automatisch an.",
+    googleSearches: [
+      "miele cm 7750 autodescale fehler",
+      "miele cm 7750 cupsensor klemmt",
+      "miele cm 7750 brühgruppe reinigen"
+    ]
+  }
+];
+
+// Verify model count
+console.log(`Loaded ${models.length} authentic German coffee machine models across 10 top brands!`);
+
+// Save to data/models-de.json
+const outPath = path.join(__dirname, 'models-de.json');
+fs.writeFileSync(outPath, JSON.stringify(models, null, 2), 'utf8');
+console.log(`Successfully generated and written: ${outPath}`);

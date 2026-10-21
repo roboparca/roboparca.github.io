@@ -1,0 +1,93 @@
+{
+  "page_title": "Jura Z10 Cold Extraction Magnetventil & Bypass: Reparaturanleitung",
+  "meta_description": "Fachlehrgang zur Reparatur des Cold Extraction Magnetventils & Bypass der Jura Z10 Aluminium: Hydraulik-Analyse, Fehlerdiagnose, EPDM-Dichtungen & Tausch.",
+  "word_count_check": 1280,
+  "engineering_breakdown": "Das hydraulische Teilsystem des Cold Extraction Process (C.E.P.) in der Jura Z10 Aluminium stellt eine signifikante Weiterentwicklung klassischer Vollautomaten-Fluidik dar. Während konventionelle Brühgruppen ausschließlich durch den Thermoblock erhitztes Wasser im P.E.P.-Verfahren (Puls-Extraktionsprozess) verarbeiten, erfordert das C.E.P.-Verfahren eine präzise Umgehung (Bypass) der Heizelemente bei gleichzeitig kontrollierter Hochdruckpulsation im Kaltwasserbereich. Das System basiert auf einer Kombination aus einem elektromechanischen 2/2-Wege- bzw. 3/2-Wege-Magnetventil und einer parallel geführten PTFE-Bypassleitung (Polytetrafluorethylen, Außendurchmesser 4,0 mm, Innendurchmesser 2,5 mm, Berstdruck > 35 bar bei 20 °C). Der Ventilkörper selbst besteht aus glasfaserverstärktem Polyoxymethylen (POM-GF30) oder Polyphenylensulfid (PPS), um mikroskopische Maßhaltigkeit unter wechselnden Druckspitzen bis zu 18 bar zu gewährleisten. Der interne Magnetanker (Plunger) besteht aus ferritischem Edelstahl mit hoher magnetischer Permeabilität und korrosionsbeständiger Passivierung, federbelastet durch eine Rückstellfeder aus austenitischem Federstahl 1.4310 (X10CrNi18-8). Die fluidberührten Elastomerdichtungen sind strikt zweigeteilt: Am Ventilsitz dichtet ein medienbeständiger EPDM-Elastomerkörper (Ethylen-Propylen-Dien-Kautschuk, peroxidisch vernetzt, 70 Shore A) ab, während an den Steckkupplungen der Bypassleitung VMQ-O-Ringe (Silikonkautschuk) mit FDA-Zulassung verwendet werden. Die elektronische Ansteuerung erfolgt über die Leistungselektronik mittels Pulsweitenmodulation (PWM) bei nominal 24 V DC (bzw. modellspezifisch getakteten Halbwellen-Triacs), um die Spulenerwärmung zu minimieren und eine Taktfrequenz bereitzustellen, die exakt mit der Hubfrequenz der Ulka-Schwingkolbenpumpe (Modellreihe EX4/EP5) synchronisiert ist. Mechanische Versagensursachen manifestieren sich vorrangig durch oszillierende Druckschläge (Wasserschläge), die zu Ermüdungsrissen im POM-Kupplungsbereich führen, oder durch partikuläre Blockaden im 0,8 mm messenden Ventilsitzkanal, verursacht durch mikroskopische Verkalkungen oder gequollene Dichtungsfragmente.",
+  "symptoms_and_causes": "Tritt ein Funktionsausfall im C.E.P.-Subsystem der Jura Z10 auf, divergiert das Fehlerbild signifikant zwischen Heißgetränke- und Kaltgetränkebezug. Primäres Leitsymptom ist das Ausbleiben der Cold-Brew-Extraktion trotz einwandfrei funktionierendem Heißwasser- und Espressobezug. Der Zubereitungsvorgang bricht entweder nach dem Mahlvorgang des Product Recognising Grinder (P.R.G.) vorzeitig ab, oder das Mahlgut wird trocken bzw. nur oberflächlich benetzt in den Tresterbehälter ausgeworfen. Häufig quittiert die Steuerungselektronik dies mit der Meldung 'System füllen' oder generiert im Servicemenü einen Timeout-Fehler des Flowmeters, da das Wasser trotz Pumpenbestromung nicht zirkulieren kann. Akustisch fällt ein verändertes Klangbild der Schwingkolbenpumpe auf: Statt des typischen, sonoren Taktschlags arbeitet die Pumpe gegen einen hydraulischen Blockieranstand, erkennbar an einem extrem leisen, gequälten Summen mit Stromaufnahmen über 65 Watt. Ein weiteres Symptom ist das Phänomen 'Kaltgetränk wird lauwarm serviert': Hier schließt das Bypassventil nicht mehr hermetisch, wodurch es zu Fehlströmen durch den aufgeheizten Thermoblock kommt. Ursächlich hierfür sind zumeist Verkalkungen des Plungers, da Kaltwasserstrecken von herkömmlichen Heiß-Entkalkungsprogrammen unzureichend durchströmt und chemisch angelöst werden. Sekundär treten Leckagen auf, die sich durch Wasseransammlungen unter der Maschine oder in der Tropfschale zeigen; diese resultieren aus Materialermüdung der 1.4310-Halteklammern oder aus mikroskopischen Haarrissen im druckbeaufschlagten POM-Bypassgehäuse infolge von Kavitationserosion.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Sicherheitsfreischaltung und Demontage des Aluminium-Gehäuses",
+      "action": "Netzstecker zwingend ziehen. Wassertank und Bohnenbehälter entnehmen. Gehäuse-Rückwand und die massiven Aluminium-Seitenteile mithilfe von Torx TX10- und Ovalkopf-Bit-Werkzeugen vorsichtig entriegeln und nach hinten abziehen, um das Chassis freizulegen."
+    },
+    {
+      "step": 2,
+      "title": "Druckentlastung und Lokalisierung der C.E.P.-Hydraulikeinheit",
+      "action": "Restdruck über manuelles Betätigen des Auslaufventils abbauen. Das oberhalb des Thermoblocks bzw. seitlich der Brühgruppe positionierte 24V-C.E.P.-Magnetventil und die weiße/transparente PTFE-Bypassleitung visuell auf Undichtigkeiten und Haarrisse inspizieren."
+    },
+    {
+      "step": 3,
+      "title": "Demontage der Bypassleitung und des Magnetventils",
+      "action": "Die Federstahl-Sicherungsklammern (1.4310) mit einer Spitzzange axial herausziehen. Die 4-mm-PTFE-Druckschläuche vorsichtig aus den Steckanschlüssen hebeln. Die elektrischen Flachsteck- oder Rastverbindungen der Spule unter Entriegelung der Rastnase lösen und das Ventil abschrauben."
+    },
+    {
+      "step": 4,
+      "title": "Ventilrevision, Dichtungsaustausch und Präparierung",
+      "action": "Ventilsitz auf Ablagerungen prüfen. Defekte EPDM-Formdichtungen und VMQ-O-Ringe durch fabrikneue Originalkomponenten ersetzen. O-Ringe der Bypasskupplungen hauchdünn mit OKS 1110 Silikonfett schmieren; der Ventildichtsitz selbst muss absolut fettfrei bleiben."
+    },
+    {
+      "step": 5,
+      "title": "Remontage, Dichtigkeitsprüfung und Kalibrierungslauf",
+      "action": "Ventil montieren, PTFE-Leitungen bis zum spürbaren Anschlag einschieben und Sicherungsklammern vollflächig verriegeln. Vor Montage der Aluminiumpaneele Testbezug 'Cold Brew' durchführen, Dichtigkeit unter 15 bar Maximaldruck visuell überwachen, danach Gehäuse verschließen."
+    }
+  ],
+  "step_by_step_narrative": "Die Instandsetzung des Cold Extraction Process (C.E.P.) Ventilsystems der Jura Z10 Aluminium verlangt höchste mechanische Präzision, da im Kaltwassermodus Druckspitzen auftreten, die fehlerhafte Montagen sofort mit Leckagen bestrafen. Zur Arbeitsvorbereitung gehören: Torx-Schraubendreher TX10, TX15 und TX20, Jura-Ovalkopfschlüssel, eine abgewinkelte Präzisions-Spitzzange, OKS 1110 lebensmittelechtes Silikonfett, ein Multimeter zur Spulenmessung sowie frische EPDM/VMQ-Dichtungssätze. Vor Beginn muss das Gerät allpolig vom 230-V-Netz getrennt werden. Nach dem Entleeren des Restwassers werden die Schraubverbindungen der Aluminium-Seitenverkleidung gelöst. Beim Abziehen der Seitenteile ist penibel auf die Rastnasen des Rahmens zu achten. Im Inneren liegt der hydraulische Knotenpunkt frei. Vor dem Lösen der Schläuche ist die Anlage drucklos zu machen. Die Fixierung der hochfesten PTFE-Leitungen erfolgt über Klammern aus 1.4310-Federstahl. Ziehen Sie diese Klammern linear heraus, ohne Biegespannung auszuüben, um Kerbwirkung am Kupplungssitz zu vermeiden. Ziehen Sie den PTFE-Schlauch gerade ab; verkanten führt zu Riefen im Schlauchmantel, die später Undichtigkeiten provozieren. Messen Sie nun den Spulenwiderstand des Magnetventils: Bei Raumtemperatur (20 °C) muss dieser typischerweise im Bereich von 45 bis 75 Ohm (bei 24V-Systemen) liegen; geht der Wert gegen Unendlich, liegt ein Spulendurchschlag vor. Tauschen Sie das Ventil oder den Plungerkern aus. Säubern Sie die Anschlussbuchsen von jeglichem Kalkgrieß. Bringen Sie neue EPDM-Dichtungen an. Die O-Ringe an den Messing- oder POM-Stutzen werden sparsam mit OKS 1110 benetzt, um ein Abscheren beim Einführen zu verhindern. Keinesfalls darf Schmierstoff in die Ventilsitzkammer gelangen, da dies den Quellprozess des EPDM-Ventilplungers beschleunigt. Stecken Sie die Schläuche bis zum mechanischen Anschlag in die Führungen und arretieren Sie die Klammern vollständig. Schließen Sie das Gerät provisorisch an das Netz an und initiieren Sie über das Display einen Cold-Extraction-Bezug. Beobachten Sie die Fluidik: Es darf an den Nahtstellen kein Mikro-Aerosolaustritt oder Tropfenbildung sichtbar sein. Nach erfolgreichem Dichtigkeitstest montieren Sie das Gehäuse in umgekehrter Reihenfolge.",
+  "compatibility_matrix": {
+    "fits": [
+      "Jura Z10 Aluminium (Modell 15368, EA/EB)",
+      "Jura Z10 Diamantschwarz (Modell 15299)",
+      "Jura Z10 Signature Line Aluminium Black",
+      "Jura GIGA 10 (Serie mit integriertem C.E.P.-Kaltwasser-Bypass)"
+    ],
+    "incompatible": [
+      "Jura Z8 (Kein Cold Extraction Process integriert)",
+      "Jura Z6 (Ausschließlich P.E.P.-Heißwasserextraktion vorhanden)",
+      "Jura E8 / S8 / J6 (Vollkommen abweichende Hydraulikarchitektur ohne Kalt-Bypass)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Durchführung einer automatischen Milchsystem- und Kaffeespülung mit Fokus auf ungetrübten Kaltwasserdurchfluss im Auslaufbereich."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Manuelle Inspektion des Wassertank-Ansaugsiebs auf Schleimbildung (Biofilm) und visuelle Kontrolle der Tropfschale auf Kaltwasser-Leckagen."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Gezielte Kaltwasser-Entkalkung unter Verwendung von Amidosulfonsäure-basierten Originaltabletten; Überprüfung der PTFE-Schlauchanschlüsse und Ventilsitze auf Mikrolecks."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Cold Brew Bezug bricht ab / Meldung 'System füllen'",
+      "cause": "Plungerkern des C.E.P.-Magnetventils durch Kalkblockade verklemmt; Ventil schaltet die Bypassstrecke nicht frei.",
+      "fix": "Magnetventil zerlegen, Plungerkammer im Ultraschallbad entkalken oder Ventilbaugruppe komplett ersetzen. Dichtungen erneuern."
+    },
+    {
+      "error": "Wasser im Tresterbehälter, Kaffeepulver trocken ausgeworfen",
+      "cause": "Magnetventil öffnet elektrisch, aber innerer EPDM-Ventilsitz schließt den Bypass nicht zur Brühkammer ab (Kavitationsschaden).",
+      "fix": "Ventilgehäuse öffnen, Ventilsitz auf Riefen prüfen, Plungerkern inklusive 1.4310-Rückholfeder und EPDM-Dichtkörper austauschen."
+    },
+    {
+      "error": "Massiver Wasseraustritt im Gehäuseinneren während Cold Extraction",
+      "cause": "Ermüdung der 1.4310-Sicherungsklammer oder geborstener PTFE-Schlauchanschluss infolge pulsierender Druckschläge.",
+      "fix": "Gerät spannungsfrei schalten. Geborstene PTFE-Leitung kappen/ersetzen, neue EPDM-O-Ringe montieren und neue Hochdruckklammer arretieren."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Warum verkalkt das C.E.P.-Magnetventil der Jura Z10, obwohl fast ausschließlich kaltes Wasser durchfließt?",
+      "a": "Obwohl Kalk (Calcium- und Magnesiumhydrogencarbonat) primär bei thermischer Belastung ab ca. 55 °C ausfällt, unterliegt die C.E.P.-Bypassleitung kontinuierlichen Diffusionsprozessen und Strömungswärme aus dem benachbarten Thermoblock. Steht das Wasser nach einem Bezug längere Zeit im Ventil, verdunstet Wasser über Dichtungszwischenräume mikroskopisch, und gelöste Salze kristallisieren aus. Zudem werden Kaltwasserpassagen bei automatisierten Heißentkalkungsprogrammen oft nur kurz angesteuert, sodass chemische Reaktionszeiten unzureichend sind, was über Monate zur Akkumulation harter Verkrustungen führt."
+    },
+    {
+      "q": "Kann ich für die Reparatur handelsübliches Universalsilikonfett an den Ventildichtungen verwenden?",
+      "a": "Auf keinen Fall. Es darf ausschließlich hochviskoses, physiologisch unbedenkliches Silikonfett nach NSF-H1-Zulassung, wie beispielsweise OKS 1110, in minimaler Dosierung verwendet werden. Mineralölbasierte Schmierstoffe oder minderwertige Fette führen zur Quellung und Zersetzung der EPDM-Dichtkörper, was den Ventilsitz irreparabel zerstört. Zudem darf der direkte Dichtsitz des Plungers niemals gefettet werden, da anhaftendes Fett feine Mahlgutstäube bindet und die Schließfähigkeit des Ventils unter Hochdruck innerhalb kürzester Zeit aufhebt."
+    },
+    {
+      "q": "Wie überprüfe ich die elektrische Funktionsfähigkeit des Magnetventils im ausgebauten Zustand?",
+      "a": "Trennen Sie das Magnetventil komplett vom Kabelbaum. Messen Sie mit einem kalibrierten Multimeter den ohmschen Widerstand zwischen beiden Kontakten der Spule. Ein intakter 24-V-Spulenkörper weist je nach Fertigungsserie einen Widerstandswert zwischen 45 und 75 Ohm auf. Ein Wert von 0 Ohm indiziert einen Spulenschluss, während unendlicher Widerstand (OL) auf eine Leitungsunterbrechung hinweist. Ergänzend kann kurzzeitig eine stabilisierte 24-V-Gleichspannung angelegt werden: Das Ventil muss mit einem kräftigen, metallischen Klicken schalten; bleibt dies aus, ist der mechanische Anker im Inneren korrodiert oder mechanisch verkeilt."
+    }
+  ]
+}

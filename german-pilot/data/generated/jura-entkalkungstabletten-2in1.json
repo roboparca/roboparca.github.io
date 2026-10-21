@@ -1,0 +1,94 @@
+{
+  "page_title": "Jura 2in1 Entkalkungstabletten 36er: Hydraulik & Service Guide",
+  "meta_description": "Technischer Leitfaden zu Jura 2in1 Entkalkungstabletten (36 Stk.): Thermoblock-Schutz, Fluidik-Wartung, Ulka-Pumpendruck & Amidosulfonsäure-Wirkung im Detail.",
+  "word_count_check": 1285,
+  "engineering_breakdown": "Das hydraulische System von Jura-Kaffeevollautomaten basiert auf einem präzise abgestimmten Zusammenspiel aus Hochdruckkomponenten, präziser Durchflussmessung und thermischer Energieübertragung. Das Herzstück der Fluidik bildet typischerweise eine Schwingkolbenpumpe (wie die Ulka EX5 oder ARS CP3A), die für einen statischen Spitzendruck von bis zu 15 bis 19 bar ausgelegt ist und im nominalen Extraktionsbereich bei 9 bis 11 bar mit einem Durchfluss von ca. 120 bis 180 ml/min arbeitet. Vor der Pumpe misst ein Digmesa-Flowmeter (FHKSC 932) mit integriertem Hall-Sensor den Volumenstrom im Niederdruckbereich über ein Turbinenrad aus PBT (Polybutylenterephthalat) und einer Edelstahl-Achse (Werkstoff 1.4305).\n\nDie Erwärmung des Wassers erfolgt über Aluminium-Druckguss-Thermoblöcke mit eingepresster Edelstahl-Rohrschlange (Werkstoff 1.4310 bzw. 1.4404). Hier liegt die kritische Schwachstelle gegenüber Kalziumkarbonat- (CaCO3) und Magnesiumkarbonat-Ablagerungen: Bei Temperaturen über 60 °C verschiebt sich das Kalk-Kohlensäure-Gleichgewicht drastisch, wodurch Härtebildner als feste Inkrustationen an den Innenwandungen ausfallen. Die Jura 2-Phasen-Entkalkungstabletten adressieren diesen Prozess über eine duale chemische Formulierung: Phase 1 nutzt eine hochreaktive Mischung aus Amidosulfonsäure (Sulfaminsäure) und Maleinsäure zur raschen Auflösung von Karbonatkristallen bei moderatem pH-Wert (~1,5), ohne die Passivierungsschichten von Aluminium oder Edelstahl anzugreifen. Phase 2 appliziert spezielle anorganische Korrosionsinhibitoren (basierend auf Phosphaten und Silikaten), die sich filmbildend auf metallische Grenzflächen legen und Elastomere (wie VMQ-Silikon und peroxidisch vernetztes EPDM mit 65–70 Shore A) vor Versprödung schützen.\n\nMechanische Drosselstellen und Ventile – wie das Drainageventil aus POM (Polyoxymethylen), das Keramik-Kerb-Ventil und die PTFE-Druckschläuche (Außendurchmesser 4 mm, Innendurchmesser 2 mm, fixiert mittels Messing-Klemmringen) – weisen enge Strömungsquerschnitte auf. Bereits mikroskopische Kalkpartikel von >0,5 mm können Ventilsitze blockieren, den Querschnitt verengen und durch den resultierenden Druckanstieg Kavitationsschäden am Schwingkolben oder mechanischen Bruch der POM-Führungszapfen provozieren.",
+  "symptoms_and_causes": "Verkalkungsinduzierte Defekte in Jura-Vollautomaten manifestieren sich durch klar abgrenzbare akustische, thermische und hydraulische Fehlersymptome. Primär verändert sich die akustische Signatur der Schwingkolbenpumpe: Bei ansteigender Leitungsverengung durch Kalkinkrustation arbeitet die Pumpe gegen einen überhöhten Gegendruck (>15 bar), wodurch das Betriebsgeräusch von einem sonoren 50-Hz-Brummen zu einem hochfrequenten, gepressten Kreischen übergeht. Erreicht der Strömungswiderstand den Blockadepunkt, verstummt die Pumpe nahezu vollständig, da der federbelastete Kolben mangels Fluidaustrag nicht mehr den vollen Hub ausführen kann.\n\nThermisch führt der Aufbau von Kalkschichten – welche eine extrem geringe Wärmeleitfähigkeit von ca. 2,2 W/(m·K) im Vergleich zu Aluminium mit ca. 200 W/(m·K) aufweisen – zu einer drastischen Drosselung des Wärmestroms. Der Thermoblock benötigt signifikant längere Aufheizzyklen. Die NTC-Temperatursensoren (meist 10 kOhm oder 200 kOhm bei 25 °C) registrieren verzögerte Temperaturgradienten, was schließlich zur Abschaltung der Triac-Ansteuerung führt. Im Display signalisiert die Steuerelektronik dies durch Meldungen wie 'Error 1' oder 'Error 2' (Thermoblock-Heizfehler / Übertemperatur).\n\nHydraulisch führen gelöste Kalkfragmente, die nicht vollständig chemisch gelöst wurden, häufig zur Blockade des Drainageventils oder des Auslaufverteilers. Wasser wird unkontrolliert über den Expansionskanal in die Tropfschale abgeleitet, anstatt die Brühkammer zu penetrieren. Zudem kann das Turbinenrad des Digmesa-Flowmeters durch Mikro-Kalkkristalle im Ansaugtrakt festklemmen; das Fehlen von Impulsen an den Mikrocontroller löst die Dauerschleife 'System füllen' aus.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Lösungsansatz & Chemische Vorbereitung",
+      "action": "Exakt 0,5 Liter handwarmes Leitungswasser (ca. 35-40 °C) in den Wassertank einfüllen. Genau 3 Stück der Jura 2in1 Entkalkungstabletten hineingeben und mindestens 5 Minuten vollständig auflösen lassen, bis eine homogene, bläuliche Lösung entsteht."
+    },
+    {
+      "step": 2,
+      "title": "Systeminitialisierung & Gefäßplatzierung",
+      "action": "Einen temperatur- und säurebeständigen Auffangbehälter mit mindestens 0,5 Liter Fassungsvermögen unter die Heißwasser-/Feinschaumdüse sowie unter den Kaffeeauslauf stellen. Das Wartungsprogramm 'Entkalken' über das Jura Operating Interface (Cockpit/Rotary Switch) starten."
+    },
+    {
+      "step": 3,
+      "title": "Durchführung Phase 1 (Reaktions- & Lösungszyklus)",
+      "action": "Den Drehknopf auf Heißwasserbezug öffnen, sofern vom Gerät gefordert. Die Maschine taktet die Schwingkolbenpumpe im Intervallmodus (Förderimpulse von 5-10 s, gefolgt von Einwirkphasen von 40-60 s), um die Amidosulfonsäure chemisch ohne thermische Zersetzung durch den Thermoblock und das Ventilsystem wirken zu lassen."
+    },
+    {
+      "step": 4,
+      "title": "Spülzyklus & Neutralisation",
+      "action": "Sobald die Meldung 'Wassertank füllen' erscheint, den Tank entnehmen, gründlich mit klarem Wasser ausspülen, um Säurereste zu neutralisieren, und bis zur Max-Markierung mit frischem Wasser befüllen. Den Auffangbehälter leeren und erneut unter die Ausläufe positionieren."
+    },
+    {
+      "step": 5,
+      "title": "Abschluss Phase 2 & Passivierungsprüfung",
+      "action": "Den Spülprozess bestätigen. Die Pumpe fördert kontinuierlich Frischwasser durch Thermoblock, Ventile und Auslauf, um gelöste Sedimente vollständig auszuschwemmen und die Passivierungsschicht zu konsolidieren. Anschließend Tropfschale und Kaffeesatzbehälter entleeren und Kontakte trocken reinigen."
+    }
+  ],
+  "step_by_step_narrative": "Bei schwerer Verkalkung oder mechanischer Blockade reicht die reine Menüführung oft nicht aus; eine hydraulische Tiefenrevision wird unausweichlich. Schalten Sie den Vollautomaten zwingend allpolig spannungsfrei, indem Sie den Netzstecker ziehen. Nach einer thermischen Abkühlphase von mindestens 30 Minuten öffnen Sie das Gehäuse. Je nach Jura-Baureihe (z.B. E-, J- oder Z-Serie) benötigen Sie einen Jura-Ovalkopf-Bitspezialschlüssel sowie Torx-Schraubendreher der Größen TX10 und TX20, um die Rückwand und die seitlichen Aluminium- oder ABS-Verkleidungsschalen abzugleiten.\n\nFokussieren Sie nun die hydraulischen Verbindungspunkte: Inspizieren Sie die transparenten PTFE-Schläuche auf weißliche Verfärbungen und Engpässe. Zur Revision lösen Sie die Schlauchklemmen bzw. Sicherungsfedern (Werkstoff 1.4310) mit einer Spitzzange. Ziehen Sie die Druckschläuche aus den Messing- und Kunststoff-Einschraubstutzen. Hierbei treten die O-Ringe (4,0 x 2,0 mm aus EPDM 70 Shore A) zutage; verhärtete oder abgeflachte Dichtringe müssen kompromisslos erneuert werden. Prüfen Sie das Digmesa-Flowmeter durch vorsichtiges Öffnen des Bajonett- oder Schraubverschlusses; befreien Sie die Drehachse und das Turbinenrad mit einer feinen Bürste von Kalksedimenten.\n\nDemontieren Sie das Drainageventil unterhalb der Brühgruppe. Dessen POM-Ventilkörper neigt bei Kalkbelastung zu Rissen oder Blockaden des Ventilstößels. Fetten Sie alle dynamischen O-Ringe sowie die Brühkolbendichtungen ausschließlich mit hochviskosem, lebensmittelkonformem Silikonfett (z.B. OKS 1110 nach NSF-H1-Zulassung) hauchdünn ein. Bauen Sie alle Komponenten spannungsfrei zusammen. Führen Sie im Anschluss den vollständigen chemischen Entkalkungszyklus mit den 3 Jura 2in1 Tabletten durch. Überwachen Sie während des ersten Pumpenlaufs visuell sämtliche Kupplungsstellen auf Leckagen unter Systemdruck (bis zu 15 bar), bevor die Gehäusepaneele endgültig verschraubt werden.",
+  "compatibility_matrix": {
+    "fits": [
+      "Jura E-Linie (E4, E6, E8, ENA 4, ENA 8)",
+      "Jura S-Linie & J-Linie (S8, J6, J8, J8 twin)",
+      "Jura Z-Linie & Giga-Serie (Z6, Z10, Giga 5, Giga 6, Giga 10)",
+      "Jura Professional & Gastronomie (X6, X8, WE6, WE8, W8, Giga X3, Giga X8)",
+      "Jura Impressa historische Baureihen (C5, C9, F50, J5, S9, Z5)"
+    ],
+    "incompatible": [
+      "Siebträgermaschinen mit unbeschichteten Kesseln aus Weichkupfer oder Zinkdruckguss",
+      "Kapsel- und Padmaschinen mit externen, geschlossenen Dosierpatronen-Systemen",
+      "Geräte mit rein manueller Kaltwasser-Schwerkraftentleerung ohne Heißwasser-/Dampfwege"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Entnahme und Reinigung des Wassertanks; mechanische Inspektion der Ansaugsieb-Dichtung auf Kalkränder; Spülung des Auslaufverteilers."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Durchführung des 2in1-Entkalkungsprogramms bei Geräten ohne CLARIS-Filter; bei Verwendung von CLARIS Smart Filterpatronen Kontrolle der berechneten Restkapazität im RFID-Menü."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Revision der Brühgruppen- und Drainageventildichtungen (EPDM/VMQ); Sichtkontrolle der PTFE-Druckleitungen auf Kristallbildung; Desinfektion und Säureentkalkung des Wassertank-Bajonettventils."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Error 8 / Brühgruppen-Initialisierungsfehler nach Entkalkung",
+      "cause": "Erhöhte Reibung am Kolben durch Entfettung der Laufbahnen infolge aggressiver Säurereste oder eingespülte Kalkkrümel in der Führung.",
+      "fix": "Brühgruppe ausbauen, Drainageventil zerlegen, Zylinderwandung und Kolbendichtungen mit OKS 1110 Silikonfett schmieren, Fremdpartikel aus den Führungsnuten entfernen."
+    },
+    {
+      "error": "Displayanzeige 'System füllen' bricht nicht ab (Endlosschleife)",
+      "cause": "Turbine des Digmesa-Flowmeters durch gelösten Kalksplitter mechanisch arretiert; Hall-Sensor registriert keine Rotationsimpulse.",
+      "fix": "Flowmeter aus Niederdruckschlauch trennen, Gehäuse öffnen, Fremdkörper von der Achse entfernen, Turbinenrad gängig machen und Sensorik mit Multimeter auf Impulsabgabe (5V High/Low) prüfen."
+    },
+    {
+      "error": "Pumpe arbeitet mit sehr leisem / gedämpftem Ton, kein Wasseraustritt",
+      "cause": "Vollständige Kalziumkarbonat-Verblockung im Eingang des Thermoblocks oder der Auslaufdüse; Druck übersteigt den Arbeitsbereich der Pumpe (>15 bar).",
+      "fix": "PTFE-Schlauch vor dem Thermoblock abziehen und Druckablass prüfen; Thermoblock separat mittels Spritze und konzentrierter Amidosulfonsäurelösung rückspülen bzw. mechanisch aufbohren/austauschen."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Warum dürfen für Jura Vollautomaten keine handelsüblichen Entkalker auf Essig- oder Zitronensäurebasis verwendet werden?",
+      "a": "Essigsäure greift die im Jura-System verbauten Elastomer-Dichtungen (EPDM und Silikon) massiv an, entzieht Weichmacher und führt zu irreversibler Versprödung mit konsekutiven Hochdruckleckagen. Zitronensäure wiederum neigt bei den hohen Betriebstemperaturen des Thermoblocks (>85 °C) zur Bildung von schwerlöslichem Calciumcitrat. Dieser weiß-kristalline Niederschlag legt sich als zähe Schicht in den engen Kapillaren der 2-mm-PTFE-Schläuche ab und versiegelt diese dauerhaft, was einen teuren Komponentenaustausch erzwingt."
+    },
+    {
+      "q": "Wie interagiert die 2-Phasen-Technologie der Jura Entkalkungstabletten mit den internen Dichtungen und Thermoblöcken?",
+      "a": "In der ersten Phase löst die exakt austarierte Sulfaminsäure-Rezeptur Inkrustationen materialschonend auf, ohne das Aluminiumgehäuse oder die Edelstahlleitungen chemisch zu ätzen. Unmittelbar folgend setzt Phase 2 spezifische Korrosionsinhibitoren und Versiegelungswirkstoffe frei. Diese bilden einen mikroskopischen Passivierungsfilm über metallische Oberflächen und konditionieren die Elastomere im Strömungskanal. Hierdurch wird verhindert, dass sich nachfolgende Mineralien vorschnell wieder ablagern, während gleichzeitig die Gleitfähigkeit beweglicher Dichtungen im Keramikventil erhalten bleibt."
+    },
+    {
+      "q": "Trotz regelmäßiger Verwendung von Claris-Filterpatronen fordert das System eine Entkalkung an – warum ist dieser Vorgang technisch zwingend erforderlich?",
+      "a": "CLARIS-Filterkartuschen arbeiten nach dem Ionenaustauschprinzip, binden jedoch bauartbedingt primär Karbonathärte und können bei hartem Wasser (>14 °dH) oder hohen Durchflussgeschwindigkeiten nicht jedes Kalzium-Ion vollständig eliminieren. Zudem verbleibt im Totvolumen des Tanks und in Bypass-Systemen eine Resthärte. Die Jura-Elektronik errechnet über den Gesamtdurchfluss und die Grundwasserhärte einen unvermeidbaren Sättigungsindex. Das Ignorieren dieses Wartungsintervalls führt trotz Filterpatrone zu schleichendem Zuwachsen der Heizelemente und zum thermischen Wirkungsgradverlust."
+    }
+  ]
+}

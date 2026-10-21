@@ -1,0 +1,101 @@
+{
+  "page_title": "Jura Profi-Feinschaumdüse G2 (E8/S8/WE8): Technik & Serviceguide",
+  "meta_description": "Technischer Leitfaden zur Jura Profi-Feinschaumdüse G2 (E8, S8, WE8): Hydraulik, Venturi-Mechanik, Fehleranalyse, O-Ring-Revision und Wartung vom Fachmann.",
+  "word_count_check": 1285,
+  "engineering_breakdown": "Die Jura Profi-Feinschaumdüse G2 (Generation 2) repräsentiert eine hochpräzise fluidmechanische Baugruppe zur Erzeugung von mikrofeinem Milchschaum nach dem Differenzdruck-Prinzip (Venturi-Effekt). Das System arbeitet im Verbund mit dem maschinenseitigen Thermoblock-Dampferzeuger der Baureihen E8, S8 und WE8, welcher bei einer Betriebstemperatur von circa 135 °C bis 142 °C einen Systemüberdruck von 1,2 bis 1,8 bar bereitstellt. Der trockene Heißdampf wird durch eine kalibrierte Lavaldüse mit einem engsten Querschnitt von etwa 0,8 mm beschleunigt. Durch den drastischen Anstieg der Strömungsgeschwindigkeit fällt der statische Druck im Injektionsraum unter das atmosphärische Niveau ab (-0,25 bis -0,4 bar relativer Unterdruck). Durch diesen Saugeffekt wird flüssige Milch (optimal temperiert auf 4 bis 8 °C) über die fluide Sauglanze kontinuierlich mit einer Förderrate von 1,5 bis 2,2 ml/s gefördert.\n\nDas Gehäuse und der innere Fluidkern bestehen aus hochfestem Polyoxymethylen (POM-C), einem thermoplastischen Kunststoff mit herausragender Dimensionsstabilität, geringem Reibungskoeffizienten und exzellenter Hydrolysebeständigkeit gegenüber alkalischen Reinigungsmitteln. Die pneumatische Luftzumischung wird über einen drehbaren Exzenterhebel realisiert, der über einen Nockenmechanismus ein elastomeres Lippenventil (Duckbill-Valve) aus lebensmittelechtem Vinyl-Methyl-Silikon (VMQ, 70 Shore A) ansteuert. Im Milchschaum-Modus wird Umgebungsluft feinst dosiert über einen Sinterkanal eingesaugt, wodurch die Oberflächenspannung der Milchproteine (insbesondere Kasein und Beta-Lactoglobulin) aufgebrochen und ein stabiles Zweiphasengemisch erzeugt wird. Die federbelasteten Rastungen nutzen korrosionsbeständigen Federstahldraht nach DIN EN 10270-3 (Werkstoff 1.4310 / X10CrNi18-8). Primäre mechanische Schwachstellen sind adhäsive Ablagerungen von Milchfett und denaturierten Proteinen im Venturikanal, thermisch induzierte Verhärtung der VMQ-Lippendichtungen sowie Mikrorisse am POM-Verbindungsstutzen durch Torsionsbeanspruchung beim Bajonettanschluss.",
+  "symptoms_and_causes": "Funktionsstörungen der Profi-Feinschaumdüse G2 manifestieren sich primär über aerodynamische und hydraulische Anomalien. Das häufigste Phänomen ist das stoßweise Ausstoßen von Dampf und kochend heißer Milch ohne Schaumbildung (sogenanntes 'Spucken'). Akustisch ist dies durch ein unregelmäßiges, hochfrequentes Knattern oder Pfeifen hörbar. Die primäre Ursache liegt hierbei in einer Querschnittsverengung des Venturi-Injektors durch polymerisierte Milcheiweiß-Rückstände oder einer Leckage im Unterdruckbereich. Zieht das System über poröse Dichtungen oder einen eingerissenen Milchschlauch Falschluft, bricht der Unterdruck zusammen; die Milchansaugung kollabiert schlagartig.\n\nErzeugt die Düse hingegen ausschließlich heiße, ungeschäumte Milch trotz aktivierter Schaumposition, ist das integrierte VMQ-Lippenventil mechanisch verklebt oder durch Kalkpartikel blockiert, sodass keine atmosphärische Stützluft zudosiert werden kann. Entsteht grobporiger, instabiler Badeschaum, schließt das Regulierventil nicht mehr formschlüssig oder der Dichtsitz ist verschlissen. Maschinenseitig kann die Fehlermeldung 'System füllen' oder ein vorzeitiger Abbruch des Dampfbezugs auftreten, falls der Gegendruck im Düsenstock durch massive Verkokung derart ansteigt, dass der Strömungswächter im Fluidsystem der Jura E8/S8 einen unzulässigen Druckstau registriert. Ein schwergängiger Drehhebel resultiert aus verharzten Milchfetten innerhalb der Exzenterführung, was bei gewaltsamer Betätigung unweigerlich zum Bruch der POM-Arretierungsnase führt.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Abschaltung und thermische Entlastung",
+      "action": "Kaffeevollautomaten über den Netzschalter ausschalten, Netzstecker ziehen und das Gesamtsystem mindestens 30 Minuten abkühlen lassen, um Verbrühungen durch Restdampf auszuschließen."
+    },
+    {
+      "step": 2,
+      "title": "Demontage des Düsenstocks vom Vollautomaten",
+      "action": "Milchansaugschlauch abziehen, die Profi-Feinschaumdüse G2 mit einer leichten Drehung gegen den Uhrzeigersinn aus der Aufnahme am Kaffeeauslauf entriegeln und axial nach unten abziehen."
+    },
+    {
+      "step": 3,
+      "title": "Vollständige Zerlegung der Einzelkomponenten",
+      "action": "Den verchromten Drehhebel abziehen, das Luftansaugventil nach oben herausdrücken, den inneren POM-Venturieinsatz vorsichtig mittels Kunststoffspatel aus der Ummantelung trennen und die Auslaufhülse abnehmen."
+    },
+    {
+      "step": 4,
+      "title": "Chemisch-mechanische Ultraschallreinigung",
+      "action": "Alle demontierten Komponenten in ein 50 °C warmes Reinigungsbad mit 10 % alkalischer Jura-Milchsystemreiniger-Lösung legen und für 15 Minuten im Ultraschallbad von organischen Fett- und Eiweißverbindungen befreien."
+    },
+    {
+      "step": 5,
+      "title": "O-Ring-Austausch und Dichtungsschmierung",
+      "action": "Verschlissene VMQ/EPDM-O-Ringe am Anschlussstutzen und am Ventilkörper mittels Messing-Pickel entfernen, Neuteile montieren und mit einem hauchdünnen Film NSF-H1-zertifiziertem Silikonfett (OKS 1110) benetzen."
+    },
+    {
+      "step": 6,
+      "title": "Remontage und Dichtheitsprüfung",
+      "action": "Die Düse in umgekehrter Reihenfolge exakt fluchtend zusammenbauen, am Auslauf arretieren und einen Testlauf mit Dampf sowie 100 ml Wasser zur Validierung des Unterdrucks durchführen."
+    }
+  ],
+  "step_by_step_narrative": "Die Instandsetzung und Grundüberholung der Jura Profi-Feinschaumdüse G2 erfordert methodische Präzision sowie den Einsatz von materialspezifischem Werkzeug. Vor Arbeitsbeginn ist sicherzustellen, dass die Maschine allpolig vom Stromnetz getrennt ist. Als Werkzeuge werden ein spitzer O-Ring-Ausheber aus Messing (zur Vermeidung von Riefenbildung in den POM-Dichtungsnuten), fusselfreie Mikrofasertücher, Reinigungsbürsten mit Polyamidborsten (Ø 1,5 mm bis 4 mm) sowie lebensmittelechtes Hochleistungssilikonfett nach NSF-H1 (empfohlen: OKS 1110) benötigt. Nach dem Abkühlen der Maschine wird der Silikonschlauch vom Milcheinlassstutzen getrennt. Die Düse wird durch eine Vierteldrehung aus der Auslaufbaugruppe entnommen. \n\nDie Zerlegung beginnt mit dem Abziehen des Wahlschiebers für Milchschaum/warme Milch. Hierbei muss darauf geachtet werden, dass die innenliegende Rastnase aus Polyoxymethylen nicht überdehnt wird. Anschließend wird das Ventilgehäuse axial auseinandergezogen, wodurch der Strömungskanal, das elastomere VMQ-Lippenventil und der zylindrische Düseneinsatz zugänglich werden. Bei der Reinigung ist zu beachten: Organische Milchrückstände lassen sich nicht mit sauren Entkalkern auf Zitronensäure- oder Amidosulfonsäurebasis lösen; hierfür ist zwingend ein alkalischer Spezialreiniger erforderlich, der Fette verseift und Kaseinstrukturen aufspaltet. \n\nNach dem chemischen Bad im Ultraschallreiniger sind sämtliche Kanäle mit Druckluft oder einer feinen Spritze durchzuspülen. Nun erfolgt die Inspektion der Dichtelemente: Das Lippenventil wird auf Rissbildung und Elastizitätsverlust geprüft; die beiden O-Ringe am Kopplungsstutzen zum Kaffeevollautomaten (typischerweise EPDM 4x1,5 mm) werden prinzipiell erneuert. Vor dem Einsetzen sind die O-Ringe sowie die Gleitbahnen des Wahlschiebers minimal mit OKS 1110 zu fetten. Überschüssiges Fett im Strömungskanal muss penibel vermieden werden, da bereits mikroskopische Schmierstofffilme im Venturibereich die Schaumbildung durch Herabsetzung der Oberflächenspannung vollständig sabotieren. Nach der formschlüssigen Montage erfolgt der hydraulische Funktionstest: Im Modus 'Milchschaum' muss die Düse ein homogenes, feinstporiges Strömungsbild ohne Dampfschläge abliefern, während im Modus 'Warme Milch' der Luftansaugpfad absolut vakuumdicht schließen muss.",
+  "compatibility_matrix": {
+    "fits": [
+      "Jura E8 (ab Modelljahr 2018 / Typ 152xx, 153xx)",
+      "Jura S8 / S80 (Typ 151xx, 153xx)",
+      "Jura WE8 (Gewerbevariante ab 2016)",
+      "Jura J6 (Platin / Brilliant Silver)",
+      "Jura Z6 (kompatibel bei Verwendung des entsprechenden HP3-Anschlusssets)",
+      "Jura E8 Platin / Dark Inox / Chrom (EB, EC, G2-Systeme)"
+    ],
+    "incompatible": [
+      "Jura ENA Serie (z. B. ENA 4, ENA 8 - proprietäre Kompaktanschlüsse)",
+      "Jura GIGA Serie (GIGA 5, GIGA 6, X8 - separate Keramikventil-Doppelausläufe)",
+      "Jura Impressa F50 / C5 / C9 (alte Generation mit Bajonett-Push-Fit ohne Feinschaum-Regulierung)",
+      "Jura Z8 / Z10 (vollautomatische Steuerung über integrierte Schrittmotoren und elektronische Umschaltung)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Komplette mechanische Demontage der Düse und 30-minütiges Einlegen aller POM- und Silikonteile in 250 ml warmes Wasser mit 15 ml alkalischem Jura-Milchsystem-Reiniger, gefolgt von einer Spülung mit Klarwasser."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Tiefeninspektion des VMQ-Lippenventils auf Versprödung, Reinigung der 0,8-mm-Luftsteuerbohrung mittels Reinigungsbürste, Prüfung des Silikon-Ansaugschlauchs auf Mikrorisse am Aufsteckkonus."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Präventiver Austausch des O-Ring-Satzes am Anschlussstutzen (EPDM/VMQ), Erneuerung des Milchansaugschlauchs und Schmierung der Drehhebel-Mechanik mit lebensmittelechtem OKS 1110 Silikonfett."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Milch wird nicht angesaugt; starker Dampfaustritt am Auslauf",
+      "cause": "Venturi-Injektorkanal verstopft durch denaturiertes Kasein oder Riss im Ansaugschlauch führt zu vollständigem Unterdruckverlust.",
+      "fix": "Düse zerlegen, Injektordüse alkalisch spülen, Milchschlauch um 5 mm einkürzen oder durch Neuteil ersetzen."
+    },
+    {
+      "error": "Milch schäumt nicht, wird nur heiß und spritzt unkontrolliert",
+      "cause": "Silikon-Lippenventil der Luftansaugung verklebt, deformiert oder sitzt nicht bündig im Gehäusesitz.",
+      "fix": "Luftansaugventil demontieren, manuell walken, von Eiweißablagerungen befreien oder das VMQ-Ventil gegen Neuteil austauschen."
+    },
+    {
+      "error": "Dampfaustritt an der Verbindungsstelle zum Kaffeeauslauf",
+      "cause": "O-Ringe am Dampfanschlussstutzen verschlissen, versprödet oder durch fehlendes Fett abgeschert.",
+      "fix": "Dichtungen mit Messingwerkzeug entnehmen, Nuten reinigen, neue O-Ringe (EPDM 70 Shore) aufziehen und mit OKS 1110 dünn benetzen."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Warum funktioniert die Schaumerzeugung trotz regelmäßiger Reinigung mit Kaffeemaschinen-Entkalker nicht?",
+      "a": "Kaffeemaschinen-Entkalker basieren auf organischen oder anorganischen Säuren (z. B. Citronensäure, Maleinsäure, Amidosulfonsäure), die speziell formuliert sind, um Calciumcarbonat (Kalk) aufzulösen. Im Milchsystem bilden jedoch Fette und Proteine die Verschmutzungsgrundlage. Trifft Säure auf Milcheiweiß, koaguliert dieses schlagartig und verhärtet zu wasserunlöslichem Kasein. Diese Ablagerungen blockieren die mikroskopischen Venturi-Bohrungen der Profi-Feinschaumdüse G2 nachhaltig. Für das Milchsystem ist zwingend ein alkalischer Milchsystemreiniger erforderlich, der über Tenside und alkalische Wirkstoffe Fette verseift und Proteinketten spaltet."
+    },
+    {
+      "q": "Kann die Profi-Feinschaumdüse G2 an jeder älteren Jura Impressa oder E-Linie nachgerüstet werden?",
+      "a": "Nein, eine universelle Nachrüstung ist aus hydraulischer und geometrischer Sicht nicht möglich. Die Profi-Feinschaumdüse G2 benötigt das standardisierte Jura-Kupplungssystem mit spezifischem Steckflansch und exakt kalibriertem Dampfdruck (Thermoblock-Systeme mit 1,2 bis 1,8 bar). Ältere Modelle wie die Impressa C- oder F-Serie besitzen abweichende Stecksysteme oder arbeiten mit anderen Dampfmengenregelungen. Für diese Maschinen existieren gesonderte Vorgängerversionen oder spezielle Adapterkits. Zudem erfordern Modelle ohne separate Dampfvorheizung eine andere pneumatische Anpassung, da unzureichend erhitzter Nassdampf den Venturi-Unterdruck sofort zum Zusammenbruch bringt."
+    },
+    {
+      "q": "Worin liegt der exakte konstruktive Unterschied zwischen der Standard-Feinschaumdüse und der Profi-Feinschaumdüse G2?",
+      "a": "Die Standard-Feinschaumdüse verfügt über eine statische Luftzumischung, die konstruktiv ausschließlich auf die Erzeugung von festem Mikroschaum ausgelegt ist. Die Profi-Feinschaumdüse G2 hingegen besitzt eine variable Nockensteuerung mit manuellem Umschaltventil. Über den Präzisions-Drehhebel lässt sich der Querschnitt der Belüftungsbohrung stufenlos regulieren bzw. vollständig schließen. Dadurch kann die G2 zwischen feinporigem Schaum (für Cappuccino und Latte Macchiato) und reiner, heißer Milch ohne Schaumphase (für Caffè Latte oder heiße Milchgetränke) umgeschaltet werden, ohne den Unterdruckfluss der Milchansaugung zu destabilisieren."
+    }
+  ]
+}

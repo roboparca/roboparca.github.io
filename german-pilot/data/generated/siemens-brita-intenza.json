@@ -1,0 +1,102 @@
+{
+  "page_title": "Siemens Brita Intenza TZ70003 Filter: EQ Serie Hydraulik & Einbau",
+  "meta_description": "Brita Intenza TZ70003 für Siemens EQ.300 bis EQ.9: Technische Analyse, Pumpenschutz, Aromaring-Justage, Hydraulik und fachgerechter Einbau im Detail.",
+  "word_count_check": 1285,
+  "engineering_breakdown": "Die Brita Intenza TZ70003 (Siemens-Referenz 17000705 / TCZ7003) ist eine integrale hydrodynamische Baugruppe für die Kaltwasseraufbereitung in Kaffeevollautomaten der Siemens EQ-Plattform. Sie greift formschlüssig in den Tankstutzen des Wassertanks ein und arbeitet hydraulisch auf der Saugseite des Systems unmittelbar stromaufwärts der Ulka-Hubkolbenpumpe (Typ EX5/EAX5, 230 V, 48 W, nominal 15 bis 19 bar Spitzendruck, saugseitiger Unterdruck ca. -0,1 bis -0,25 bar). Die Kartusche besteht aus lebensmittelkonformem Polypropylen (PP) mit einem Arretierflansch aus Polyoxymethylen (POM), welcher mechanische Zug- und Scherkräfte beim Einsetzen aufnimmt. Die Dichtgrenze zum Wassertankboden wird durch einen Elastomer-O-Ring aus hochreinem Silikonkautschuk (VMQ) oder alternativ EPDM (Shore-A-Härte 60) realisiert, der ein Ansaugen von Falschluft und unfiltriertem Bypasswasser unterbindet. Das Filtrationsbett kombiniert zwei funktionale Komponenten: ein schwachsaures, makroporöses Kationenaustauscherharz auf sulfonierter Polystyrol-Copolymer-Basis zur gezielten Reduktion von temporärer Karbonathärte (Ca2+, Mg2+) sowie silberimprägnierte Aktivkohlegranulate aus Kokosnussschalen mit einer inneren BET-Oberfläche von über 1000 m²/g zur adsorptiven Bindung von freiem Chlor, organischen Geschmacksstoffen und Schwermetallen (Kupfer, Blei). An der Kartuschenunterseite befindet sich der patentierte Intenza-Aroma-Ring: ein mechanischer Drehschieber aus POM mit kalibrierten Bypass-Blendenöffnungen (Positionen A, B, C). Er teilt den hydrostatischen Zustrom in ein dekarbonisierendes Teilvolumen und einen definierten Rohwasser-Bypass auf, um den Langelier-Sättigungsindex des Wassers im Brühkreislauf zwischen pH 6,8 und 7,3 zu stabilisieren. Bei Nennvolumenströmen von 120 bis 250 ml/min durch das Digmesa-Flügelrad-Flowmeter (FHKSC, Hall-Sensor mit ca. 1920 Impulsen/Liter) erzeugt eine intakte Patrone einen minimalen hydraulischen Differenzdruck (ΔP) von lediglich 0,05 bis maximal 0,15 bar. Ein Defekt entsteht meist durch Kanalbildung (Channeling), Partikelkollaps des Harzbettes bei thermischer Falschbelastung (> 35 °C) oder Dichtungsquetschung durch Verkantung.",
+  "symptoms_and_causes": "Funktionsstörungen im Verbund zwischen Brita Intenza Filter und EQ-Hydraulik manifestieren sich primär durch Strömungsabrisse, akustische Auffälligkeiten und Fehlermeldungen in der Gerätesoftware. Ein dominantes Fehlerbild ist das akustische Kavitationsbrummen der Ulka-Pumpe: Anstelle des dumpfen, niederfrequenten 50-Hz-Hubgeräuschs geht die Pumpe in ein schrilles, metallisch helles Surren über. Ursache ist eine Überschreitung des kritischen saugseitigen Strömungswiderstands (ΔP > 0,35 bar), meist hervorgerufen durch ein nicht entlüftetes, trockenes Filtergranulatbett oder eine mikrobielle Verblockung des Eintritts-Mesh-Gitters. Die Pumpe saugt Vakuumblasen, was zu Kavitationserosion am Ventilteller und federbelasteten Rückschlagventil führt. Auf Displayebene reagiert die Elektronik mit den Meldungen 'Wassertank prüfen', 'Wasser ohne Kohlensäure nachfüllen' oder 'System füllen'. Diese Fehler werden ausgelöst, wenn das Turbinen-Flowmeter innerhalb eines definierten Zeitfensters (meist 1500 ms) keine Mindestanzahl an Rechteckimpulsen an die Steuerungsplatine liefert. Ein weiteres Phänomen ist tröpfelnder Kaffeebezug bei intakter Brühgruppe: Hier führt ein verbrauchtes, durch Kalk gesättigtes Harzbett zu nachgelagerter Kalkausscheidung im 1300-W-Edelstahl-Thermoblock, wodurch dessen Kapillarrohrquerschnitt von 4 mm auf unter 1,5 mm verengt wird. Tritt Wasser unterhalb des Wassertankbereichs aus, ist häufig der VMQ-Dichtring der Filteraufnahme gequetscht oder der federvorgespannte Ventilkegel (Edelstahlfeder 1.4310) im Wassertankboden verkalkt, da Rohwasser an der Filterbasis vorbeiströmt.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Aroma-Ring Voreinstellung",
+      "action": "Ermitteln Sie die Karbonathärte des Leitungswassers mittels Titrations-Teststreifen. Drehen Sie den an der Kartuschenunterseite integrierten Aroma-Ring mechanisch auf die entsprechende Rastposition: Stufe A für weiches Wasser (bis 7 °dH), Stufe B für mittelhartes Wasser (8–14 °dH) oder Stufe C für hartes Wasser (> 15 °dH)."
+    },
+    {
+      "step": 2,
+      "title": "Hydraulische Evakuierung (Entlüftung)",
+      "action": "Tauchen Sie die Patrone vollständig mit der Anschlussöffnung nach oben in ein mit kaltem Leitungswasser gefülltes Gefäß. Schwenken und klopfen Sie die Patrone leicht unter Wasser, bis sämtliche im Kationenaustauscherharz und der Aktivkohle gebundene Restluft vollständig in Form von Bläschen entwichen ist."
+    },
+    {
+      "step": 3,
+      "title": "Reinigung und Inspektion des Tankstutzens",
+      "action": "Entleeren Sie den Wassertank des EQ-Vollautomaten. Prüfen Sie die Tankbodenaufnahme und das federbelastete Auslaufventil auf Biofilm oder Kalkkristalle. Tragen Sie bei Bedarf eine minimale Menge lebensmittelechtes Silikonfett (z. B. OKS 1110) auf den O-Ring des Tankstutzens auf."
+    },
+    {
+      "step": 4,
+      "title": "Formschlüssige Arretierung",
+      "action": "Führen Sie die entlüftete Patrone senkrecht in den Ansaugstutzen am Tankboden ein. Drücken Sie die Patrone mit leichtem, gleichmäßigem Axialdruck an oder nutzen Sie den Dosierlöffel als Hebelwerkzeug (je nach EQ-Modell), bis der Flansch spür- und hörbar fest im Dichtsitz einrastet."
+    },
+    {
+      "step": 5,
+      "title": "Elektronische Initialisierung & Spülzyklus",
+      "action": "Befüllen Sie den Tank bis zur 'Max'-Markierung mit frischem Wasser. Navigieren Sie im Servicemenü der Maschine zu 'Wasserfilter' -> 'Neu aktivieren'. Stellen Sie ein Auffanggefäß (mindestens 0,5 Liter) unter den Heißwasserauslauf und starten Sie den automatischen Spülvorgang, um Feinstpartikel aus der Aktivkohlematrix auszutreiben."
+    }
+  ],
+  "step_by_step_narrative": "Der Austausch der Brita Intenza TZ70003 Wasserfilterpatrone in einer Siemens EQ.300, EQ.500, EQ.6 oder EQ.9 erfordert grundlegendes technisches Verständnis für fluidmechanische Schnittstellen, wenngleich er ohne Spezialwerkzeug wie Torx TX10 oder TX20 an der Maschinenverkleidung durchgeführt werden kann. Vor Arbeitsbeginn sollte die Maschine eingeschaltet sein, um den softwaregestützten Filterwechselassistenten synchron nutzen zu können. Entnehmen Sie den Wassertank und inspizieren Sie die im Tankboden integrierte Ventileinheit. Dieses Rückschlagventil besteht aus einem POM-Ventilkörper, einer Rückstellfeder aus V2A-Edelstahl (Werkstoff 1.4310) und einer EPDM-Lippendichtung. Vor dem Einsetzen der neuen Patrone ist diese Aufnahme gründlich von Kalkausscheidungen und schleimigen Alginat-Ablagerungen zu befreien. Verwenden Sie für die Pflege des VMQ-O-Rings der Filterpatrone ausschließlich NSF-H1-zertifiziertes Silikonfett (z. B. OKS 1110); mineralölbasierte Schmierstoffe zerstören das Dichtungsgefüge irreversibel. Der kritischste Arbeitsschritt ist das Entlüften der Patrone: Wird eine trockene Kartusche direkt in den Tank gedrückt, wirkt das Schüttbett wie ein pneumatischer Pfropfen. Die Pumpe saugt Luft, das Digmesa-Turbinenrad dreht trocken, und das Gerät meldet einen Strömungsabriss ('System füllen'). Tauchen Sie die Patrone daher kopfüber in kaltes Wasser ein, bis absolut keine Kavitationsluft mehr austritt. Stellen Sie nun den Aroma-Ring exakt auf die zuvor via Indikatorstreifen ermittelte Wasserhärte ein. Beim Einsetzen in den Tankstutzen muss axialer Druck ausgeübt werden, bis die Dichtung lippenseitig abdichtet; ein Verkanten führt zu Bypass-Leckagen, wodurch unfiltriertes Rohwasser das empfindliche Thermoblock-System erreicht. Nach dem Einsetzen in das Gerät zwingend das programmierte Filter-Spülprogramm abrufen. Die Steuerung pumpt dabei ca. 0,5 Liter Wasser durch das Expansionsgefäß und den Auslauf. Kontrollieren Sie währenddessen den Wasserstrahl: Er muss homogen, ohne Spritzen oder intermittierende Förderstöße austreten. Dies belegt den erfolgreichen Druckaufbau und den luftfreien Zustand des hydraulischen Vorlaufs.",
+  "compatibility_matrix": {
+    "fits": [
+      "Siemens EQ.300 Serie (TI351209RW, TI353201RW, TI35A209RW u. a.)",
+      "Siemens EQ.500 classic / integral (TQ505D09, TQ507D03, TQ503D01 u. a.)",
+      "Siemens EQ.6 plus s100 / s300 / s500 / s700 (TE651209RW, TE655203RW, TE657319RW u. a.)",
+      "Siemens EQ.9 / EQ.9 plus s300 / s500 / s700 (TI923309RW, TI9553X1RW, TI9573X9RW u. a.)",
+      "Siemens EQ.7 / EQ.8 Baureihen (TE716211RW, TE806201RW u. a.)",
+      "Bosch VeroBar / VeroAroma / VeroCup / VeroProfessional Plattformen",
+      "Gaggenau CM250 / CM450 Serie mit Intenza-Tankaufnahme"
+    ],
+    "incompatible": [
+      "Jura Vollautomaten (nutzt Claris Blue / Smart mit sechskantiger/runder Steckaufnahme)",
+      "De'Longhi Magnifica / Primadonna (proprietäre DLS C002 Bajonettverriegelung)",
+      "Philips / Saeco Kaffeemaschinen mit AquaClean-Technologie (CA6903 Klick-System)",
+      "Melitta Caffeo Baureihen mit Pro Aqua Schraubgewinde (Miron-Gewinde)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Entnahme des Wassertanks, visuelle Sichtprüfung des Kartuschenflansches auf Rissbildung, Ausspülen des Tanks mit klarem Kaltwasser zur Verhinderung von Biofilmbildung im Bypassbereich."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Überprüfung des Flowmeter-Durchsatzes anhand der Bezugszeit für 100 ml Heißwasser (Soll: 25–35 s); Inspektion der VMQ/EPDM-Tankbodendichtung auf Elastizitätsverlust oder Versprödung."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Präventiver Austausch des 3er-Packs (spätestens nach 50 Litern oder 60 Tagen Standzeit pro Patrone); zwingende Durchführung des calc'nClean-Programms mit ausgebautem Filter zur Entkalkung des Thermoblocks."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Meldung 'Wassertank prüfen' trotz gefülltem Reservoir",
+      "cause": "Pneumatische Blockade (Lufteinschluss) im Harzbett der Intenza-Patrone führt zu fehlendem hydrostatischem Druck; Flowmeter registriert keine Turbinendrehung.",
+      "fix": "Patrone entnehmen, für 60 Sekunden unter Wasser tauchen und kräftig schwenken, bis keine Blasen mehr austreten. Erneut einsetzen und manuellen Spülimpuls über Heißwasserbezug auslösen."
+    },
+    {
+      "error": "Extrem lautes, hochfrequentes Kreischen der Ulka-Pumpe",
+      "cause": "Kavitation durch unzureichenden Vordruck. Filteransauggitter verstopft oder Filterpatrone durch Kalkausscheidungen/Alterung impermeabel.",
+      "fix": "Sofortigen Bezug stoppen. Filter entnehmen und Maschine ohne Filter testen. Läuft sie leise, ist die Patrone erschöpft und muss durch eine neue TZ70003 ersetzt werden."
+    },
+    {
+      "error": "Feine schwarze Kohlepartikel im Wassertank oder Tropfschale",
+      "cause": "Abrieb des Aktivkohlegranulats durch Erschütterung beim Transport; unvollständige Initialspülung vor der Inbetriebnahme.",
+      "fix": "Wassertank entleeren und mechanisch spülen. Filterpatrone einsetzen und mindestens zwei komplette Spülgänge (ca. 1,0 Liter Wasser) über das Systemmenü abfordern, um Reststaub auszutragen."
+    },
+    {
+      "error": "Kalkablagerungen im Heißwasserauslauf trotz Filterbetrieb",
+      "cause": "Falsche Kalibrierung des Aroma-Rings (z. B. Position A bei Wasserhärte > 18 °dH) oder Standzeit der Patrone überschritten (> 50 Liter Durchsatz).",
+      "fix": "Wasserhärte mit Aquadur-Teststreifen messen. Aroma-Ring auf Stufe C justieren. Maschine ohne Filter mit Siemens Entkalkungstabletten (TZ80002) entkalken, danach neue Filterpatrone aktivieren."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Warum muss die Brita Intenza TZ70003 während des chemischen Entkalkungsprogramms zwingend entfernt werden?",
+      "a": "Wird die Patrone während des calc'nClean- bzw. Entkalkungsprogramms im Wassertank belassen, zerstören die hochkonzentrierten Säuren (in der Regel Amidosulfonsäure, Maleinsäure oder Zitronensäure) das funktionelle Schüttbett irreversibel. Die Säure spült die im schwachsauren Kationenaustauscherharz gebundenen Calcium- und Magnesium-Ionen sowie adsorbierte Schwermetalle schlagartig in konzentrierter Form zurück in das Leitungssystem. Zudem zersetzt sich die Vernetzung der Polystyrol-Polymerketten, wodurch das Harz quillt, die Kartusche hydraulisch verstopft und Bruchstücke der Polymermatrix in den Thermoblock sowie in das Keramikventil gelangen können, was massive Folgeschäden verursacht."
+    },
+    {
+      "q": "Welche technische Funktion hat der verstellbare Aroma-Ring an der Unterseite der Patrone?",
+      "a": "Der Aroma-Ring fungiert als fluidmechanisches Mischventil (variabler Bypass). Da Kaffee zur optimalen Extraktion von Kaffeefett, Säuren und Aromastoffen einen definierten Mineralienanteil (idealerweise 5–8 °dH Gesamthärte) benötigt, darf das Brühwasser nicht vollständig demineralisiert werden. Stufe A öffnet den Bypass-Kanal maximal für von Natur aus weiches Wasser, Stufe B bietet eine ausgewogene Mischung bei mittlerer Härte, und Stufe C schließt den Bypass weitgehend, sodass das gesamte Fluidvolumen das Kationenaustauscherbett passieren muss. Eine Fehlstellung führt entweder zu saurem Unterextraktionskaffee oder zu rapider Verkalkung des Brühsystems."
+    },
+    {
+      "q": "Wie grenzt sich die Original Siemens TZ70003 Patrone technisch von günstigen Nachbauten ab?",
+      "a": "Original Brita Intenza Patronen unterliegen engen Fertigungstoleranzen hinsichtlich der Spritzgussmaße des POM-Rastflansches und des integrierten Bypass-Ventils. Drittanbieter-Filter weisen häufig abweichende Flanschgeometrien auf, was zu Mikroleckagen oder überhöhter mechanischer Spannung auf die Tankstutzenaufnahme führt. Zudem verwenden billige Nachbauten oft einfaches Starkguss-Aktivkohlegranulat ohne permanente Silberzeolith-Dotierung zur Keiminhibition sowie Kationenaustauscherharze mit inhomogener Korngrößenverteilung. Dies bewirkt einen progressiv ansteigenden Durchflusswiderstand, der die Ulka-Hubkolbenpumpe thermisch und mechanisch überlastet, sowie ein unkontrolliertes Auswaschen von feinstem Kohlenstaub in die Ventilsitze der EQ-Brüheinheit."
+    }
+  ]
+}

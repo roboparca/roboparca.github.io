@@ -1,0 +1,96 @@
+{
+  "page_title": "Philips LatteGo Fehler 1, 2, 3, 4, 5: Reparatur & Diagnose",
+  "meta_description": "Experten-Leitfaden zur Behebung der Philips LatteGo Fehlercodes 1 bis 5: Technische Ursachen, Brühgruppen-Wartung, Hydraulik-Instandsetzung und OKS 1110 Fette.",
+  "word_count_check": 1240,
+  "engineering_breakdown": "Die Vollautomaten-Baureihen Philips LatteGo (Serien 2200 bis 5400) basieren auf einer modularen Plattformarchitektur, deren Herzstück die kompakte, herausnehmbare Brühgruppe aus Polyoxymethylen (POM / Polyacetal) bildet. POM zeichnet sich durch hohe Formstabilität, geringen Reibungskoeffizienten und exzellente Ermüdungsfestigkeit bei thermischen Wechselbelastungen aus. Innerhalb der Brühkammer agiert ein Kolbensystem mit VMQ-O-Ringen (Vinyl-Methyl-Silikon, Shore-Härte 70A, Abmessung 38 x 4 mm für den Hauptbrühkolben) sowie peroxidisch vernetzten EPDM-Dichtelementen am Wassereinlaufstutzen. Das integrierte Cremaventil nutzt eine kalibrierte Feder aus rostfreiem Edelstahl 1.4310 (X10CrNi18-8), die bei einem Staudruck von 3,5 bis 4,5 bar öffnet, um das gewünschte Crema-Profil zu erzeugen.\n\nDas hydraulische System wird von einer ULKA EP4GW- oder EX5-Schwingkolbenpumpe gespeist (230 V, 48 W), welche bei Nullförderung einen Maximaldruck von 15 bar generiert; der reale Arbeitsdruck während der Vorbrüh- und Extraktionsphase liegt prozessbedingt im Bereich von 9 bis 11 bar bei einer Soll-Durchflussrate von 80 bis 140 ml/min. Die Fluiderhitzung übernimmt ein 1400 W starker Aluminium-Druckguss-Thermoblock mit eingegossenem Edelstahl-Rohrwendel (1.4301), geregelt über einen NTC-Temperatursensor und thermisch abgesichert über redundante 192 °C / 228 °C Schmelzsicherungen. Hochdruckverbindungen sind über PTFE-Druckschläuche (Außendurchmesser 4 mm, Innen 2 mm) realisiert, die mit Messing-Stützhülsen und Schlauchclips gegen Berstdrücke von über 35 bar gesichert sind. Die volumetrische Dosierung erfolgt über einen Turbinen-Durchflussmesser (Digmesa Flowmeter) mit integriertem Hall-Sensor und einer kalibrierten Düsenbohrung von 0,35 mm bis 0,5 mm, welcher circa 1800 bis 2200 Impulse pro Liter an den Mikrocontroller der Leistungselektronik meldet.\n\nMechanische Schwachstellen konzentrieren sich primär auf den Spindeltrieb des Brühgruppen-Getriebes, Verkalkungen im mikroskopischen Düsenbereich des Auslaufstutzens sowie Ermüdungsbrüche der Mikroschalter (Saia-Burgess / Omron Subminiatur), welche die Neutral- und Brühposition überwachen.",
+  "symptoms_and_causes": "Die Fehlercodes 1 bis 5 im Philips LatteGo System spiegeln deterministische Sensordaten und Stromüberwachungszustände der Steuerplatine wider. Bei Fehler 01 (Mahlwerk blockiert) registriert die Motorelektronik über einen Mess-Shunt-Widerstand einen anhaltenden Überstrom (> 2,8 A) am 230V-DC-Gleichstrommotor des Scheibenmahlwerks. Typische akustische Symptome sind ein tiefes Brummen ohne Anlaufen der Keramikmahlscheiben oder ein abruptes Blockiergeräusch. Ursächlich sind zumeist eingedrungene Fremdkörper im Mahlwerk, feucht gewordene Bohnen mit Klumpenbildung oder ein vollkommen verstopfter Kaffeemehltrichter.\n\nFehler 02 (Mahlwerks-Sensorausfall) signalisiert, dass der Motor zwar läuft, die Steuerplatine jedoch keine Tachosignale vom Hall-Geber registriert, etwa durch lockere Steckverbinder, Kabelbruch oder gebrochene Gebermagnete. Fehler 03 (Brühgruppe mechanisch überlastet) resultiert aus einer Überschreitung der Motorstromgrenze des 24V-DC-Antriebsgetriebes. Die Brühgruppe fährt ruckartig an, quietscht oder blockiert auf halbem Weg zur Verdichtung. Ursache sind hier verharzte Gleitschienen, mangelnde Schmierung, verschlissene POM-Zahnflanken oder aufgequollene VMQ-Kolbendichtungen.\n\nFehler 04 (Positionierungsfehler) bedeutet, dass die Endposition innerhalb eines Timeout-Fensters von 4,5 Sekunden nicht erreicht wurde, was an defekten Mikroschaltern, gebrochenen Schaltfahnen oder verschlissenen Getriebespindeln liegt. Fehler 05 (Hydraulikblockade) kennzeichnet den Ausfall des Durchflussmessers: Pumpt die Schwingkolbenpumpe gegen einen hydraulischen Widerstand an, sinkt das Geräusch von lautem Brummen zu einem leisen Zischen ab, während der Flowmeter keine Drehung meldet. Hauptursachen sind Kalkausscheidungen im Thermoblock, festsitzende Rückschlagventile oder Lufteinschlüsse nach Filterwechsel.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Sicherheitsabschaltung und Druckentlastung",
+      "action": "Netzstecker ziehen, Maschine mindestens 45 Minuten abkühlen lassen. Wassertank, Tropfschale und LatteGo-Milchsystem entnehmen."
+    },
+    {
+      "step": 2,
+      "title": "Entnahme und Primärinspektion der Brühgruppe",
+      "action": "Servicetür öffnen, PUSH-Hebel an der Brühgruppe betätigen und Einheit horizontal herausziehen. Pulverschacht mit Taschenlampe auf Kaffeemehlstau prüfen."
+    },
+    {
+      "step": 3,
+      "title": "Mechanische Reinigung und Entfettung",
+      "action": "Brühgruppe unter lauwarmem Wasser ohne Tenside gründlich abspülen. Mit einer weichen Bürste Kaffeefettreste aus dem Trichtersieb und Cremaventil entfernen."
+    },
+    {
+      "step": 4,
+      "title": "Tausch der VMQ-Dichtringe und Schmierstoffauftrag",
+      "action": "Großen Kolbendichtring mit Kunststoffhebel abhebeln. Neuen lebensmittelechten VMQ-Dichtring (38x4 mm) aufziehen und Führungsrillen hauchdünn mit OKS 1110 fetten."
+    },
+    {
+      "step": 5,
+      "title": "Hydraulische Entlüftung und Funktionsprüfung",
+      "action": "Brühgruppe einsetzen, bis sie hörbar einrastet. Maschine einschalten und zwei Heißwasserbezüge zur Entlüftung des Hydraulikkreislaufs durchführen."
+    }
+  ],
+  "step_by_step_narrative": "Zur fachgerechten Behebung der internen Fehlercodes 01 bis 05 ist strukturiertes Vorgehen essenziell. Als Werkzeugausstattung werden Torx-Schraubendreher der Größen TX10 und TX15, ein Kreuzschlitz-Schraubendreher PH2, eine abgewinkelte Spitzzange, ein O-Ring-Demontagewerkzeug aus Messing oder POM sowie NSF-H1-zertifiziertes Schmierfett (z. B. OKS 1110 Silikonpaste) benötigt. Nach vollständiger galvanischer Trennung vom 230V-Netz beginnt die Fehlersuche bei Fehler 01 am Mahlwerk. Entfernen Sie den Bohnenbehälter und saugen Sie Reste ab. Lösen Sie die Verkleidungsschrauben (TX10) an der Rückwand und den oberen Gehäuseschalen, um Zugang zum Keramikmahlwerk zu erhalten. Kontrollieren Sie den Mahlgut-Schacht: Ist dieser verpresst, wird er vorsichtig mit einem Spatel freigeräumt. Prüfen Sie die Mahlscheiben auf mechanischen Steinschlag und justieren Sie den Mahlgradring provisorisch auf grobe Mahlung.\n\nLiegt Fehler 03 oder 04 vor, muss das Augenmerk auf das Brühantriebsgetriebe gelegt werden. Nach Abnahme der Seitenverkleidung überprüfen Sie den Zustand der Mikroschalter auf Durchgang (Multimeter im Widerstandsmessbereich: 0 Ohm bei Betätigung, unendlich im offenen Zustand). Verschlissene Mikroschalter mit Mikroschalter-Rollenhebel austauschen. Die Kniehebelmechanik der Brühgruppe wird manuell auf Leichtgängigkeit geprüft. Tauschen Sie den Kolbendichtring (VMQ 70 rot) und die beiden kleinen Einlaufdichtungen am Supportventil (EPDM) aus. Fetten Sie ausschließlich die inneren Führungsbahnen der POM-Kulisse und den Dichtring sparsam mit OKS 1110; überschüssiges Fett zieht Kaffeepulver an und führt erneut zu Blockaden.\n\nBei Fehler 05 ist der Druckaufbau im System zu diagnostizieren. Lösen Sie den Zulaufschlauch hinter dem Flowmeter und prüfen Sie, ob die Schwerkraft Wasser aus dem Wassertank nachführt. Bei Verkalkung des Flowmeters das Turbinengehäuse öffnen, Schaufelrad reinigen und die Düsenbohrung mit einer 0,4-mm-Nadel entkalken. Nach Remontage sämtlicher Baugruppen und Wiederanbringen der Schläuche mit Sicherungsfedern erfolgt der Dichtheitstest: Führen Sie einen Spülzyklus bei geöffneter Wartungsklappe (unter Überbrückung des Tür-Interlock-Schalters mit isoliertem Prüfadapter) durch und kontrollieren Sie alle Schlauch- und Ventilübergänge mit der Taschenlampe auf Leckagen.",
+  "compatibility_matrix": {
+    "fits": [
+      "Philips LatteGo 5400 Serie (z. B. EP5447/90, EP5444/90, EP5441/50)",
+      "Philips LatteGo 4300 Serie (z. B. EP4346/70, EP4341/50, EP4321/50)",
+      "Philips LatteGo 3200 Serie (z. B. EP3246/70, EP3243/70, EP3221/40)",
+      "Philips LatteGo 2200 Serie (z. B. EP2231/40, EP2230/10, EP2220/10)",
+      "Philips 1200 Serie (z. B. EP1220/00)"
+    ],
+    "incompatible": [
+      "Saeco Xelsis SM-Serie mit frontaler Edelstahl-Brühgruppe (z. B. SM7683)",
+      "Philips Baristina Siebträger-Konzepte",
+      "Saeco Incanto älterer Bauart mit 8-Gramm-Brühgruppe ohne LatteGo-Aufnahme",
+      "Senseo Pad-Maschinen (HD-Serien)",
+      "Gaggia Titanium / Accademia mit Motor-Hebewerk"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Entnahme der Brühgruppe, Abspülen unter fließendem lauwarmem Wasser ohne Reiniger, Säubern des Kaffeepulverschachts und Leerung der Kaffeesatzschublade."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Lösen von Kaffeefett-Rückständen in der Brühkammer mittels Philips Kaffeefettlöser-Tablette; mechanische Kontrolle des Cremaventils auf elastische Rückstellung."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Demontage und Ersatz der VMQ-Kolbendichtung sowie der EPDM-Ventilstutzendichtungen; Neuauftrag von lebensmittelechtem OKS 1110 Schmierfett auf alle POM-Gleitbahnen; Durchführung eines vollständigen Entkalkungszyklus mit Amidosulfonsäure."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Fehlercode 01 (Mahlwerk blockiert)",
+      "cause": "Fremdkörper (z. B. Stein) zwischen den Keramikmahlscheiben oder vollständige Verstopfung des Auswurfschachts durch nasses Kaffeemehl.",
+      "fix": "Gerät stromlos schalten, Bohnenbehälter leeren, Bohnenreste absaugen, Kaffeetrichter manuell mit Flaschenbürste freiräumen. Bei Blockade Mahlwerk demontieren und Fremdkörper entfernen."
+    },
+    {
+      "error": "Fehlercode 03 / 04 (Brühgruppe blockiert / Positionierfehler)",
+      "cause": "Schwergängigkeit des POM-Kniehebelmechanismus, Trockenlaufen der Kolbendichtung oder defekter Mikroschalter am Getriebe.",
+      "fix": "Brühgruppe entnehmen, reinigen und Dichtungen ersetzen. POM-Gleitschienen mit OKS 1110 fetten. Mikroschalter per Durchgangsprüfung testen und bei Signalverlust erneuern."
+    },
+    {
+      "error": "Fehlercode 05 (Wasserkreislauf blockiert)",
+      "cause": "Verkalkung im Edelstahl-Rohrwendel des Thermoblocks, verstopfter Durchflussmesser (Flowmeter) oder Luftblase im System nach Filterwechsel.",
+      "fix": "AquaClean-Filter entfernen, Wassertank einsetzen, System über Heißwasserausgabe entlüften. Bleibt der Fehler bestehen, Flowmeter reinigen und chemische Entkalkung mit Amidosulfonsäure durchführen."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Warum erscheint Fehler 05 unmittelbar nach dem Wechsel des AquaClean-Wasserfilters?",
+      "a": "Wird der neue AquaClean-Wasserfilter vor dem Einsetzen nicht vorschriftsmäßig unter Wasser geschüttelt, bis keine Luftblasen mehr aufsteigen, saugt die ULKA-Schwingkolbenpumpe die im Filtergehäuse komprimierte Luft an. Die Pumpe fällt daraufhin in Kavitation und baut keinen hydrostatischen Druck auf. Der Digmesa-Turbinen-Durchflussmesser registriert mangels Volumenstroms keine Rotordrehung, woraufhin die Elektronik zum Schutz der Heizelemente Fehler 05 anzeigt. Zur Behebung den Filter entfernen, die Maschine über den Heißwasserbezug entlüften und den Filter erneut gründlich wässern."
+    },
+    {
+      "q": "Welches Schmiermittel ist für die Gleitschienen der Philips LatteGo Brühgruppe technisch zulässig?",
+      "a": "Für die POM-Komponenten der LatteGo-Brühgruppe dürfen ausschließlich lebensmittelechte, NSF-H1-zertifizierte Silikonfette wie OKS 1110 oder Glissando 20 verwendet werden. Ungeeignete Schmierstoffe auf Mineralölbasis oder Universalschmiermittel wie WD-40 greifen die Molekularstruktur des Polyoxymethylens sowie die VMQ- und EPDM-Elastomere chemisch an, was zur Versprödung, Rissbildung und zum vollständigen Funktionsausfall führt. Das Silikonfett muss thermisch stabil bis mindestens 140 °C sein und eine hohe Heißwasserbeständigkeit aufweisen, um nicht bei den ersten Brühvorgängen ausgewaschen zu werden."
+    },
+    {
+      "q": "Wie grenze ich mechanische Brühgruppenfehler (Fehler 03) von elektrischen Getriebedefekten (Fehler 04) ab?",
+      "a": "Fehler 03 resultiert primär aus einer unzulässig hohen Stromaufnahme des 24V-DC-Antriebsmotors (> 1,8 A), verursacht durch rein mechanische Schwergängigkeit, Schmutzansammlungen in den Kulissenführungen oder eine klemmende Kolbenmechanik. Lässt sich die Brühgruppe von Hand über das rückseitige Antriebszahnrad ruckfrei durchdrehen, liegt das Problem meist nicht am Kniehebel. Fehler 04 ist demgegenüber fast immer ein messtechnisches Rückmeldeproblem: Hier dreht der Motor ordnungsgemäß, aber einer der beiden Getriebe-Mikroschalter schließt den Stromkreis zur Platine nicht innerhalb des definierten Zeitintervalls, bedingt durch Kontaktoxidation oder verformte Schaltnocken."
+    }
+  ]
+}

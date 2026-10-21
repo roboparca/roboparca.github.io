@@ -1,0 +1,93 @@
+{
+  "page_title": "De'Longhi Magnifica S Mahlkegel & Mahlring Tausch | ECAM 22.110.B Reparatur",
+  "meta_description": "De'Longhi ECAM 22.110.B Mahlkegel & Mahlring austauschen: Detaillierte Reparaturanleitung, Linksgewinde-Demontage, Justage, Verschleißgrenzen & Getriebeprüfung.",
+  "word_count_check": 1285,
+  "engineering_breakdown": "Das Mahlwerk der De'Longhi Magnifica S (ECAM-Serie) basiert auf einem hochtourig angetriebenen, mechanisch untersetzten Kegelmahlwerk (Conical Burr Grinder), das auf maximale Extraktionskonstanz bei kompaktem Bauraum ausgelegt ist. Die Mahlwerkzeuge – bestehend aus dem zentralen Mahlkegel und dem peripheren Mahlring – sind aus korrosionsbeständigem, martensitisch gehärtetem Edelstahl der Werkstoffgüte 1.4034 (X46Cr13) im Vakuumhärteverfahren auf eine Härte von 55 bis 58 HRC vergütet. Diese Härte ist zwingend erforderlich, um den abrasiven Belastungen durch Kaffeebohnen, geröstete Schalenfragmente und unvermeidbare mineralische Mikro-Verunreinigungen über 10.000 bis 15.000 Zyklen standzuhalten. Das Außengehäuse sowie die Mahlkammer bestehen aus hochfestem Polyoxymethylen (POM), einem thermoplastischen Kunststoff, der sich durch hohe Steifigkeit, herausragende Dimensionsstabilität und exzellente Gleiteigenschaften bei trockener Reibung auszeichnet. Der Antrieb erfolgt über einen permanenterregten 230V-Gleichstrommotor von Johnson Electric, der über ein zweistufiges Stirnrad-Schneckengetriebe aus glasfaserverstärktem Polyamid (PA66-GF30) und POM eine Drehzahluntersetzung von ca. 12.000 U/min auf 380 bis 420 U/min am Mahlkegel realisiert. Das Drehmoment an der Mahlachse erreicht hierbei Arbeitswerte von 2,8 bis 3,4 Nm. Die axiale Spaltbreite zwischen Mahlkegel und Mahlring definiert die Partikelgrößenverteilung und bewegt sich im Arbeitsbereich von 0,15 mm (feinste Stufe) bis 0,45 mm (grob). Die Führung der Edelstahl-Zentralschnecke weist ein definiertes Axialspiel von unter 0,04 mm auf, um Taumelbewegungen und inhomogene Mahlresultate zu verhindern. Bei Verschleiß der Schneidkanten verliert das Mahlgut seine bimodale Kornverteilung; der Anteil an Kaffeestaub (Fines < 100 µm) steigt drastisch an. Im hydraulischen Kreislauf, welcher von einer ULKA EP5 Schwingkolbenpumpe (max. 15 bar, Arbeitsbereich 9 bis 12 bar bei einem Durchfluss von 1,2 bis 1,8 ml/s) gespeist wird, führt dieser Feinstaub zu einem exponentiellen Anstieg des hydraulischen Gegendrucks im Brühzylinder. Kritische mechanische Schwachstellen sind neben den abrasiv abgestumpften Schneidkanten die Mitnehmernuten aus POM, die Pufferlager aus Ethylen-Propylen-Dien-Kautschuk (EPDM/VMQ) sowie die axiale Befestigung des Mahlkegels über eine M6-Linksgewindemutter, die bei falschem Drehmoment zur Zerstörung der Getriebewelle führen kann.",
+  "symptoms_and_causes": "Ein primäres Symptom verschlissener Mahlwerkzeuge ist ein wässriger, unterextrahierter oder punktuell extrem bitterer Espresso mit unzureichender, instabiler Crema. Akustisch kündigt sich der Verschleiß durch eine Veränderung des Mahlgeräuschs an: Statt eines satten, sonoren Schneidgeräuschs erzeugt die Baugruppe ein hochfrequentes, gequältes Kreischen oder ein ungleichmäßiges, jaulendes Lastgeräusch. Dieses resultiert daraus, dass abgenutzte Schneidkanten die Bohnen nicht mehr spanabhebend schneiden, sondern zwischen Kegel und Ring zerquetschen, was die mechanische Last auf den Gleichstrommotor und die Stromaufnahme drastisch erhöht. Ein visuelles Indiz liefert der Tresterbehälter: Verschlissene Mahlkegel führen zu nassen, schlammigen und strukturlosen Kaffeepucks, da das inhomogene Kaffeemehl im Brühkolben ungleichmäßig verdichtet wird und bevorzugte Fließkanäle (Channelling) bildet. Elektronisch quittiert die Magnifica S dies häufig mit dem Aufblinken des roten Warndreiecks oder der Aufforderung zur Kaffeesatzbehälter-Leerung nach nur wenigen Bezügen, da die Elektronik über den Hall-Sensor auf der Getriebewelle eine Drehzahlverlangsamung oder eine Zeitüberschreitung des Mahlvorgangs registriert. Bei völliger Mahlwerksblockade – etwa wenn eingedrungene Kaffeesteine auf die stumpfen Kanten treffen – blockiert der Motor vollständig, das Geräusch bricht nach einem kurzen, tiefen Brummen ab, und die Brühgruppen-Initialisierung schlägt fehl. Hydraulisch resultiert der Mahlwerkverschleiß in einem vollständigen Tropfbezug oder Pumpenstillstand: Die durch das Quetschen übermäßig erzeugten Fines verdichten sich im 100-µm-Brühsieb zu einer wasserundurchlässigen Barriere, woraufhin das integrierte Überdruckventil bei 14 bar öffnet und das Wasser ungenutzt in die Tropfschale ableitet.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Netztrennung und Gehäusedemontage",
+      "action": "Netzstecker ziehen, Bohnen- und Wassertank entnehmen, Gehäuseschrauben auf der Rückseite mit Torx TX20 TR lösen und die beiden Seitenwände vorsichtig nach hinten abziehen."
+    },
+    {
+      "step": 2,
+      "title": "Bohnenbehälter und Mahlwerksabdeckung entfernen",
+      "action": "Die beiden inneren Befestigungsschrauben (Torx TX10) im Bohnenbehälter herausdrehen, Fingerschutz entnehmen und die Kunststoff-Mahlwerksabdeckung nach oben abhebeln."
+    },
+    {
+      "step": 3,
+      "title": "Mahlring entriegeln und entnehmen",
+      "action": "Den schwarzen Einstellring gegen den Uhrzeigersinn über die Rastung drehen (Position vorher mit Stift markieren), die Bajonett-Halterung freigeben und den äußeren Mahlring samt Träger nach oben herausziehen."
+    },
+    {
+      "step": 4,
+      "title": "Mahlkegel über Linksgewinde lösen",
+      "action": "Die zentrale Mutter (Schlüsselweite 10 mm) auf der Mahlachse im Uhrzeigersinn (Achtung: Linksgewinde!) lösen, U-Scheibe, Mahlkegel und Auswurfflügel entnehmen und den Schacht aussaugen."
+    },
+    {
+      "step": 5,
+      "title": "Montage des Neuteils und Justage",
+      "action": "Neuen Mahlkegel einsetzen, Linksgewinde handfest (ca. 2,5 Nm) gegen den Uhrzeigersinn festziehen, neuen Mahlring einsetzen, Markierung fluchten, Mahlgrad auf Stufe 4 grundkalibrieren und Gehäuse remontieren."
+    }
+  ],
+  "step_by_step_narrative": "Zur fachgerechten Durchführung des Komponentenwechsels an der De'Longhi Magnifica S (ECAM 22.110.B) sind zwingend folgende Werkzeuge bereitzulegen: Ein Torx-Schraubendreher TX20 mit Stirnlochbohrung (Security Torx), ein Torx TX10, ein Kreuzschlitz-Schraubendreher PH2, eine Stecknuss bzw. ein gekröpfter Ringschlüssel SW10, ein Feinmechaniker-Schlitzschraubendreher zum Aushebeln von Rastnasen, ein Pinsel, ein Werkstattstaubsauger sowie NSF-H1-zertifiziertes Lebensmittelfett (z.B. OKS 1110). Vor Beginn muss das Gerät allpolig vom 230V-Netz getrennt werden. Nach dem Entleeren des Bohnenbehälters und Wassertanks lösen Sie an der Geräterückwand alle sichtbaren TX20-Schrauben. Die Seitenverkleidungen werden erst nach hinten geschoben und dann seitlich ausgehängt. Nun liegt der Blick auf das obere Chassis und den Mahlwerksblock frei. Entfernen Sie die beiden TX10-Schrauben im Bohnenbehälter und heben Sie den Trichter samt mechanischem Wahlschalter ab. Notieren oder fotografieren Sie exakt die Position des Mahlgrad-Zahnrings im Verhältnis zum Verstellgetriebe. Der äußere Mahlring ist durch drei Führungsnuten gesichert; er wird durch Drehbewegung gegen den Uhrzeigersinn entriegelt und entnommen. Der kritischste Schritt ist die Demontage des Mahlkegels: Auf der Antriebswelle sitzt eine Sechskantmutter SW10. Diese besitzt zwingend ein LINKSGEWINDE! Zum Lösen muss die Mutter zwingend IM UHRZEIGERSINN gedreht werden. Ein Drehen gegen den Uhrzeigersinn schert die POM-Zahnräder des Untersetzungsgetriebes sofort unwiderruflich ab. Halten Sie die Welle gegebenenfalls vorsichtig fest, lösen Sie die Mutter, entfernen Sie die Unterlegscheibe und ziehen Sie den alten Edelstahlkegel sowie die darunterliegenden Auswurfflügel von der Welle ab. Reinigen Sie die gesamte Mahlkammer pedantisch von verharzten Kaffeefetten und Restpartikeln. Untersuchen Sie die Messingbuchse der Welle und tragen Sie einen Hauch OKS 1110 auf den Wellensitz auf (die Mahlflächen müssen zwingend fettfrei bleiben!). Setzen Sie den neuen Mahlkegel passgenau auf die Zweiflach-Aufnahme der Welle. Schrauben Sie die Linksgewindemutter GEGEN den Uhrzeigersinn auf und ziehen Sie diese mit einem kontrollierten Drehmoment von ca. 2,5 Nm handfest an. Platzieren Sie den neuen Mahlring in seinem Träger, setzen Sie ihn in die Führungsnuten ein und drehen Sie ihn in die Ausgangsmarkierung. Zur Kalibrierung drehen Sie den Einstellkranz so weit im Uhrzeigersinn in Richtung 'Fein', bis sich Mahlkegel und Mahlring bei manueller Drehung ganz leicht berühren (Nullpunkt), und drehen ihn von dort exakt 5 bis 6 Rastzähne zurück in Richtung 'Grob' (Standardposition Stufe 3 bis 4). Setzen Sie den Bohnenbehälter auf, sodass die Verzahnung des Drehreglers spielfrei einrastet. Nach dem Zusammenbau des Gehäuses muss zwingend ein Testlauf erfolgen: Starten Sie 2 bis 3 Leerbezüge ohne Kaffeemehl, gefolgt von 3 Testmahlungen, um die Mahlkammer zu füllen und den korrekten Kaffeepuck-Aufbau im Tresterbehälter zu überprüfen.",
+  "compatibility_matrix": {
+    "fits": [
+      "De'Longhi Magnifica S (ECAM 22.110.B / ECAM 22.110.SB)",
+      "De'Longhi Magnifica S Plus / Smart (ECAM 23.420.SW / ECAM 250.33.TB)",
+      "De'Longhi Dinamica (ECAM 350.15.B / ECAM 350.55.B)",
+      "De'Longhi Autentica / PrimaDonna Class / Soul (ETAM 29.510.B / ECAM 550.65.SB / ECAM 610.75.MB)"
+    ],
+    "incompatible": [
+      "De'Longhi ESAM Baureihe (ESAM 3000, ESAM 4200 - Riemenantrieb-Mahlwerk mit abweichender Kegelgeometrie)",
+      "Jura Vollautomaten (A-, E-, J- und Z-Serie mit Aroma+ oder P.A.G. Mahlwerk)",
+      "Philips Saeco / Gaggia Kaffeevollautomaten (Keramik-Scheibenmahlwerke)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Aussaugen des Bohnenbehälters bei niedrigem Füllstand und manuelle Reinigung des Pulverschachts mit einem Pinsel, um Rückstände zu beseitigen."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Einsatz von lebensmittelechtem Reinigungsgranulat auf Getreidebasis zur Bindung von ranzigen Kaffeeölen an Mahlkegel und Mahlring."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Demontage des oberen Mahlrings, Überprüfung der Schneidkanten auf Ausbrüche, gründliche Trockenreinigung des Mahlraums und visuelle Kontrolle der EPDM-Dichtungen."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Mahlwerk blockiert / tiefes Motorbrummen ohne Rotation",
+      "cause": "Fremdkörper (Stein) zwischen Mahlkegel und Mahlring verklemmt oder Getriebezahnbruch im POM-Getriebe.",
+      "fix": "Mahlwerk demontieren, Fremdkörper mechanisch entfernen, Zustand der Schneidkanten und des Getriebes prüfen, Teile bei Pittingbildung tauschen."
+    },
+    {
+      "error": "Kaffee fließt extrem schnell / Puck im Trester ist breiig",
+      "cause": "Mahlkegel und Mahlring sind abrasiv abgenutzt; Übermaß an Coarse-Bouldern führt zu fehlendem hydraulischem Widerstand.",
+      "fix": "Edelstahl-Mahlkegel und Mahlring ersetzen und das Mahlwerk auf Werkseinstellung (Stufe 3,5) kalibrieren."
+    },
+    {
+      "error": "Pumpe arbeitet leise gegen Überdruck / Kaffee tröpfelt nur",
+      "cause": "Mahlgrad zu fein eingestellt oder durch Gratbildung übermäßig viele Feinstäube (Fines), die das Brühsieb verblocken.",
+      "fix": "Mahlgrad um 2 Raststufen vergröbern; falls Phänomen weiterhin auftritt, Mahlwerkzeuge erneuern und Brühgruppensieb spülen."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Warum verfügt die Befestigungsmutter des Mahlkegels über ein Linksgewinde?",
+      "a": "Der Mahlkegel der De'Longhi ECAM-Baugruppen rotiert im regulären Mahlbetrieb im Uhrzeigersinn (Rechtsdrehung). Ein Standard-Rechtsgewinde würde durch die beim Einziehen und Zerkleinern der Bohnen auftretenden Torsions- und Reibungskräfte kontinuierlich im Gegenlauf gelockert werden. Das Linksgewinde bewirkt einen physikalischen Selbsthemmungseffekt: Das Gegenmoment des Mahlguts wirkt in Schließrichtung der Verschraubung. Aus diesem Grund muss die Mutter beim Demontieren zwingend im Uhrzeigersinn aufgedreht werden, da ansonsten bei einem Löseversuch nach links die Welle abgerissen oder das Getriebe zerstört wird."
+    },
+    {
+      "q": "Wie wird das Mahlwerk nach dem Tausch von Mahlring und Mahlkegel exakt kalibriert?",
+      "a": "Nach der physischen Montage des neuen Edelstahl-Satzes muss der mechanische Anschlagpunkt ermittelt werden. Drehen Sie den Zahnkranz des Mahlwerkgehäuses vorsichtig im Uhrzeigersinn (Richtung feiner Mahlgrad), während Sie die zentrale Achse von Hand durchdrehen. Sobald Sie einen leichten mechanischen Kontakt zwischen den Schnittkanten spüren, ist der absolute Nullpunkt erreicht. Drehen Sie nun den Kranz exakt 5 bis 6 Rastungen gegen den Uhrzeigersinn zurück. Setzen Sie den äußeren Verstellring des Bohnenbehälters so ein, dass der Reglerzeiger exakt auf Mahlgrad-Position 4 zeigt."
+    },
+    {
+      "q": "Können alternativ Keramik-Mahlsteine in die De'Longhi Magnifica S verbaut werden?",
+      "a": "Nein, ein Umbau auf Keramikmahlsteine ist bei den ECAM-Modellen weder konstruktiv vorgesehen noch technisch sinnvoll. Die Aufnahme der Mahlachse sowie die axiale Arretierung im POM-Gehäuse sind geometrisch ausschließlich für die De'Longhi Edelstahl-Fräskegel mit Zweiflachaufnahme und Linksgewindemutter ausgelegt. Keramische Werkzeuge besitzen eine grundlegend andere Scherkraftcharakteristik, ein höheres Losbrechmoment und erfordern andere Drehzahlen sowie Drehmomente. Das De'Longhi 230V-Getriebe würde durch die veränderte Lastkurve überlastet, was zum Karies-Zahnausfall an den POM-Stirnrädern führen würde."
+    }
+  ]
+}

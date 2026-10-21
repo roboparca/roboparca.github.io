@@ -1,0 +1,98 @@
+{
+  "page_title": "Philips Saeco GranAroma SM6580 Mahlwerk: Analyse & Tauschanleitung",
+  "meta_description": "Philips Saeco GranAroma SM6580/00 Keramik-Mahlwerk defekt? Diagnose von Fehler 01, Getriebe-Analyse und professionelle Schritt-für-Schritt-Tauschanleitung.",
+  "word_count_check": 1215,
+  "engineering_breakdown": "Die Mahlwerkseinheit der Philips Saeco GranAroma (Modellreihe SM6580/00, ASIN: B0H3P9Q63G) ist ein mechatronisches Präzisionssubsystem, das für eine volumetrische Dosierung bei variabler Partikelgrößenverteilung konzipiert ist. Das Herzstück bildet ein 48-mm-Scheibenmahlwerk aus isostatisch gepresster, hochreiner Aluminiumoxid-Keramik (Al2O3, Reinheitsgrad > 95 %). Keramik zeichnet sich durch eine Mohshärte von 9 aus, wodurch die Schneidkanten über zehntausende Zyklen verschleißfrei bleiben und thermisch neutral arbeiten, um ein vorzeitiges Entgasen der Kaffeeöle während des Scherprozesses zu verhindern. Der mechanische Antrieb erfolgt über einen bürstenbehafteten Gleichstrom-Hochvolt-Elektromotor (typischerweise Johnson DC 230V, gleichgerichtet über die Leistungselektronik), der über ein zweistufiges Untersetzungsgetriebe mit Schneckentrieb gekoppelt ist. Sämtliche tragenden Getriebekomponenten und Gehäuseschalen bestehen aus hochkristallinem Polyoxymethylen-Copolymer (POM-C), welches durch herausragende Gleitreibungseigenschaften, chemische Resistenz gegen Kaffeewachse und Formstabilität bei mechanischen Lastwechseln überzeugt. Die 12-stufige Mahlgradverstellung operiert über einen axialen Hubmechanismus mit Steilgewinde. Die Gegenlagerung und axiale Vorspannung der rotierenden Mahlscheibe wird durch Präzisionsfedern aus austenitischem Federstahl (Werkstoff 1.4310 / X10CrNi18-8) sichergestellt, um Spaltmaße zwischen 0,15 mm (Stufe 1) und 0,65 mm (Stufe 12) spielfrei zu halten. Die elektronische Drehzahlerfassung und Dosismessung erfolgt kontaktlos über einen Hall-Sensor, der die Feldänderungen eines auf der Getriebeachse platzierten Neodym-Ringmagneten abtastet (Impulszählung). Die Leistungselektronik überwacht die Stromaufnahme kontinuierlich über einen niederohmigen Shunt-Widerstand: Steigt die Stromaufnahme infolge von Blockaden oder Verkeilungen über den definierten Schwellenwert von typischerweise 2,4 bis 2,8 Ampere für mehr als 200 Millisekunden, trennt die Firmware den Strompfad, um Motorwicklungen und POM-Zahnflanken vor thermischem und mechanischem Versagen zu bewahren. Abgedichtet ist die Einheit gegen Brühraumfeuchtigkeit und aufsteigenden Dampf über dynamische Dichtlippen aus vernetztem Silikonkautschuk (VMQ) und Ethylen-Propylen-Dien-Kautschuk (EPDM).",
+  "symptoms_and_causes": "Mechanische und elektromechanische Defekte an der Mahlwerkseinheit der Saeco GranAroma manifestieren sich in spezifischen Fehlerbildern. Das primäre Fehlersymptom ist der im Display ausgegebene 'Fehler 01' (Error 01 / E01). Dieser Code signalisiert eine Blockade des Mahlwerks oder das Ausbleiben der erforderlichen Hall-Sensor-Impulse innerhalb des Zeitfensters nach Motoransteuerung. Ursächlich hierfür sind zumeist mineralische Fremdkörper (Steine im Rohkaffee), verbackene Kaffeefett-Akkumulationen bei extrem öligen 'Dark Roast'-Röstungen oder ein mechanischer Getriebeklemmer. Ein weiteres Fehlermuster ist ein hochfrequentes 'Heulen' oder 'Kreischen' ohne Rotation der Mahlscheiben: Dies resultiert zumeist aus dem Abscheren der POM-Getriebezähne auf der Sekundärstufe oder dem Bruch des metallischen Mitnehmerstifts, wodurch der DC-Motor lastfrei mit Maximaldrehzahl (~8.000 U/min) rotiert, ohne Drehmoment auf den Mahlkegel bzw. die Scheibe zu übertragen. Brummt die Maschine hingegen nur tief und bricht den Brühzyklus nach ca. zwei Sekunden ab, liegt in vielen Fällen ein Wicklungsschluss im Anker des DC-Motors oder ein Ausfall der Gleichrichterdioden auf der Leistungsplatine vor. Läuft das Mahlwerk regulär, erzeugt jedoch trotz feinster Raststufe 1 nur grobes, splittriges Schrot und wässrigen Espresso, ist ein Bruch des Rastrings der Mahlgradverstellung oder das Nachlassen der Vorspannkraft des Federstahls 1.4310 die Ursache. Infolgedessen drückt der Kaffeebohnen-Gegendruck die Mahlscheiben axial auseinander. Schließlich führt der natürliche Abrieb der Graphitkohlen des DC-Motors nach etwa 7.000 bis 10.000 Bezügen zu instabilem Motorlauf und sporadischen Stromabschaltungen.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Netztrennung und Gehäusevorbereitung",
+      "action": "Ziehen Sie den 230V-Netzstecker der GranAroma und entnehmen Sie Wassertank, Kaffeesatzbehälter sowie die Brühgruppe. Entfernen Sie alle Kaffeebohnen aus dem Bohnenbehälter mittels eines Werkstattsaugers, um ein Nachrieseln in das Gehäuseinnere vollständig zu verhindern."
+    },
+    {
+      "step": 2,
+      "title": "Demontage des Bohnenbehälters und der oberen Abdeckung",
+      "action": "Lösen Sie mit einem Torx TX10 Schraubendreher die Sicherungsschrauben im Bohnenbehälter und ziehen Sie die manuelle Mahlgrad-Einstellwelle vorsichtig senkrecht nach oben ab. Lösen Sie die Gehäuseschrauben der oberen Verkleidung und hebeln Sie die Rastnasen vorsichtig mit einem Kunststoff-Spatel aus, um das Chassis freizulegen."
+    },
+    {
+      "step": 3,
+      "title": "Elektrische und mechanische Entkopplung des Mahlwerks",
+      "action": "Ziehen Sie den zweipoligen Motor-Flachstecker (rot/schwarz) sowie den dreipoligen JST-Steckverbinder der Hall-Sensor-Platine ab. Heben Sie die komplette Mahlwerkseinheit aus ihren drei gummigelagerten Schwingungsdämpfern (EPDM) senkrecht aus dem Gehäusebett heraus."
+    },
+    {
+      "step": 4,
+      "title": "Installation der neuen Mahlwerkseinheit B0H3P9Q63G",
+      "action": "Setzen Sie die neue 100% Keramik-Mahlwerkseinheit präzise in die Schwingungsdämpfer ein. Stellen Sie sicher, dass die Auswurfschurre formschlüssig und dicht über der Silikondichtung (VMQ) des Pulverschachts zur Brühkammer sitzt, um Kaffeemehlaustritt im Geräteinneren zu unterbinden."
+    },
+    {
+      "step": 5,
+      "title": "Verkabelung, Justage und Testlauf",
+      "action": "Schließen Sie den Hall-Sensor- und Motorstecker polungsrichtig an. Montieren Sie die Mahlgradverstellung mit Grundstellung auf Stufe 6. Setzen Sie die Gehäuseabdeckung wieder auf, montieren Sie die Torx-Schrauben handfest und führen Sie zwei Leerbezüge ohne Bohnen zur Sensorinitialisierung durch, gefolgt von drei Testbezügen mit Kaffee zur Füllung der Mahlkammer."
+    }
+  ],
+  "step_by_step_narrative": "Der Austausch der Mahlwerkseinheit B0H3P9Q63G an der Saeco GranAroma SM6580/00 erfordert höchste Präzision und das richtige Werkzeug. Benötigt werden: Torx-Schraubendreher der Größen TX10 und TX15, ein Kunststoff-Demontagespatel, eine Spitzzange, ein Pinsel sowie lebensmittelechtes Silikonfett (z. B. OKS 1110). Vor Beginn aller Arbeiten ist die Maschine zwingend vom Stromnetz zu trennen; warten Sie mindestens fünf Minuten, um Entladungsströme der Glättungskondensatoren auf der Hauptplatine abklingen zu lassen. Nach Entnahme aller Anbauteile saugen Sie den Bohnenbehälter porentief aus. Demontieren Sie die sichtbaren TX10-Schrauben unter dem Bohnenfachdeckel. Heben Sie den Feinjustage-Drehknopf vorsichtig mit dem Spatel axial ab; achten Sie dabei peinlich genau auf die interne Rastfeder und die Nullpunkt-Markierung. Lösen Sie nun die Rastverbindungen der oberen Abdeckung. Das Mahlwerk ist in einem eigenen Resonanzschacht über drei EPDM-Schwingungsdämpfer schwebend montiert. Ziehen Sie die Faston-Flachstecker des Motors mit einer Spitzzange direkt am Kabelschuh ab (niemals an den Litzen ziehen) und trennen Sie das Datenkabel des Hall-Sensors. Entnehmen Sie die alte Einheit. Reinigen Sie den Pulverschachtkanal gründlich von verharzten Kaffeeresten und inspizieren Sie die VMQ-Dichtmanschette auf Risse oder Versprödung; tragen Sie bei Bedarf einen hauchdünnen Film OKS 1110 auf die Dichtflächen auf. Setzen Sie die neue Original-Ersatzeinheit B0H3P9Q63G bündig in die Gummiführungen ein. Ein Verkanten führt zu erhöhten Resonanzschwingungen und Geräuschemissionen im Betrieb. Schließen Sie die elektrischen Kontakte polungsrichtig an. Bei der Montage des 12-Stufen-Getrieberings ist sicherzustellen, dass die mechanische Übersetzung exakt mit dem Drehregler übereinstimmt: Positionieren Sie den Regler auf die mittlere Raststufe 6, bevor Sie das Gehäuseoberteil wieder aufsetzen. Verschrauben Sie das Gehäuse mit 1,2 Nm Drehmoment (handfest in thermoplastischem Kunststoff). Schalten Sie das Gerät ein und führen Sie zunächst im Test- bzw. Spülmodus einen Initiallauf durch. Mahlen Sie anschließend drei Espresso-Portionen, bis sich das Mahlwerk mit Kaffeemehl gefüllt und der Saeco Adapting System (SAS) Algorithmus die Stromaufnahmewerte des neuen Motors neu kalibriert hat.",
+  "compatibility_matrix": {
+    "fits": [
+      "Saeco GranAroma SM6580/00",
+      "Saeco GranAroma SM6580/10",
+      "Saeco GranAroma SM6580/20",
+      "Saeco GranAroma SM6582/10",
+      "Saeco GranAroma SM6585/00",
+      "Saeco GranAroma Deluxe SM6680/00",
+      "Saeco GranAroma Deluxe SM6685/00",
+      "Saeco Xelsis SM7580/00 (baugleiche Mahleinheit)"
+    ],
+    "incompatible": [
+      "Philips LatteGo EP2220/10 (modifizierte Motoraufhängung)",
+      "Philips 5400 Serie EP5447/90 (abweichende Schorrengeometrie)",
+      "Saeco Incanto HD8911/01 (älteres 24V-Niedervolt-Mahlwerk)",
+      "Gaggia Accademia (abweichender Gehäuseschacht)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Aussaugen des Bohnenbehälters und Trockenreinigung des sichtbaren Einzugskegels mit einem Naturborstenpinsel zur Beseitigung klebriger Fettfilme."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Durchführung eines Reinigungszyklus mit professionellem Bohnenmahlwerk-Granulat (auf Getreidestärkebasis) zur Neutralisierung ranziger Kaffeeöle in den Scheibenrillen."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Teildemontage der oberen Mahlscheibe, vollständiges Freipinseln des Auswurfkanals, Prüfung der VMQ-Schachtdichtung auf Elastizität und Überprüfung der 12-Stufen-Rastung."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Fehler 01 (Display: Mahlwerk blockiert)",
+      "cause": "Fremdkörper (Stein/Holz) zwischen den Keramikscheiben verklemmt; Motorstrom übersteigt 2,8 A; Hall-Sensor sendet keine Taktimpulse.",
+      "fix": "Netzstecker ziehen, Mahlgrad auf Stufe 12 stellen, Fremdkörper mittels Staubsauger und manuellem Rückdrehen der Keramikscheibe entfernen; bei Wicklungsschaden Einheit B0H3P9Q63G ersetzen."
+    },
+    {
+      "error": "Motor dreht hochfrequent, kein Bohneneinzug",
+      "cause": "Zahnbruch an den POM-Zahnrädern des Reduktionsgetriebes oder Abscherung der Mitnehmerachse zwischen Getriebe und rotierender Mahlscheibe.",
+      "fix": "Mahlwerkseinheit ausbauen und Getriebegehäuse öffnen; bei Karies auf den Flanken des Schneckenrades die komplette Baugruppe B0H3P9Q63G erneuern."
+    },
+    {
+      "error": "Kaffee extrem wässrig trotz feiner Einstellung",
+      "cause": "Vorspannfeder (1.4310) erlahmt oder Gewinde des 12-Stufen-Stellrings überdreht, wodurch der Mahlspalt unter Bohnendruck axial aufweicht.",
+      "fix": "Mahlgradmechanik zerlegen, Rastelemente auf Beschädigung prüfen, Axialspiel verifizieren; bei verschlissenem POM-Gewinde Einheit austauschen."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Wie wird die werkseitige Grundkalibrierung des 12-Stufen-Keramikmahlwerks korrekt durchgeführt?",
+      "a": "Für die exakte Grundkalibrierung muss das Mahlwerk zunächst im stromlosen Zustand vorsichtig im Uhrzeigersinn gedreht werden, bis sich die beiden Keramikmahlscheiben berühren (physischer Nullpunkt). Von diesem Anschlagpunkt aus wird die Stellmechanik exakt um drei Rasten gegen den Uhrzeigersinn gelöst, was einem definierten Mindestspaltmaß von ca. 0,18 mm entspricht. In dieser Position wird der 12-Stufen-Rasterring mit der Markierung für Stufe 1 formschlüssig aufgesetzt. Dies verhindert zuverlässig, dass die Keramikscheiben bei Feineinstellung kollidieren und Kantenabsplitterungen erleiden, garantiert aber gleichzeitig eine mehlfeine Mahlung für druckvollen Espresso."
+    },
+    {
+      "q": "Warum erscheint der Fehlercode 01, obwohl keine Fremdkörper im Mahlwerk sichtbar sind?",
+      "a": "Der Fehlercode 01 wird primär über die elektronische Strom- und Impulsüberwachung generiert. Wenn ölige, stark geröstete Kaffeebohnen verwendet werden, polymerisieren die austretenden Kaffeefette mit feinstem Kaffeestaub zu einer zähen Masse im Auswurfkanal. Dies erhöht das Drehmoment derart drastisch, dass der Shunt-Widerstand auf der Hauptplatine einen Überstrom (> 2,4 A) detektiert. Alternativ kann ein Defekt der Hall-Sensor-Platine oder ein Abriss der Kohlebürsten im DC-Motor vorliegen, wodurch keine Drehzahlimpulse mehr an die CPU übertragen werden, was die Firmware sofort als Blockade interpretiert."
+    },
+    {
+      "q": "Ist der Austausch einzelner Keramikmahlscheiben dem Wechsel der kompletten Baugruppe (B0H3P9Q63G) vorzuziehen?",
+      "a": "Aus ingenieurtechnischer Sicht ist bei Modellen der Serie GranAroma SM6580/00 der Tausch der kompletten Baugruppe B0H3P9Q63G dringend angeraten. Während der Wechsel einzelner Scheiben zwar theoretisch machbar ist, behebt er weder das typische Verschleißspiel in den POM-Lagerbuchsen noch den Kohlebürstenverschleiß des 230V-Motors. Zudem sind Austausch-Mahlscheiben selten perfekt aufeinander eingelaufen, was zu Unwuchten und inhomogenem Partikelspektrum führt. Die werkseitig vormontierte Einheit B0H3P9Q63G garantiert kalibrierte Spaltmaße, ein unverschlissenes Schneckengetriebe und volle elektrische Zuverlässigkeit ohne zeitaufwendige Justagefehler."
+    }
+  ]
+}
