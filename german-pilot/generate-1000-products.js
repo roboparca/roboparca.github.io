@@ -311,7 +311,16 @@ const CATEGORIES = [
 ];
 
 // Helper to choose the best Amazon image set
-function getImagesForProduct(brandSlug, cat) {
+function getImagesForProduct(id, brandSlug, cat) {
+  // 1. Direct 1:1 distinctive match from Amazon scraper
+  if (asinsData[id] && Array.isArray(asinsData[id]) && asinsData[id].length > 0) {
+    return {
+      asin: asinsData[id][0].asin,
+      images: asinsData[id].map(item => item.img)
+    };
+  }
+
+  // 2. Category & Brand fallback
   let key = 'delonghi-ecam-bruehgruppe';
   if (cat.imageKey) {
     if (cat.imageKey[brandSlug]) {
@@ -342,7 +351,7 @@ const allProducts = [];
 for (const model of models) {
   for (const cat of CATEGORIES) {
     const id = `${model.brandSlug}-${model.slug}-${cat.slug}`;
-    const imgData = getImagesForProduct(model.brandSlug, cat);
+    const imgData = getImagesForProduct(id, model.brandSlug, cat);
     const oem = cat.oemMap[model.brandSlug] || 'OEM-Standard';
 
     // Tailored Google SERP title tag

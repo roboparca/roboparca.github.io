@@ -56,22 +56,54 @@ function formatEditorialText(text) {
       .replace(/\b(\d+(?:[.,]\d+)?\s*(?:bar|Bar|Watt|W|Volt|V|Hz|mm|ml|Nm|cm³))\b/g, '<strong>$1</strong>')
       .replace(/\b(1\.4310|1\.4301|POM|Delrin|VMQ|EPDM|FKM|PTFE|CW617N|NSF-H1|OKS 1110|Glissa|TX10|TX15|TX20|Torx)\b/g, '<strong>$1</strong>');
 
-    // Wikipedia-style contextual internal linking (only first occurrence per paragraph)
+    // Wikipedia-style contextual internal linking across 5 distinct dimensions:
+
+    // 1. Core Component & Technology Hubs
     formatted = formatted
-      .replace(/\b(Brühgruppe[n]?|Brühgruppen-[a-zA-ZäöüÄÖÜß]+)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/bruehgruppe/" class="wiki-link" title="Brühgruppen &amp; Dichtungen">$1</a>`)
+      .replace(/\b(Brühgruppe[n]?|Brühgruppen-[a-zA-ZäöüÄÖÜß]+|Brüheinheit(?:en)?)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/bruehgruppe/" class="wiki-link" title="Brühgruppen &amp; Dichtungen">$1</a>`)
       .replace(/\b(Vibrationspumpe[n]?|Schwingkolbenpumpe[n]?)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/vibrationspumpe/" class="wiki-link" title="Pumpen &amp; Hydraulik">$1</a>`)
-      .replace(/\b(Ulka EX5|Ulka EP5)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/vibrationspumpe/" class="wiki-link" title="Ulka Pumpe">$1</a>`)
-      .replace(/\b(Mahlwerk[e]?|Keramikmahlwerk[e]?)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/mahlwerk/" class="wiki-link" title="Mahlwerke &amp; Keramikmahlscheiben">$1</a>`)
+      .replace(/\b(Ulka EX5|Ulka EP5)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/vibrationspumpe/" class="wiki-link" title="15-Bar Ulka Schwingkolbenpumpe">$1</a>`)
+      .replace(/\b(Mahlwerk[e]?|Keramikmahlwerk[e]?|Kegelmahlwerk[e]?)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/mahlwerk/" class="wiki-link" title="Mahlwerke &amp; Mahlkegel">$1</a>`)
       .replace(/\b(ceramDrive)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/mahlwerk/" class="wiki-link" title="ceramDrive Keramikmahlwerk">$1</a>`)
-      .replace(/\b(Milchsystem[e]?|Milchkaraffe[n]?|LatteCrema|HygieSteam)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/milchsystem/" class="wiki-link" title="Milchsysteme &amp; Karaffen">$1</a>`)
-      .replace(/\b(Wasserfilter[n]?|Entkalkung|Entkalker)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/wasserfilter/" class="wiki-link" title="Wasserfilter &amp; Entkalkung">$1</a>`)
-      .replace(/\b(AquaClean|Claris Smart|Intenza)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/wasserfilter/" class="wiki-link" title="Wasserfilterpatrone">$1</a>`)
-      .replace(/\b(Drainageventil[e]?)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/drainageventil/" class="wiki-link" title="Drainageventile">$1</a>`)
+      .replace(/\b(Milchsystem[e]?|Milchkaraffe[n]?|Milchaufschäumer|LatteCrema|HygieSteam|LatteGo)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/milchsystem/" class="wiki-link" title="Milchsysteme &amp; Karaffen">$1</a>`)
+      .replace(/\b(Wasserfilter[n]?|Entkalkung|Entkalker|Amidosulfonsäure)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/wasserfilter/" class="wiki-link" title="Wasserfilter &amp; System-Entkalkung">$1</a>`)
+      .replace(/\b(AquaClean|Claris Smart|Intenza|DLSC002)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/wasserfilter/" class="wiki-link" title="Wasserfilterpatrone">$1</a>`)
+      .replace(/\b(Drainageventil[e]?)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/drainageventil/" class="wiki-link" title="Drainageventile &amp; Messingkappen">$1</a>`)
+      .replace(/\b(Messingkappe[n]?)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/drainageventil/" class="wiki-link" title="Drainageventil Messingkappe">$1</a>`)
       .replace(/\b(Thermoblock[s]?|Durchlauferhitzer[n]?)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/thermoblock/" class="wiki-link" title="Heizelemente &amp; Thermoblöcke">$1</a>`)
-      .replace(/\b(Magnetventil[e]?|Solenoidventil[e]?)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/magnetventil/" class="wiki-link" title="Magnetventile">$1</a>`)
-      .replace(/\b(Fehlercodes|Fehlermeldung(?:en)?)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/fehlercodes/" class="wiki-link" title="Diagnose &amp; Fehlercode-Datenbank">$1</a>`)
-      .replace(/\b(Allgemeiner Alarm)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/fehlercodes/" class="wiki-link" title="De'Longhi Allgemeiner Alarm"><span class="code-pill">$1</span></a>`)
-      .replace(/\b(E0511|E0513|Error 8)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/fehlercodes/" class="wiki-link" title="Fehlercode-Diagnose"><span class="code-pill">$1</span></a>`);
+      .replace(/\b(Magnetventil[e]?|Solenoidventil[e]?)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/magnetventil/" class="wiki-link" title="Magnetventile &amp; Solenoid">$1</a>`)
+      .replace(/\b(Kaffeeauslauf(?:verteiler)?|Düsenabdeckung)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/kaffeeauslauf/" class="wiki-link" title="Kaffeeauslauf &amp; Düsen">$1</a>`)
+      .replace(/\b(Fehlercodes|Fehlermeldung(?:en)?)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/fehlercodes/" class="wiki-link" title="Diagnose &amp; Fehlercode-Datenbank">$1</a>`);
+
+    // 2. Error Code Shortcuts linking directly to dedicated diagnostic pages
+    formatted = formatted
+      .replace(/\b(Allgemeiner Alarm|Allgemeine Störung)\b(?![^<]*>)/i, `<a href="${SITE_URL}/delonghi/magnifica-s/fehlercodes/" class="wiki-link" title="De'Longhi Allgemeine Störung Diagnose"><span class="code-pill">$1</span></a>`)
+      .replace(/\b(E0511|E0513)\b(?![^<]*>)/i, `<a href="${SITE_URL}/siemens/eq6-plus-s700/fehlercodes/" class="wiki-link" title="Siemens Fehlercode Diagnose"><span class="code-pill">$1</span></a>`)
+      .replace(/\b(Error 8)\b(?![^<]*>)/i, `<a href="${SITE_URL}/jura/e8/fehlercodes/" class="wiki-link" title="Jura Error 8 Brühgruppen-Diagnose"><span class="code-pill">$1</span></a>`)
+      .replace(/\b(Fehler 01|Fehler 03|Fehler 04)\b(?![^<]*>)/i, `<a href="${SITE_URL}/philips/lattego-3200/fehlercodes/" class="wiki-link" title="Philips Fehlercode Diagnose"><span class="code-pill">$1</span></a>`)
+      .replace(/\b(Fehler 06)\b(?![^<]*>)/i, `<a href="${SITE_URL}/krups/evidence-ea8918/fehlercodes/" class="wiki-link" title="Krups Fehler 06 Diagnose"><span class="code-pill">$1</span></a>`);
+
+    // 3. Physical Symptoms linking to symptom problem hubs
+    formatted = formatted
+      .replace(/\b(Tropfschale läuft voll|Wasser in der Tropfschale)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/drainageventil/" class="wiki-link" title="Wasserverlust in Tropfschale">$1</a>`)
+      .replace(/\b(tröpfelt nur(?: schwach)?|Kaffee tröpfelt)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/vibrationspumpe/" class="wiki-link" title="Druckverlust &amp; Pumpe">$1</a>`)
+      .replace(/\b(Milchschaum spritzt|bleibt flüssig)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/milchsystem/" class="wiki-link" title="Milchschaum-Probleme">$1</a>`)
+      .replace(/\b(Mahlwerk blockiert|mahlt leer)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/mahlwerk/" class="wiki-link" title="Mahlwerk-Blockade">$1</a>`)
+      .replace(/\b(Kaffee (?:ist )?nicht heiß|nur lauwarm)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/thermoblock/" class="wiki-link" title="Temperatur-Probleme">$1</a>`)
+      .replace(/\b(Kaffee läuft einseitig)\b(?![^<]*>)/i, `<a href="${SITE_URL}/kategorie/kaffeeauslauf/" class="wiki-link" title="Auslauf einseitig">$1</a>`);
+
+    // 4. Sister Machine Models linking directly to their model hubs
+    formatted = formatted
+      .replace(/\b(Magnifica S)\b(?![^<]*>)/i, `<a href="${SITE_URL}/delonghi/magnifica-s/" class="wiki-link" title="De'Longhi Magnifica S Übersicht">$1</a>`)
+      .replace(/\b(Dinamica Plus|Dinamica)\b(?![^<]*>)/i, `<a href="${SITE_URL}/delonghi/dinamica/" class="wiki-link" title="De'Longhi Dinamica Übersicht">$1</a>`)
+      .replace(/\b(EQ\.6 Plus|EQ\.6)\b(?![^<]*>)/i, `<a href="${SITE_URL}/siemens/eq6-plus-s700/" class="wiki-link" title="Siemens EQ.6 Plus Übersicht">$1</a>`)
+      .replace(/\b(EQ\.9 Plus|EQ\.9)\b(?![^<]*>)/i, `<a href="${SITE_URL}/siemens/eq9-plus-s700/" class="wiki-link" title="Siemens EQ.9 Plus Übersicht">$1</a>`)
+      .replace(/\b(Jura E8)\b(?![^<]*>)/i, `<a href="${SITE_URL}/jura/e8/" class="wiki-link" title="Jura E8 Modellübersicht">$1</a>`)
+      .replace(/\b(LatteGo 3200|LatteGo 5400)\b(?![^<]*>)/i, `<a href="${SITE_URL}/philips/lattego-3200/" class="wiki-link" title="Philips LatteGo Übersicht">$1</a>`)
+      .replace(/\b(Krups Evidence)\b(?![^<]*>)/i, `<a href="${SITE_URL}/krups/evidence-ea8918/" class="wiki-link" title="Krups Evidence Übersicht">$1</a>`)
+      .replace(/\b(Barista Express)\b(?![^<]*>)/i, `<a href="${SITE_URL}/sage/barista-express/" class="wiki-link" title="Sage Barista Express Übersicht">$1</a>`)
+      .replace(/\b(Caffeo Solo)\b(?![^<]*>)/i, `<a href="${SITE_URL}/melitta/caffeo-solo/" class="wiki-link" title="Melitta Caffeo Solo Übersicht">$1</a>`)
+      .replace(/\b(CafeRomatica)\b(?![^<]*>)/i, `<a href="${SITE_URL}/nivona/caferomatica-759/" class="wiki-link" title="Nivona CafeRomatica Übersicht">$1</a>`);
 
     return `<p class="prose-p">${formatted}</p>`;
   }).join('\n');

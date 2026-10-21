@@ -17,7 +17,9 @@ if (fs.existsSync(OUT_FILE)) {
 
 function searchAmazonDe(query) {
   return new Promise((resolve) => {
-    const url = 'https://www.amazon.de/s?k=' + encodeURIComponent(query.replace(/\+/g, ' '));
+    const clean = query.replace(/['"]/g, '').trim();
+    const url = 'https://www.amazon.de/s?k=' + clean.split(/\s+/).map(encodeURIComponent).join('+');
+    
     const req = https.get(url, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
@@ -35,7 +37,6 @@ function searchAmazonDe(query) {
         while ((match = regex.exec(data)) !== null && results.length < 5) {
           const asin = match[1];
           let img = match[2].replace(/\._AC_[^.]+_/, '._AC_SL1500_');
-          // Skip tracking pixels or transparent badges
           if (img.includes('transparent') || img.includes('pixel') || seenAsins.has(asin)) continue;
           seenAsins.add(asin);
           results.push({ asin, img });
@@ -50,39 +51,55 @@ function searchAmazonDe(query) {
   });
 }
 
-async function scrapeAll() {
-  console.log(`🔍 Scraping Amazon.de images & ASINs for ${products.length} coffee repair parts...`);
+function getOptimizedSearchQuery(p) {
+  const cleanModel = p.model.replace(/\s*\(.*\)/, '').trim();
+  const categoryTerms = {
+    bruehgruppe: 'Brühgruppe Dichtungssatz',
+    vibrationspumpe: 'Ulka EX5 Pumpe 15 bar',
+    thermoblock: 'Thermoblock Heizelement',
+    mahlwerk: 'Mahlwerk Keramik Mahlkegel',
+    milchsystem: 'Milchaufschäumer Karaffe',
+    wasserfilter: 'Wasserfilter Entkalker',
+    drainageventil: 'Drainageventil Messingkappe',
+    magnetventil: 'Magnetventil Solenoid 230V',
+    fehlercodes: 'Ersatzteile Reparatursatz',
+    kaffeeauslauf: 'Kaffeeauslauf Verteiler'
+  };
+
+  const term = categoryTerms[p.partSlug] || p.category;
+  return `${p.brand} ${cleanModel} ${term}`;
+}
+
+async function scrapeBatch(limit = 10) {
+  console.log(`🔍 Scraping Amazon.de images & ASINs for products (limit: ${limit})...`);
   let updated = 0;
 
-  for (let i = 0; i < products.length; i++) {
+  for (let i = 0; i < products.length && updated < limit; i++) {
     const p = products[i];
     const key = p.id;
 
-    if (cache[key] && cache[key].length > 0) {
-      // console.log(`[${i+1}/${products.length}] ⏩ Cached: ${p.id}`);
+    if (cache[key] && Array.isArray(cache[key]) && cache[key].length > 0) {
       continue;
     }
 
-    const searchQuery = p.query || `${p.brand} ${p.model} ${p.partName}`;
-    console.log(`[${i+1}/${products.length}] 🔎 Searching Amazon.de: ${searchQuery}...`);
+    const searchQuery = getOptimizedSearchQuery(p);
+    console.log(`[${i+1}/${products.length}] 🔎 Searching Amazon.de: "${searchQuery}"...`);
 
     const results = await searchAmazonDe(searchQuery);
     if (results && results.length > 0) {
       cache[key] = results;
       console.log(`   ✅ Found ${results.length} Amazon images! Top ASIN: ${results[0].asin}`);
       updated++;
+      fs.writeFileSync(OUT_FILE, JSON.stringify(cache, null, 2), 'utf8');
     } else {
-      console.log(`   ⚠️ No images found for ${p.id}`);
+      console.log(`   ⚠️ No images found for "${searchQuery}"`);
     }
 
-    // Save progressively
-    fs.writeFileSync(OUT_FILE, JSON.stringify(cache, null, 2), 'utf8');
-
-    // Politeness pause to avoid rate limits
-    await new Promise(r => setTimeout(r, 650));
+    await new Promise(r => setTimeout(r, 700));
   }
 
-  console.log(`🎉 Finished scraping! Updated ${updated} items. Total cached: ${Object.keys(cache).length}/${products.length}`);
+  console.log(`🎉 Batch finished! Updated ${updated} items. Total cached: ${Object.keys(cache).length}`);
 }
 
-scrapeAll();
+const argLimit = parseInt(process.argv[2] || '10', 10);
+scrapeBatch(argLimit);

@@ -206,9 +206,161 @@ const BRAND_DATA = {
 };
 
 /**
+ * Generates 100% distinctive FAQs based on category, brand, and model nuances
+ */
+function generateDistinctFaqs(p, cat, brd) {
+  const catKey = p.partSlug || 'bruehgruppe';
+  const cleanModel = p.model.replace(/\s*\(.*\)/, '').trim();
+
+  const faqGenerators = {
+    bruehgruppe: [
+      {
+        q: `Warum lässt sich die Brühgruppe bei der ${p.brand} ${cleanModel} nicht mehr einsetzen oder herausnehmen?`,
+        a: `Das liegt in über 90% der Fälle an einer verstellten Nullstellung (Grundposition). Wenn die Maschine während eines Brühvorgangs stromlos geschaltet wurde oder das Getriebe wegen ausgewaschenem Fett blockierte, steht der Mitnehmerzapfen schief. Schalten Sie das Gerät bei geschlossener Servicetür ein, damit der Spindelantrieb die Initialisierungsfahrt abschließen kann. Fetten Sie anschließend die Gleitnuten mit ${brd.greaseSpec}.`
+      },
+      {
+        q: `Darf die Brühgruppe der ${p.brand} ${cleanModel} in der Spülmaschine gereinigt werden?`,
+        a: `Nein, keinesfalls! Die hohen Spültemperaturen von über 55 °C und die aggressiven alkalischen Reinigersalze waschen das lebensmittelechte Silikonfett restlos aus und verspröden das POM-Delrin-Chassis irreversibel. Spülen Sie die Brühgruppe ausschließlich unter fließendem, lauwarmem Leitungswasser ab und lassen Sie sie an der Luft trocknen.`
+      },
+      {
+        q: `Wie oft sollten die O-Ring-Dichtungen an der ${p.brand} ${cleanModel} getauscht werden?`,
+        a: `Wir empfehlen einen Wechsel alle 12 bis 18 Monate oder nach ca. 2.500 Bezügen. Typische Indikatoren für fällige Dichtungen sind wässriger Tresterschlamm, ein schwergängiges Fahrgeräusch des Motors sowie klares Wasser, das ungenutzt in die Abtropfschale fließt.`
+      }
+    ],
+    vibrationspumpe: [
+      {
+        q: `Die Pumpe der ${p.brand} ${cleanModel} brummt laut, aber es wird kein Kaffee ausgegeben: Was ist die Ursache?`,
+        a: `Häufigste Ursache ist eine Trockenlauf-Kavitation oder eine verhärtete Silikon-Rückschlagkugel im Pumpenkopf. Wenn Luft in das System gelangt ist (z. B. nach Leerlaufen des Wassertanks), kann die 15-Bar Schwingkolbenpumpe gegen das Luftpolster keinen Druck aufbauen. Beziehen Sie 1–2 Tassen Heißwasser über die Dampflanze, um das Hydrauliksystem manuell zu entlüften.`
+      },
+      {
+        q: `Kann man anstelle der originalen Pumpe eine Ulka EX5 mit Messingstutzen verbauen?`,
+        a: `Ja, die Ulka EX5 (48W, 230V) mit massivem CW617N Messingauslauf ist die langlebigste Austauschoption. Sie ersetzt die günstigeren EP5-Kunststoffvarianten 1:1, da die elektrischen Anschlüsse (6,3 mm Flachstecker) und Einbaumaße identisch sind. Achten Sie darauf, den Druckschlauch mit einem neuen O-Ring zu sichern.`
+      },
+      {
+        q: `Wie messe ich mit einem Multimeter, ob die Magnetspule der Pumpe durchgebrannt ist?`,
+        a: `Trennen Sie die 230V Flachstecker von der Pumpe. Messen Sie den Widerstand zwischen beiden Kontakten. Eine intakte 48W-Spule mit integrierter Diode zeigt in einer Richtung ca. 1,8 bis 2,2 kΩ an und in der Gegenrichtung unendlich (Sperrrichtung der Diode). Ist der Durchgang in beiden Richtungen unendlich, liegt ein Spulenwicklungsbruch vor.`
+      }
+    ],
+    thermoblock: [
+      {
+        q: `Der Kaffee bei meiner ${p.brand} ${cleanModel} ist nur noch lauwarm: Ist der Thermoblock defekt?`,
+        a: `Wenn die Temperatur spürbar abfällt, liegt meist entweder eine dicke Kalkschicht im inneren 1.4301 Edelstahlrohr vor (verringert den Wärmeübergang drastisch) oder der NTC-Temperaturfühler liefert driftende Messwerte an die Steuerplatine. Messen Sie den Kaltwiderstand des NTC-Sensors: Er sollte bei 20 °C exakt 10 kΩ bzw. 100 kΩ (je nach Baureihe) betragen.`
+      },
+      {
+        q: `Beim Einschalten der ${p.brand} ${cleanModel} fliegt sofort der FI-Schutzschalter raus: Woran liegt das?`,
+        a: `Dies weist auf einen Isolationsfehler der 1400W-Heizwendel gegen das geerdete Aluminiumgehäuse hin. Wenn Wasser über undichte Schlauchanschlüsse auf die Heizkontakte tropft, entsteht ein Fehlerstrom. Ziehen Sie die Anschlüsse des Thermoblocks ab; fliegt die Sicherung danach nicht mehr, muss der Erhitzer ausgetauscht werden.`
+      },
+      {
+        q: `Müssen beim Thermoblock-Tausch auch die thermischen Schmelzsicherungen ersetzt werden?`,
+        a: `Ja, wir empfehlen zwingend neue Schmelzsicherungen (192 °C / 216 °C) und frische Wärmeleitpaste für den NTC-Fühler zu verbauen. Ausgelöste Schmelzsicherungen dürfen niemals überbrückt werden, da dies akute Brandgefahr bei einem Elektronikdefekt darstellt.`
+      }
+    ],
+    mahlwerk: [
+      {
+        q: `Das Mahlwerk der ${p.brand} ${cleanModel} dreht leer durch und zieht keine Kaffeebohnen ein: Warum?`,
+        a: `Entweder haben sich ölige Bohnenreste an den Einzugsschnecken verklebt, oder der Mahlspalt ist durch feuchtes Pulver vollständig zugesetzt. Reinigen Sie den Mahlwerkskragen mit einem harten Borstenpinsel und saugen Sie den Bohnenbehälter gründlich aus. Testen Sie das Mahlwerk anschließend mit trockenen, nicht aromatisierten Bohnen.`
+      },
+      {
+        q: `Wie entferne ich ein Steinchen oder einen Fremdkörper aus dem Mahlwerk?`,
+        a: `Trennen Sie das Gerät vom Netz. Nehmen Sie die Bohnen aus dem Trichter und lösen Sie den oberen Mahlwerksring (bei Siemens ceramDrive gegen den Uhrzeigersinn entriegeln). Hebeln Sie den Fremdkörper vorsichtig mit einer Spitzzange heraus. Drehen Sie das Mahlwerk von Hand einige Umdrehungen, um sicherzustellen, dass die Keramikschneiden keinen Zahnbruch erlitten haben.`
+      },
+      {
+        q: `Wann müssen die Mahlscheiben oder der Mahlkegel erneuert werden?`,
+        a: `Keramik-Mahlscheiben halten üblicherweise 10.000 bis 15.000 Bezüge, Stahlkegel ca. 6.000 bis 8.000 Zyklen. Wenn der Kaffee trotz feinster Einstellung wässrig schmeckt, die Crema hell bleibt und die Bezugszeit unter 12 Sekunden für einen Espresso sinkt, sind die Mahlkanten stumpf und müssen getauscht werden.`
+      }
+    ],
+    milchsystem: [
+      {
+        q: `Der Milchschaum bei der ${p.brand} ${cleanModel} spritzt nur noch und bleibt flüssig: Was hilft sofort?`,
+        a: `Zu 95% ist die winzige 0,8 mm Feinluft-Bohrung im Venturi-Kopf der Milchkaraffe durch verharzte Milcheiweiße verstopft. Wenn keine Luft beigemischt werden kann, entsteht kein Mikroschaum, sondern nur kochende, spritzende Milch. Legen Sie den zerlegten Milchauslauf für 20 Minuten in warmes Wasser mit Spezial-Milchfettlöser ein.`
+      },
+      {
+        q: `Welche Milchtemperatur und welcher Fettgehalt liefern das beste Schaumergebnis?`,
+        a: `Verwenden Sie stets kühlschrankkalte Milch (4 °C bis maximal 7 °C). Der Fettgehalt (1,5% oder 3,5%) beeinflusst primär den Geschmack; für die Schaumstabilität ist jedoch der Proteingehalt (Eiweiß) entscheidend (ideal: mindestens 3,3 g Eiweiß pro 100 ml).`
+      },
+      {
+        q: `Warum zieht die Karaffe überhaupt keine Milch mehr aus dem Behälter?`,
+        a: `Prüfen Sie die beiden O-Ringe am Dampfanschluss-Stutzen im Gehäuse. Sind diese Dichtungen spröde oder nicht mit lebensmittelechtem Fett gepflegt, entweicht der Dampfdruck seitlich und kann keinen Unterdruck (Venturi-Effekt) zum Ansaugen der Milch aufbauen.`
+      }
+    ],
+    drainageventil: [
+      {
+        q: `Warum landet das heiße Brühwasser komplett in der Auffangschale statt in der Kaffeetasse?`,
+        a: `Das ist das typische Schadensbild eines defekten Drainageventils. Die werkseitig verbaute Kunststoffkappe bricht durch den hydraulischen Druckstoß von 4 Bar ab, oder die inneren EPDM-Lippendichtungen haben ihre Spannkraft verloren. Das Wasser fließt dann drucklos in die Auffangschale ab.`
+      },
+      {
+        q: `Warum ist ein Upgrade auf eine Drainageventil-Kappe aus Messing ratsam?`,
+        a: `Massives CW617N Messing eliminiert die Sollbruchstelle der originalen Kunststoffkappen dauerhaft. Messing verzieht sich nicht unter Heißwassereinfluss und bricht selbst bei 50.000 Brühzyklen nicht ab. Ein solches Revisionsset verhindert künftige Wasserschäden dauerhaft.`
+      },
+      {
+        q: `Wie aufwendig ist der Austausch des Drainageventils bei der ${p.brand} ${cleanModel}?`,
+        a: `Der Austausch dauert für geübte Heimwerker ca. 30 bis 45 Minuten. Das Ventil sitzt an der Rückseite des Brühgruppen-Antriebs. Es müssen die Gehäuseseitenwand entfernt und der Antriebsmotor gelöst werden. Verwenden Sie beim Zusammenbau stets neue Lippendichtungen mit OKS 1110 Schmierfilm.`
+      }
+    ],
+    fehlercodes: [
+      {
+        q: `Was bedeutet die Fehlermeldung "${brd.typicalErrors}" bei der ${p.brand} ${cleanModel}?`,
+        a: `Diese Meldung signalisiert eine mechanische oder elektronische Timeout-Blockade. Die Steuerplatine überwacht über Mikroschalter oder Hallsensoren, ob Brühgruppe und Ventile ihre Endposition in einer definierten Millisekunden-Zeitspanne erreichen. Blockiert Kaffeefett die Führungsschienen, schaltet die Elektronik als Motorschutz ab.`
+      },
+      {
+        q: `Wie starte ich den internen Testmodus bei der ${p.brand} ${cleanModel}?`,
+        a: `Der Testmodus variiert je nach Modell-Generation: Schalten Sie das Gerät am Hauptschalter aus, halten Sie die Tasten 'Ein/Aus' und 'Kaffee' gleichzeitig gedrückt und schalten Sie das Gerät wieder ein. Im Testmodus können Pumpe, Mahlwerk, Brühgruppenmotor und Thermoblock manuell einzeln bestromt werden, um die defekte Komponente präzise zu lokalisieren.`
+      },
+      {
+        q: `Löscht ein Zurücksetzen auf Werkseinstellungen mechanische Fehlermeldungen?`,
+        a: `Nein. Ein Werksreset setzt lediglich Bezugszähler, Kaffeetemperaturen und Wasserhärtegrade zurück. Liegt ein mechanischer Defekt (Schwergängigkeit, defekter Mikroschalter, verkalkter Durchflussmesser) vor, wird die Fehlermeldung bei der nächsten Initialisierungsfahrt sofort erneut gesetzt.`
+      }
+    ],
+    wasserfilter: [
+      {
+        q: `Die Meldung "Gerät entkalken" geht trotz neu eingesetzter Filterpatrone nicht weg: Warum?`,
+        a: `Kaffeevollautomaten erkennen das Einsetzen einer Filterpatrone nicht immer automatisch (außer bei RFID-Systemen wie Jura CLARIS Smart). Der Filter muss zwingend im Gerätemenü unter 'Wasserfilter aktivieren' angemeldet werden. Zudem ersetzt der Filter nicht das Entkalken des oberen Brühkolbens und Dampfkreislaufs.`
+      },
+      {
+        q: `Darf man zum Entkalken der ${p.brand} ${cleanModel} Essig oder Zitronensäure verwenden?`,
+        a: `Auf keinen Fall! Essigsäure zersetzt die internen Silikon- und EPDM-Dichtungen und greift Aluminium-Thermoblöcke chemisch an. Zitronensäure bildet bei Heißwassererwärmung unlösliches Calciumcitrat, das Rohre irreparabel verstopft. Verwenden Sie ausschließlich professionelle Entkalker auf Basis von Amidosulfonsäure.`
+      },
+      {
+        q: `Wie entlüfte ich eine neue Filterpatrone vor dem Einsetzen in den Wassertank?`,
+        a: `Tauchen Sie die neue Patrone kopfüber in eine Schüssel mit kaltem Wasser und schwenken Sie sie leicht, bis keine Luftbläschen mehr aufsteigen. Erst dann wird die Patrone in den Wassertanksockel gesteckt. So verhindern Sie, dass die Ulka-Pumpe Luft ansaugt und trocken läuft.`
+      }
+    ],
+    kaffeeauslauf: [
+      {
+        q: `Der Kaffee läuft bei der ${p.brand} ${cleanModel} nur noch aus einer Düse heraus: Was ist zu tun?`,
+        a: `Im Doppel-Auslaufverteiler teilt ein kleines Prallblech den Kaffeestrom symmetrisch. Eingetrocknete Kaffeefette verkrusten die 1,2 mm engen Kanäle bevorzugt auf einer Seite. Nehmen Sie die Auslaufabdeckung ab und reinigen Sie den Verteiler mit einer 1,0 mm Düsenbürste oder weichen Sie ihn in warmem Wasser mit Kaffeefettlöser ein.`
+      },
+      {
+        q: `Wie nehme ich die verchromte Frontblende des Auslaufs ab, ohne Rastnasen abzubrechen?`,
+        a: `Schieben Sie den Auslauf ganz nach unten. An der Unterseite oder Rückseite befinden sich meist zwei kleine Rastzungen. Hebeln Sie diese vorsichtig mit einem Kunststoff-Spatel nach außen, während Sie die Chromblende nach vorne abziehen. Niemals mit Gewalt ziehen, da gebrochene Rastnasen zum Klappern führen.`
+      },
+      {
+        q: `Warum sammelt sich im Inneren des Kaffeeauslaufs oft Schimmel?`,
+        a: `Der Kaffeeauslauf bleibt nach jedem Bezug feucht und warm – ideale Bedingungen für Schimmelsporen auf Kaffeerückständen. Spülen Sie nach dem letzten Tagesbezug stets manuell mit Heißwasser nach und bauen Sie den Auslaufverteiler alle 6 Monate zur Tiefenreinigung aus.`
+      }
+    ],
+    magnetventil: [
+      {
+        q: `Beim Einschalten zischt es im Inneren der ${p.brand} ${cleanModel} dauerhaft: Ist das Magnetventil undicht?`,
+        a: `Ja, wenn die FKM-Viton-Dichtung des Hubankers durch Kalkkrusten blockiert ist, schließt das Ventil nicht mehr vollständig. Dampf und Restdruck entweichen unkontrolliert in die Auffangschale oder den Innenraum. Ein Tausch des Solenoidventils stellt die Drucktrennung wieder her.`
+      },
+      {
+        q: `Wie prüfe ich, ob die 230V Magnetspule des Solenoidventils noch intakt ist?`,
+        a: `Ziehen Sie die Gerätestecker ab. Messen Sie mit einem Ohmmeter den Spulenwiderstand. Ein intaktes 230V/50Hz Solenoidventil besitzt typischerweise einen Widerstand von ca. 2,0 bis 2,4 kΩ. Zeigt das Messgerät 'OL' oder unendlich, ist der Spulendraht durchgebrannt.`
+      },
+      {
+        q: `Kann man ein verkalktes Solenoidventil zerlegen und reinigen?`,
+        a: `Bei Messingventilen kann der Ankerdom mit einem Maulschlüssel abgeschraubt werden. Der Anker und die Feder können in Amidosulfonsäure entkalkt werden. Bei Kunststoffventilen (PPS) ist das Zerlegen oft nicht zerstörungsfrei möglich; hier ist ein kompletter Baugruppentausch wirtschaftlicher.`
+      }
+    ]
+  };
+
+  const list = faqGenerators[catKey] || faqGenerators.bruehgruppe;
+  return list;
+}
+
+/**
  * Returns an exhaustive, model-specific technical guide object
- * Checks for a cached Grok file first; if absent, procedurally generates
- * an authoritative, research-backed German technical guide.
  */
 function getTechnicalArticle(p) {
   // 1. Check if cached Grok file exists
@@ -225,14 +377,13 @@ function getTechnicalArticle(p) {
   }
 
   // 2. Procedural Research-Backed Synthesis
-  const catKey = p.categorySlug || 'bruehgruppe';
+  const catKey = p.partSlug || 'bruehgruppe';
   const brandKey = p.brandSlug || 'delonghi';
   
   const cat = CATEGORY_DATA[catKey] || CATEGORY_DATA.bruehgruppe;
   const brd = BRAND_DATA[brandKey] || BRAND_DATA.delonghi;
 
   const oemText = p.oem ? `mit OEM-Teilenummer ${p.oem}` : `nach strenger OEM-Erstausrüster-Spezifikation`;
-  const specText = (p.specs || []).join(', ');
 
   // Deep Mechatronic Breakdown (300+ words)
   const engineering_breakdown = `Die Komponente "${p.partName}" für den Kaffeevollautomaten ${p.brand} ${p.model} (${oemText}) ist das zentrale hydraulisch-mechanische Bindeglied für einen stabilen Brühdruck und aromatische Extraktion. Das Bauteil basiert auf einem ${cat.materials}. Im regulären Betrieb widersteht diese Baugruppe extremen Beanspruchungen: ${cat.operatingPressures} sowie einer thermischen Dauerbelastung im Bereich von ${cat.tempRange}.
@@ -339,21 +490,8 @@ Typische mechanische Ausfallursachen in der Praxis sind: ${cat.commonFailures}. 
     }
   ];
 
-  // 3 Rich FAQs (60+ words each)
-  const faq = [
-    {
-      q: `Kann ich den Austausch von "${p.partName}" bei der ${p.brand} ${p.model} selbst durchführen?`,
-      a: `Ja, der Austausch ist für handwerklich geschickte Laien innerhalb von 15 bis 30 Minuten problemlos machbar. Dank der modularen Bauweise von ${p.brand} werden lediglich handelsübliche Standardwerkzeuge wie Torx-Schraubendreher (${cat.tools.split(',')[0]}) benötigt. Befolgen Sie einfach unsere bebilderte Schritt-für-Schritt-Anleitung und achten Sie auf die Netztrennung vor Beginn der Arbeiten.`
-    },
-    {
-      q: `Welches Schmiermittel muss für die Dichtungen und Mechanik zwingend verwendet werden?`,
-      a: `Verwenden Sie ausnahmslos 100% lebensmittelechtes Silikonfett mit NSF-H1-Zertifizierung oder Trinkwasserzulassung nach UBA-Leitlinie (z.B. OKS 1110, Glissa oder Original ${brd.name}-Fett). Mineralölbasierte Schmierstoffe, WD-40 oder Speiseöle dürfen keinesfalls verwendet werden, da sie den POM-Kunststoff verspröden, Dichtungen aufquellen lassen und ranzig werden.`
-    },
-    {
-      q: `Wann sollte dieses Ersatzteil präventiv gewechselt werden, um Folgeschäden zu vermeiden?`,
-      a: `Wir empfehlen eine präventive Revision nach ca. 2.500 bis 4.000 Brühzyklen oder spätestens nach 2 Jahren Betriebszeit. Verschlissene Dichtungen führen oft zu schleichendem Wasseraustritt im Gehäuseinneren, der teure Elektronikschäden an der Hauptplatine oder Korrosion am Spindelantrieb verursachen kann. Eine rechtzeitige Wartung spart mehrere hundert Euro Reparaturkosten.`
-    }
-  ];
+  // 100% Distinct Category & Model Specific FAQs
+  const faq = generateDistinctFaqs(p, cat, brd);
 
   // Dedicated Google Search Intent Direct Answers
   const google_intent_qa = [
@@ -388,6 +526,7 @@ Typische mechanische Ausfallursachen in der Praxis sind: ${cat.commonFailures}. 
 
 module.exports = {
   getTechnicalArticle,
+  generateDistinctFaqs,
   CATEGORY_DATA,
   BRAND_DATA
 };
