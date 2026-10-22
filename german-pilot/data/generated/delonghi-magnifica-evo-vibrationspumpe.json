@@ -1,0 +1,96 @@
+{
+  "page_title": "De'Longhi Magnifica Evo Ulka EX5 Pumpe: Mechatronik-Guide & Tausch",
+  "meta_description": "Ulka EX5 Pumpe (5113211311) für De'Longhi ECAM 290.61.B Magnifica Evo im mechatronischen Praxis-Check: 48W, 19 Bar, CW617N Messing & Tauschanleitung.",
+  "word_count_check": 1285,
+  "engineering_breakdown": "Die Ulka EX5 Schwingkolbenpumpe (De'Longhi Ersatzteilnummer 5113211311) bildet das hydraulische Herzstück des Brühkreislaufs in der De'Longhi Magnifica Evo (ECAM 290.61.B). Ihr Funktionsprinzip basiert auf einem elektromagnetischen Linearantrieb: Eine 48-Watt-Hochleistungsmagnetspule umschließt eine zylindrische Druckkammer, in welcher ein ferromagnetischer Edelstahlkolben axial gelagert ist. Durch Vorschaltung einer Halbleiterdiode des Typs 1N4007 in Serie zur Wicklung wird das 230-V-Wechselstromnetz (50 Hz) einweggleichgerichtet. Dies erzeugt 50 Zugimpulse pro Sekunde, bei denen der Kolben gegen eine kalibrierte Rückstellfeder aus korrosionsbeständigem Federstahl 1.4310 (X10CrNi18-8) mit einer exakt definierten Federkonstante schlägt. Das Zusammenspiel aus elektromagnetischer Beschleunigungskraft und mechanischer Federreversierung generiert einen statischen Maximaldruck von 15 bis 19 Bar bei Nullförderung sowie einen typischen Betriebsdruck von 9 bis 11,5 Bar bei der Espressoextraktion im Arbeitspunkt von 180 bis 250 ml/min.\n\nWerkstofftechnisch unterscheidet sich die Ulka EX5 von Standardpumpen wie der EP5 durch ihren massiven Auslaufstutzen aus bleiarmer Zerspanungsmessing-Legierung CW617N (CuZn40Pb2). Dieser Werkstoff gewährleistet eine überragende thermomechanische Dauerstandfestigkeit gegenüber den Druckschlägen des nachgeschalteten federbelasteten Überdruck- und Entlüftungsventils. Das innenliegende Pilz- bzw. Rückschlagventil besteht aus reibungsarmem Polyoxymethylen (POM / Delrin) in Kombination mit hochelastischen Dichtkörpern aus Fluorkautschuk bzw. vernetztem Vinyl-Methyl-Silikon (VMQ). Diese Materialpaarung minimiert Reibungsverluste und verhindert Verklebungen bei thermischen Zyklen bis zu 95 °C Wassertemperatur am Pumpenausgang.\n\nDer primäre mechatronische Ausfallmechanismus resultiert selten aus dem Spulendurchschlag, sondern aus mechanischem und tribologischem Verschleiß. Durch den permanenten Kontakt mit abrasivem Restkalk sowie sauren Entkalkermedien auf Amidosulfonsäure- oder Zitronensäurebasis erodieren die Dichtlippen des internen POM-Pilzventils. Gleichzeitig unterliegt die 1.4310-Kolbenfeder einer dynamischen Wechsellast-Ermüdung, was zu Mikrorissen und Federkraftverlust führt. Die Folge ist eine gestörte Kavitationsdynamik: Die Pumpe kann den Schließdruck im Saughub nicht mehr aufrechterhalten, wodurch die Fördermenge unter Gegendruck drastisch kollabiert.",
+  "symptoms_and_causes": "Ein Defekt der Ulka EX5 in der De'Longhi Magnifica Evo ECAM 290.61.B äußert sich durch eine differenzierte akustische und hydraulische Symptomatik. Das deutlichste Frühwarnzeichen ist ein verändertes Klangbild der Maschine während des Bezugs: Ein hochfrequentes, metallisch kreischendes Schnarren deutet auf Trockenlauf oder einsetzende Kavitationserscheinungen hin, wenn das saugseitige Ventil Luft zieht oder das Flowmeter verengt ist. Schlägt dieses Geräusch in ein auffällig leises, dumpfes 50-Hz-Brummen um, liegt meist eine Blockade des Edelstahlkolbens durch massive Kalkpartikel oder ein Bruch der Kolbenfeder vor; der Anker vibriert ohne nennenswerten Hubweg im Wechselfeld. Ein unregelmäßiges, schnelles Tickern hingegen signalisiert ein undichtes Rückschlagventil, bei dem der Druck während der Halbwelle zurück in den Wassertank entweicht.\n\nHydraulisch resultiert der Leistungsabfall in matschigen, unvollständig verpressten Kaffeesatz-Pucks im Tresterbehälter. Da der hydraulische Kolben der Brühgruppe über den Pumpendruck mitunterstützt und der Gegendruck im Kaffeemehlbett für die Extraktionszeit entscheidend ist, führt ein Druckabfall unter 8 Bar zu wässrigem, unterextrahiertem Espresso ohne Crema. Elektronisch registriert die Magnifica Evo den Ausfall über das Turbinen-Flowmeter: Fördert die Pumpe bei anliegender Spulenspannung weniger als ca. 30 ml pro 10 Sekunden, detektiert die Hauptplatine ein fehlendes Hall-Signal. Das Gerät bricht den Bezug ab und quittiert dies über das LED-Panel mit dem Fehler 'Wasserkreislauf leer / System füllen' oder der allgemeinen Störungsanzeige (Warndreieck). Elektrisch kann zudem die integrierte 1N4007-Gleichrichterdiode durch thermische Überlastung einen Kurzschluss erleiden; die Spule erhält dann reine Wechselspannung, heizt sich rasant auf und löst den an der Spulenwandung sitzenden 120-°C-Thermoschutzschalter aus.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Freischaltung und Gehäusedemontage",
+      "action": "Netzstecker der ECAM 290.61.B ziehen, Wassertank, Tropfschale und Bohnenbehälterdeckel entfernen. Mit einem Torx-Schraubendreher TX20 die Schrauben der Rückwand lösen, Rückwand nach hinten abziehen und die beiden Seitenteile vorsichtig nach hinten ausschieben."
+    },
+    {
+      "step": 2,
+      "title": "Hydraulische Entlastung und Leitungsdemontage",
+      "action": "Rastklammer am CW617N-Messing-Druckstutzen der Pumpe mit einem feinen Schlitzschraubendreher entriegeln. Den PTFE-Druckschlauch zum Thermoblock vorsichtig axial herausziehen und die innenliegende VMQ-O-Ring-Dichtung inspizieren."
+    },
+    {
+      "step": 3,
+      "title": "Elektrische Entkopplung und Sensorprüfung",
+      "action": "Die beiden Flachsteckhülsen (6,3 mm) von den Spulenkontakten der Ulka EX5 abziehen. Den in die Haltenut eingeclipsten Klixon-Thermoschutzschalter vorsichtig aushebeln, ohne die Zuleitungen mechanisch zu knicken."
+    },
+    {
+      "step": 4,
+      "title": "Ausbau der Pumpe und Gummiaufhängung",
+      "action": "Den flexiblen Niederdruck-Zulaufschlauch (Silikon) von der Tülle des Saugstutzens abziehen. Die gesamte Pumpeneinheit aus den beiden gummigelagerten Schwingungsdämpfern im Gehäuseboden herausheben und die Gummikappen auf Versprödung kontrollieren."
+    },
+    {
+      "step": 5,
+      "title": "Installation und hydraulische Entlüftung",
+      "action": "Neue Ulka EX5 (5113211311) in die Schwingungsdämpfer einsetzen, Saugschlauch aufstecken und Druckschlauch mit neuem, lebensmittelecht gefettetem O-Ring per Federklammer verriegeln. Maschine schließen, Wassertank füllen und über die Heißwasserfunktion das System vollständig blasenfrei entlüften."
+    }
+  ],
+  "step_by_step_narrative": "Der mechatronische Tausch der Ulka EX5 Vibrationspumpe in einer De'Longhi Magnifica Evo ECAM 290.61.B erfordert methodische Präzision und zwingende Schutzmaßnahmen. Vor Beginn aller Arbeiten ist die Maschine allpolig vom 230-V-Netz zu trennen; Kondensatoren auf der Leistungselektronik entladen sich binnen weniger Minuten selbstständig. Zur Durchführung werden ein Torx-Schraubendreher TX20 (für Gehäuseschrauben), ein TX10, ein Schlitzschraubendreher der Größe 2,5 mm, eine Spitzzange sowie lebensmittelkonformes Silikonfett (OKS 1110) benötigt.\n\nNach Demontage der Rückwand und dem Ausrasten der Rastnasen der Seitenteile liegt die Pumpengruppe im hinteren rechten Quadranten der ECAM frei. Das Hauptaugenmerk gilt der dämpfenden Lagerung: Die Ulka EX5 ist in zwei formelastischen Schwingungsdämpfern aus EPDM/VMQ gelagert, die Körperschallübertragungen auf das Chassis minimieren. Diese Dämpfer dürfen beim Ausbau nicht zerrissen werden. Lösen Sie die Flachstecker mit leichtem Druck auf deren Rastzungen. Notieren Sie sich die Position des Thermoschalters, welcher den Spulenkörper vor unzulässiger Erwärmung über 120 °C schützt.\n\nBeim Lösen des CW617N Messingstutzens ist größte Sorgfalt geboten: Entfernen Sie die Sicherungsklammer aus Federstahl radial und ziehen Sie den PTFE-Druckschlauch vibrationsfrei heraus. Der darin befindliche O-Ring (Abmessung ca. 3,4 x 1,9 mm VMQ70) muss zwingend erneuert und mit OKS 1110 hauchdünn benetzt werden, um Quetschungen beim Einschieben in die Messingbohrung zu verhindern. Nach dem mechanischen Einsetzen der neuen Originalpumpe (OEM 5113211311) und Anschluss der Schläuche erfolgt die Remontage des Gehäuses.\n\nDie Erstinbetriebnahme erfordert eine Kalibrierung der Hydraulik: Da die neue Pumpe trocken verbaut ist, kann das interne Rückschlagventil durch Oberflächenspannung zunächst klemmen. Starten Sie das Heißwasser-Bezugsprogramm. Sollte die Pumpe nach 10 Sekunden nicht selbstständig ansaugen, hilft ein leichter hydrostatischer Überdruck über eine Einwegspritze am Saugschlauch. Sobald das Wasser pulsierungsarm austritt, ist der Brühdruck stabil kalibriert.",
+  "compatibility_matrix": {
+    "fits": [
+      "De'Longhi Magnifica Evo ECAM 290.61.B",
+      "De'Longhi Magnifica Evo ECAM 290.81.TB",
+      "De'Longhi Magnifica Evo ECAM 292.52.GB",
+      "De'Longhi Dinamica ECAM 350.55.B",
+      "De'Longhi Magnifica S ECAM 22.110.B",
+      "De'Longhi Primadonna Soul ECAM 610.75.MB"
+    ],
+    "incompatible": [
+      "De'Longhi Dedica EC 685 (Abweichende axiale Druckabgangsgeometrie)",
+      "Nespresso Lattissima Pro EN 750 (Verwendet spezielle Bajonett-Schnellanschlüsse)",
+      "Jura E8 G2 (Benötigt invertierte Halterung und 24V-Flowmeter-Ansteuerung)",
+      "Philips Saeco Incanto (Verwendet Ulka HF mit 22W / abweichender Halterung)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Entnahme und Spülung der Brühgruppe unter fließendem warmem Wasser ohne Reinigungsmittel, um hydraulischen Gegendruck durch Kaffeefettablagerungen im Brühsieb zu minimieren."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Inspektion des Wassertank-Einlassventils und Einsetzen eines frischen De'Longhi DLS C002 Wasserfilters zur Verminderung von Abrasivpartikeln im Ansaugtrakt der Pumpe."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Durchführung einer sensorgesteuerten Entkalkung mit Original-Entkalker auf Milchsäurebasis (EcoDecalk). Keine aggressiven Essig- oder Sulfaminsäuren nutzen, um die VMQ-Ventilsitze der Pumpe nicht anzugreifen."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Fehlermeldung 'Wasserkreislauf leer / Spülen'",
+      "cause": "Flowmeter registriert keine Impulse. Pumpenkolben durch Kalk blockiert oder Kolbenfeder 1.4310 gebrochen.",
+      "fix": "Messung der Spulenspannung (230V~). Liegt Spannung an, aber kein Durchfluss erfolgt: Ulka EX5 tauschen und Flowmeter auf Fremdkörper prüfen."
+    },
+    {
+      "error": "Pumpe brummt sehr leise, kein Kaffeebezug",
+      "cause": "Gleichrichterdiode 1N4007 defekt (Kurzschluss) oder Schwingkolben mechanisch im Zylinder festgefressen.",
+      "fix": "Widerstandsmessung mit Multimeter im Diodentest-Modus durchführen. Zeigt die Diode Durchgang in beide Richtungen, Pumpe austauschen."
+    },
+    {
+      "error": "Wässriger Trester, unzureichende Crema",
+      "cause": "Verschleiß der inneren POM-Ventillagerung; Arbeitsdruck fällt unter Gegendruck auf unter 7 Bar ab.",
+      "fix": "Druckprüfung mit Brühgruppenmanometer. Bei Maximaldruck < 10 Bar Ulka EX5 (5113211311) ersetzen und O-Ringe mit OKS 1110 servicieren."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Warum ist der CW617N-Messingauslauf der Ulka EX5 gegenüber der günstigeren Kunststoffvariante EP5 vorzuziehen?",
+      "a": "Der CW617N Zerspanungsmessing-Stutzen (CuZn40Pb2) weist eine Zugfestigkeit von über 440 N/mm² auf und verhindert hydrodynamische Dauerbrüche, wie sie bei Polyamidstutzen (Ulka EP5) durch die permanenten 50-Hz-Druckschläge der Magnetspule auftreten können. Zudem verhindert die metallische Gewinde- bzw. Klammerführung das Ausleiern der O-Ring-Passung bei thermischen Wechselbelastungen von 20 °C bis 95 °C im Innenraum der De'Longhi Magnifica Evo."
+    },
+    {
+      "q": "Welche elektrotechnische Funktion besitzt die integrierte 1N4007 Diode und wie wird sie messtechnisch geprüft?",
+      "a": "Die 1N4007 Diode (1000 V Spitzensperrspannung, 1 A Nennstrom) realisiert eine Einweggleichrichtung des 50-Hz-Wechselstroms. Sie sperrt jede zweite Halbwelle, wodurch der Kolben 50-mal pro Sekunde elektromagnetisch angezogen wird und die restliche Zeit durch die 1.4310-Feder zurückgestellt werden kann. Zur mechatronischen Prüfung schaltet man das Multimeter in den Diodentest: In Flussrichtung muss eine Schwellenspannung von ca. 0,5 bis 0,7 Volt messbar sein, in Sperrrichtung muss der Wert 'OL' (unendlich) betragen."
+    },
+    {
+      "q": "Aus welchem Grund sind die Kaffeesatz-Pucks im Tresterbehälter nach dem Einbau einer neuen Ulka EX5 wieder trocken und fest?",
+      "a": "Der Kolben der Brühgruppe benötigt einen präzise aufgebauten Mindesthydraulikdruck von 9 bis 12 Bar, um das Kaffeemehl optimal zu verdichten und das federbelastete Cremaventil im Gruppenkolben sauber zu öffnen. Eine verschlissene Pumpe erreicht diesen Druck nicht mehr, das Wasser tröpfelt nur ein und kann am Bezugsende nicht über das Expansionsventil evakuiert werden. Die neue Ulka EX5 gewährleistet die vollständige Schwallentwässerung nach Bezugsende."
+    }
+  ]
+}

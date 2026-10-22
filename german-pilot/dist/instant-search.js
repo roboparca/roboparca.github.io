@@ -1,61 +1,63 @@
 
-(function(){
-  var searchInput = document.getElementById('site-search');
-  var clearBtn = document.getElementById('search-clear');
-  var dropdown = document.getElementById('search-dropdown');
-  if (!searchInput || !dropdown) return;
+  (function() {
+    let indexData = [];
+    const searchInput = document.getElementById('site-search');
+    const searchClear = document.getElementById('search-clear');
+    const searchDropdown = document.getElementById('search-dropdown');
 
-  var index = [];
-  fetch('https://roboparca.github.io/kaffeereparatur/search-index.json')
-    .then(function(r){ return r.json(); })
-    .then(function(d){ index = d; });
+    if (!searchInput) return;
 
-  function doSearch(val) {
-    var q = val.trim().toLowerCase();
-    if (!q) {
-      dropdown.classList.remove('show');
-      if (clearBtn) clearBtn.style.display = 'none';
-      return;
-    }
-    if (clearBtn) clearBtn.style.display = 'flex';
+    fetch('https://roboparca.github.io/kaffeereparatur/search-index.json')
+      .then(r => r.json())
+      .then(d => { indexData = d; })
+      .catch(e => console.error(e));
 
-    var results = index.filter(function(item) {
-      return item.t.toLowerCase().indexOf(q) !== -1 ||
-             item.b.toLowerCase().indexOf(q) !== -1 ||
-             item.m.toLowerCase().indexOf(q) !== -1 ||
-             item.c.toLowerCase().indexOf(q) !== -1;
-    }).slice(0, 8);
+    searchInput.addEventListener('input', function() {
+      const q = this.value.trim().toLowerCase();
+      if (!q) {
+        searchDropdown.classList.remove('show');
+        searchClear.style.display = 'none';
+        return;
+      }
+      searchClear.style.display = 'block';
 
-    if (results.length === 0) {
-      dropdown.innerHTML = '<div style="padding:12px; font-size:13px; color:#78716c;">Keine passenden Ersatzteile gefunden.</div>';
-    } else {
-      dropdown.innerHTML = results.map(function(item){
-        return '<a href="' + item.u + '" class="search-dropdown-item">' +
-          '<div style="display:flex; align-items:center;">' +
-            '<img src="' + item.i + '" class="search-item-thumb" onerror="this.style.opacity=\'0.7\'">' +
-            '<div>' +
-              '<div style="font-weight:700; font-size:13px;">' + item.t + '</div>' +
-              '<div style="font-size:11px; color:#78716c;">' + item.b + ' • ' + item.c + '</div>' +
-            '</div>' +
-          '</div>' +
-          '<span style="font-size:16px; color:#854d0e;">›</span>' +
-        '</a>';
-      }).join('');
-    }
-    dropdown.classList.add('show');
-  }
+      const results = indexData.filter(item => 
+        item.title.toLowerCase().includes(q) || 
+        item.category.toLowerCase().includes(q) ||
+        item.brand.toLowerCase().includes(q) ||
+        (item.asin && item.asin.toLowerCase().includes(q))
+      ).slice(0, 8);
 
-  searchInput.addEventListener('input', function(e){ doSearch(e.target.value); });
-  if (clearBtn) {
-    clearBtn.addEventListener('click', function(){
+      if (results.length === 0) {
+        searchDropdown.innerHTML = '<div style="padding:12px; font-size:13px; color:#78716c;">Kein passendes Bauteil gefunden.</div>';
+      } else {
+        searchDropdown.innerHTML = results.map(r => `
+          <a href="${r.url}" class="search-dropdown-item">
+            <div style="display:flex; align-items:center; overflow:hidden;">
+              <img src="${r.thumb}" class="search-item-thumb" alt="${r.title}" onerror="this.style.display='none'">
+              <div style="overflow:hidden;">
+                <div style="font-size:13px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:260px;">${r.title}</div>
+                <div style="font-size:11px; color:#78716c;">${r.brand} • ${r.category}</div>
+              </div>
+            </div>
+            <span style="font-size:12px; color:#854d0e; font-weight:700;">›</span>
+          </a>
+        `).join('');
+      }
+      searchDropdown.classList.add('show');
+    });
+
+    searchClear.addEventListener('click', function() {
       searchInput.value = '';
-      doSearch('');
+      searchDropdown.classList.remove('show');
+      searchClear.style.display = 'none';
       searchInput.focus();
     });
-  }
-  document.addEventListener('click', function(e){
-    if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
-      dropdown.classList.remove('show');
-    }
-  });
-})();
+
+    document.addEventListener('click', function(e) {
+      if (!searchInput.contains(e.target) && !searchDropdown.contains(e.target)) {
+        searchDropdown.classList.remove('show');
+      }
+    });
+  })();
+  

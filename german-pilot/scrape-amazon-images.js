@@ -15,6 +15,18 @@ if (fs.existsSync(OUT_FILE)) {
   }
 }
 
+const USER_AGENTS = [
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0',
+  'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_4_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15'
+];
+
+function getRandomUserAgent() {
+  return USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)];
+}
+
 function searchAmazonDe(query) {
   return new Promise((resolve) => {
     const clean = query.replace(/['"]/g, '').trim();
@@ -22,9 +34,11 @@ function searchAmazonDe(query) {
     
     const req = https.get(url, {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'User-Agent': getRandomUserAgent(),
         'Accept-Language': 'de-DE,de;q=0.9,en;q=0.8',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+        'Cache-Control': 'no-cache',
+        'Pragma': 'no-cache'
       }
     }, res => {
       let data = '';
@@ -67,11 +81,14 @@ function getOptimizedSearchQuery(p) {
   };
 
   const term = categoryTerms[p.partSlug] || p.category;
-  return `${p.brand} ${cleanModel} ${term}`;
+  return {
+    primary: `${p.brand} ${cleanModel} ${term}`,
+    secondary: `${p.brand} ${term}`
+  };
 }
 
-async function scrapeBatch(limit = 10) {
-  console.log(`🔍 Scraping Amazon.de images & ASINs for products (limit: ${limit})...`);
+async function scrapeBatch(limit = Infinity) {
+  console.log(`🔍 Scraping Amazon.de images & ASINs for products (target limit: ${limit === Infinity ? 'ALL' : limit})...`);
   let updated = 0;
 
   for (let i = 0; i < products.length && updated < limit; i++) {
@@ -82,24 +99,33 @@ async function scrapeBatch(limit = 10) {
       continue;
     }
 
-    const searchQuery = getOptimizedSearchQuery(p);
-    console.log(`[${i+1}/${products.length}] 🔎 Searching Amazon.de: "${searchQuery}"...`);
+    const { primary, secondary } = getOptimizedSearchQuery(p);
+    console.log(`[${i+1}/${products.length}] 🔎 Searching Amazon.de: "${primary}"...`);
 
-    const results = await searchAmazonDe(searchQuery);
+    let results = await searchAmazonDe(primary);
+    
+    // Secondary search fallback if primary had 0 results
+    if (!results || results.length === 0) {
+      console.log(`   🔄 Primary empty, trying secondary fallback: "${secondary}"...`);
+      await new Promise(r => setTimeout(r, 600));
+      results = await searchAmazonDe(secondary);
+    }
+
     if (results && results.length > 0) {
       cache[key] = results;
       console.log(`   ✅ Found ${results.length} Amazon images! Top ASIN: ${results[0].asin}`);
       updated++;
       fs.writeFileSync(OUT_FILE, JSON.stringify(cache, null, 2), 'utf8');
     } else {
-      console.log(`   ⚠️ No images found for "${searchQuery}"`);
+      console.log(`   ⚠️ No images found for "${primary}"`);
     }
 
-    await new Promise(r => setTimeout(r, 700));
+    await new Promise(r => setTimeout(r, 650));
   }
 
-  console.log(`🎉 Batch finished! Updated ${updated} items. Total cached: ${Object.keys(cache).length}`);
+  console.log(`🎉 Batch finished! Updated ${updated} items. Total cached: ${Object.keys(cache).length}/${products.length}`);
 }
 
-const argLimit = parseInt(process.argv[2] || '10', 10);
+const rawArg = process.argv[2];
+const argLimit = rawArg === 'all' || !rawArg ? Infinity : parseInt(rawArg, 10);
 scrapeBatch(argLimit);

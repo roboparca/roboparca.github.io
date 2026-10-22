@@ -1,0 +1,93 @@
+{
+  "page_title": "De'Longhi ECAM 22.110 Kaffeeauslauf 7313220451 Reparaturanleitung",
+  "meta_description": "Kaffeeauslaufverteiler 7313220451 für De'Longhi Magnifica S ECAM 22.110.B wechseln: Mechatroniker-Anleitung zu Tausch, Dichtungen, Justage & Fehleranalyse.",
+  "word_count_check": 1285,
+  "engineering_breakdown": "Der Kaffeeauslaufverteiler (Herstellernummer 7313220451) bildet das finale hydrodynamische Übergangsglied im Fluidsystem der De'Longhi Magnifica S (ECAM 22.110.B). Nach dem Brühvorgang tritt der extrahierte Espresso mit einem dynamischen Fließdruck von ca. 1,2 bis 2,5 bar – entspannt vom primären Brühdruck der Ulka EP5 Schwingkolbenpumpe (15 bar Peak, ca. 9 bar Brühkammerdruck) – über das vertikal verfahrbare Steigrohr in das Verteilergehäuse ein. Das Modul besteht primär aus hochmolekularem Polyoxymethylen (POM / Delrin) im fluidführenden Kern sowie einer schlagzähen, verchromten ABS-Außenblende. POM gewährleistet hierbei eine thermische Dimensionsstabilität bis über 110 °C und eine ausgeprägte Hydrolyse- sowie Säurebeständigkeit gegenüber Kaffeesäuren (pH-Werte zwischen 4,5 und 5,5).\n\nDie Dichtebenen zwischen dem vertikal verschiebbaren Auslaufschlitten und dem statischen Zuleitungskanal der Brühgruppe werden durch lebensmittelechte Elastomer-Formdichtungen aus Fluorsilikon- bzw. Vinyl-Methyl-Silikonkautschuk (VMQ) mit einer Härte von 70 Shore A hermetisch abgesichert. Das geometrische Strömungsdesign der inneren Verteilkammer teilt das Fluidvolumen über eine symmetrische Y-Gabelung mit exakt 1,8 mm Düseninnendurchmesser auf beide Ausläufe auf. Dabei ist die laminare Strömungsführung entscheidend: Jede Rauigkeit, Querschnittsverengung oder Kantenverwirbelung führt zur Scherung der Emulsion, wodurch die Crema-Mikrobläschen kollabieren und ein unregelmäßiges Strahlbild entsteht. Federelemente und Rasthaken aus kaltgewalztem Edelstahl 1.4310 (X10CrNi18-8) sorgen für die spielfreie Friktion der Höhenverstellung über den Verfahrweg von ca. 65 mm bis 105 mm Tassenhöhe. Das primäre Ausfallkriterium ist die thermomechanische Alterung in Kombination mit Kaffeefettpolymerisation: Ungesättigte Fettsäuren und Schwebstoffe verharzen in den engen Düsenschenkeln, verengen den lichten Querschnitt asymmetrisch und erzeugen einen hydraulischen Rückstau, der letztlich zum Bersten der Ultraschall-Schweißnähte des POM-Körpers oder zum Dichtungsversagen am Einlaufstutzen führt.",
+  "symptoms_and_causes": "Defekte oder verstopfte Kaffeeauslaufverteiler manifestieren sich durch klar definierte mechatronische und akustische Symptome. Das offensichtlichste hydraulische Fehlerbild ist der einseitige oder fadenförmige Kaffeebezug: Bei der Zwei-Tassen-Zubereitung weichen die Füllmengen um mehr als 15 % voneinander ab, oder aus einer Düse tropft das Fluid lediglich unregelmäßig heraus. Tritt während des Bezugs ein zischendes oder gurgelndes Nebengeräusch auf, deutet dies auf Kavitation oder Lufteintrag durch Mikrorisse im Verteilergehäuse hin.\n\nEin weiteres kritisches Symptom ist das Vorhandensein von Kaffeebrühe hinter der Gerätefrontblende oder eine überproportional schnell gefüllte Tropfschale, ohne dass die Brühgruppe leckt. Weisen die Kaffeepucks im Tresterbehälter eine schlammige, nasse Konsistenz auf ('Wet Puck Syndrome'), kann dies auf einen unzureichenden Druckabfall nach der Extraktion zurückzuführen sein: Verstopfte Düsenkanäle erzeugen einen parasitären Gegendruck, der die Drainagefunktion des Drainageventils behindert. Akustisch quittiert die Ulka EP5 Pumpe eine hochgradige Blockade des Auslaufverteilers mit einem auffallend leisen, dumpfen Brummen, da der Arbeitsdruck im hydraulischen Stillstand gegen das Überdruckventil (16 bar) ansteigt. Mechanisch führt eingetrocknetes Kaffeefett im Schiebemechanismus zu quietschenden Reibgeräuschen und einer Blockade der Höhenverstellung, was häufig zum Bruch der rückseitigen Führungsnasen führt.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "action": "Netzstecker ziehen (vollst��ndige 230V-Freischaltung). Wassertank, Tropfschale, Tresterbehälter und Brühgruppe entnehmen. Fünf Torx TX20-Schrauben an der Gehäuserückwand herausdrehen und Rückwand nach hinten abziehen."
+    },
+    {
+      "step": 2,
+      "action": "Beide Seitenteile nach hinten schieben und aus den Frontrasten aushängen. Den Heißwasser-/Dampfdrehknopf nach vorne abziehen. Die beiden oberen Torx TX10-Schrauben der Frontblende lösen."
+    },
+    {
+      "step": 3,
+      "action": "Bedienelektronik-Kabelbaum vorsichtig entriegeln. Die frontale Schieberblende an den seitlichen Rasten vorsichtig spreizen und nach vorne abhebeln, um die innere Mechanik des Auslaufs freizulegen."
+    },
+    {
+      "step": 4,
+      "action": "Den flexiblen Verbindungsschlauch bzw. Einlaufstutzen vom Steigrohr abziehen. Die Rastlaschen des alten Kaffeeauslaufverteilers (OEM 7313220451) mit einem Schlitzschraubendreher entriegeln und das Modul aus den Führungsschienen nach unten herausziehen."
+    },
+    {
+      "step": 5,
+      "action": "Führungsschienen reinigen und hauchdünn mit OKS 1110 Silikonfett schmieren. Den neuen Verteiler 7313220451 passgenau einschieben, bis die Haltenasen hörbar einrasten. Dichtungsstutzen aufstecken und Gehäuse in umgekehrter Reihenfolge montieren."
+    }
+  ],
+  "step_by_step_narrative": "Zur fachgerechten Durchführung des Komponentenwechsels werden Torx-Schraubendreher der Größen TX10 und TX20, ein flacher Schlitzschraubendreher (Größe 2,5 mm) sowie lebensmittelechtes Silikonfett (Zulassung nach NSF H1, vorzugsweise OKS 1110) benötigt. Bevor Arbeiten am Chassis beginnen, muss das Gerät ausnahmslos durch Ziehen des Netzsteckers spannungsfrei geschaltet werden; es besteht Lebensgefahr durch netzspannungsführende Bauteile am Thermoblock und Schalterbereich.\n\nBeginnen Sie mit der Demontage der rückwärtigen Chassisschale. Lösen Sie hierzu alle peripheren TX20-Schrauben. Nach dem Abnehmen der Rückwand lassen sich die linken und rechten Gehäuseseitenteile durch Entriegeln der unteren Rastlaschen nach hinten wegschieben. Um Zugriff auf den Auslaufverteiler zu erhalten, muss die Frontpartie geöffnet werden. Ziehen Sie den Drehregler des Dampfventils axial ab. Lösen Sie die Schrauben der oberen Blendenfixierung und klappen Sie die Bedienblende vorsichtig nach vorne. Markieren oder fotografieren Sie die Flachbandkabelverbindung zur Hauptplatine, bevor Sie diese trennen.\n\nDer Auslaufverteiler 7313220451 sitzt in einem vertikalen Schlitten hinter der verchromten Blende. Hebeln Sie die Chromblende vorsichtig mit einem Kunststoff-Demontagewerkzeug aus den vier Rastpunkten. Dahinter wird der POM-Verteilerblock sichtbar. Trennen Sie den fluidischen Übergangsstutzen zum Brühgruppenkanal; prüfen Sie hierbei zwingend den Zustand des integrierten VMQ-O-Rings. Ziehen Sie den alten Verteiler nach unten aus den Führungsschienen heraus. Reinigen Sie die Kulissenführung von verharzten Kaffeeresten und tragen Sie eine mikroskopische Schicht OKS 1110 auf die Gleitflächen auf, um eine dauerhafte Haptik und Leichtgängigkeit ohne Ruckgleiten (Stick-Slip-Effekt) zu garantieren.\n\nSetzen Sie den neuen Verteiler 7313220451 in die Führungsnuten ein und drücken Sie ihn nach oben, bis die Arretierungsclips formschlüssig einrasten. Überprüfen Sie den Sitz der Dichtung: Ein verkanteter Einstich führt unweigerlich zu Leckagen in den Frontkorpus. Nach dem Zusammenbau aller Baugruppen wird eine Kalibrier- und Druckprüfung durchgeführt. Starten Sie das Gerät im Spülmodus. Prüfen Sie das Strahlbild beider Düsen auf exakte Parallelität und kontrollieren Sie mit einer Inspektionslampe die Fuge hinter dem Schieber auf absolute Dichtigkeit bei ca. 2 bar dynamischem Förderdruck.",
+  "compatibility_matrix": {
+    "fits": [
+      "De'Longhi Magnifica S ECAM 22.110.B",
+      "De'Longhi Magnifica S ECAM 22.110.SB",
+      "De'Longhi Magnifica S ECAM 21.117.B",
+      "De'Longhi Magnifica S ECAM 21.117.SB",
+      "De'Longhi ECAM 20.110.B Compact",
+      "De'Longhi Magnifica S ECAM 22.113.B",
+      "De'Longhi Magnifica S ECAM 21.110.W"
+    ],
+    "incompatible": [
+      "De'Longhi Magnifica ESAM 3000.B",
+      "De'Longhi Magnifica ESAM 4200.S",
+      "De'Longhi Autentica ETAM 29.510.B",
+      "De'Longhi Dinamica ECAM 350.55.B",
+      "De'Longhi PrimaDonna Soul ECAM 610.75.MB"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Manuelle Heißwasserspülung ohne Kaffeepulver aktivieren; anschließende mechanische Reinigung der beiden Austrittsdüsen mit einer flexiblen Interdentalbürste (Durchmesser 1,5–1,8 mm) zur Verhinderung von Fettfilmbildung."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Spülung mit einer Kaffeefettlöser-Tablette (Aktivsauerstoffbasis) über das Pulverfach im Reinigungszyklus, um polymerisierte Kaffeewachse in den inneren Verzweigungskanälen chemisch zu spalten."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Demontage der vorderen Abdeckblende, optische Inspektion des POM-Verteilergehäuses auf Haarrisse, Prüfung des Elastomer-Stutzens sowie Nachfetten der Führungskulissen mit physiologisch unbedenklichem OKS 1110 Schmierstoff."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Asymmetrischer Auslauf (Kaffee fließt nur links oder rechts)",
+      "cause": "Partielle Querschnittsverengung einer Verteilerbohrung durch verhärtete Kaffeefett-Feststoffagglomerate oder gelöste Kalkfragmente.",
+      "fix": "Düseneinheit mit 1,5 mm Reinigungsnadel mechanisch durchstoßen; danach Intensivspülung mit Heißwasser und Kaffeefettlöser durchführen. Bei persistierendem Fehler Baugruppe 7313220451 ersetzen."
+    },
+    {
+      "error": "Kaffee läuft hinter der Frontblende herunter / Wasseraustritt am Gehäusespalt",
+      "cause": "Ermüdungsriss im ultraschallverschweißten POM-Gehäuse oder verschlissener VMQ-Nutring am Zuleitungsstutzen infolge thermischer Schockbelastung.",
+      "fix": "Gerätefront demontieren, Kaffeeauslaufverteiler freilegen, Bezug starten. Tritt Wasser oberhalb der Düsen aus, ist das Modul 7313220451 komplett inklusive Dichtelement zu erneuern."
+    },
+    {
+      "error": "Höhenverstellung klemmt oder hakt massiv beim Verschieben",
+      "cause": "Verharzte Kaffeerückstände in den Kunststoff-Führungsnuten oder gebrochene Edelstahl-Federklammer (1.4310) der Schlittenbremse.",
+      "fix": "Frontblende demontieren, Führungsnuten gründlich mit Isopropanol entfetten, Federklemmen auf plastische Verformung prüfen, Gleitbahnen mit OKS 1110 benetzen."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Kann der Kaffeeauslaufverteiler 7313220451 im Ultraschallbad gereinigt werden?",
+      "a": "Ein Ultraschallbad bei 40 bis maximal 50 °C unter Verwendung eines milden, kaffeefettlösenden Reinigers ist für den reinen POM-Grundkörper technisch zulässig. Die verchromte ABS-Frontblende sollte jedoch nicht dauerhaft intensiven Ultraschallwellen oder basischen Chemikalien ausgesetzt werden, da Kavitationserosion zu mikrofeinen Abplatzungen der Galvanikschicht führen kann. Vor dem Wiedereinbau muss das Bauteil absolut rückstandsfrei mit VE-Wasser gespült werden."
+    },
+    {
+      "q": "Warum passen Auslaufverteiler der ESAM-Serie nicht in die Magnifica S ECAM 22.110.B?",
+      "a": "Die Baureihen ESAM und ECAM basieren auf gänzlich unterschiedlichen Chassis- und Fluidplattformen. Die ESAM-Geräte nutzen eine breitere Baugruppenarchitektur mit größerem Brühgruppenhub und statischer Schlauchzuführung. Die ECAM-Kompaktklasse hingegen implementiert ein vertikal teleskopierendes Steigrohrsystem mit engeren Radien, spezifischen Rastgeometrien und einem deutlich kompakteren POM-Verteilerblock mit 1,8 mm Düsenmatrix. Eine physische oder hydraulische Kompatibilität ist konstruktiv ausgeschlossen."
+    },
+    {
+      "q": "Welche Konsequenz hat ein verschleppter Wechsel eines undichten Verteilers?",
+      "a": "Ein undichter Auslaufverteiler entlässt Feuchtigkeit direkt in den Innenraum der Frontbaugruppe. Durch Kondensationsprozesse korrodieren die Mikroschalter, die rückseitigen Leiterbahnen der Display-/Tastenplatine sowie die Steckverbinder des Bedienfelds. Zudem begünstigt austretendes Kaffeewasser in Kombination mit Wärme im geschlossenen Gehäuse massiven Schimmelbefall und kann über Kriechströme zum Auslösen des Fehlerstrom-Schutzschalters (FI/RCD) führen."
+    }
+  ]
+}

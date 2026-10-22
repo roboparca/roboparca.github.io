@@ -968,7 +968,8 @@ function getAmazonUrl(p) {
   if (p.asin && p.asin.startsWith('B0')) {
     return `https://www.amazon.de/dp/${p.asin}?tag=kaffeereparatur-21`;
   }
-  const q = p.query || `${p.brand} ${p.model} ${p.partName}`;
+  const cleanQuery = `${p.brand} ${p.model} ${p.partName}`.replace(/['"()]/g, ' ').replace(/\s+/g, ' ').trim();
+  const q = cleanQuery.split(' ').map(encodeURIComponent).join('+');
   return `https://www.amazon.de/s?k=${q}&tag=kaffeereparatur-21`;
 }
 

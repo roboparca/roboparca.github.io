@@ -1,0 +1,95 @@
+{
+  "page_title": "De'Longhi ECAM Kaffeeauslaufverteiler 7313220451 Reparaturratgeber",
+  "meta_description": "Kaffeeauslaufverteiler 7313220451 für De'Longhi Magnifica S Smart ECAM 250.23.SB: Fachmännische Diagnose, Mechatronik-Anleitung, Ursachenanalyse & Austausch.",
+  "word_count_check": 1310,
+  "engineering_breakdown": "Der Kaffeeauslaufverteiler (OEM 7313220451) der De'Longhi Magnifica S Smart (ECAM 250.23.SB) bildet die fluidmechanische Schnittstelle zwischen der Brühgruppe und dem Tassenauslauf. In der mechatronischen Systemarchitektur unterliegt diese Baugruppe hochdynamischen thermischen sowie hydraulischen Zyklen. Das Brühwasser verlässt den oberen Brühkolben unter einem Pumpenspitzendruck von bis zu 15 bar (statisch reguliert über das mechanische Cremaventil auf ca. 9 bar Fließdruck bei 88 °C bis 94 °C). Vor dem Eintritt in den Verteiler wird die Strömung druckentlastet; im Verteiler selbst herrscht ein hydrodynamischer Restdruck von 0,5 bis 1,8 bar bei einer Strömungsgeschwindigkeit von ca. 0,8 m/s.\n\nWerkstofftechnisch besteht der tragende Fluidkanal aus hochkristallinem Polyoxymethylen (POM / Delrin). POM zeichnet sich durch herausragende Biegewechselfestigkeit, extrem geringe Wasseraufnahme (< 0,2 %) und Formbeständigkeit bis 110 °C aus. Die Fertigungstoleranzen der inneren Strömungsbifurkation liegen im Bereich von +/- 0,05 mm, um eine symmetrische Volumenaufteilung auf die beiden Düsenabgänge zu gewährleisten. Die elastische Kopplung zum vertikal verstellbaren Schlitten (Hubweg 35 mm) erfolgt über einen hochelastischen Faltenbalgstutzen aus lebensmittelechtem Vinyl-Methyl-Silikonkautschuk (VMQ, Shore A 60), der FDA- und BfR-konform spezifiziert ist. Zur mechanischen Vorspannung des Schiebemechanismus kommen korrosionsfeste Federelemente aus austenitischem Federstahl 1.4310 (X10CrNi18-8) zum Einsatz.\n\nPrimäre Ausfallursache ist die thermo-oxidative Polymerisation hydrophober Kaffeelipide und -wachse. Diese Kaffeeöle lagern sich in den Mikrostrukturen des POM-Kanals ab, verengen den Innendurchmesser von nominal 2,8 mm punktuell und führen zu lokalem Strömungsabriss. Sekundär führt die permanente Biegebelastung des VMQ-Stutzens in Kombination mit kalkinduzierter Versprödung zu mikroskopischen Scherrissen, wodurch Kaffeebrühe in die Innenwandung der Fronttür migriert, statt laminar durch die verchromte ABS/PC-Doppeldüse auszutreten.",
+  "symptoms_and_causes": "Defekte oder verblockte Kaffeeauslaufverteiler an der ECAM 250.23.SB äußern sich durch charakteristische akustische und fluidische Auffälligkeiten. Akustisch tritt häufig ein verändertes Pumpengeräusch auf: Die elektromagnetische Schwingankerpumpe (Ulka EX5) wechselt während des Bezugs von einem satten 50-Hz-Brummen zu einem gepressten, höherfrequenten Pfeifton. Dieser rührt von einem hydraulischen Rückstau her, wenn die Verteilereinheit durch verharzte Kaffeefette verstopft ist. Zudem ist nach Beendigung des Bezugs ein zischendes Nachgasen hörbar, da Restdruck durch Leckagen am VMQ-Koppler entweicht.\n\nHydraulisch äußert sich der Verschleiß primär in asymmetrischer Tassenfüllung beim Doppelbezug: Eine Düse liefert nur noch Tropfen, während die andere im Vollstrahl ausgibt. Ein weiteres Kardinalsymptom ist das unkontrollierte Nachtropfen nach Bezugsende sowie Kaffeeverlust hinter der Schiebeblende, welcher sich durch Flüssigkeitsansammlungen unter der Tropfschalenführung bemerkbar macht. In der Tasse bricht die Crema frühzeitig zusammen, da die laminare Strömung in der Düsenabdeckung abreißt und zu grobporigem Schaum verwirbelt wird.\n\nIm Tresterbehälter zeigen sich vermehrt feuchte, matschige Kaffeepucks. Dies resultiert aus einem gestörten Druckausgleich: Kann der Brühkolben den Nachlaufdruck wegen des Gegendrucks im Verteiler nicht schlagartig über das Drainageventil abbauen, verbleibt Restfeuchte in der Presskammer. Elektronisch kann ein Totalverschluss des Verteilers indirekt Fehlermeldungen provozieren: Das Flowmeter (Digmesa FHKSC 932) registriert keine adäquaten Durchflussimpulse, was nach Überschreiten des Timeouts zum Abbruch des Bezugs und zum Aufleuchten des Dreiecks-Warnsymbols ('Allgemeiner Alarm') führt.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Freischaltung & Vorbereitung",
+      "action": "Netzstecker der ECAM 250.23.SB ziehen (galvanische Trennung). Wassertank, Auffangschale und Tresterbehälter entfernen. Torx-Schraubendreher TX10/TX20 sowie Kunststoffspatel bereitlegen."
+    },
+    {
+      "step": 2,
+      "title": "Gehäusezerlegung",
+      "action": "Die fünf rückseitigen TX10-Schrauben lösen. Beide Seitenwände nach hinten schieben und aushängen, um Zugriff auf die Verriegelungselemente der Frontpartie zu erhalten."
+    },
+    {
+      "step": 3,
+      "title": "Demontage der Auslaufeinheit",
+      "action": "Die Rasthaken der verchromten Düsenblende vorsichtig mit dem Kunststoffspatel aufspreizen. Den internen Hebelmechanismus des Höhenverstellers lösen und den VMQ-Zulaufschlauch vom Verteiler abziehen."
+    },
+    {
+      "step": 4,
+      "title": "Austausch des Verteilers 7313220451",
+      "action": "Den defekten POM-Verteiler aus den Führungsschienen der Frontwand heraushebeln. Das Neuteil 7313220451 einsetzen, die Gleitbahnen säubern und die Rastnasen exakt in den Führungsnut-Arretierungen einrasten."
+    },
+    {
+      "step": 5,
+      "title": "Dichtungsprüfung & Endmontage",
+      "action": "Den VMQ-Elastomer-Stutzen mit NSF-H1 Silikonfett leicht benetzen und spannungsfrei auf den Verteilerstutzen schieben. Frontblende aufclipsen, Gehäuse montieren und Probelauf durchführen."
+    }
+  ],
+  "step_by_step_narrative": "Vor Beginn der Instandsetzung an der De'Longhi Magnifica S Smart steht der Personenschutz an oberster Stelle: Das Netzkabel muss zwingend physisch vom 230-Volt-Netz getrennt werden, um lebensgefährliche Stromschläge durch benachbarte Baugruppen wie Thermoblock und Leistungsplatine auszuschließen. Als Werkzeugausstattung werden ein Torx-Schraubendreher TX10, ein TX20, ein flacher ESD-gerechter Kunststoff-Entriegelungsspatel sowie lebensmittelechtes OKS 1110 Silikonfett benötigt.\n\nNach Entnahme von Wassertank, Bohnenbehälterdeckel und Tropfschale werden die Gehäuseschrauben der Rückwand gelöst. Die Seitenteile werden über ihre Führungsschienen nach hinten gezogen. Um den Auslaufverteiler freizulegen, muss der vertikale Höhenversteller in die unterste Position gebracht werden. Mit dem Kunststoffspatel werden die filigranen Rasthaken der Chrom-Frontblende vorsichtig nach außen gehebelt. Vermeiden Sie metallische Hebelwerkzeuge, um Kerbspannungen und Rissbildung im ABS-Material zu unterbinden.\n\nIm Inneren wird nun der VMQ-Verbindungsschlauch sichtbar, der vom oberen Brühkopf zum Verteiler führt. Dieser wird behutsam abgezogen. Der eigentliche Auslaufverteiler (OEM 7313220451) ist über zwei seitliche POM-Rastnasen im Schlittenträger fixiert. Lösen Sie diese Arretierung und entnehmen Sie das Altteil. Reinigen Sie die freiliegenden Schienen von getrockneten Kaffeeresten. Vor dem Einbau des Ersatzteils wird der O-Ring-Bereich des VMQ-Stutzens hauchdünn mit OKS 1110 benetzt – dies verhindert Torsion und frühzeitiges Abscheren beim späteren Aufschieben. Das Neuteil wird eingeschoben, bis die Rastnasen mit einem hörbaren Klicken quittieren.\n\nAbschließend wird der Höhenversteller mehrfach manuell über den gesamten 35-mm-Hub bewegt, um ein klemmenfreies Gleiten sicherzustellen. Nach Schließen des Gehäuses erfolgt der mechatronische Funktionstest: Führen Sie drei Heißwasserspülungen durch. Kontrollieren Sie visuell mit einer Inspektionslampe, dass kein Spülwasser seitlich am Verteiler austritt und der Wasserstrahl an beiden Auslässen absolut synchron bricht.",
+  "compatibility_matrix": {
+    "fits": [
+      "De'Longhi Magnifica S Smart ECAM 250.23.SB",
+      "De'Longhi Magnifica S Smart ECAM 23.260.B",
+      "De'Longhi Magnifica S ECAM 22.110.B / 22.110.SB",
+      "De'Longhi Magnifica S Smart ECAM 250.33.TB",
+      "De'Longhi Magnifica Start ECAM 220.21.B"
+    ],
+    "incompatible": [
+      "De'Longhi PrimaDonna Soul ECAM 610.75.MB",
+      "De'Longhi Dinamica Plus ECAM 370.95.T",
+      "De'Longhi Eletta Explore ECAM 450.55.G",
+      "De'Longhi Dedica EC 685 (Siebträger-Baureihe)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Manuelle Heißwasserspülung aktivieren und die Düsenöffnungen mit einer feinen Nylon-Rundbürste von anhaftenden Kaffeeölen befreien."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Reinigungsprogramm mit Kaffeefettlöser-Tabletten durchführen, um polymerisierte Wachse im inneren POM-Y-Verteilerkanal chemisch aufzulösen."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Demontage der Frontdüsenabdeckung, Tiefenreinigung des Verteilers im Ultraschallbad sowie Nachfettung der Führungsschienen und VMQ-Elastomere mit OKS 1110."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Asymmetrischer Kaffeeauslauf (Einseitiges Tröpfeln)",
+      "cause": "Hydrodynamischer Querschnittsverschluss eines Kanals im POM-Verteiler durch Kaffeemehlaggregate und Fettpolymerisate.",
+      "fix": "Auslaufblende abnehmen, Verteilerkanal mit Reinigungsdraht freiräumen, Spülung mit Fettlöser vornehmen; bei Verzug Baugruppe 7313220451 austauschen."
+    },
+    {
+      "error": "Kaffeebrühe läuft hinter der Gehäusefront in die Auffangschale",
+      "cause": "Scherriss oder Versprödung des flexiblen VMQ-Elastomer-Kopplers infolge thermischer Lastzyklen und Reibung.",
+      "fix": "Kaffeeauslaufbaugruppe freilegen, alten VMQ-Stutzen abziehen, neuen Verteiler 7313220451 montieren und Verbindung mit OKS 1110 gleitfähig abdichten."
+    },
+    {
+      "error": "Crema-Abriss und stark spritzender Kaffeeauslauf",
+      "cause": "Bruch der internen Prallwand im Verteilergehäuse führt zu Kavitation, unkontrollierten Turbulenzen und Verlust der Crema-Emulsion.",
+      "fix": "Austausch des gesamten Verteilers gegen OEM-Originalteil; zugleich Gegendruckfeder im Brühkolben auf mechanische Ermüdung kontrollieren."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Warum genügt herkömmlicher Entkalker nicht zur Beseitigung von Auslaufstörungen?",
+      "a": "Klassische Entkalker basieren meist auf Amidosulfon- oder Zitronensäure, welche ausschließlich anorganische Kalzium- und Magnesiumsalze lösen. Im Kaffeeauslaufverteiler lagern sich primär unpolare, organische Kaffeelipide, Kakaobutteranteile und Schwebstoffe ab. Diese polymerisieren unter thermischer Einwirkung zu einer wasserunlöslichen Schicht. Säuren greifen diese Polymere nicht an, können jedoch bei Überdosierung die VMQ-Silikondichtungen angreifen. Es sind zwingend alkalische Fettlöser oder der mechanische Komponententausch erforderlich."
+    },
+    {
+      "q": "Welche Risiken birgt der Weiterbetrieb mit undichtem Auslaufverteiler?",
+      "a": "Eine Leckage am Auslaufverteiler führt dazu, dass aggressive, heiße Kaffeebrühe unkontrolliert an der Innenseite der Gehäusetür herabläuft. Dies gefährdet die darunterliegenden Mikroschalter der Schaleneinschiebung sowie den Reed-Sensor der Türverriegelung durch Korrosion und Kriechströme. Langfristig begünstigt die ständige Feuchtigkeit im Innenraum der Maschine zudem Schimmelbildung und kann über Kurzschlüsse an elektrischen Kontaktpunkten irreversible Schäden an der Leistungs-Elektronik verursachen."
+    },
+    {
+      "q": "Ist beim Einbau des Verteilers zwingend lebensmittelechtes Spezialfett vorgeschrieben?",
+      "a": "Ja, der Einsatz eines zertifizierten Schmiermittels nach NSF-H1-Standard (z. B. OKS 1110) ist technisch unabdingbar. Gewöhnliche Schmierfette auf Mineralölbasis quellen das VMQ-Elastomer auf, führen zu Rissbildung und lösen toxische Kohlenwasserstoffe in den Heißwasserpfad. Das Silikonfett gewährleistet nicht nur die hydrodynamische Abdichtung unter Temperaturwechseln bis 100 °C, sondern verhindert auch das sogenannte Stick-Slip-Phänomen beim vertikalen Verschieben des Kaffeeauslaufs auf den Kunststoffführungen."
+    }
+  ]
+}

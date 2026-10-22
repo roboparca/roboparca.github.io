@@ -1,0 +1,100 @@
+{
+  "page_title": "De'Longhi ECAM Mahlwerk Justierung: OEM 7313230501 Reparatur-Guide",
+  "meta_description": "De'Longhi Magnifica S Smart ECAM 250.23.SB Mahlwerk (OEM 7313230501) justieren: 100Cr6 Mahlkegel, Hall-Sensor & Toleranzen mechatronisch instandsetzen.",
+  "word_count_check": 1320,
+  "engineering_breakdown": "Das Mahlwerk der De'Longhi Magnifica S Smart (ECAM 250.23.SB), gelistet unter der OEM-Baugruppennummer 7313230501, stellt ein mechatronisches Teilsystem dar, bei dem Kinematik, Werkstofftechnik und Sensorik unmittelbar ineinandergreifen. Kern des Systems ist ein konisches Mahlwerk, das je nach Fertigungscharge mit Schneidkörpern aus hochfestem, martensitischem Wälzlagerstahl 100Cr6 (1.3505) oder teilstabilisierten ceramDrive-Keramikkomponenten bestückt ist. Der gehärtete Stahl 100Cr6 weist eine Härte von ca. 60 bis 64 HRC auf, was eine extrem standfeste Schneidkantenschärfe bei geringem Abrasionsverschleiß gewährleistet. Die mechanische Führung verlangt eine axiale Rundlauftoleranz von unter 0,05 mm. Überschreitet der axiale Schlag diesen Schwellenwert, führt dies zu einer inhomogenen Partikelgrößenverteilung mit überproportional hohem Anteil an Feinstaub (Fines), welcher nachfolgend die Brühsiebe verstopft.\n\nDer Antrieb erfolgt über einen permanenterregten 230V-Gleichstrommotor, dessen Nenndrehzahl über ein zweistufiges Planetengetriebe aus Polyoxymethylen (POM / Delrin) drastisch reduziert wird. POM bietet eine herausragende Gleitreibung, hohe Schwingungsdämpfung und Formstabilität gegen Kriechneigung unter Last. An der Schnittstelle zur Rotorwelle erfasst ein bipolarer Hall-Sensor über einen Multipol-Neodym-Magnetring die Drehzahl sowie den Gleichlauf des Systems. Die Getriebewelle wird von vorgespannten Druckfedern aus nichtrostendem austenitischem Federstahl 1.4310 (X10CrNi18-8) gestützt, welche thermische Längenausdehnungen kompensieren. Gegen das Eindringen von feinsten Mahlrückständen in das Planetengetriebe dichtet eine elastomere VMQ-Lippendichtung (Vinyl-Methyl-Silikonkautschuk) mit hoher thermischer Beständigkeit (-50 °C bis +180 °C) den Triebstrang ab. Die Einstellmechanik greift über ein Feingewinde mit Messingeinsätzen (CuZn39Pb3), wodurch eine spielfreie axiale Spaltverstellung zwischen Innenkonus und äußerem Mahlring realisiert wird. Versagt das System, liegt dies meist an Mikrorissen in den POM-Planetenrädern durch Fremdkörper, Abrasionsverschleiß der Scherkanten oder einer thermischen Degeneration des Schmierfilms im Getriebe.",
+  "symptoms_and_causes": "Tritt ein mechatronischer Defekt am Mahlwerk der ECAM 250.23.SB auf, äußert sich dies über distinkte akustische, hydraulische und sensorische Indikatoren. Akustisch differenziert man primär zwischen drei Störbildern: Ein hochfrequentes, metallisches Kreischen deutet auf Trockenlauf der Sinterbronzegleitlager oder auf einen Fremdkörper (z. B. Quarzsteinchen aus der Kaffeebohnenernte) hin, der zwischen Kegel und Mahlring verkeilt ist. Ein periodisch auftretendes, hartes 'Knack-Ruckeln' unter Last indiziert Zahnausfall oder Karies an den Planetenrädern des POM-Getriebes. Ein rein elektrisches Netzbrummen ohne Rotation der Mahleinheit signalisiert entweder eine vollständige Blockade des Mahlkonus oder einen Wicklungsschluss des Gleichstrommotors infolge thermischer Überlastung.\n\nHydraulisch führt eine Dejustage des Mahlspalts zu gravierenden Fehlfunktionen im Brühkreis: Ist das Mahlgut zu grob, sinkt der Fließwiderstand im Brühsieb, wodurch der Extraktionsdruck von nominell 9 bis 11 bar auf unter 4 bar absackt. Die Folge ist eine wässrige Überextraktion und strukturlos-nasser, schlammiger Kaffeesatz in der Auffangschale, da die Brühgruppe den Kuchen nicht kompakt verdichten kann. Bei zu feiner Justage erzeugt die Ulka-Pumpe Höchstdruck (bis zu 15 bar gegen das geschlossene Brühventil), ohne dass Kaffee fließt ('Pumpe würgt ab').\n\nElektronisch reagiert die Hauptplatine auf Unregelmäßigkeiten des Hall-Sensors. Bleiben die Rechteckimpulse der Drehzahlüberwachung für länger als 800 Millisekunden nach Ansteuerung des Mahlwerk-Triacs aus, bricht die Steuerung den Vorgang ab: Die De'Longhi ECAM signalisiert dies über das simultane Blinken des allgemeinen Warndreiecks und der LED für den Tresterbehälter.",
+  "diy_step_by_step": [
+    {
+      "step": 1,
+      "title": "Netztrennung und Gehäusedemontage",
+      "action": "Netzstecker zwingend ziehen. Wassertank, Tropfschale und Kaffeebohnenbehälterdeckel entfernen. Die Rückwand über fünf Torx TX20-Schrauben lösen, Seitenteile vorsichtig nach hinten abschieben, um die Verrastungsnasen nicht zu beschädigen."
+    },
+    {
+      "step": 2,
+      "title": "Freilegen der Mahlwerkseinheit",
+      "action": "Bohnenbehälter leersaugen. Den Einstellknopf des Mahlgrads vorsichtig nach oben abhebeln. Die oberen Gehäuseschrauben (Torx TX10) der Abdeckung lösen und die Mahlwerksaufhängung freilegen. Spannungsversorgung (Kabelschuhe rot/schwarz) sowie den dreipoligen Flachbandstecker des Hall-Sensors abziehen."
+    },
+    {
+      "step": 3,
+      "title": "Ausbau und Demontage des Mahlrings",
+      "action": "Das Mahlwerk aus den drei gummigelagerten Schwingungsdämpfern heben. Den äußeren Justierkranz gegen den Uhrzeigersinn über den mechanischen Anschlag drehen und den oberen Mahlringhalter nach oben entnehmen. Vorherige Rastposition mit einem Lackstift markieren."
+    },
+    {
+      "step": 4,
+      "title": "Mahlkegel-Demontage und Getriebeinspektion",
+      "action": "Mit einem 10-mm-Sechskantschlüssel die zentrale Befestigungsmutter des inneren Mahlkegels lösen (Achtung: Linksgewinde!). Mahlkegel abziehen, Mitnehmerstifte und Feder 1.4310 entnehmen. Getriebedeckel abschrauben, POM-Planetenräder auf Zahnbruch prüfen und altes Fett restlos entfernen."
+    },
+    {
+      "step": 5,
+      "title": "Reinigung, Schmierung und Dichtungstausch",
+      "action": "Alle Bauteile mit Isopropanol reinigen. Neue VMQ-Wellendichtung einsetzen. POM-Getriebezahnräder dünn mit physiologisch unbedenklichem Schmierfett OKS 1110 bestreichen. Mahlkegel montieren und Mutter mit 3,5 Nm Drehmoment (Linksgewinde) anziehen."
+    },
+    {
+      "step": 6,
+      "title": "Kalibrierung der axialen Grundtoleranz & Zusammenbau",
+      "action": "Oberen Mahlring einsetzen und im Uhrzeigersinn eindrehen, bis Mahlkegel und Mahlring spielfrei aufeinanderliegen (Nullpunkt, Toleranz 0,05 mm prüfen). Von diesem Anschlag exakt drei Rasterungen gegen den Uhrzeigersinn zurückdrehen. Mahlwerk einbauen, Sensorstecker kontaktieren, Gehäuse remontieren und Testbezug durchführen."
+    }
+  ],
+  "step_by_step_narrative": "Vor Beginn der mechanischen Instandsetzung steht die mechatronische Arbeitssicherheit an erster Stelle: Ziehen Sie den 230V-Netzstecker der De'Longhi Magnifica S Smart und warten Sie mindestens fünf Minuten, damit sich die Pufferkondensatoren auf der Leistungsplatine vollständig entladen können. Bereiten Sie folgende Spezialwerkzeuge vor: Torx-Schraubendreher TX10 und TX20, einen Schlitzschraubendreher (Klingenbreite 2,5 mm), eine 10-mm-Nuss für Linksgewinde, eine Messingdrahtbürste zur Reinigung der Schneidgeometrien sowie lebensmittelechtes Hochleistungssilikonfett OKS 1110 (NSF H1-zertifiziert).\n\nNach dem Entfernen der Gehäuserückwand und dem Entriegeln der Seitenteile liegt das Mahlwerk frei. Bevor Sie die Einheit entnehmen, saugen Sie verbliebene Bohnenfragmente mit einem Industriestaubsauger vollständig ab. Markieren Sie mit einem wasserfesten Lackstift die präzise Werksstellung des Verstellkranzes relativ zum Trägergehäuse. Lösen Sie die Flachstecker der 230V-Gleichstromzuleitung sowie den 3-Pin-JST-Stecker der Hall-Sensorplatine. Heben Sie den Motorblock aus seinen drei VMQ-Gummilagern, die Körperschallschwingungen auf das Maschinengehäuse minimieren.\n\nBeim Lösen des Mahlkegels ist größte Umsicht geboten: Die Zentralmutter besitzt ein Linksgewinde und muss im Uhrzeigersinn gelöst werden. Nach Abzug des Konus prüfen Sie die darunterliegende Ausgleichsfeder aus 1.4310-Federstahl sowie die beiden radialen Mitnehmerstifte auf Abscherung. Öffnen Sie nun das darunterliegende POM-Planetengetriebe. Reinigen Sie das Gehäuse penibel von verharzten Ölen und Kaffeefett. Kontrollieren Sie die Flanken der Planetenräder auf Pittings oder Verformung. Tragen Sie eine hauchdünne Schicht OKS 1110 auf die Verzahnung auf – zu viel Fett erhöht den Reibungswiderstand und führt zur thermischen Überlastung des DC-Motors.\n\nDer kritischste Schritt ist die anschließende Kalibrierung: Setzen Sie den gereinigten oder getauschten Mahlring (OEM 7313230501) ein. Drehen Sie den Ring so weit vorsichtig hinein, bis die Mahlflächen ohne Spiel aufeinandergleiten (akustische Berührungsprobe durch manuelles Durchdrehen des Motors). Dies definiert den Nullabstand. Drehen Sie den Kranz nun exakt um drei Klicks gegen den Uhrzeigersinn zurück. Dies garantiert einen definierten Basismahlspalt mit einer axialen Toleranz von 0,05 mm, der verhindert, dass die Stahlkanten unter Last aufeinander reiben. Montieren Sie nach dem Einbau das Gehäuse und führen Sie mindestens drei Mahlgänge durch, um den Mahlkanal einzulaufen, bevor Sie die Puck-Konsistenz und Extraktionszeit (ca. 25 Sekunden für 35 ml Espresso bei 9 bar) final bewerten.",
+  "compatibility_matrix": {
+    "fits": [
+      "De'Longhi Magnifica S Smart ECAM 250.23.SB",
+      "De'Longhi Magnifica S Smart ECAM 250.33.TB",
+      "De'Longhi Magnifica S ECAM 22.110.B",
+      "De'Longhi Magnifica S ECAM 21.117.W",
+      "De'Longhi Dinamica ECAM 350.55.B",
+      "De'Longhi Dinamica Plus ECAM 370.95.T"
+    ],
+    "incompatible": [
+      "De'Longhi Dedica Deluxe EC 685 (Siebträger-Serie ohne internes Mahlwerk)",
+      "De'Longhi Nespresso Lattissima Pro EN 750 (Kapselsystem)",
+      "De'Longhi ESAM 3000.B Magnifica (Alte Generation mit Riemenuntersetzung)"
+    ]
+  },
+  "maintenance_schedule": [
+    {
+      "frequency": "Wöchentlich",
+      "task": "Aussaugen des Bohnenbehälters und des oberen Mahlwerkstrichters mit einer schmalen Düse zur Verhinderung von Ranzigwerden alter Bohnenöle."
+    },
+    {
+      "frequency": "Monatlich",
+      "task": "Inspektion des Auswurfschachts auf Mehlstau; manuelle Reinigung mit Pinsel und Reinigungsgranulat auf Getreidebasis zur Entfettung der 100Cr6-Stahlflächen."
+    },
+    {
+      "frequency": "Alle 6-12 Monate",
+      "task": "Teildemontage des oberen Mahlrings, Überprüfung der Grundkalibrierung (Soll-Axialspiel 0,05 mm), Sichtprüfung der VMQ-Staubdichtung und Nachfettung der Gleitflächen mit OKS 1110."
+    }
+  ],
+  "troubleshooting_table": [
+    {
+      "error": "Allgemeines Warndreieck blinkt synchron mit Trester-Symbol",
+      "cause": "Hall-Sensor detektiert keine Drehimpulse innerhalb von 800 ms; Mahlwerk mechanisch blockiert oder Sensorplatine defekt.",
+      "fix": "Mahlwerk entleeren, auf Fremdkörper (Steine) prüfen. Leichtgängigkeit von Hand prüfen; Hall-Sensor-Kabelbaum auf Kabelbruch und 5V-Versorgung messen, ggf. Sensorbaugruppe tauschen."
+    },
+    {
+      "error": "Kaffee fließt nur tropfenweise, Pumpe wird extrem leise",
+      "cause": "Mahlgrad zu fein eingestellt; überhöhter Feinstaubanteil (Fines) durch abgenutzten Mahlkegel verstopft das Brühsieb bei 15 bar.",
+      "fix": "Mahlgradeinstellrad um 2 Stufen gröber stellen. Bringt dies keine Besserung: Mahlkegel und Mahlring (OEM 7313230501) wegen Abrasionsverschleiß erneuern und Brühsieb reinigen."
+    },
+    {
+      "error": "Tresterpuck ist nass, schwammig und zerfällt im Behälter",
+      "cause": "Axiale Toleranz des Mahlwerks zu groß (> 0,15 mm) oder Einstellgewinde überrastet, was zu inhomogenem, grobem Schrot führt.",
+      "fix": "Mahlwerk öffnen, Nullpunktjustierung kalibrieren (3 Rasterungen vom Anschlag) und Federbandstahl-Spannfeder 1.4310 auf Ermüdung prüfen, ggf. ersetzen."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Warum ist der Tresterpuck trotz feiner Mahlgradeinstellung nass und der Espresso wässrig?",
+      "a": "Dies deutet auf einen fortgeschrittenen Abrasionsverschleiß der Mahlkanten aus 100Cr6-Stahl hin. Wenn die Schneiden stumpf werden, schneidet das Mahlwerk die Bohnen nicht mehr sauber ab, sondern quetscht sie ungleichmäßig. Es entsteht eine ungünstige Partikelgrößenverteilung mit zu hohem Grobkornanteil. Wasser sucht sich den Weg des geringsten hydraulischen Widerstands (Channeling), wodurch die Brühkammer nicht den nötigen Extraktionsdruck von 9 bar aufbauen kann. In diesem Fall hilft nur ein Austausch des Mahlkegelsatzes oder die Neujustierung der axialen Toleranz."
+    },
+    {
+      "q": "Worin liegt der Unterschied zwischen 100Cr6-Stahl und Keramikmahlkörpern bei De'Longhi?",
+      "a": "Der wälzlagergehärtete Chromstahl 100Cr6 zeichnet sich durch extrem hohe Zähigkeit und Bruchfestigkeit aus. Gerät versehentlich ein kleiner Kieselstein in das Mahlwerk, erleidet Stahl meist nur minimale Riefen, während Keramikmahlscheiben (ceramDrive) sofort spröde ausbrechen oder zersplittern können. Keramik hat dagegen den Vorteil absoluter chemischer Inertheit und geringerer Wärmeleitfähigkeit bei Dauerextraktion. Für den Heimanwender in der Magnifica S Smart bietet die Stahlvariante OEM 7313230501 jedoch eine überlegene Robustheit gegenüber mechanischen Schockbelastungen im Alltagsbetrieb."
+    },
+    {
+      "q": "Was muss beim Anziehen der inneren Mahlkegelmutter mechanisch beachtet werden?",
+      "a": "Die zentrale Befestigungsmutter besitzt zwingend ein Linksgewinde, um ein selbsttätiges Lösen durch die Drehrichtung des Motors im Betrieb zu verhindern. Sie wird im Uhrzeigersinn gelöst und gegen den Uhrzeigersinn angezogen. Beim Zusammenbau muss ein exaktes Drehmoment von maximal 3,5 Nm eingehalten werden. Ein zu starkes Anziehen verzieht die Mitnehmerachse, zerstört die POM-Zahnräder darunter und komprimiert die 1.4310-Vorspannfeder irreversibel, was zu einem unrunden Lauf und Lagerschäden führt."
+    }
+  ]
+}

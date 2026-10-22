@@ -23,7 +23,8 @@ function callGrok(prompt) {
         },
         { role: 'user', content: prompt }
       ],
-      temperature: 0.2
+      temperature: 0.2,
+      max_tokens: 4096
     });
 
     const req = https.request(API_URL, {
@@ -44,10 +45,18 @@ function callGrok(prompt) {
         try {
           const parsed = JSON.parse(data);
           let raw = parsed.choices[0].message.content.trim();
-          if (raw.startsWith('```json')) raw = raw.replace(/^```json\s*/, '').replace(/\s*```$/, '');
-          else if (raw.startsWith('```')) raw = raw.replace(/^```\s*/, '').replace(/\s*```$/, '');
+          
+          // Robust JSON extraction
+          const match = raw.match(/\{[\s\S]*\}/);
+          if (match) {
+            raw = match[0];
+          } else {
+            if (raw.startsWith('```json')) raw = raw.replace(/^```json\s*/, '').replace(/\s*```$/, '');
+            else if (raw.startsWith('```')) raw = raw.replace(/^```\s*/, '').replace(/\s*```$/, '');
+          }
+          
           const jsonContent = JSON.parse(raw);
-          resolve({ json: jsonContent, usage: parsed.usage });
+          resolve({ json: jsonContent, usage: parsed.usage || { total_tokens: 0 } });
         } catch (e) {
           reject(new Error(`JSON parse err: ${e.message}\nRaw: ${data.slice(0, 150)}`));
         }
@@ -114,8 +123,8 @@ Output strictly a JSON object with this exact structure:
 }
 
 // Concurrency queue
-async function runBatch(concurrency = 4) {
-  console.log(`🚀 Starting Grok 4.7 batch generator for ${products.length} products (Concurrency: ${concurrency})...`);
+async function runBatch(concurrency = 1) {
+  console.log(`🚀 Starting Grok 4.7 generator for ${products.length} products (Concurrency: ${concurrency})...`);
   
   const pending = [];
   for (let i = 0; i < products.length; i++) {
@@ -129,15 +138,14 @@ async function runBatch(concurrency = 4) {
   console.log(`📋 Total products: ${products.length} | Already cached: ${products.length - pending.length} | To generate: ${pending.length}`);
 
   let completed = 0;
-  let activeWorkers = 0;
   let itemIdx = 0;
 
-  async function worker() {
+  async function worker(workerId) {
     while (itemIdx < pending.length) {
       const current = pending[itemIdx++];
       const { index, product: p, targetFile } = current;
       
-      console.log(`[Worker] Generating (${index + 1}/${products.length}): ${p.brand} ${p.model} - ${p.partName}...`);
+      console.log(`[Worker ${workerId}] Generating (${index + 1}/${products.length}): ${p.brand} ${p.model} - ${p.partName}...`);
       
       let attempts = 0;
       let success = false;
@@ -147,25 +155,27 @@ async function runBatch(concurrency = 4) {
           const res = await callGrok(buildPrompt(p));
           fs.writeFileSync(targetFile, JSON.stringify(res.json, null, 2), 'utf8');
           completed++;
-          console.log(`   ✅ [${completed}/${pending.length}] Saved: ${p.id} (${res.usage.total_tokens} tokens)`);
+          console.log(`   ✅ [${completed}/${pending.length}] Saved: ${p.id} (${res.usage.total_tokens || 0} tokens)`);
           success = true;
         } catch (err) {
           console.error(`   ⚠️ Attempt ${attempts} failed for ${p.id}: ${err.message}`);
-          await new Promise(r => setTimeout(r, 2000 * attempts));
+          const waitTime = err.message.includes('503') || err.message.includes('504') ? 6000 : 2500 * attempts;
+          await new Promise(r => setTimeout(r, waitTime));
         }
       }
-      // Small rest between worker iterations
-      await new Promise(r => setTimeout(r, 500));
+      // Polite pause between calls to avoid service_busy
+      await new Promise(r => setTimeout(r, 800));
     }
   }
 
   const workers = [];
   for (let i = 0; i < concurrency; i++) {
-    workers.push(worker());
+    workers.push(worker(i + 1));
   }
 
   await Promise.all(workers);
   console.log(`🎉 All Grok 4.7 content generation completed! Generated ${completed} new files.`);
 }
 
-runBatch(4);
+const reqConcurrency = parseInt(process.argv[2] || '1', 10);
+runBatch(reqConcurrency);

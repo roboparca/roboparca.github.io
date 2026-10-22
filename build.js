@@ -1127,6 +1127,7 @@ async function runBuild() {
       const html = `<!doctype html>
 <html lang="tr">
 <head>
+  <meta name="google-site-verification" content="z1HDX3FFWaHIqyPyOMLwt9sgJg31Is1QxB7Po-DuJBs" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <title>${pageTitle}</title>
@@ -1386,6 +1387,7 @@ async function runBuild() {
     const modelHtml = `<!doctype html>
 <html lang="tr">
 <head>
+  <meta name="google-site-verification" content="z1HDX3FFWaHIqyPyOMLwt9sgJg31Is1QxB7Po-DuJBs" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <title>${esc(model.brand)} ${esc(model.name)} Yedek Parça &amp; Filtre Uyumluluk Rehberi (${esc(model.year)})</title>
@@ -1466,6 +1468,7 @@ async function runBuild() {
     const brandHtml = `<!doctype html>
 <html lang="tr">
 <head>
+  <meta name="google-site-verification" content="z1HDX3FFWaHIqyPyOMLwt9sgJg31Is1QxB7Po-DuJBs" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <title>${esc(brand.name)} Robot Süpürge Yedek Parçaları &amp; Modelleri</title>
@@ -1531,6 +1534,7 @@ async function runBuild() {
     const catHtml = `<!doctype html>
 <html lang="tr">
 <head>
+  <meta name="google-site-verification" content="z1HDX3FFWaHIqyPyOMLwt9sgJg31Is1QxB7Po-DuJBs" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <title>Tüm Robot Süpürgeler İçin ${esc(cat.name)} Uyumluluk Listesi</title>
@@ -1613,6 +1617,7 @@ async function runBuild() {
   const homeHtml = `<!doctype html>
 <html lang="tr">
 <head>
+  <meta name="google-site-verification" content="z1HDX3FFWaHIqyPyOMLwt9sgJg31Is1QxB7Po-DuJBs" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <title>RoboParça — Robot Süpürge Yedek Parça &amp; Uyumluluk Motoru (Anlık Arama)</title>
