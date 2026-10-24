@@ -2,541 +2,2008 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KaffeeTeile24 | Deutsches Reparatur- &amp; Ersatzteilportal für Kaffeevollautomaten</title>
-  <meta name="description" content="Deutschlands unabhängiges Fachportal für Kaffeevollautomaten-Reparatur. Über 700 verifizierte Original- &amp; OEM-Ersatzteile für De'Longhi, Siemens, Jura, Philips und mehr.">
-  <link rel="canonical" href="https://roboparca.github.io/kaffeereparatur/">
-  <link rel="stylesheet" href="https://roboparca.github.io/kaffeereparatur/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#2874f0">
+  <meta name="google-site-verification" content="z1HDX3FFWaHIqyPyOMLwt9sgJg31Is1QxB7Po-DuJBs" />
+  <title>KaffeeReparatur.de | Deutschlands Ersatzteil- &amp; Reparaturportal für Kaffeevollautomaten</title>
+  <meta name="description" content="Deutschlands großes Fachportal für Kaffeevollautomaten-Reparatur. Über 670 verifizierte Original- &amp; OEM-Ersatzteile für De'Longhi, Siemens, Jura, Philips und mehr.">
+  <link rel="canonical" href="https://kaffeereparatur.github.io/">
+  <style>
+
+/* ==========================================================================
+   FLIPKART OFFICIAL UI DESIGN SYSTEM (DESKTOP WEBSITE + MOBILE APP)
+   ========================================================================== */
+
+:root {
+  --fk-blue: #2874f0;
+  --fk-blue-dark: #1259c7;
+  --fk-yellow: #ffe500;
+  --fk-orange-buy: #fb641b;
+  --fk-orange-cart: #ff9f00;
+  --fk-green: #388e3c;
+  --fk-bg: #f1f3f6;
+  --fk-card: #ffffff;
+  --fk-text: #212121;
+  --fk-secondary: #878787;
+  --fk-border: #f0f0f0;
+  --fk-border-dark: #e0e0e0;
+  --fk-font: Roboto, Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --fk-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+  --fk-shadow-card: 0 1px 3px 0 rgba(0,0,0,.12);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: var(--fk-bg);
+  color: var(--fk-text);
+  font-family: var(--fk-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Input & Search Reset */
+input, input[type="text"], input[type="search"] {
+  font-family: var(--fk-font) !important;
+  font-size: 16px !important; /* Prevents auto zoom on iOS */
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none !important;
+}
+
+/* Safe text wrap guarantee */
+h1, h2, h3, h4, p, span, div, li {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ==========================================================================
+   FLIPKART PRIMARY HEADER (Electric Blue #2874f0)
+   ========================================================================== */
+
+.fk-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--fk-blue);
+  color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.18);
+  padding: 10px 16px;
+}
+
+.fk-header-inner {
+  max-width: 1248px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Flipkart Brand Logo */
+.fk-logo-box {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none !important;
+  flex-shrink: 0;
+}
+
+.fk-logo-main {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fk-logo-sub {
+  font-size: 11px;
+  font-style: italic;
+  color: #ffffff;
+  margin-top: -2px;
+}
+
+.fk-plus {
+  color: var(--fk-yellow);
+  font-weight: 700;
+}
+
+/* Flipkart Center Search Bar */
+.fk-search-wrap {
+  position: relative;
+  flex: 1;
+  max-width: 560px;
+}
+
+.fk-search-box {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 2px;
+  height: 38px;
+  padding: 0 12px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
+}
+
+.fk-search-input {
+  flex: 1;
+  background: transparent !important;
+  font-size: 14px !important;
+  color: #212121 !important;
+  padding: 0 !important;
+}
+
+.fk-search-input::placeholder {
+  color: var(--fk-secondary);
+}
+
+.fk-search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: var(--fk-blue);
+}
+
+.fk-search-clear {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--fk-secondary);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0 6px;
+}
+
+/* Floating Search Dropdown */
+.fk-search-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,.2);
+  border: 1px solid var(--fk-border-dark);
+  max-height: 420px;
+  overflow-y: auto;
+  z-index: 1010;
+}
+
+.fk-search-dropdown.show { display: block; }
+
+.fk-search-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--fk-border);
+  gap: 12px;
+  text-decoration: none !important;
+  color: #212121;
+}
+
+.fk-search-item:hover, .fk-search-item:active {
+  background: #f9f9f9;
+}
+
+.fk-search-thumb {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.fk-search-title {
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fk-search-sub {
+  font-size: 11px;
+  color: var(--fk-secondary);
+}
+
+/* Desktop Header Action Buttons */
+.fk-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.fk-nav-link {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.fk-nav-link:hover {
+  color: var(--fk-yellow);
+}
+
+.fk-amazon-badge {
+  background: #ffffff;
+  color: var(--fk-blue) !important;
+  padding: 6px 14px;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* ==========================================================================
+   FLIPKART CATEGORY STRIP (White Icon Strip Below Header)
+   ========================================================================== */
+
+.fk-cat-strip {
+  background: #ffffff;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.14);
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.fk-cat-strip-inner {
+  max-width: 1248px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  gap: 16px;
+}
+
+.fk-cat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none !important;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.fk-cat-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.fk-cat-text {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--fk-text);
+  transition: color 0.15s ease;
+}
+
+.fk-cat-item:hover .fk-cat-text {
+  color: var(--fk-blue);
+}
+
+/* ==========================================================================
+   FLIPKART DESKTOP PRODUCT DETAIL PAGE (2-Column E-Commerce Layout)
+   ========================================================================== */
+
+.fk-page-wrap {
+  max-width: 1248px;
+  margin: 10px auto 40px;
+  padding: 0 12px;
+}
+
+.fk-detail-desktop-grid {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* Sticky Left Gallery Column */
+.fk-left-col {
+  position: sticky;
+  top: 74px;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 2px;
+  box-shadow: var(--fk-shadow);
+  border: 1px solid var(--fk-border);
+}
+
+.fk-main-img-box {
+  width: 100%;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border: 1px solid var(--fk-border);
+  margin-bottom: 16px;
+}
+
+.fk-main-img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.fk-main-img-box:hover img {
+  transform: scale(1.04);
+}
+
+/* Dual Action Buttons (Flipkart Yellow + Orange) */
+.fk-btn-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.fk-btn-cart {
+  background: var(--fk-orange-cart);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  height: 48px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.fk-btn-cart:hover {
+  background: #f29600;
+}
+
+.fk-btn-buy {
+  background: var(--fk-orange-buy);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  height: 48px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.fk-btn-buy:hover {
+  background: #e65612;
+}
+
+/* Right Detail Column */
+.fk-right-col {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 2px;
+  box-shadow: var(--fk-shadow);
+  border: 1px solid var(--fk-border);
+}
+
+.fk-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--fk-secondary);
+  margin-bottom: 10px;
+}
+
+.fk-breadcrumb a {
+  color: var(--fk-secondary);
+}
+
+.fk-breadcrumb a:hover {
+  color: var(--fk-blue);
+}
+
+.fk-product-h1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--fk-text);
+  line-height: 1.35;
+  margin: 0 0 10px 0;
+}
+
+/* Green Rating Badge (Iconic Flipkart Green) */
+.fk-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.fk-rating-badge {
+  background: var(--fk-green);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12.5px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.fk-rating-count {
+  font-size: 13px;
+  color: var(--fk-secondary);
+  font-weight: 500;
+}
+
+.fk-assured-tag {
+  background: #e9f0ff;
+  color: var(--fk-blue);
+  font-size: 11.5px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Flipkart Special Price & Offers Section */
+.fk-price-box {
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--fk-border);
+}
+
+.fk-price-highlight {
+  font-size: 24px;
+  font-weight: 700;
+  color: #212121;
+}
+
+.fk-stock-status {
+  font-size: 13px;
+  color: var(--fk-green);
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* Available Offers (Flipkart Green Tag Style) */
+.fk-offers-box {
+  margin-bottom: 20px;
+}
+
+.fk-offers-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #212121;
+  margin-bottom: 8px;
+}
+
+.fk-offer-item {
+  font-size: 13px;
+  color: #212121;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 6px;
+  line-height: 1.45;
+}
+
+.fk-tag-icon {
+  color: var(--fk-green);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Highlights Box */
+.fk-highlights-box {
+  margin-bottom: 24px;
+}
+
+.fk-hl-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.fk-hl-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fk-hl-list li {
+  font-size: 13px;
+  color: #212121;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* Specifications Table (Flipkart Clean Spec Table) */
+.fk-sec-card {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--fk-border);
+}
+
+.fk-sec-heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: #212121;
+  margin-bottom: 12px;
+}
+
+.fk-sec-text p {
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.65;
+  margin: 0 0 10px 0;
+}
+
+.fk-spec-grid {
+  border: 1px solid var(--fk-border-dark);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.fk-spec-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--fk-border);
+  font-size: 13px;
+  align-items: center;
+}
+
+.fk-spec-row:last-child {
+  border-bottom: none;
+}
+
+.fk-spec-row:nth-child(even) {
+  background: #fafafa;
+}
+
+.fk-spec-k {
+  color: var(--fk-secondary);
+  font-weight: 500;
+}
+
+.fk-spec-v {
+  color: #212121;
+  font-weight: 500;
+}
+
+.fk-tag {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.fk-tag-blue { background: #e9f0ff; color: var(--fk-blue); }
+.fk-tag-orange { background: #fff3e0; color: #e65100; }
+.fk-tag-green { background: #e8f5e9; color: var(--fk-green); }
+.fk-tag-purple { background: #f3e5f5; color: #7b1fa2; }
+
+.fk-wiki-link {
+  color: var(--fk-blue);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.fk-code-pill {
+  background: #ffebee;
+  color: #c62828;
+  font-weight: 700;
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 2px;
+}
+
+/* Flipkart Structured DIY Step Cards */
+.fk-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+.fk-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #f8fafc;
+  border: 1px solid var(--fk-border);
+  border-radius: 4px;
+  padding: 12px 14px;
+}
+.fk-step-num {
+  width: 26px;
+  height: 26px;
+  background: var(--fk-blue);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.fk-step-content {
+  flex: 1;
+}
+.fk-step-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #212121;
+  margin-bottom: 3px;
+}
+.fk-step-desc {
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.55;
+}
+
+/* Flipkart Structured Compatibility Matrix */
+.fk-compat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+@media (max-width: 768px) {
+  .fk-compat-grid { grid-template-columns: 1fr; }
+}
+.fk-compat-col {
+  padding: 12px 14px;
+  border-radius: 4px;
+  border: 1px solid var(--fk-border);
+  background: #fafafa;
+}
+.fk-compat-col-fits {
+  border-left: 4px solid #388e3c;
+}
+.fk-compat-col-incomp {
+  border-left: 4px solid #d32f2f;
+}
+.fk-compat-head {
+  font-weight: 700;
+  font-size: 13.5px;
+  margin-bottom: 8px;
+}
+.fk-compat-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.fk-compat-list li {
+  font-size: 12.5px;
+  color: #374151;
+  line-height: 1.4;
+  padding-left: 12px;
+  position: relative;
+}
+.fk-compat-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #9ca3af;
+}
+
+/* Flipkart Structured Troubleshooting Cards */
+.fk-trouble-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+.fk-trouble-card {
+  background: #fff;
+  border: 1px solid var(--fk-border);
+  border-radius: 4px;
+  padding: 12px 14px;
+}
+.fk-trouble-error {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #b91c1c;
+  margin-bottom: 6px;
+}
+.fk-trouble-row {
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+.fk-trouble-fix {
+  color: #15803d;
+}
+
+/* ==========================================================================
+   FLIPKART PRODUCT CARDS GRID (Deals Grid)
+   ========================================================================== */
+
+.fk-grid-title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0 12px;
+}
+
+.fk-grid-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #212121;
+  margin: 0;
+}
+
+.fk-grid-count {
+  font-size: 13px;
+  color: var(--fk-secondary);
+}
+
+.fk-prod-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.fk-prod-card {
+  background: #ffffff;
+  border: 1px solid var(--fk-border);
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  position: relative;
+}
+
+.fk-prod-card:hover {
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,.15);
+  transform: translateY(-2px);
+}
+
+.fk-card-thumb-link {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--fk-border);
+}
+
+.fk-card-thumb {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.fk-card-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.fk-card-badges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.fk-card-title {
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.35;
+  margin: 0 0 8px 0;
+  color: #212121;
+}
+
+.fk-card-title a {
+  color: #212121;
+  text-decoration: none;
+}
+
+.fk-card-title a:hover {
+  color: var(--fk-blue);
+}
+
+.fk-card-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.fk-card-footer {
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--fk-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fk-card-link {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--fk-blue);
+}
+
+/* ==========================================================================
+   FLIPKART HOMEPAGE BANNERS & DEALS STRIPS
+   ========================================================================== */
+
+.fk-home-banner {
+  background: linear-gradient(135deg, #2874f0 0%, #1259c7 100%);
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin-bottom: 16px;
+  box-shadow: var(--fk-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.fk-banner-left {
+  flex: 1;
+}
+
+.fk-banner-pill {
+  background: var(--fk-yellow);
+  color: #212121;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.fk-banner-h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  line-height: 1.25;
+}
+
+.fk-banner-sub {
+  font-size: 14px;
+  color: #e0e9fa;
+  margin: 0 0 16px 0;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.fk-banner-badges-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fk-badge-check {
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Grouped Hubs (Brands & Categories) */
+.fk-hub-list-card {
+  background: #ffffff;
+  border: 1px solid var(--fk-border);
+  border-radius: 2px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: var(--fk-shadow);
+}
+
+.fk-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.fk-hub-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--fk-border);
+  border-radius: 2px;
+  text-decoration: none !important;
+  color: #212121;
+  transition: all 0.15s ease;
+}
+
+.fk-hub-item:hover {
+  border-color: var(--fk-blue);
+  background: #f8fbff;
+}
+
+.fk-hub-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.fk-hub-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fk-hub-sub {
+  font-size: 11px;
+  color: var(--fk-secondary);
+}
+
+/* ==========================================================================
+   FLIPKART FOOTER (Iconic Flipkart Dark Blue Footer #172337)
+   ========================================================================== */
+
+.fk-footer {
+  background: #172337;
+  color: #878787;
+  font-size: 12px;
+  padding: 40px 0 24px;
+  margin-top: 40px;
+  border-top: 1px solid #28354a;
+}
+
+.fk-footer-inner {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #28354a;
+}
+
+.fk-foot-col-title {
+  color: #878787;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.fk-foot-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fk-foot-list a {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.fk-foot-list a:hover {
+  text-decoration: underline;
+}
+
+.fk-footer-bottom {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 16px 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   MOBILE APP SPECIFIC OVERRIDES (FLIPKART MOBILE APP EXPERIENCE)
+   ========================================================================== */
+
+/* Mobile Bottom Buy Bar (Flipkart Yellow + Orange 50/50 Dual Bar) */
+.fk-mobile-buy-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  z-index: 9999;
+  background: #ffffff;
+  box-shadow: 0 -1px 4px 0 rgba(0,0,0,.2);
+}
+
+.fk-mobile-buy-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13.5px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  height: 100%;
+}
+
+.fk-mob-cart {
+  background: #ffffff;
+  color: #212121 !important;
+  border-right: 1px solid #e0e0e0;
+}
+
+.fk-mob-buy {
+  background: var(--fk-orange-buy);
+  color: #ffffff !important;
+}
+
+/* Mobile App Bottom Tab Bar (on Home & Hubs) */
+.fk-mobile-tab-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  z-index: 9999;
+  background: #ffffff;
+  box-shadow: 0 -1px 4px rgba(0,0,0,0.12);
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 4px;
+}
+
+.fk-tab-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  color: var(--fk-secondary);
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  flex: 1;
+  gap: 2px;
+}
+
+.fk-tab-btn.active {
+  color: var(--fk-blue);
+  font-weight: 700;
+}
+
+.fk-tab-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.fk-tab-label {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/* Mobile Back Button */
+.fk-mobile-back-row {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--fk-border);
+  font-size: 14px;
+  font-weight: 700;
+  color: #212121;
+}
+
+.fk-back-arrow {
+  font-size: 20px;
+  line-height: 1;
+  color: var(--fk-blue);
+  text-decoration: none !important;
+}
+
+/* ==========================================================================
+   MEDIA QUERY: FLIPKART MOBILE APP VIEW (<= 859px)
+   ========================================================================== */
+
+@media (max-width: 859px) {
+  body {
+    padding-bottom: 58px; /* Clearance for fixed mobile bars */
+  }
+
+  .fk-header-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .fk-nav-actions {
+    display: none; /* Hidden on mobile header, placed in bottom tabs */
+  }
+
+  .fk-search-wrap {
+    max-width: 100%;
+  }
+
+  .fk-search-box {
+    height: 38px;
+    border-radius: 4px;
+  }
+
+  .fk-cat-strip-inner {
+    padding: 0 10px;
+    gap: 12px;
+  }
+
+  .fk-cat-text {
+    font-size: 11px;
+  }
+
+  .fk-detail-desktop-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .fk-left-col {
+    position: static;
+    box-shadow: none;
+    border: none;
+    padding: 12px;
+    margin-bottom: 8px;
+  }
+
+  .fk-main-img-box {
+    height: 280px;
+    border: none;
+    margin-bottom: 0;
+  }
+
+  .fk-btn-row {
+    display: none; /* Replaced by sticky mobile buy bar */
+  }
+
+  .fk-right-col {
+    padding: 16px;
+    box-shadow: none;
+    border: none;
+  }
+
+  .fk-spec-row {
+    grid-template-columns: 120px 1fr;
+    padding: 8px 10px;
+    font-size: 12.5px;
+  }
+
+  .fk-prod-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .fk-card-thumb-link {
+    height: 140px;
+    padding: 8px;
+  }
+
+  .fk-card-body {
+    padding: 8px;
+  }
+
+  .fk-card-title {
+    font-size: 12.5px;
+  }
+
+  .fk-home-banner {
+    flex-direction: column;
+    padding: 20px 16px;
+  }
+
+  .fk-banner-h1 {
+    font-size: 20px;
+  }
+
+  .fk-mobile-buy-bar {
+    display: flex;
+  }
+
+  .fk-mobile-tab-bar {
+    display: flex;
+  }
+
+  .fk-mobile-back-row {
+    display: flex;
+  }
+
+  .fk-footer {
+    display: none; /* Replaced by compact mobile footer info */
+  }
+}
+
+  </style>
+  <link rel="stylesheet" href="https://kaffeereparatur.github.io/style.css?v=1792808664478">
 </head>
 <body>
   
-  <header class="app-header">
-    <div class="header-inner">
-      <a href="https://roboparca.github.io/kaffeereparatur/" class="brand-logo">
-        <span class="logo-icon">☕</span>
-        <span>KaffeeTeile<span class="tld">24</span></span>
-        <span class="badge-pro">Genuine Hub</span>
-      </a>
-
-      <nav class="nav-links">
-        <a href="https://roboparca.github.io/kaffeereparatur/#marken" class="nav-link">Hersteller</a>
-        <a href="https://roboparca.github.io/kaffeereparatur/#kategorien" class="nav-link">Baugruppen</a>
-      </nav>
-
-      <div class="header-search">
-        <div class="search-input-wrap">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="site-search" class="search-input" placeholder="Ersatzteil, Modell oder ASIN suchen..." autocomplete="off">
-          <button id="search-clear" class="search-clear" aria-label="Suche leeren">✕</button>
+  <!-- Flipkart Top Electric Blue Header -->
+  <header class="fk-header">
+    <div class="fk-header-inner">
+      <div style="display:flex; align-items:center; justify-content:space-between; width:100%; max-width:859px; margin-bottom:2px;" class="fk-mobile-top-bar">
+        <a href="https://kaffeereparatur.github.io/" class="fk-logo-box">
+          <div class="fk-logo-main">☕ KaffeeReparatur</div>
+          <div class="fk-logo-sub">Explore <span class="fk-plus">Plus ✦</span></div>
+        </a>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <a href="https://kaffeereparatur.github.io/#marken" class="fk-nav-link" style="font-size:13px;">Marken</a>
+          <a href="https://kaffeereparatur.github.io/#kategorien" class="fk-nav-link" style="font-size:13px;">Kategorien</a>
         </div>
-        <div id="search-dropdown" class="search-dropdown"></div>
+      </div>
+
+      <!-- Flipkart Center Search Bar -->
+      <div class="fk-search-wrap">
+        <div class="fk-search-box">
+          <input type="search" id="site-search" class="fk-search-input" placeholder="Nach Ersatzteilen, Marken oder Modellen suchen..." autocomplete="off">
+          <button id="search-clear" class="fk-search-clear" aria-label="Löschen" type="button">✕</button>
+          <button class="fk-search-btn" aria-label="Suchen" type="button" onclick="if(window.performFkSearch)window.performFkSearch();">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2874f0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+        </div>
+        <div id="search-dropdown" class="fk-search-dropdown"></div>
+      </div>
+
+      <!-- Desktop Nav Actions -->
+      <div class="fk-nav-actions">
+        <a href="https://kaffeereparatur.github.io/#marken" class="fk-nav-link">Hersteller</a>
+        <a href="https://kaffeereparatur.github.io/#kategorien" class="fk-nav-link">Baugruppen</a>
+        <a href="https://www.amazon.de/?tag=kaffeereparatur-21" target="_blank" rel="sponsored nofollow noopener" class="fk-amazon-badge">Amazon Partner</a>
       </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <!-- Hero Section -->
-    <section style="background:linear-gradient(180deg, #ffffff 0%, #f7f6f2 100%); border:1px solid var(--border-color); border-radius:16px; padding:48px 24px; margin:24px 0 36px; text-align:center;">
-      <span style="font-size:12px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--primary); margin-bottom:8px; display:inline-block;">
-        Offizielles Reparatur- und Komponenten-Verzeichnis
-      </span>
-      <h1 style="font-size:34px; font-weight:800; color:var(--text-main); margin-bottom:14px; letter-spacing:-0.02em;">
-        Kaffeevollautomaten selbst reparieren.
-      </h1>
-      <p style="font-size:16px; color:var(--text-muted); max-width:680px; margin:0 auto 24px; line-height:1.6;">
-        Finden Sie das exakt passende Ersatzteil mit authentischen Amazon.de Produktdaten, mechatronischer Funktionsanalyse und praxiserprobter Einbauanleitung.
-      </p>
-      <div style="display:inline-flex; gap:12px; flex-wrap:wrap; justify-content:center;">
-        <a href="#marken" class="cta" style="width:auto; padding:12px 28px;">Hersteller wählen ↓</a>
-        <a href="#kategorien" class="cta" style="width:auto; padding:12px 28px; background:#f5f5f4; color:#1c1917 !important;">Baugruppen ↓</a>
-      </div>
-    </section>
+  <!-- Flipkart Horizontal Category Strip -->
+  <nav class="fk-cat-strip">
+    <div class="fk-cat-strip-inner">
+      <a href="https://kaffeereparatur.github.io/delonghi/" class="fk-cat-item">
+        <div class="fk-cat-icon">☕</div>
+        <span class="fk-cat-text">De'Longhi</span>
+      </a>
+      <a href="https://kaffeereparatur.github.io/siemens/" class="fk-cat-item">
+        <div class="fk-cat-icon">⚡</div>
+        <span class="fk-cat-text">Siemens</span>
+      </a>
+      <a href="https://kaffeereparatur.github.io/jura/" class="fk-cat-item">
+        <div class="fk-cat-icon">💎</div>
+        <span class="fk-cat-text">Jura</span>
+      </a>
+      <a href="https://kaffeereparatur.github.io/philips/" class="fk-cat-item">
+        <div class="fk-cat-icon">✨</div>
+        <span class="fk-cat-text">Philips</span>
+      </a>
+      <a href="https://kaffeereparatur.github.io/kategorie/bruehgruppe/" class="fk-cat-item">
+        <div class="fk-cat-icon">⚙️</div>
+        <span class="fk-cat-text">Brühgruppen</span>
+      </a>
+      <a href="https://kaffeereparatur.github.io/kategorie/mahlwerk/" class="fk-cat-item">
+        <div class="fk-cat-icon">🪨</div>
+        <span class="fk-cat-text">Mahlwerke</span>
+      </a>
+      <a href="https://kaffeereparatur.github.io/kategorie/drainageventil/" class="fk-cat-item">
+        <div class="fk-cat-icon">💧</div>
+        <span class="fk-cat-text">Ventile</span>
+      </a>
+      <a href="https://kaffeereparatur.github.io/kategorie/milchsystem/" class="fk-cat-item">
+        <div class="fk-cat-icon">🥛</div>
+        <span class="fk-cat-text">Milchsystem</span>
+      </a>
+      <a href="https://kaffeereparatur.github.io/kategorie/wasserfilter/" class="fk-cat-item">
+        <div class="fk-cat-icon">🌊</div>
+        <span class="fk-cat-text">Filter</span>
+      </a>
+      <a href="https://kaffeereparatur.github.io/kategorie/thermoblock/" class="fk-cat-item">
+        <div class="fk-cat-icon">🔥</div>
+        <span class="fk-cat-text">Heizung</span>
+      </a>
+    </div>
+  </nav>
 
-    <!-- Brands Grid -->
-    <section id="marken" style="margin-bottom:48px;">
-      <h2 style="font-size:22px; font-weight:800; margin-bottom:16px;">Hersteller &amp; Baureihen</h2>
-      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)); gap:14px;">
+  <main class="fk-page-wrap">
+    <!-- Flipkart Deals of the Day Banner -->
+    <div class="fk-home-banner">
+      <div class="fk-banner-left">
+        <span class="fk-banner-pill">Offizielles Fachportal</span>
+        <h1 class="fk-banner-h1">Kaffeevollautomaten selbst reparieren.</h1>
+        <p class="fk-banner-sub">
+          Über 670 geprüfte Original- &amp; OEM-Ersatzteile mit mechatronischen Einbauanleitungen, Fehlerdiagnosen und Live-Verfügbarkeitsprüfung auf Amazon.de.
+        </p>
+        <div class="fk-banner-badges-strip">
+          <span class="fk-badge-check">✓ 100% Original- / OEM-Teile</span>
+          <span class="fk-badge-check">✓ F-Assured geprüfte Passform</span>
+          <span class="fk-badge-check">✓ Schneller Prime-Versand</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Brands (Flipkart Grid Hub) -->
+    <div class="fk-hub-list-card" id="marken">
+      <div class="fk-grid-title-bar" style="margin-top:0;">
+        <h2 class="fk-grid-title" style="font-size:17px;">Hersteller &amp; Baureihen</h2>
+        <span class="fk-grid-count">11 Marken</span>
+      </div>
+      <div class="fk-hub-grid">
         
-        <a href="https://roboparca.github.io/kaffeereparatur/delonghi/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:16px; text-decoration:none; color:var(--text-main); display:flex; flex-direction:column; align-items:center; transition:all 0.15s ease;">
-          <span style="font-size:24px; margin-bottom:6px;">☕</span>
-          <span style="font-weight:700; font-size:15px;">DeLonghi</span>
-          <span style="font-size:12px; color:var(--text-muted); margin-top:4px;">176 Ersatzteile</span>
+        <a href="https://kaffeereparatur.github.io/delonghi/" class="fk-hub-item">
+          <span class="fk-hub-icon">☕</span>
+          <div>
+            <div class="fk-hub-name">DeLonghi</div>
+            <div class="fk-hub-sub">174 Ersatzteile</div>
+          </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/siemens/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:16px; text-decoration:none; color:var(--text-main); display:flex; flex-direction:column; align-items:center; transition:all 0.15s ease;">
-          <span style="font-size:24px; margin-bottom:6px;">☕</span>
-          <span style="font-weight:700; font-size:15px;">Siemens</span>
-          <span style="font-size:12px; color:var(--text-muted); margin-top:4px;">133 Ersatzteile</span>
+        <a href="https://kaffeereparatur.github.io/siemens/" class="fk-hub-item">
+          <span class="fk-hub-icon">☕</span>
+          <div>
+            <div class="fk-hub-name">Siemens</div>
+            <div class="fk-hub-sub">115 Ersatzteile</div>
+          </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/bosch/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:16px; text-decoration:none; color:var(--text-main); display:flex; flex-direction:column; align-items:center; transition:all 0.15s ease;">
-          <span style="font-size:24px; margin-bottom:6px;">☕</span>
-          <span style="font-weight:700; font-size:15px;">Bosch</span>
-          <span style="font-size:12px; color:var(--text-muted); margin-top:4px;">18 Ersatzteile</span>
+        <a href="https://kaffeereparatur.github.io/bosch/" class="fk-hub-item">
+          <span class="fk-hub-icon">☕</span>
+          <div>
+            <div class="fk-hub-name">Bosch</div>
+            <div class="fk-hub-sub">18 Ersatzteile</div>
+          </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/jura/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:16px; text-decoration:none; color:var(--text-main); display:flex; flex-direction:column; align-items:center; transition:all 0.15s ease;">
-          <span style="font-size:24px; margin-bottom:6px;">☕</span>
-          <span style="font-weight:700; font-size:15px;">Jura</span>
-          <span style="font-size:12px; color:var(--text-muted); margin-top:4px;">110 Ersatzteile</span>
+        <a href="https://kaffeereparatur.github.io/jura/" class="fk-hub-item">
+          <span class="fk-hub-icon">☕</span>
+          <div>
+            <div class="fk-hub-name">Jura</div>
+            <div class="fk-hub-sub">110 Ersatzteile</div>
+          </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/philips/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:16px; text-decoration:none; color:var(--text-main); display:flex; flex-direction:column; align-items:center; transition:all 0.15s ease;">
-          <span style="font-size:24px; margin-bottom:6px;">☕</span>
-          <span style="font-weight:700; font-size:15px;">Philips</span>
-          <span style="font-size:12px; color:var(--text-muted); margin-top:4px;">45 Ersatzteile</span>
+        <a href="https://kaffeereparatur.github.io/philips/" class="fk-hub-item">
+          <span class="fk-hub-icon">☕</span>
+          <div>
+            <div class="fk-hub-name">Philips</div>
+            <div class="fk-hub-sub">44 Ersatzteile</div>
+          </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/saeco/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:16px; text-decoration:none; color:var(--text-main); display:flex; flex-direction:column; align-items:center; transition:all 0.15s ease;">
-          <span style="font-size:24px; margin-bottom:6px;">☕</span>
-          <span style="font-weight:700; font-size:15px;">Saeco</span>
-          <span style="font-size:12px; color:var(--text-muted); margin-top:4px;">36 Ersatzteile</span>
+        <a href="https://kaffeereparatur.github.io/saeco/" class="fk-hub-item">
+          <span class="fk-hub-icon">☕</span>
+          <div>
+            <div class="fk-hub-name">Saeco</div>
+            <div class="fk-hub-sub">36 Ersatzteile</div>
+          </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/krups/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:16px; text-decoration:none; color:var(--text-main); display:flex; flex-direction:column; align-items:center; transition:all 0.15s ease;">
-          <span style="font-size:24px; margin-bottom:6px;">☕</span>
-          <span style="font-weight:700; font-size:15px;">Krups</span>
-          <span style="font-size:12px; color:var(--text-muted); margin-top:4px;">56 Ersatzteile</span>
+        <a href="https://kaffeereparatur.github.io/krups/" class="fk-hub-item">
+          <span class="fk-hub-icon">☕</span>
+          <div>
+            <div class="fk-hub-name">Krups</div>
+            <div class="fk-hub-sub">56 Ersatzteile</div>
+          </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/melitta/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:16px; text-decoration:none; color:var(--text-main); display:flex; flex-direction:column; align-items:center; transition:all 0.15s ease;">
-          <span style="font-size:24px; margin-bottom:6px;">☕</span>
-          <span style="font-weight:700; font-size:15px;">Melitta</span>
-          <span style="font-size:12px; color:var(--text-muted); margin-top:4px;">24 Ersatzteile</span>
+        <a href="https://kaffeereparatur.github.io/melitta/" class="fk-hub-item">
+          <span class="fk-hub-icon">☕</span>
+          <div>
+            <div class="fk-hub-name">Melitta</div>
+            <div class="fk-hub-sub">23 Ersatzteile</div>
+          </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/nivona/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:16px; text-decoration:none; color:var(--text-main); display:flex; flex-direction:column; align-items:center; transition:all 0.15s ease;">
-          <span style="font-size:24px; margin-bottom:6px;">☕</span>
-          <span style="font-weight:700; font-size:15px;">Nivona</span>
-          <span style="font-size:12px; color:var(--text-muted); margin-top:4px;">16 Ersatzteile</span>
+        <a href="https://kaffeereparatur.github.io/nivona/" class="fk-hub-item">
+          <span class="fk-hub-icon">☕</span>
+          <div>
+            <div class="fk-hub-name">Nivona</div>
+            <div class="fk-hub-sub">16 Ersatzteile</div>
+          </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/sage/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:16px; text-decoration:none; color:var(--text-main); display:flex; flex-direction:column; align-items:center; transition:all 0.15s ease;">
-          <span style="font-size:24px; margin-bottom:6px;">☕</span>
-          <span style="font-weight:700; font-size:15px;">Sage</span>
-          <span style="font-size:12px; color:var(--text-muted); margin-top:4px;">67 Ersatzteile</span>
+        <a href="https://kaffeereparatur.github.io/sage/" class="fk-hub-item">
+          <span class="fk-hub-icon">☕</span>
+          <div>
+            <div class="fk-hub-name">Sage</div>
+            <div class="fk-hub-sub">67 Ersatzteile</div>
+          </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/miele/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:16px; text-decoration:none; color:var(--text-main); display:flex; flex-direction:column; align-items:center; transition:all 0.15s ease;">
-          <span style="font-size:24px; margin-bottom:6px;">☕</span>
-          <span style="font-weight:700; font-size:15px;">Miele</span>
-          <span style="font-size:12px; color:var(--text-muted); margin-top:4px;">19 Ersatzteile</span>
+        <a href="https://kaffeereparatur.github.io/miele/" class="fk-hub-item">
+          <span class="fk-hub-icon">☕</span>
+          <div>
+            <div class="fk-hub-name">Miele</div>
+            <div class="fk-hub-sub">19 Ersatzteile</div>
+          </div>
         </a>
       </div>
-    </section>
+    </div>
 
-    <!-- Categories Grid -->
-    <section id="kategorien" style="margin-bottom:48px;">
-      <h2 style="font-size:22px; font-weight:800; margin-bottom:16px;">Baugruppen &amp; Mechanik</h2>
-      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:14px;">
+    <!-- Categories (Flipkart Grid Hub) -->
+    <div class="fk-hub-list-card" id="kategorien">
+      <div class="fk-grid-title-bar" style="margin-top:0;">
+        <h2 class="fk-grid-title" style="font-size:17px;">Baugruppen &amp; Mechanik</h2>
+        <span class="fk-grid-count">10 Kategorien</span>
+      </div>
+      <div class="fk-hub-grid">
         
-        <a href="https://roboparca.github.io/kaffeereparatur/kategorie/bruehgruppe/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:18px; text-decoration:none; color:var(--text-main); display:flex; align-items:center; gap:12px; transition:all 0.15s ease;">
-          <span style="font-size:26px;">⚙️</span>
+        <a href="https://kaffeereparatur.github.io/kategorie/bruehgruppe/" class="fk-hub-item">
+          <span class="fk-hub-icon">⚙️</span>
           <div>
-            <div style="font-weight:700; font-size:14px;">Brühgruppen &amp; Dichtungen</div>
-            <div style="font-size:12px; color:var(--text-muted);">165 Produkte</div>
+            <div class="fk-hub-name">Brühgruppen &amp; Dichtungen</div>
+            <div class="fk-hub-sub">164 Produkte</div>
           </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/kategorie/mahlwerk/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:18px; text-decoration:none; color:var(--text-main); display:flex; align-items:center; gap:12px; transition:all 0.15s ease;">
-          <span style="font-size:26px;">🪨</span>
+        <a href="https://kaffeereparatur.github.io/kategorie/mahlwerk/" class="fk-hub-item">
+          <span class="fk-hub-icon">🪨</span>
           <div>
-            <div style="font-weight:700; font-size:14px;">Mahlwerke &amp; Mahlkegel</div>
-            <div style="font-size:12px; color:var(--text-muted);">63 Produkte</div>
+            <div class="fk-hub-name">Mahlwerke &amp; Mahlkegel</div>
+            <div class="fk-hub-sub">62 Produkte</div>
           </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/kategorie/thermoblock/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:18px; text-decoration:none; color:var(--text-main); display:flex; align-items:center; gap:12px; transition:all 0.15s ease;">
-          <span style="font-size:26px;">🔥</span>
+        <a href="https://kaffeereparatur.github.io/kategorie/thermoblock/" class="fk-hub-item">
+          <span class="fk-hub-icon">🔥</span>
           <div>
-            <div style="font-weight:700; font-size:14px;">Heizelemente &amp; Thermoblöcke</div>
-            <div style="font-size:12px; color:var(--text-muted);">41 Produkte</div>
+            <div class="fk-hub-name">Heizelemente &amp; Thermoblöcke</div>
+            <div class="fk-hub-sub">24 Produkte</div>
           </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/kategorie/milchsystem/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:18px; text-decoration:none; color:var(--text-main); display:flex; align-items:center; gap:12px; transition:all 0.15s ease;">
-          <span style="font-size:26px;">🥛</span>
+        <a href="https://kaffeereparatur.github.io/kategorie/milchsystem/" class="fk-hub-item">
+          <span class="fk-hub-icon">🥛</span>
           <div>
-            <div style="font-weight:700; font-size:14px;">Milchsysteme &amp; Karaffen</div>
-            <div style="font-size:12px; color:var(--text-muted);">98 Produkte</div>
+            <div class="fk-hub-name">Milchsysteme &amp; Karaffen</div>
+            <div class="fk-hub-sub">97 Produkte</div>
           </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/kategorie/wasserfilter/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:18px; text-decoration:none; color:var(--text-main); display:flex; align-items:center; gap:12px; transition:all 0.15s ease;">
-          <span style="font-size:26px;">🌊</span>
+        <a href="https://kaffeereparatur.github.io/kategorie/wasserfilter/" class="fk-hub-item">
+          <span class="fk-hub-icon">🌊</span>
           <div>
-            <div style="font-weight:700; font-size:14px;">Wasserfilter &amp; Entkalker</div>
-            <div style="font-size:12px; color:var(--text-muted);">162 Produkte</div>
+            <div class="fk-hub-name">Wasserfilter &amp; Entkalker</div>
+            <div class="fk-hub-sub">161 Produkte</div>
           </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/kategorie/magnetventil/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:18px; text-decoration:none; color:var(--text-main); display:flex; align-items:center; gap:12px; transition:all 0.15s ease;">
-          <span style="font-size:26px;">🧲</span>
+        <a href="https://kaffeereparatur.github.io/kategorie/magnetventil/" class="fk-hub-item">
+          <span class="fk-hub-icon">🧲</span>
           <div>
-            <div style="font-weight:700; font-size:14px;">Magnetventile &amp; Solenoid</div>
-            <div style="font-size:12px; color:var(--text-muted);">30 Produkte</div>
+            <div class="fk-hub-name">Magnetventile &amp; Solenoid</div>
+            <div class="fk-hub-sub">30 Produkte</div>
           </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/kategorie/kaffeeauslauf/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:18px; text-decoration:none; color:var(--text-main); display:flex; align-items:center; gap:12px; transition:all 0.15s ease;">
-          <span style="font-size:26px;">☕</span>
+        <a href="https://kaffeereparatur.github.io/kategorie/kaffeeauslauf/" class="fk-hub-item">
+          <span class="fk-hub-icon">☕</span>
           <div>
-            <div style="font-weight:700; font-size:14px;">Kaffeeauslauf &amp; Verteiler</div>
-            <div style="font-size:12px; color:var(--text-muted);">38 Produkte</div>
+            <div class="fk-hub-name">Kaffeeauslauf &amp; Verteiler</div>
+            <div class="fk-hub-sub">37 Produkte</div>
           </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/kategorie/vibrationspumpe/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:18px; text-decoration:none; color:var(--text-main); display:flex; align-items:center; gap:12px; transition:all 0.15s ease;">
-          <span style="font-size:26px;">⚡</span>
+        <a href="https://kaffeereparatur.github.io/kategorie/vibrationspumpe/" class="fk-hub-item">
+          <span class="fk-hub-icon">⚡</span>
           <div>
-            <div style="font-weight:700; font-size:14px;">15-Bar Ulka Pumpen &amp; Hydraulik</div>
-            <div style="font-size:12px; color:var(--text-muted);">25 Produkte</div>
+            <div class="fk-hub-name">15-Bar Ulka Pumpen &amp; Hydraulik</div>
+            <div class="fk-hub-sub">25 Produkte</div>
           </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/kategorie/drainageventil/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:18px; text-decoration:none; color:var(--text-main); display:flex; align-items:center; gap:12px; transition:all 0.15s ease;">
-          <span style="font-size:26px;">💧</span>
+        <a href="https://kaffeereparatur.github.io/kategorie/drainageventil/" class="fk-hub-item">
+          <span class="fk-hub-icon">💧</span>
           <div>
-            <div style="font-weight:700; font-size:14px;">Drainageventile &amp; Kappen</div>
-            <div style="font-size:12px; color:var(--text-muted);">59 Produkte</div>
+            <div class="fk-hub-name">Drainageventile &amp; Kappen</div>
+            <div class="fk-hub-sub">59 Produkte</div>
           </div>
         </a>
 
-        <a href="https://roboparca.github.io/kaffeereparatur/kategorie/reinigung/" style="background:#ffffff; border:1px solid var(--border-color); border-radius:12px; padding:18px; text-decoration:none; color:var(--text-main); display:flex; align-items:center; gap:12px; transition:all 0.15s ease;">
-          <span style="font-size:26px;">✨</span>
+        <a href="https://kaffeereparatur.github.io/kategorie/reinigung/" class="fk-hub-item">
+          <span class="fk-hub-icon">✨</span>
           <div>
-            <div style="font-weight:700; font-size:14px;">Pflegesets &amp; Spezial-Entkalker</div>
-            <div style="font-size:12px; color:var(--text-muted);">19 Produkte</div>
+            <div class="fk-hub-name">Pflegesets &amp; Spezial-Entkalker</div>
+            <div class="fk-hub-sub">19 Produkte</div>
           </div>
         </a>
       </div>
-    </section>
+    </div>
 
-    <!-- Featured Genuine Products -->
-    <section style="margin-bottom:48px;">
-      <h2 style="font-size:22px; font-weight:800; margin-bottom:16px;">Beliebte Ersatzteile &amp; Revisions-Kits</h2>
-      <div class="prod-grid">
-        
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/delonghi-brueheinheit-7313251451-brueheinheit-fuer-b07cnw1wlc/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/61odfgh4STL._AC_SL1500_.jpg" class="prod-card-thumb" alt="DeLonghi Brüheinheit 7313251451 Brüheinheit für ECAM und ETAM Kaffeevollautomaten (1 Packung)" onerror="this.style.opacity='0.8'">
+    <!-- Featured Genuine Products Grid (Deals of the Day) -->
+    <div class="fk-grid-title-bar" id="beliebt">
+      <h2 class="fk-grid-title">Beliebte Ersatzteile &amp; Revisions-Kits</h2>
+      <span class="fk-grid-count">16 Empfehlungen</span>
+    </div>
+    <div class="fk-prod-grid">
+      
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/delonghi-brueheinheit-7313251451-brueheinheit-fuer-b07cnw1wlc/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/61odfgh4STL._AC_SL1500_.jpg" class="fk-card-thumb" alt="DeLonghi Brüheinheit 7313251451 Brüheinheit für ECAM und ETAM Kaffeevollautomaten (1 Packung)" onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/delonghi-brueheinheit-7313251451-brueheinheit-fuer-b07cnw1wlc/">DeLonghi Brüheinheit 7313251451 Brüheinheit für ECAM und ETAM Kaffeevollautomaten (1 Packung)</a></h3>
-      <div class="prod-card-rating">★ 4.7 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/delonghi-brueheinheit-7313251451-brueheinheit-fuer-b07cnw1wlc/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/delonghi-brueheinheit-7313251451-brueheinheit-fuer-b07cnw1wlc/">DeLonghi Brüheinheit 7313251451 Brüheinheit für ECAM und ETAM Kaffeevollautomaten (1 Packung)</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 4.7</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/delonghi-brueheinheit-7313251451-brueheinheit-fuer-b07cnw1wlc/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
 
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/dl-pro-bruehgruppe-passend-fuer-de-longhi-ecam-eta-b08q4fnpw5/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/618-jrihB4L._AC_SL1500_.jpg" class="prod-card-thumb" alt="DL-pro Brühgruppe passend für De&#39;Longhi ECAM ETAM ersetzt 5513227891" onerror="this.style.opacity='0.8'">
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/dl-pro-bruehgruppe-passend-fuer-de-longhi-ecam-eta-b08q4fnpw5/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/618-jrihB4L._AC_SL1500_.jpg" class="fk-card-thumb" alt="DL-pro Brühgruppe passend für De&#39;Longhi ECAM ETAM ersetzt 5513227891" onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/dl-pro-bruehgruppe-passend-fuer-de-longhi-ecam-eta-b08q4fnpw5/">DL-pro Brühgruppe passend für De&#39;Longhi ECAM ETAM ersetzt 5513227891</a></h3>
-      <div class="prod-card-rating">★ 4.5 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/dl-pro-bruehgruppe-passend-fuer-de-longhi-ecam-eta-b08q4fnpw5/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/dl-pro-bruehgruppe-passend-fuer-de-longhi-ecam-eta-b08q4fnpw5/">DL-pro Brühgruppe passend für De&#39;Longhi ECAM ETAM ersetzt 5513227891</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 4.5</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/dl-pro-bruehgruppe-passend-fuer-de-longhi-ecam-eta-b08q4fnpw5/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
 
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/vioks-bruehkolben-mit-ventil-kaffeemaschine-ersatz-b0h6mdhx5s/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/71XN+gpi3SL._AC_SL1500_.jpg" class="prod-card-thumb" alt="VIOKS Brühkolben mit Ventil Kaffeemaschine Ersatz für DeLоnghi 7313292714" onerror="this.style.opacity='0.8'">
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/vioks-bruehkolben-mit-ventil-kaffeemaschine-ersatz-b0h6mdhx5s/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/71XN+gpi3SL._AC_SL1500_.jpg" class="fk-card-thumb" alt="VIOKS Brühkolben mit Ventil Kaffeemaschine Ersatz für DeLоnghi 7313292714" onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/vioks-bruehkolben-mit-ventil-kaffeemaschine-ersatz-b0h6mdhx5s/">VIOKS Brühkolben mit Ventil Kaffeemaschine Ersatz für DeLоnghi 7313292714</a></h3>
-      <div class="prod-card-rating">★ 3 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/vioks-bruehkolben-mit-ventil-kaffeemaschine-ersatz-b0h6mdhx5s/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/vioks-bruehkolben-mit-ventil-kaffeemaschine-ersatz-b0h6mdhx5s/">VIOKS Brühkolben mit Ventil Kaffeemaschine Ersatz für DeLоnghi 7313292714</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 3</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/vioks-bruehkolben-mit-ventil-kaffeemaschine-ersatz-b0h6mdhx5s/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
 
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/delonghi-7332222900-bruehgruppe-b00dc4qi66/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/81vxdiGpvAL._AC_SL1500_.jpg" class="prod-card-thumb" alt="DeLonghi 7332222900 Brühgruppe" onerror="this.style.opacity='0.8'">
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/delonghi-7332222900-bruehgruppe-b00dc4qi66/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/81vxdiGpvAL._AC_SL1500_.jpg" class="fk-card-thumb" alt="DeLonghi 7332222900 Brühgruppe" onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/delonghi-7332222900-bruehgruppe-b00dc4qi66/">DeLonghi 7332222900 Brühgruppe</a></h3>
-      <div class="prod-card-rating">★ 4.6 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/delonghi-7332222900-bruehgruppe-b00dc4qi66/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/delonghi-7332222900-bruehgruppe-b00dc4qi66/">DeLonghi 7332222900 Brühgruppe</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 4.6</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/delonghi-7332222900-bruehgruppe-b00dc4qi66/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
 
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/snapworld-kaffee-16tlg-dichtung-fuer-delonghi-ecam-b08lncxznq/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/71G5mqLYaQL._AC_SL1500_.jpg" class="prod-card-thumb" alt="Snapworld-Kaffee 16tlg., Dichtung für DeLonghi ECAM ESAM Brühgruppe etc." onerror="this.style.opacity='0.8'">
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/snapworld-kaffee-16tlg-dichtung-fuer-delonghi-ecam-b08lncxznq/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/71G5mqLYaQL._AC_SL1500_.jpg" class="fk-card-thumb" alt="Snapworld-Kaffee 16tlg., Dichtung für DeLonghi ECAM ESAM Brühgruppe etc." onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/snapworld-kaffee-16tlg-dichtung-fuer-delonghi-ecam-b08lncxznq/">Snapworld-Kaffee 16tlg., Dichtung für DeLonghi ECAM ESAM Brühgruppe etc.</a></h3>
-      <div class="prod-card-rating">★ 4.6 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/snapworld-kaffee-16tlg-dichtung-fuer-delonghi-ecam-b08lncxznq/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/snapworld-kaffee-16tlg-dichtung-fuer-delonghi-ecam-b08lncxznq/">Snapworld-Kaffee 16tlg., Dichtung für DeLonghi ECAM ESAM Brühgruppe etc.</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 4.6</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/snapworld-kaffee-16tlg-dichtung-fuer-delonghi-ecam-b08lncxznq/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
 
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/9-teiliges-pflegeset-brueheinheit-fuer-delonghi-ae-b0dkh498v3/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/81WcLjiZgVL._AC_SL1500_.jpg" class="prod-card-thumb" alt="9-teiliges Pflegeset Brüheinheit für DeLonghi &amp; AEG (ECAM ESAM)" onerror="this.style.opacity='0.8'">
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/9-teiliges-pflegeset-brueheinheit-fuer-delonghi-ae-b0dkh498v3/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/81WcLjiZgVL._AC_SL1500_.jpg" class="fk-card-thumb" alt="9-teiliges Pflegeset Brüheinheit für DeLonghi &amp; AEG (ECAM ESAM)" onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/9-teiliges-pflegeset-brueheinheit-fuer-delonghi-ae-b0dkh498v3/">9-teiliges Pflegeset Brüheinheit für DeLonghi &amp; AEG (ECAM ESAM)</a></h3>
-      <div class="prod-card-rating">★ 4.5 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/9-teiliges-pflegeset-brueheinheit-fuer-delonghi-ae-b0dkh498v3/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/9-teiliges-pflegeset-brueheinheit-fuer-delonghi-ae-b0dkh498v3/">9-teiliges Pflegeset Brüheinheit für DeLonghi &amp; AEG (ECAM ESAM)</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 4.5</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/9-teiliges-pflegeset-brueheinheit-fuer-delonghi-ae-b0dkh498v3/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
 
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/6-teiliges-reinigungsset-brueheinheit-delonghi-aeg-b0d3l1wm73/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/71-vQ4iP7TL._AC_SL1500_.jpg" class="prod-card-thumb" alt="6-teiliges Reinigungsset Brüheinheit DeLonghi &amp; AEG (ECAM ESAM)" onerror="this.style.opacity='0.8'">
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/6-teiliges-reinigungsset-brueheinheit-delonghi-aeg-b0d3l1wm73/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/71-vQ4iP7TL._AC_SL1500_.jpg" class="fk-card-thumb" alt="6-teiliges Reinigungsset Brüheinheit DeLonghi &amp; AEG (ECAM ESAM)" onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/6-teiliges-reinigungsset-brueheinheit-delonghi-aeg-b0d3l1wm73/">6-teiliges Reinigungsset Brüheinheit DeLonghi &amp; AEG (ECAM ESAM)</a></h3>
-      <div class="prod-card-rating">★ 4.5 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/6-teiliges-reinigungsset-brueheinheit-delonghi-aeg-b0d3l1wm73/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/6-teiliges-reinigungsset-brueheinheit-delonghi-aeg-b0d3l1wm73/">6-teiliges Reinigungsset Brüheinheit DeLonghi &amp; AEG (ECAM ESAM)</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 4.5</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/6-teiliges-reinigungsset-brueheinheit-delonghi-aeg-b0d3l1wm73/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
 
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/3-stueck-dichtung-o-ring-kompatibel-mit-delonghi-e-b0h5jkzmy4/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/618UKKNA8TL._AC_SL1500_.jpg" class="prod-card-thumb" alt="3 Stück Dichtung O-Ring kompatibel mit Delonghi ECAM ECA ETAM ESAM EABI EAM EPAM für die Brüheinheit Brühgruppe Anpresskolben Kolben Thermoblock Heizung" onerror="this.style.opacity='0.8'">
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/3-stueck-dichtung-o-ring-kompatibel-mit-delonghi-e-b0h5jkzmy4/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/618UKKNA8TL._AC_SL1500_.jpg" class="fk-card-thumb" alt="3 Stück Dichtung O-Ring kompatibel mit Delonghi ECAM ECA ETAM ESAM EABI EAM EPAM für die Brüheinheit Brühgruppe Anpresskolben Kolben Thermoblock Heizung" onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/3-stueck-dichtung-o-ring-kompatibel-mit-delonghi-e-b0h5jkzmy4/">3 Stück Dichtung O-Ring kompatibel mit Delonghi ECAM ECA ETAM ESAM EABI EAM EPAM für die Brüheinheit Brühgruppe Anpresskolben Kolben Thermoblock Heizung</a></h3>
-      <div class="prod-card-rating">★ 4.2 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/3-stueck-dichtung-o-ring-kompatibel-mit-delonghi-e-b0h5jkzmy4/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/3-stueck-dichtung-o-ring-kompatibel-mit-delonghi-e-b0h5jkzmy4/">3 Stück Dichtung O-Ring kompatibel mit Delonghi ECAM ECA ETAM ESAM EABI EAM EPAM für die Brüheinheit Brühgruppe Anpresskolben Kolben Thermoblock Heizung</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 4.2</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/3-stueck-dichtung-o-ring-kompatibel-mit-delonghi-e-b0h5jkzmy4/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
 
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/pflegeset-3-dichtungen-und-1-silikonfett-passend-f-b0b8t3fjnw/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/61edqCpyu9L._AC_SL1500_.jpg" class="prod-card-thumb" alt="Pflegeset 3 Dichtungen und 1 Silikonfett passend für DeLonghi Kaffeevollautomat" onerror="this.style.opacity='0.8'">
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/pflegeset-3-dichtungen-und-1-silikonfett-passend-f-b0b8t3fjnw/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/61edqCpyu9L._AC_SL1500_.jpg" class="fk-card-thumb" alt="Pflegeset 3 Dichtungen und 1 Silikonfett passend für DeLonghi Kaffeevollautomat" onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/pflegeset-3-dichtungen-und-1-silikonfett-passend-f-b0b8t3fjnw/">Pflegeset 3 Dichtungen und 1 Silikonfett passend für DeLonghi Kaffeevollautomat</a></h3>
-      <div class="prod-card-rating">★ 4.8 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/pflegeset-3-dichtungen-und-1-silikonfett-passend-f-b0b8t3fjnw/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/pflegeset-3-dichtungen-und-1-silikonfett-passend-f-b0b8t3fjnw/">Pflegeset 3 Dichtungen und 1 Silikonfett passend für DeLonghi Kaffeevollautomat</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 4.8</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/pflegeset-3-dichtungen-und-1-silikonfett-passend-f-b0b8t3fjnw/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
 
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/ancable-40-stueck-o-ring-dichtungssatz-mit-reinigu-b0fn3s4nbv/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/71GcfQlJxjL._AC_SL1500_.jpg" class="prod-card-thumb" alt="Ancable 40 Stück O-Ring Dichtungssatz mit Reinigungsbürsten, Wartungsset Dichtungsring Kompatibel mit DeLonghi ESAM/ECAM/ETAM Kaffeevollautomaten, für Brüheinheit Thermoblock Milchaufschäumer Zubehör" onerror="this.style.opacity='0.8'">
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/ancable-40-stueck-o-ring-dichtungssatz-mit-reinigu-b0fn3s4nbv/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/71GcfQlJxjL._AC_SL1500_.jpg" class="fk-card-thumb" alt="Ancable 40 Stück O-Ring Dichtungssatz mit Reinigungsbürsten, Wartungsset Dichtungsring Kompatibel mit DeLonghi ESAM/ECAM/ETAM Kaffeevollautomaten, für Brüheinheit Thermoblock Milchaufschäumer Zubehör" onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/ancable-40-stueck-o-ring-dichtungssatz-mit-reinigu-b0fn3s4nbv/">Ancable 40 Stück O-Ring Dichtungssatz mit Reinigungsbürsten, Wartungsset Dichtungsring Kompatibel mit DeLonghi ESAM/ECAM/ETAM Kaffeevollautomaten, für Brüheinheit Thermoblock Milchaufschäumer Zubehör</a></h3>
-      <div class="prod-card-rating">★ 4.2 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/ancable-40-stueck-o-ring-dichtungssatz-mit-reinigu-b0fn3s4nbv/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/ancable-40-stueck-o-ring-dichtungssatz-mit-reinigu-b0fn3s4nbv/">Ancable 40 Stück O-Ring Dichtungssatz mit Reinigungsbürsten, Wartungsset Dichtungsring Kompatibel mit DeLonghi ESAM/ECAM/ETAM Kaffeevollautomaten, für Brüheinheit Thermoblock Milchaufschäumer Zubehör</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 4.2</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/ancable-40-stueck-o-ring-dichtungssatz-mit-reinigu-b0fn3s4nbv/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
 
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/delonghi-delonghi-coffee-brewing-company-brueheinh-b0052zyevo/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/516VqDvT6gS._AC_SL1500_.jpg" class="prod-card-thumb" alt="DELONGHI DeLonghi Coffee Brewing Company Brüheinheit für alle EAM/ ESAM Kaffeevollautomaten" onerror="this.style.opacity='0.8'">
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/delonghi-delonghi-coffee-brewing-company-brueheinh-b0052zyevo/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/516VqDvT6gS._AC_SL1500_.jpg" class="fk-card-thumb" alt="DELONGHI DeLonghi Coffee Brewing Company Brüheinheit für alle EAM/ ESAM Kaffeevollautomaten" onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/delonghi-delonghi-coffee-brewing-company-brueheinh-b0052zyevo/">DELONGHI DeLonghi Coffee Brewing Company Brüheinheit für alle EAM/ ESAM Kaffeevollautomaten</a></h3>
-      <div class="prod-card-rating">★ 4.7 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/delonghi-delonghi-coffee-brewing-company-brueheinh-b0052zyevo/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/delonghi-delonghi-coffee-brewing-company-brueheinh-b0052zyevo/">DELONGHI DeLonghi Coffee Brewing Company Brüheinheit für alle EAM/ ESAM Kaffeevollautomaten</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 4.7</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/delonghi-delonghi-coffee-brewing-company-brueheinh-b0052zyevo/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
 
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/pflegeset-fuer-delonghi-kaffeeautomaten-3-dichtung-b0fdfw6nw8/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/71VSqlDahKL._AC_SL1500_.jpg" class="prod-card-thumb" alt="Pflegeset für DeLonghi Kaffeeautomaten - 3 Dichtungen, Silikonfett, 2 Bürsten" onerror="this.style.opacity='0.8'">
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/pflegeset-fuer-delonghi-kaffeeautomaten-3-dichtung-b0fdfw6nw8/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/71VSqlDahKL._AC_SL1500_.jpg" class="fk-card-thumb" alt="Pflegeset für DeLonghi Kaffeeautomaten - 3 Dichtungen, Silikonfett, 2 Bürsten" onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/pflegeset-fuer-delonghi-kaffeeautomaten-3-dichtung-b0fdfw6nw8/">Pflegeset für DeLonghi Kaffeeautomaten - 3 Dichtungen, Silikonfett, 2 Bürsten</a></h3>
-      <div class="prod-card-rating">★ 3.9 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/pflegeset-fuer-delonghi-kaffeeautomaten-3-dichtung-b0fdfw6nw8/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/pflegeset-fuer-delonghi-kaffeeautomaten-3-dichtung-b0fdfw6nw8/">Pflegeset für DeLonghi Kaffeeautomaten - 3 Dichtungen, Silikonfett, 2 Bürsten</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 3.9</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/pflegeset-fuer-delonghi-kaffeeautomaten-3-dichtung-b0fdfw6nw8/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
 
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/dl-pro-bruehgruppe-passend-fuer-delonghi-731325144-b093t7br97/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/51oTyVbIkUL._AC_SL1500_.jpg" class="prod-card-thumb" alt="DL-pro Brühgruppe passend für DeLonghi 7313251441 5513227911 EAM ESAM" onerror="this.style.opacity='0.8'">
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/dl-pro-bruehgruppe-passend-fuer-delonghi-731325144-b093t7br97/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/51oTyVbIkUL._AC_SL1500_.jpg" class="fk-card-thumb" alt="DL-pro Brühgruppe passend für DeLonghi 7313251441 5513227911 EAM ESAM" onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/dl-pro-bruehgruppe-passend-fuer-delonghi-731325144-b093t7br97/">DL-pro Brühgruppe passend für DeLonghi 7313251441 5513227911 EAM ESAM</a></h3>
-      <div class="prod-card-rating">★ 4.5 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/dl-pro-bruehgruppe-passend-fuer-delonghi-731325144-b093t7br97/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/dl-pro-bruehgruppe-passend-fuer-delonghi-731325144-b093t7br97/">DL-pro Brühgruppe passend für DeLonghi 7313251441 5513227911 EAM ESAM</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 4.5</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/dl-pro-bruehgruppe-passend-fuer-delonghi-731325144-b093t7br97/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
 
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/pflegeset-200910-fuer-alle-delonghi-ecam-etam-brue-b01n7dgcpd/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/61jRT-dtd7L._AC_SL1500_.jpg" class="prod-card-thumb" alt="Pflegeset 200910 für alle DeLonghi ECAM ETAM Brühgruppen (Dichtungen, Fett, inkl. QR-Anleitung)" onerror="this.style.opacity='0.8'">
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/pflegeset-200910-fuer-alle-delonghi-ecam-etam-brue-b01n7dgcpd/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/61jRT-dtd7L._AC_SL1500_.jpg" class="fk-card-thumb" alt="Pflegeset 200910 für alle DeLonghi ECAM ETAM Brühgruppen (Dichtungen, Fett, inkl. QR-Anleitung)" onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/pflegeset-200910-fuer-alle-delonghi-ecam-etam-brue-b01n7dgcpd/">Pflegeset 200910 für alle DeLonghi ECAM ETAM Brühgruppen (Dichtungen, Fett, inkl. QR-Anleitung)</a></h3>
-      <div class="prod-card-rating">★ 4.5 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/pflegeset-200910-fuer-alle-delonghi-ecam-etam-brue-b01n7dgcpd/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/pflegeset-200910-fuer-alle-delonghi-ecam-etam-brue-b01n7dgcpd/">Pflegeset 200910 für alle DeLonghi ECAM ETAM Brühgruppen (Dichtungen, Fett, inkl. QR-Anleitung)</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 4.5</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/pflegeset-200910-fuer-alle-delonghi-ecam-etam-brue-b01n7dgcpd/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
 
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/konisches-mahlwerk-fraesstift-set-kompatibel-mit-d-b0fqv6t5sb/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/61PS-sLA8FL._AC_SL1500_.jpg" class="prod-card-thumb" alt="Konisches Mahlwerk-Frässtift-Set, kompatibel mit DeLonghi Mahlwerk ECAM und ETAM Kaffeevollautomaten." onerror="this.style.opacity='0.8'">
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/konisches-mahlwerk-fraesstift-set-kompatibel-mit-d-b0fqv6t5sb/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/61PS-sLA8FL._AC_SL1500_.jpg" class="fk-card-thumb" alt="Konisches Mahlwerk-Frässtift-Set, kompatibel mit DeLonghi Mahlwerk ECAM und ETAM Kaffeevollautomaten." onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/konisches-mahlwerk-fraesstift-set-kompatibel-mit-d-b0fqv6t5sb/">Konisches Mahlwerk-Frässtift-Set, kompatibel mit DeLonghi Mahlwerk ECAM und ETAM Kaffeevollautomaten.</a></h3>
-      <div class="prod-card-rating">★ 4.5 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/konisches-mahlwerk-fraesstift-set-kompatibel-mit-d-b0fqv6t5sb/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/konisches-mahlwerk-fraesstift-set-kompatibel-mit-d-b0fqv6t5sb/">Konisches Mahlwerk-Frässtift-Set, kompatibel mit DeLonghi Mahlwerk ECAM und ETAM Kaffeevollautomaten.</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 4.5</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/konisches-mahlwerk-fraesstift-set-kompatibel-mit-d-b0fqv6t5sb/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
 
-  <article class="prod-card">
-    <a href="https://roboparca.github.io/kaffeereparatur/delonghi/piebert-sieb-46101-fuer-delonghi-bruehgruppen-komp-b0dhqpxj8d/" class="prod-card-thumb-link">
-      <img src="https://m.media-amazon.com/images/I/71bgg+fQbOL._AC_SL1500_.jpg" class="prod-card-thumb" alt="Piebert Sieb 46101 für DeLonghi Brühgruppen kompatibel mit allen ECAM, ESAM, ETAM, EAM De´Longhi Kaffeevollautomaten (wie 6013213181)" onerror="this.style.opacity='0.8'">
+  <article class="fk-prod-card">
+    <a href="https://kaffeereparatur.github.io/delonghi/piebert-sieb-46101-fuer-delonghi-bruehgruppen-komp-b0dhqpxj8d/" class="fk-card-thumb-link">
+      <img src="https://m.media-amazon.com/images/I/71bgg+fQbOL._AC_SL1500_.jpg" class="fk-card-thumb" alt="Piebert Sieb 46101 für DeLonghi Brühgruppen kompatibel mit allen ECAM, ESAM, ETAM, EAM De´Longhi Kaffeevollautomaten (wie 6013213181)" onerror="this.style.opacity='0.8'">
     </a>
-    <div class="prod-card-body">
-      <div class="badge-row">
-        <span class="badge-brand">DeLonghi</span>
-        <span class="badge-cat">Brühgruppen &amp; Dichtungen</span>
+    <div class="fk-card-body">
+      <div class="fk-card-badges">
+        <span class="fk-tag fk-tag-blue">DeLonghi</span>
+        <span class="fk-tag fk-tag-green">F-Assured</span>
       </div>
-      <h3 class="prod-card-title"><a href="https://roboparca.github.io/kaffeereparatur/delonghi/piebert-sieb-46101-fuer-delonghi-bruehgruppen-komp-b0dhqpxj8d/">Piebert Sieb 46101 für DeLonghi Brühgruppen kompatibel mit allen ECAM, ESAM, ETAM, EAM De´Longhi Kaffeevollautomaten (wie 6013213181)</a></h3>
-      <div class="prod-card-rating">★ 4.4 (145 Bewertungen)</div>
-      <a href="https://roboparca.github.io/kaffeereparatur/delonghi/piebert-sieb-46101-fuer-delonghi-bruehgruppen-komp-b0dhqpxj8d/" class="btn-card-details">
-        Reparatur-Guide &amp; Details ›
-      </a>
+      <h3 class="fk-card-title"><a href="https://kaffeereparatur.github.io/delonghi/piebert-sieb-46101-fuer-delonghi-bruehgruppen-komp-b0dhqpxj8d/">Piebert Sieb 46101 für DeLonghi Brühgruppen kompatibel mit allen ECAM, ESAM, ETAM, EAM De´Longhi Kaffeevollautomaten (wie 6013213181)</a></h3>
+      <div class="fk-card-rating-row">
+        <span class="fk-rating-badge">★ 4.4</span>
+        <span style="font-size:12px; color:#878787;">(145)</span>
+      </div>
+      <div class="fk-card-footer">
+        <a href="https://kaffeereparatur.github.io/delonghi/piebert-sieb-46101-fuer-delonghi-bruehgruppen-komp-b0dhqpxj8d/" class="fk-card-link">
+          Details &amp; Einbau ›
+        </a>
+      </div>
     </div>
   </article>
-      </div>
-    </section>
+    </div>
   </main>
 
   
-  <footer style="background:#1c1917; color:#a8a29e; padding:48px 0 24px; margin-top:64px; border-top:1px solid #292524;">
-    <div class="wrap" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:32px; padding-bottom:32px;">
+  <!-- Flipkart Mobile App Bottom Tab Bar -->
+  <nav class="fk-mobile-tab-bar" aria-label="App Navigation">
+    <a href="https://kaffeereparatur.github.io/" class="fk-tab-btn active">
+      <span class="fk-tab-icon">🏠</span>
+      <span class="fk-tab-label">Home</span>
+    </a>
+    <a href="https://kaffeereparatur.github.io/#kategorien" class="fk-tab-btn ">
+      <span class="fk-tab-icon">⚙️</span>
+      <span class="fk-tab-label">Kategorien</span>
+    </a>
+    <a href="https://kaffeereparatur.github.io/#marken" class="fk-tab-btn ">
+      <span class="fk-tab-icon">☕</span>
+      <span class="fk-tab-label">Marken</span>
+    </a>
+    <button type="button" class="fk-tab-btn" onclick="if(window.focusFkSearch)window.focusFkSearch();" aria-label="Suche">
+      <span class="fk-tab-icon">🔍</span>
+      <span class="fk-tab-label">Suche</span>
+    </button>
+  </nav>
+  
+  <!-- Flipkart Official Dark Footer (Desktop) -->
+  <footer class="fk-footer">
+    <div class="fk-footer-inner">
       <div>
-        <div style="font-weight:800; font-size:18px; color:#ffffff; margin-bottom:12px; display:flex; align-items:center; gap:8px;">
-          ☕ KaffeeTeile<span style="color:#eab308;">24</span>
-        </div>
-        <p style="font-size:13px; line-height:1.6; color:#78716c;">
-          Deutsches Fach- und Reparaturportal für Kaffeevollautomaten-Ersatzteile. 100% verifizierte Original- und OEM-Komponenten mit direkter Verfügbarkeitsprüfung auf Amazon.de.
-        </p>
-      </div>
-
-      <div>
-        <div style="font-weight:700; color:#ffffff; font-size:14px; margin-bottom:12px;">Top-Hersteller</div>
-        <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; font-size:13px;">
-          <li><a href="https://roboparca.github.io/kaffeereparatur/delonghi/" style="color:#a8a29e;">De'Longhi Ersatzteile</a></li>
-          <li><a href="https://roboparca.github.io/kaffeereparatur/siemens/" style="color:#a8a29e;">Siemens EQ-Serie</a></li>
-          <li><a href="https://roboparca.github.io/kaffeereparatur/jura/" style="color:#a8a29e;">Jura Impressa &amp; E/Z/ENA</a></li>
-          <li><a href="https://roboparca.github.io/kaffeereparatur/philips/" style="color:#a8a29e;">Philips LatteGo &amp; 2200/3200</a></li>
-          <li><a href="https://roboparca.github.io/kaffeereparatur/sage/" style="color:#a8a29e;">Sage Barista Express</a></li>
+        <div class="fk-foot-col-title">ÜBER UNS</div>
+        <ul class="fk-foot-list">
+          <li><a href="https://kaffeereparatur.github.io/">KaffeeReparatur Portal</a></li>
+          <li><a href="https://kaffeereparatur.github.io/#marken">Hersteller &amp; Baureihen</a></li>
+          <li><a href="https://kaffeereparatur.github.io/#kategorien">Baugruppen &amp; Mechanik</a></li>
+          <li><a href="https://kaffeereparatur.github.io/sitemap.xml">XML Sitemap</a></li>
         </ul>
       </div>
 
       <div>
-        <div style="font-weight:700; color:#ffffff; font-size:14px; margin-bottom:12px;">Baugruppen</div>
-        <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; font-size:13px;">
-          <li><a href="https://roboparca.github.io/kaffeereparatur/kategorie/bruehgruppe/" style="color:#a8a29e;">Brühgruppen &amp; Dichtungen</a></li>
-          <li><a href="https://roboparca.github.io/kaffeereparatur/kategorie/mahlwerk/" style="color:#a8a29e;">Mahlwerke &amp; Mahlkegel</a></li>
-          <li><a href="https://roboparca.github.io/kaffeereparatur/kategorie/drainageventil/" style="color:#a8a29e;">Drainageventile</a></li>
-          <li><a href="https://roboparca.github.io/kaffeereparatur/kategorie/milchsystem/" style="color:#a8a29e;">Milchsysteme &amp; Karaffen</a></li>
-          <li><a href="https://roboparca.github.io/kaffeereparatur/kategorie/wasserfilter/" style="color:#a8a29e;">Wasserfilter &amp; Entkalker</a></li>
+        <div class="fk-foot-col-title">TOP MARKEN</div>
+        <ul class="fk-foot-list">
+          <li><a href="https://kaffeereparatur.github.io/delonghi/">De'Longhi Ersatzteile</a></li>
+          <li><a href="https://kaffeereparatur.github.io/siemens/">Siemens EQ Serie</a></li>
+          <li><a href="https://kaffeereparatur.github.io/jura/">Jura Impressa &amp; E-Linie</a></li>
+          <li><a href="https://kaffeereparatur.github.io/philips/">Philips LatteGo</a></li>
+          <li><a href="https://kaffeereparatur.github.io/sage/">Sage Barista Express</a></li>
         </ul>
       </div>
 
       <div>
-        <div style="font-weight:700; color:#ffffff; font-size:14px; margin-bottom:12px;">Transparenz</div>
-        <p style="line-height:1.5; color:#78716c; font-size:12px;">
-          Als Amazon-Partner verdienen wir an qualifizierten Verkäufen. Alle Preise, Verfügbarkeiten und Lieferfristen werden live von Amazon.de bereitgestellt.
+        <div class="fk-foot-col-title">KERN-BAUGRUPPEN</div>
+        <ul class="fk-foot-list">
+          <li><a href="https://kaffeereparatur.github.io/kategorie/bruehgruppe/">Brühgruppen &amp; Dichtungen</a></li>
+          <li><a href="https://kaffeereparatur.github.io/kategorie/mahlwerk/">Mahlwerke &amp; Mahlkegel</a></li>
+          <li><a href="https://kaffeereparatur.github.io/kategorie/drainageventil/">Drainageventile</a></li>
+          <li><a href="https://kaffeereparatur.github.io/kategorie/milchsystem/">Milchkaraffen &amp; Schläuche</a></li>
+          <li><a href="https://kaffeereparatur.github.io/kategorie/wasserfilter/">Wasserfilter &amp; Entkalker</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="fk-foot-col-title">TRANSPARENZ</div>
+        <p style="line-height:1.6; color:#878787; font-size:12px; margin:0;">
+          Als Amazon-Partner verdienen wir an qualifizierten Verkäufen. Alle Preise, tagesaktuelle Verfügbarkeiten und Lieferzeiten werden live von Amazon.de bereitgestellt.
         </p>
       </div>
     </div>
-    <div class="wrap" style="border-top:1px solid #292524; padding-top:20px; text-align:center; font-size:12px; color:#57534e;">
-      © 2026 KaffeeTeile24. Alle Rechte vorbehalten. Unabhängiges Fachportal.
+
+    <div class="fk-footer-bottom">
+      <div>☕ KaffeeReparatur.de • Unabhängiges Deutsches Fachportal • © 2026</div>
+      <div>Explore <span style="color:#ffe500; font-weight:700;">Plus ✦</span></div>
     </div>
   </footer>
-  <script src="https://roboparca.github.io/kaffeereparatur/instant-search.js" defer></script>
+  <div style="text-align:center; padding:12px; font-size:11px; color:#878787;" class="fk-mobile-foot-note">
+    © 2026 KaffeeReparatur • Alle Angaben ohne Gewähr
+  </div>
+  <script src="https://kaffeereparatur.github.io/instant-search.js" defer></script>
 </body>
 </html>

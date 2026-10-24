@@ -1960,6 +1960,7 @@ async function runBuild() {
   // Sitemaps
   sitemapUrls.unshift({ loc: `${SITE_URL}/`, priority: '1.0', changefreq: 'daily' });
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapUrls.map(u => `  <url>
     <loc>${u.loc}</loc>
@@ -1970,6 +1971,15 @@ ${sitemapUrls.map(u => `  <url>
 </urlset>`;
 
   fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), sitemapXml, 'utf8');
+
+  // Write Rank Math styled XSLT for human-readable visual browser rendering
+  const { getRankMathXsl } = require('./lib/sitemap-style');
+  const sitemapXsl = getRankMathXsl('RoboParça', SITE_URL, 'tr');
+  fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xsl'), sitemapXsl, 'utf8');
+
+  // Also write to repo root since RoboParça GitHub Pages is served from root
+  fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), sitemapXml, 'utf8');
+  fs.writeFileSync(path.join(__dirname, 'sitemap.xsl'), sitemapXsl, 'utf8');
   fs.writeFileSync(path.join(DIST_DIR, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`, 'utf8');
   // Write .nojekyll to ensure GitHub Pages serves raw pre-rendered HTML without running Jekyll
   fs.writeFileSync(path.join(DIST_DIR, '.nojekyll'), '', 'utf8');
